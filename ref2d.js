@@ -520,7 +520,7 @@
       collab: "Iván Caro",
       area: "Servicio / Salud / Producto",
       year: "N/A",
-      url: "https://www.trinidadburgos.com/babykine"
+      url: "https://trinidadburgos.com/baby-kine-en/"
     },
 
     /* ------------------ Emprendekit — Kimberly McCartney ------------------ */
@@ -933,6 +933,273 @@
       src: "https://freight.cargo.site/t/original/i/T2726560875526688930172594762435/Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.18.png",
       url: "https://readymag.website/u3068913620/portafoliomojona/proyectotoyngtravelgames/"
     },
+    /* ------------------ DRP_01 — Benjamín Becerra ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2729729462721201243755679003331/Benjamin-Becerra-Captura-de-pantalla-2026-01-04-a-las-14.02.30.png",
+  orientation: "v",
+  span: 2,
+  tags: ["vestuario","moda"],
+  title: "DRP_01",
+  author: "Benjamín Becerra",
+  collab: "Marca: Hostil",
+  area: "Vestuario / Moda",
+  year: "2025",
+  url: "https://hostil-streetwear.com/products/hoodie_core"
+},
+
+/* ------------------ De Cancelling — Domingo Smart ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2825598558428431692792129336003/Smart-Domingo.png",
+  orientation: "v",
+  span: 2,
+  tags: ["soundscape","experimental","investigación","museografía"],
+  title: "De Cancelling",
+  author: "Domingo Smart",
+  collab: "Guiatura: Nicolás Morales. Colaboradores: Manuel Larraín, Lukas Yunge",
+  area: "Soundscape / Investigación / Museografía",
+  year: "2025",
+  url: "https://www.estudioample.com/003"
+},
+
+/* ------------------ PACKAGING FL-01 — Domingo Smart ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/T2825598558705132853897772610243/Smart-Domingo-1.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["packaging","serigrafía","industrial"],
+  title: "PACKAGING FL-01",
+  author: "Domingo Smart",
+  collab: "Artista: Martín Jiménez",
+  area: "Packaging / Serigrafía / Industrial",
+  year: "2024",
+  url: "https://www.estudioample.com/002"
+},
+
+/* ------------------ Mesa Lateral — Domingo Smart ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2825598558686686109824063058627/Smart-Domingo-3.jpg",
+  orientation: "v",
+  span: 2,
+  tags: ["mobiliario","industrial","producto"],
+  title: "Mesa Lateral",
+  author: "Domingo Smart",
+  collab: "Estudio: Ample",
+  area: "Mobiliario / Producto / Industrial",
+  year: "2024",
+  url: "https://www.estudioample.com/001"
+},
+
+/* ------------------ Axigo — Tomás Sánchez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/X2825598558446878436865838887619/Sanchez-Tomas.png",
+  orientation: "h",
+  span: 2,
+  tags: ["servicio","deportes","salud"],
+  title: "Axigo",
+  author: "Tomás Sánchez",
+  collab: "Guiatura: Tomás Vivanco",
+  area: "Servicio / Deportes / Salud",
+  year: "2023",
+  url: "https://tomassanchezsilva.myportfolio.com/axigo"
+},
+
+/* ------------------ Centralcorp — Francisco Poulsen ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2825598558668239365750353507011/Poulsen-Francisco-1.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Centralcorp",
+  author: "Francisco Poulsen",
+  collab: "Trabajo realizado en IV estudio",
+  area: "Branding / Identidad Visual / Gráfico",
+  year: "2025",
+  url: "https://www.behance.net/gallery/229770149/Centralcorp"
+},
+
+/* ------------------ Olivo — Francisco Poulsen ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/K2825598558649792621676643955395/Poulsen-Francisco-2.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Olivo",
+  author: "Francisco Poulsen",
+  collab: "Trabajo realizado en IV estudio",
+  area: "Branding / Identidad Visual / Gráfico",
+  year: "2026",
+  url: "https://www.behance.net/gallery/241545075/Olivo"
+},
+
+/* ------------------ Délano — Francisco Poulsen ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2825598558631345877602934403779/Poulsen-Francisco-3.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["branding","web","gráfico"],
+  title: "Délano",
+  author: "Francisco Poulsen",
+  collab: "Co-autor: Francisco Poulsen",
+  area: "Branding / Web / Gráfico",
+  year: "-",
+  url: "https://www.behance.net/gallery/238927891/Dlano"
+},
+
+/* ------------------ Sala simulación AVD — Valentina Navarrete ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2825598558612899133529224852163/Navarrete-Valentina.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["industrial","espacios","salud"],
+  title: "Sala simulación AVD",
+  author: "María Fernanda Gonzalez, Clemente López, Valentina Navarrete",
+  collab: "",
+  area: "Industrial / Espacios / Salud",
+  year: "2025",
+  url: "https://sites.google.com/view/valenavarrete-portafolio/sala-simulaci%C3%B3n-avd?"
+},
+
+/* ------------------ Salud oportuna en el sistema público de Chile — Felipe Vilches Ivelić ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2825598558409984948718419784387/Vilches-Felipe-04.jpg",
+  orientation: "h",
+  span: 2,
+  tags: ["animación","audiovisual","motion graphics","salud"],
+  title: "Salud oportuna en el sistema público de Chile",
+  author: "Felipe Vilches Ivelić",
+  collab: "Encargo: LIP UC, Ministerio de Salud, Banco Interamericano de Desarrollo",
+  area: "Animación / Audiovisual / Motion Graphics",
+  year: "2020",
+  url: "https://felipevilchesinc.com/trabajo/salud-oportuna"
+},
+
+/* ------------------ El delantal vestido — Felipe Vilches Ivelić ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2825598558465325180939548439235/Vilches-Felipe.png",
+  orientation: "h",
+  span: 2,
+  tags: ["animación","audiovisual","motion graphics","museografía"],
+  title: "El delantal vestido",
+  author: "Felipe Vilches Ivelić",
+  collab: "Curaduría: Camila Ríos Erazo. Identidad gráfica: Sergio Ramírez Flores",
+  area: "Animación / Audiovisual / Motion Graphics",
+  year: "2024",
+  url: "https://felipevilchesinc.com/trabajo/delantal-vestido"
+},
+
+/* ------------------ De Este a Oeste, de Norte a Sur — Felipe Vilches Ivelić ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2825598558391538204644710232771/Vilches-Felipe-05.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["animación","audiovisual","motion graphics"],
+  title: "De Este a Oeste, de Norte a Sur",
+  author: "Felipe Vilches Ivelić",
+  collab: "Dirección: Domingo Abelli. Producción: Goroka TV",
+  area: "Animación / Motion Graphics / Audiovisual",
+  year: "2022",
+  url: "https://felipevilchesinc.com/trabajo/titulos-deaodnas-documental"
+},
+
+/* ------------------ Péndulo — Daniela Reyes Muñoz ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2825598558483771925013257990851/Reyes-Daniela.png",
+  orientation: "h",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Péndulo",
+  author: "Daniela Reyes Muñoz",
+  collab: "",
+  area: "Branding / Identidad Visual / Gráfico",
+  year: "2024",
+  url: "https://www.behance.net/gallery/211077763/PENDULO"
+},
+
+/* ------------------ Cositas Fanzine — Daniela Reyes Muñoz ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2825598558594452389455515300547/Reyes-Daniela-cositas1_670.jpg",
+  orientation: "h",
+  span: 2,
+  tags: ["ilustración","gráfico"],
+  title: "Cositas Fanzine",
+  author: "Daniela Reyes Muñoz",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2024",
+  url: "https://danielawilliam.com/Fanzine-Cositas"
+},
+
+/* ------------------ Mujeres Inspiradoras — Daniela Reyes Muñoz ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2825598558576005645381805748931/Reyes-Daniela-STEM2_670.jpg",
+  orientation: "h",
+  span: 2,
+  tags: ["ilustración","gráfico"],
+  title: "Mujeres Inspiradoras",
+  author: "Daniela Reyes Muñoz",
+  collab: "Proyecto con Mujeres Bacanas",
+  area: "Ilustración / Gráfico",
+  year: "2023",
+  url: "https://danielawilliam.com/Illustration-work/STEM"
+},
+
+/* ------------------ Los Heroes Magazine Covers — Daniela Reyes Muñoz ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/H2825598558557558901308096197315/Reyes-Daniela-abril2023_670.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "Los Heroes Magazine Covers",
+  author: "Daniela Reyes Muñoz",
+  collab: "Revista Los Héroes",
+  area: "Ilustración / Editorial",
+  year: "2023",
+  url: "https://danielawilliam.com/Illustration-work/Los-Heroes-2023"
+},
+
+/* ------------------ Disonia — Joaquín Gajardo ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/N2825598558539112157234386645699/Gajardo-Joaquin-6624043949c81673fb06bf59_Mesa-de-trabajo-18-copia-9.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["desarrollo web","servicios","portafolio"],
+  title: "Disonia",
+  author: "Joaquín Gajardo",
+  collab: "Cliente: DISONIA. Trabajo realizado en Gaja Studio",
+  area: "Desarrollo Web / Servicios",
+  year: "2023",
+  url: "https://www.gaja.studio/proyectos/topo-colectivo"
+},
+
+/* ------------------ TOPO COLECTIVO — Joaquín Gajardo ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/B2825598558520665413160677094083/Gajardo-Joaquin-66831724e1980d57e502d3b2_Mesa-de-trabajo-18-copia-4.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["desarrollo web","servicios","ecommerce"],
+  title: "TOPO COLECTIVO",
+  author: "Joaquín Gajardo",
+  collab: "Cliente: TOPO COLECTIVO. Trabajo realizado en Gaja Studio",
+  area: "Desarrollo Web / Ecommerce",
+  year: "2023",
+  url: "https://www.gaja.studio/proyectos/jose-maiza"
+},
+
+/* ------------------ Guaico — Joaquín Gajardo ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/M2825598558502218669086967542467/Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
+  orientation: "h",
+  span: 2,
+  tags: ["desarrollo web","servicios","ecommerce"],
+  title: "Guaico",
+  author: "Joaquín Gajardo",
+  collab: "Cliente: GUAICO. Trabajo realizado en Gaja Studio",
+  area: "Desarrollo Web / Ecommerce",
+  year: "2023",
+  url: "https://www.gaja.studio/proyectos/proyecto-guaico"
+},
+
+    /* ------------------ Campaña día del niño — Francisca Torres ------------------ */
     {
       id: "campana-dia-del-nino",
       title: "Campaña día del niño",
@@ -1073,7 +1340,7 @@
         e.stopPropagation(); // Evita que se abra el modal al hacer click en la etiqueta
         if (search) search.value=t;
         applyFilter(t);
-      }, { capture: true }); // Usar capture phase para que se ejecute antes del listener del viewport
+      }); // Sin capture phase
       metaBox.appendChild(c);
     });
     el.appendChild(metaBox);
@@ -1126,7 +1393,7 @@
   const updateCount = ()=> count && (count.textContent = activeList.length + " ítems");
 
   /* ===== Pan 2D mejorado: drag vs click ===== */
-  const DRAG_THRESHOLD = 6; // px - umbral para distinguir drag de click
+  const DRAG_THRESHOLD = 10; // px - umbral para distinguir drag de click (ajustado para desktop)
   let isDown = false;
   let isDragging = false;
   let startX = 0, startY = 0;
@@ -1136,11 +1403,6 @@
   let suppressClickUntil = 0; // Para evitar clicks fantasma después de drag
   
   function resetPointerState(){
-    if(activePid !== null){
-      try { 
-        viewport.releasePointerCapture(activePid); 
-      } catch(e){}
-    }
     isDown = false;
     isDragging = false;
     downTarget = null;
@@ -1148,10 +1410,10 @@
     viewport.classList.remove('is-dragging', 'is-panning');
   }
   
-  // Handler de pointerdown con capture phase
+  // Handler de pointerdown
   function onPointerDown(e){
     // Ignorar clicks en elementos interactivos (botones, links, etc.)
-    if(e.target.closest('button') || e.target.closest('a') || e.target.closest('input')){
+    if(e.target.closest('button') || e.target.closest('a') || e.target.closest('input') || e.target.closest('.ref2d__chip')){
       return;
     }
     
@@ -1164,16 +1426,8 @@
     activePid = e.pointerId;
     downTarget = e.target.closest('.ref2d__item');
     
-    // Capturar el puntero para recibir eventos incluso fuera del viewport
-    try {
-      viewport.setPointerCapture(e.pointerId);
-    } catch(err){}
-    
     // Agregar clase de panning
     viewport.classList.add('is-panning');
-    
-    // Prevenir comportamientos nativos
-    e.preventDefault();
   }
   
   // Handler de pointermove
@@ -1212,9 +1466,9 @@
       
       lastX = currentX;
       lastY = currentY;
+      
+      if (e.cancelable) e.preventDefault();
     }
-    
-    e.preventDefault();
   }
   
   // Handler de pointerup
@@ -1227,7 +1481,6 @@
     }
     
     resetPointerState();
-    e.preventDefault();
   }
   
   // Handler de pointercancel
@@ -1236,32 +1489,24 @@
     resetPointerState();
   }
   
-  // Agregar listeners con capture phase para que funcionen sobre elementos internos
-  viewport.addEventListener('pointerdown', onPointerDown, { passive: false, capture: true });
-  viewport.addEventListener('pointermove', onPointerMove, { passive: false });
-  viewport.addEventListener('pointerup', onPointerUp, { passive: false });
-  viewport.addEventListener('pointercancel', onPointerCancel, { passive: false });
-  viewport.addEventListener('lostpointercapture', resetPointerState);
+  // Agregar listeners normales
+  viewport.addEventListener('pointerdown', onPointerDown, { passive: false });
+  window.addEventListener('pointermove', onPointerMove, { passive: false });
+  window.addEventListener('pointerup', onPointerUp, { passive: false });
+  window.addEventListener('pointercancel', onPointerCancel, { passive: false });
   
   // Handler de click para abrir popup (solo si no hubo drag)
   viewport.addEventListener('click', (e) => {
-    // Suprimir click si acabamos de hacer drag
-    if(performance.now() < suppressClickUntil){
+    // Si el click fue en una etiqueta o botón, no interferir
+    if(e.target.closest('button') || e.target.closest('a') || e.target.closest('.ref2d__chip')){
+      return;
+    }
+
+    // Suprimir click si acabamos de hacer drag o si isDragging estaba activo
+    if(performance.now() < suppressClickUntil || isDragging){
       e.preventDefault();
       e.stopPropagation();
       return;
-    }
-    
-    // Si hubo drag, no abrir popup
-    if(isDragging){
-      e.preventDefault();
-      e.stopPropagation();
-      return;
-    }
-    
-    // Si el click fue en una etiqueta, no abrir el modal (la etiqueta maneja su propio click)
-    if(e.target.closest('.ref2d__chip')){
-      return; // Dejar que el listener de la etiqueta maneje el click
     }
     
     // Buscar el item clickeado
@@ -1271,7 +1516,7 @@
       e.stopPropagation();
       openSpotlight(item);
     }
-  }, { capture: true });
+  });
   viewport.addEventListener('wheel',(e)=>{
     e.preventDefault();
     camX -= e.deltaX; camY -= e.deltaY;
@@ -1503,7 +1748,15 @@
   function applyFilter(term){
     const q = norm(term);
     if(q){
-      const list = DB.filter(x => norm((x.tags||[]).join(' ')).includes(q));
+      const list = DB.filter(x => {
+        const hay = norm([
+          x.title || '',
+          x.author || '',
+          (x.tags || []).join(' ')
+        ].join(' '));
+      
+        return hay.includes(q);
+      }); /* const list = DB.filter(x => norm((x.tags||[]).join(' ')).includes(q)); */
       if(list.length === 0){
         if (count) {
           count.textContent = `0 ítems — sin resultados para “${term}”`;
@@ -1844,74 +2097,6 @@
       closeWipModal();
     }
   });
-
-  /* ===== Modales header: Info y Submit ===== */
-  const infoOverlay = $("#ref2dInfoOverlay");
-  const infoClose = $("#ref2dInfoClose");
-  const submitOverlay = $("#ref2dSubmitOverlay");
-  const submitClose = $("#ref2dSubmitClose");
-  const infoBtn = $("#ref2dInfoBtn");
-  const submitBtn = $("#ref2dSubmitBtn");
-
-  function openInfoModal() {
-    if (infoOverlay) { infoOverlay.removeAttribute("hidden"); document.body.style.overflow = "hidden"; }
-  }
-  function closeInfoModal() {
-    if (infoOverlay) { infoOverlay.setAttribute("hidden", ""); document.body.style.overflow = ""; }
-  }
-  function openSubmitModal() {
-    if (submitOverlay) { submitOverlay.removeAttribute("hidden"); document.body.style.overflow = "hidden"; }
-  }
-  function closeSubmitModal() {
-    if (submitOverlay) { submitOverlay.setAttribute("hidden", ""); document.body.style.overflow = ""; }
-  }
-
-  if (infoBtn) infoBtn.addEventListener("click", openInfoModal);
-  if (infoClose) infoClose.addEventListener("click", closeInfoModal);
-  if (infoOverlay) infoOverlay.addEventListener("click", function(e) { if (e.target === infoOverlay) closeInfoModal(); });
-  if (submitBtn) submitBtn.addEventListener("click", openSubmitModal);
-  if (submitClose) submitClose.addEventListener("click", closeSubmitModal);
-  if (submitOverlay) submitOverlay.addEventListener("click", function(e) { if (e.target === submitOverlay) closeSubmitModal(); });
-
-  document.addEventListener("keydown", function(e) {
-    if (e.key !== "Escape") return;
-    if (infoOverlay && !infoOverlay.hidden) { closeInfoModal(); return; }
-    if (submitOverlay && !submitOverlay.hidden) closeSubmitModal();
-  });
-
-  /* ===== Dropdown "Más" (mobile) ===== */
-  const headerMore = $("#ref2dHeaderMore");
-  const headerMoreDropdown = $("#ref2dHeaderMoreDropdown");
-  if (headerMore && headerMoreDropdown) {
-    headerMore.addEventListener("click", function(e) {
-      e.stopPropagation();
-      const open = headerMoreDropdown.hidden;
-      headerMoreDropdown.hidden = !open;
-      headerMore.setAttribute("aria-expanded", open ? "true" : "false");
-    });
-    headerMoreDropdown.querySelector("[data-action='info']")?.addEventListener("click", function() {
-      headerMoreDropdown.hidden = true;
-      headerMore.setAttribute("aria-expanded", "false");
-      openInfoModal();
-    });
-    headerMoreDropdown.querySelector("[data-action='submit']")?.addEventListener("click", function() {
-      headerMoreDropdown.hidden = true;
-      headerMore.setAttribute("aria-expanded", "false");
-      openSubmitModal();
-    });
-    document.addEventListener("click", function(ev) {
-      if (!headerMoreDropdown.hidden && !ev.target.closest(".ref2d__header-more-wrap")) {
-        headerMoreDropdown.hidden = true;
-        headerMore.setAttribute("aria-expanded", "false");
-      }
-    });
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape" && !headerMoreDropdown.hidden) {
-        headerMoreDropdown.hidden = true;
-        headerMore.setAttribute("aria-expanded", "false");
-      }
-    });
-  }
 
   /* Boot */
   resetWorld();
