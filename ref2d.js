@@ -289,10 +289,20 @@
     };
 
   /* Config desde CSS */
+  const getPlanePadding = () => {
+    const raw = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--plane-padding'), 10);
+    return Number.isFinite(raw) ? raw : 2000;
+  };
   let COL_W = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--colw'));
   let GAP   = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
-  let yTopLimit = -parseInt(getComputedStyle(document.documentElement).getPropertyValue('--plane-padding'));
-  let yBotLimit =  parseInt(getComputedStyle(document.documentElement).getPropertyValue('--plane-padding'));
+  let planePadding = getPlanePadding();
+  let yTopLimit = -planePadding;
+  let yBotLimit = planePadding;
+  function resetPlaneLimits() {
+    planePadding = getPlanePadding();
+    yTopLimit = -planePadding;
+    yBotLimit = planePadding;
+  }
 
   /* Cámara 2D */
   let camX = 0, camY = 0;
@@ -1406,6 +1416,9 @@
   let masonryRaf = null;
   let listSortKey = '';
   let listSortDir = 1;
+  let filterDebounceTimer = null;
+  const FILTER_DEBOUNCE_MS = 150;
+  let fillAroundRaf = null;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
 
   /* Crear tarjeta */
@@ -1704,6 +1717,10 @@
   }
 
   function setView(view) {
+    if (filterDebounceTimer !== null) {
+      clearTimeout(filterDebounceTimer);
+      filterDebounceTimer = null;
+    }
     const viewMap = {
       bento: 'Vista: Infinita',
       grid: 'Vista: Grilla',
@@ -1748,8 +1765,21 @@
     updateCount();
   }
 
+  function requestFillAround() {
+    if (fillAroundRaf !== null) return;
+    fillAroundRaf = requestAnimationFrame(() => {
+      fillAroundRaf = null;
+      fillAround();
+    });
+  }
+
   /* Reset/reordenar mundo */
   function resetWorld(){
+    if (fillAroundRaf !== null) {
+      cancelAnimationFrame(fillAroundRaf);
+      fillAroundRaf = null;
+    }
+    resetPlaneLimits();
     plane.innerHTML = "";
     columns.clear();
     globalId = 0;
@@ -1764,7 +1794,7 @@
       while(col.yUp   > -vh*0.8) makeCard(i,'up',   nextMeta());
     }
     updateCount();
-    fillAround();
+    requestFillAround();
   }
   const updateCount = ()=> count && (count.textContent = activeList.length + " ítems");
 
@@ -1840,7 +1870,7 @@
       camX += dx;
       camY += dy;
       applyTransform();
-      fillAround();
+      requestFillAround();
       
       lastX = currentX;
       lastY = currentY;
@@ -1902,12 +1932,15 @@
     if (activeView !== 'bento') return;
     e.preventDefault();
     camX -= e.deltaX; camY -= e.deltaY;
-    applyTransform(); fillAround();
+    applyTransform();
+    requestFillAround();
   },{passive:false});
   if (btnCenter) {
     btnCenter.addEventListener('click', ()=>{
       if (activeView !== 'bento') return;
-      camX=camY=0; applyTransform(); fillAround();
+      camX=camY=0;
+      applyTransform();
+      requestFillAround();
     });
   
   // Logo REFERENCIOTECA: recargar página completa para reordenar proyectos
@@ -2089,7 +2122,7 @@
   function applySuggestion(value) {
     if (!search) return;
     search.value = value;
-    applyFilter(value);
+    queueFilter(value, true);
     if (suggestionsBox) {
       suggestionsBox.hidden = true;
     }
@@ -2127,21 +2160,37 @@
     });
   }
 
+  function queueFilter(term, immediate = false) {
+    if (filterDebounceTimer !== null) {
+      clearTimeout(filterDebounceTimer);
+      filterDebounceTimer = null;
+    }
+    if (immediate || activeView !== 'bento') {
+      applyFilter(term);
+      return;
+    }
+    filterDebounceTimer = setTimeout(() => {
+      filterDebounceTimer = null;
+      applyFilter(term);
+    }, FILTER_DEBOUNCE_MS);
+  }
+
   /* ===== Filtro que reordena (robusto) ===== */
   function applyFilter(term){
+    if (filterDebounceTimer !== null) {
+      clearTimeout(filterDebounceTimer);
+      filterDebounceTimer = null;
+    }
     const q = norm(term);
     if(q){
-      const list = DB.filter(x => {
-        const hay = norm([
-          x.title || '',
-          x.author || '',
-          (x.tags || []).join(' ')
-        ].join(' '));
-      
-        return hay.includes(q);
-      }); /* const list = DB.filter(x => norm((x.tags||[]).join(' ')).includes(q)); */
+      const list = DB.filter(x => (x._search || '').includes(q));
       if(list.length === 0){
         activeList = [];
+        if (activeView === 'bento') {
+          camX = 0;
+          camY = 0;
+          applyTransform();
+        }
         closeSpotlight();
         renderActiveView();
         if (count) {
@@ -2160,6 +2209,12 @@
       activeList = DB_ORDERED.slice();
       highlightActiveCategory('all');
     }
+    if (activeView === 'bento') {
+      // Evita bloqueos cuando se filtra después de desplazarse mucho en infinito.
+      camX = 0;
+      camY = 0;
+      applyTransform();
+    }
     closeSpotlight();
     renderActiveView();
   }
@@ -2172,7 +2227,7 @@
     search.addEventListener('input', (e) => {
       const value = e.target.value;
       showSuggestions(value);
-      applyFilter(value);
+      queueFilter(value);
     });
 
     // Navegación con teclado en sugerencias
@@ -2211,6 +2266,8 @@
           const item = items[activeSuggestIndex];
           const value = item.dataset.suggestion || item.textContent.trim();
           applySuggestion(value);
+        } else {
+          queueFilter(search.value, true);
         }
         // Si no hay sugerencia activa, Enter funciona normal (búsqueda con texto actual)
       } else if (e.key === 'Escape') {
@@ -2220,7 +2277,7 @@
         } else {
           // Si está cerrado, limpiar búsqueda
           search.value = '';
-          applyFilter('');
+          queueFilter('', true);
         }
       }
     });
@@ -2251,10 +2308,12 @@
   window.Refx2D = {
     add(item){
       const id = DB.length;
-      DB.push(Object.assign(
+      const newItem = Object.assign(
         {id, src:"", orientation:"h", span:1, tags:[], title:"—", author:"—", collab:"", area:"—", year:"—", url:""},
         item
-      ));
+      );
+      normalizeProjectTags(newItem);
+      DB.push(newItem);
       // Reordenar DB_ORDERED cuando se agrega un nuevo proyecto
       if (USE_RANDOM_SHUFFLE) {
         DB_ORDERED = shuffleArray(DB);
@@ -2274,6 +2333,7 @@
   window.addEventListener('resize', ()=>{
     COL_W = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--colw'));
     GAP   = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
+    resetPlaneLimits();
     renderActiveView();
   });
 
