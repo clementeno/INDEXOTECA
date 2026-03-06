@@ -23,6 +23,20 @@
         sLink   = $("#sheetLink");
   const btnCenter = $("#ref2dCenter");
   const brand     = document.querySelector(".ref2d__brand");
+  const viewToggle = $("#ref2dViewToggle");
+  const viewMenu = $("#ref2dViewMenu");
+  const multiGrid = $("#ref2dMultiGrid");
+  const indexList = $("#ref2dIndexList");
+  const indexBody = $("#ref2dIndexBody");
+  const btnRandom = $("#ref2dRandom");
+  const infoBtn = $("#ref2dInfoBtn");
+  const submitBtn = $("#ref2dSubmitBtn");
+  const infoOverlay = $("#ref2dInfoOverlay");
+  const submitOverlay = $("#ref2dSubmitOverlay");
+  const infoClose = $("#ref2dInfoClose");
+  const submitClose = $("#ref2dSubmitClose");
+  const headerMoreBtn = $("#ref2dHeaderMore");
+  const headerMoreDropdown = $("#ref2dHeaderMoreDropdown");
 
   /* Si falta el contenedor principal, salimos en silencio (para no romper otras páginas) */
   if (!viewport || !plane) {
@@ -1388,6 +1402,10 @@
   /* Activo + generador circular */
   let activeList = DB_ORDERED.slice();
   let genPtr = 0;
+  let activeView = 'bento';
+  let masonryRaf = null;
+  let listSortKey = '';
+  let listSortDir = 1;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
 
   /* Crear tarjeta */
@@ -1486,6 +1504,227 @@
     globalId++;
   }
 
+  function createSharedCardElement(meta, className) {
+    const el = document.createElement('article');
+    const orient = meta.orientation || 'h';
+    const isFeatured = meta.span === 2;
+    el.className = `${className} is-${orient} ${isFeatured ? 'is-featured' : ''}`;
+    el.dataset.tags   = (meta.tags || []).join(' | ');
+    el.dataset.title  = meta.title || '—';
+    el.dataset.author = meta.author || '—';
+    el.dataset.area   = meta.area || '—';
+    el.dataset.year   = meta.year || '—';
+    el.dataset.url    = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
+    el.dataset.collab = meta.collab || '';
+    el._meta = meta;
+
+    const body = document.createElement('div');
+    body.className = 'ref2d__view-card-body';
+
+    const imgWrap = document.createElement('div');
+    imgWrap.className = 'ref2d__view-card-figure';
+    if (meta.src) {
+      const img = new Image();
+      img.src = meta.src;
+      img.loading = 'lazy';
+      img.alt = meta.title || '';
+      img.addEventListener('load', scheduleMultiGridLayout);
+      img.addEventListener('error', scheduleMultiGridLayout);
+      imgWrap.appendChild(img);
+    }
+    body.appendChild(imgWrap);
+
+    const head = document.createElement('div');
+    head.className = 'ref2d__view-card-head';
+    head.innerHTML = `
+      <h3>${meta.title || '—'}</h3>
+      <p>${meta.author || '—'}</p>
+    `;
+    body.appendChild(head);
+
+    const tagsWrap = document.createElement('div');
+    tagsWrap.className = 'ref2d__view-card-tags';
+    (meta.tags || []).slice(0, 4).forEach((t) => {
+      const chip = document.createElement('span');
+      chip.className = 'ref2d__chip';
+      chip.textContent = t;
+      chip.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        if (search) search.value = t;
+        applyFilter(t);
+      });
+      tagsWrap.appendChild(chip);
+    });
+    body.appendChild(tagsWrap);
+    el.appendChild(body);
+
+    el.addEventListener('click', () => openSpotlight(el));
+    return el;
+  }
+
+  function layoutMultiGridMasonry() {
+    if (!multiGrid || activeView !== 'grid' || multiGrid.hidden) return;
+
+    const styles = getComputedStyle(multiGrid);
+    const rowUnit = parseFloat(styles.getPropertyValue('grid-auto-rows'));
+    const rowGap = parseFloat(styles.getPropertyValue('row-gap'));
+    if (!rowUnit) return;
+
+    multiGrid.querySelectorAll('.ref2d__view-card').forEach((card) => {
+      const content = card.querySelector('.ref2d__view-card-body');
+      if (!content) return;
+      const span = Math.ceil((content.getBoundingClientRect().height + rowGap) / (rowUnit + rowGap));
+      card.style.gridRowEnd = `span ${Math.max(span, 1)}`;
+    });
+  }
+
+  function scheduleMultiGridLayout() {
+    if (masonryRaf !== null) return;
+    masonryRaf = requestAnimationFrame(() => {
+      masonryRaf = null;
+      layoutMultiGridMasonry();
+    });
+  }
+
+  function renderMultiGridView() {
+    if (!multiGrid) return;
+    multiGrid.innerHTML = '';
+
+    if (!activeList.length) {
+      multiGrid.innerHTML = '<p class="ref2d__empty">Sin resultados para esta búsqueda.</p>';
+      return;
+    }
+
+    const frag = document.createDocumentFragment();
+    activeList.forEach((meta) => {
+      const card = createSharedCardElement(meta, 'ref2d__view-card');
+      frag.appendChild(card);
+    });
+    multiGrid.appendChild(frag);
+    scheduleMultiGridLayout();
+  }
+
+  function normalizedTextValue(value) {
+    return norm((value || '').toString());
+  }
+
+  function parseYearValue(value) {
+    const match = (value || '').toString().match(/\d{4}/);
+    return match ? parseInt(match[0], 10) : null;
+  }
+
+  function compareIndexItems(a, b) {
+    if (listSortKey === 'year') {
+      const yearA = parseYearValue(a.year);
+      const yearB = parseYearValue(b.year);
+      if (yearA === null && yearB !== null) return 1;
+      if (yearA !== null && yearB === null) return -1;
+      if (yearA !== null && yearB !== null) {
+        if (yearA < yearB) return -1 * listSortDir;
+        if (yearA > yearB) return 1 * listSortDir;
+      }
+      const fallback = normalizedTextValue(a.title).localeCompare(normalizedTextValue(b.title), 'es');
+      return fallback * listSortDir;
+    }
+
+    const valueA = listSortKey === 'author' ? a.author : a.title;
+    const valueB = listSortKey === 'author' ? b.author : b.title;
+    return normalizedTextValue(valueA).localeCompare(normalizedTextValue(valueB), 'es') * listSortDir;
+  }
+
+  function getSortedIndexList() {
+    const list = activeList.slice();
+    if (!listSortKey) return list;
+    return list.sort(compareIndexItems);
+  }
+
+  function updateIndexSortUI() {
+    if (!indexList) return;
+    const headers = indexList.querySelectorAll('.ref2d__indexTable th[data-sort]');
+    headers.forEach((th) => {
+      th.classList.remove('sort-asc', 'sort-desc');
+      if (th.dataset.sort !== listSortKey) return;
+      th.classList.add(listSortDir === 1 ? 'sort-asc' : 'sort-desc');
+    });
+  }
+
+  function renderIndexListView() {
+    if (!indexBody) return;
+    indexBody.innerHTML = '';
+    updateIndexSortUI();
+
+    if (!activeList.length) {
+      indexBody.innerHTML = '<tr><td colspan="5" class="ref2d__index-empty">Sin resultados para esta búsqueda.</td></tr>';
+      return;
+    }
+
+    const list = getSortedIndexList();
+    const frag = document.createDocumentFragment();
+    list.forEach((meta) => {
+      const tr = document.createElement('tr');
+      const firstUrl = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
+      tr.innerHTML = `
+        <td>${meta.title || '—'}</td>
+        <td>${meta.author || '—'}</td>
+        <td>${meta.area || '—'}</td>
+        <td>${meta.year || '—'}</td>
+        <td>${firstUrl ? `<a href="${firstUrl}" target="_blank" rel="noopener">↗</a>` : '—'}</td>
+      `;
+      tr.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;
+        const ghost = document.createElement('div');
+        ghost.dataset.tags = (meta.tags || []).join(' | ');
+        ghost.dataset.title = meta.title || '—';
+        ghost.dataset.author = meta.author || '—';
+        ghost.dataset.area = meta.area || '—';
+        ghost.dataset.year = meta.year || '—';
+        ghost.dataset.url = firstUrl;
+        ghost.dataset.collab = meta.collab || '';
+        ghost._meta = meta;
+        openSpotlight(ghost);
+      });
+      frag.appendChild(tr);
+    });
+    indexBody.appendChild(frag);
+  }
+
+  function renderActiveView() {
+    if (activeView === 'bento') {
+      resetWorld();
+      return;
+    }
+    if (activeView === 'grid') {
+      renderMultiGridView();
+      updateCount();
+      return;
+    }
+    renderIndexListView();
+    updateCount();
+  }
+
+  function setView(view) {
+    const viewMap = {
+      bento: 'Vista: Infinita',
+      grid: 'Vista: Grilla',
+      index: 'Vista: Lista'
+    };
+    activeView = viewMap[view] ? view : 'bento';
+
+    const isBento = activeView === 'bento';
+    const isGrid = activeView === 'grid';
+    const isIndex = activeView === 'index';
+
+    if (viewToggle) viewToggle.textContent = viewMap[activeView];
+    if (viewport) viewport.hidden = !isBento;
+    if (multiGrid) multiGrid.hidden = !isGrid;
+    if (indexList) indexList.hidden = !isIndex;
+    if (btnCenter) btnCenter.hidden = !isBento;
+    if (btnRandom) btnRandom.hidden = !isGrid;
+
+    renderActiveView();
+  }
+
   /* Relleno alrededor de la vista */
   function fillAround(){
     if(activeList.length===0) return;
@@ -1549,6 +1788,7 @@
   
   // Handler de pointerdown
   function onPointerDown(e){
+    if (activeView !== 'bento') return;
     // Ignorar clicks en elementos interactivos (botones, links, etc.)
     if(e.target.closest('button') || e.target.closest('a') || e.target.closest('input') || e.target.closest('.ref2d__chip')){
       return;
@@ -1569,6 +1809,7 @@
   
   // Handler de pointermove
   function onPointerMove(e){
+    if (activeView !== 'bento') return;
     if(!isDown || activePid === null || e.pointerId !== activePid) return;
     
     const currentX = e.clientX;
@@ -1610,6 +1851,7 @@
   
   // Handler de pointerup
   function onPointerUp(e){
+    if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
     
     // Si hubo drag, suprimir clicks por un tiempo
@@ -1622,6 +1864,7 @@
   
   // Handler de pointercancel
   function onPointerCancel(e){
+    if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
     resetPointerState();
   }
@@ -1634,6 +1877,7 @@
   
   // Handler de click para abrir popup (solo si no hubo drag)
   viewport.addEventListener('click', (e) => {
+    if (activeView !== 'bento') return;
     // Si el click fue en una etiqueta o botón, no interferir
     if(e.target.closest('button') || e.target.closest('a') || e.target.closest('.ref2d__chip')){
       return;
@@ -1655,12 +1899,14 @@
     }
   });
   viewport.addEventListener('wheel',(e)=>{
+    if (activeView !== 'bento') return;
     e.preventDefault();
     camX -= e.deltaX; camY -= e.deltaY;
     applyTransform(); fillAround();
   },{passive:false});
   if (btnCenter) {
     btnCenter.addEventListener('click', ()=>{
+      if (activeView !== 'bento') return;
       camX=camY=0; applyTransform(); fillAround();
     });
   
@@ -1895,11 +2141,12 @@
         return hay.includes(q);
       }); /* const list = DB.filter(x => norm((x.tags||[]).join(' ')).includes(q)); */
       if(list.length === 0){
+        activeList = [];
+        closeSpotlight();
+        renderActiveView();
         if (count) {
           count.textContent = `0 ítems — sin resultados para “${term}”`;
         }
-        activeList = [];
-        plane.innerHTML = "";
         // Limpiar highlight de categorías si no hay resultados
         highlightActiveCategory('');
         return;
@@ -1914,7 +2161,7 @@
       highlightActiveCategory('all');
     }
     closeSpotlight();
-    resetWorld();
+    renderActiveView();
   }
   if (search) {
     // Mostrar sugerencias al escribir o al hacer focus
@@ -2016,7 +2263,7 @@
       }
       if(search && search.value.trim()===""){
         activeList = DB_ORDERED.slice();
-        resetWorld();
+        renderActiveView();
       } else {
         applyFilter(search ? search.value : "");
       }
@@ -2027,7 +2274,7 @@
   window.addEventListener('resize', ()=>{
     COL_W = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--colw'));
     GAP   = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--gap'));
-    resetWorld();
+    renderActiveView();
   });
 
   /* ===== Panel de categorías ===== */
@@ -2189,6 +2436,178 @@
     });
   }
 
+  function openViewMenu() {
+    if (!viewMenu || !viewToggle) return;
+    viewMenu.hidden = false;
+    viewToggle.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeViewMenu() {
+    if (!viewMenu || !viewToggle) return;
+    viewMenu.hidden = true;
+    viewToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function initViewSwitcher() {
+    if (!viewToggle || !viewMenu) return;
+
+    viewToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (viewMenu.hidden) openViewMenu();
+      else closeViewMenu();
+    });
+
+    viewMenu.addEventListener('click', (e) => {
+      const btn = e.target.closest('button[data-view]');
+      if (!btn) return;
+      setView(btn.dataset.view);
+      closeViewMenu();
+    });
+
+    document.addEventListener('click', (e) => {
+      if (viewMenu.hidden) return;
+      if (!e.target.closest('#ref2dViewMenu') && !e.target.closest('#ref2dViewToggle')) {
+        closeViewMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && viewMenu && !viewMenu.hidden) {
+        closeViewMenu();
+      }
+    });
+  }
+
+  function openHeaderMore() {
+    if (!headerMoreBtn || !headerMoreDropdown) return;
+    headerMoreDropdown.hidden = false;
+    headerMoreBtn.setAttribute('aria-expanded', 'true');
+  }
+
+  function closeHeaderMore() {
+    if (!headerMoreBtn || !headerMoreDropdown) return;
+    headerMoreDropdown.hidden = true;
+    headerMoreBtn.setAttribute('aria-expanded', 'false');
+  }
+
+  function openSimpleOverlay(el) {
+    if (!el) return;
+    el.removeAttribute('hidden');
+    document.body.style.overflow = "hidden";
+    document.body.classList.add('is-modal-open');
+  }
+
+  function closeSimpleOverlay(el) {
+    if (!el) return;
+    el.setAttribute('hidden', '');
+    document.body.style.overflow = "";
+    document.body.classList.remove('is-modal-open');
+  }
+
+  function initHeaderModals() {
+    if (infoBtn) {
+      infoBtn.addEventListener('click', () => {
+        closeHeaderMore();
+        openSimpleOverlay(infoOverlay);
+      });
+    }
+
+    if (submitBtn) {
+      submitBtn.addEventListener('click', () => {
+        closeHeaderMore();
+        openSimpleOverlay(submitOverlay);
+      });
+    }
+
+    if (infoClose) {
+      infoClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeSimpleOverlay(infoOverlay);
+      });
+    }
+
+    if (submitClose) {
+      submitClose.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeSimpleOverlay(submitOverlay);
+      });
+    }
+
+    if (infoOverlay) {
+      infoOverlay.addEventListener('click', (e) => {
+        if (e.target === infoOverlay) closeSimpleOverlay(infoOverlay);
+      });
+    }
+
+    if (submitOverlay) {
+      submitOverlay.addEventListener('click', (e) => {
+        if (e.target === submitOverlay) closeSimpleOverlay(submitOverlay);
+      });
+    }
+
+    if (headerMoreBtn && headerMoreDropdown) {
+      headerMoreBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (headerMoreDropdown.hidden) openHeaderMore();
+        else closeHeaderMore();
+      });
+
+      headerMoreDropdown.addEventListener('click', (e) => {
+        const actionBtn = e.target.closest('button[data-action]');
+        if (!actionBtn) return;
+        const action = actionBtn.dataset.action;
+        closeHeaderMore();
+        if (action === 'info') openSimpleOverlay(infoOverlay);
+        if (action === 'submit') openSimpleOverlay(submitOverlay);
+      });
+
+      document.addEventListener('click', (e) => {
+        if (headerMoreDropdown.hidden) return;
+        if (!e.target.closest('#ref2dHeaderMore') && !e.target.closest('#ref2dHeaderMoreDropdown')) {
+          closeHeaderMore();
+        }
+      });
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      closeHeaderMore();
+      if (infoOverlay && !infoOverlay.hidden) closeSimpleOverlay(infoOverlay);
+      if (submitOverlay && !submitOverlay.hidden) closeSimpleOverlay(submitOverlay);
+    });
+  }
+
+  function initRandomButton() {
+    if (!btnRandom) return;
+    btnRandom.addEventListener('click', () => {
+      if (activeView !== 'grid') return;
+      activeList = shuffleArray(activeList);
+      renderMultiGridView();
+      updateCount();
+    });
+  }
+
+  function initIndexSorting() {
+    if (!indexList) return;
+    const headers = indexList.querySelectorAll('.ref2d__indexTable th[data-sort]');
+    headers.forEach((th) => {
+      th.addEventListener('click', () => {
+        const key = th.dataset.sort;
+        if (!key) return;
+        if (listSortKey === key) {
+          listSortDir *= -1;
+        } else {
+          listSortKey = key;
+          listSortDir = key === 'year' ? -1 : 1;
+        }
+        renderIndexListView();
+        updateCount();
+      });
+    });
+  }
+
   /* ===== Modal institucional (work in progress) ===== */
   const wipOverlay = $("#ref2dWipOverlay");
   const wipClose = $("#ref2dWipClose");
@@ -2240,13 +2659,17 @@
   });
 
   /* Boot */
-  resetWorld();
+  renderActiveView();
   if (overlay) {
     overlay.setAttribute('hidden',''); // garantía extra
   }
   
   // Inicializar panel de categorías
   initCategoryPanel();
+  initViewSwitcher();
+  initHeaderModals();
+  initRandomButton();
+  initIndexSorting();
   
   // Mostrar modal institucional al cargar (si no se ha visto antes)
   showWipModal();

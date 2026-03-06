@@ -73,6 +73,14 @@
     </div>
     <div class="ref2d__header-actions">
       <button class="ref2d__catToggle" id="ref2dCatToggle" type="button" aria-expanded="false" aria-controls="ref2dCatPanel">Ver categorías</button>
+      <div class="ref2d__view-wrap">
+        <button class="ref2d__view-toggle" id="ref2dViewToggle" type="button" aria-expanded="false" aria-haspopup="true" aria-controls="ref2dViewMenu">Vista: Infinita</button>
+        <div class="ref2d__view-menu" id="ref2dViewMenu" hidden>
+          <button type="button" data-view="bento">Infinita</button>
+          <button type="button" data-view="grid">Grilla</button>
+          <button type="button" data-view="index">Lista</button>
+        </div>
+      </div>
       <button class="ref2d__header-btn ref2d__header-btn--secondary" id="ref2dInfoBtn" type="button" aria-controls="ref2dInfoOverlay">Información</button>
       <button class="ref2d__header-btn ref2d__header-btn--secondary" id="ref2dSubmitBtn" type="button" aria-controls="ref2dSubmitOverlay">Submit</button>
       <a class="ref2d__header-chip" href="indexoteca.html">Indexoteca <span aria-hidden="true">↗</span></a>
@@ -112,6 +120,23 @@
     <div class="ref2d__plane" id="ref2dPlane"></div>
   </div>
 
+  <section class="ref2d__multiGrid" id="ref2dMultiGrid" hidden aria-live="polite"></section>
+
+  <section class="ref2d__indexList" id="ref2dIndexList" hidden aria-live="polite">
+    <table class="ref2d__indexTable" role="table">
+      <thead>
+        <tr>
+          <th scope="col" data-sort="title">Proyecto <span class="sort-icon" aria-hidden="true"></span></th>
+          <th scope="col" data-sort="author">Autor <span class="sort-icon" aria-hidden="true"></span></th>
+          <th scope="col">Área</th>
+          <th scope="col" data-sort="year">Año <span class="sort-icon" aria-hidden="true"></span></th>
+          <th scope="col">Link</th>
+        </tr>
+      </thead>
+      <tbody id="ref2dIndexBody"></tbody>
+    </table>
+  </section>
+
   <!-- Modal / Spotlight -->
   <div class="ref2d__overlay" id="ref2dOverlay" hidden>
     <div aria-labelledby="sheetTitle" aria-modal="true" class="ref2d__modal" role="dialog">
@@ -139,6 +164,7 @@
   </div>
 
   <button class="ref2d__center" id="ref2dCenter" title="Volver al centro">Recentrar</button>
+  <button class="ref2d__random" id="ref2dRandom" title="Orden aleatorio" hidden>Aleatorio</button>
 </section>
 
 <!-- JS principal de la Referencioteca 2D -->
