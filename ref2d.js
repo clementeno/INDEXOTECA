@@ -79,6 +79,10 @@
     'dirección creativa',
     'ux',
     'ui',
+    'ux ui',
+    'diseño servicio',
+    'espacio',
+    'exhibición',
     'web',
     'responsivo',
     'fanzine',
@@ -94,6 +98,10 @@
     'identidad gráfica',
     'señaletica',
     'museografia',
+    'portada disco',
+    'afiche digital',
+    'afiche impreso',
+    'fotografía de moda',
     'instalación'
   ];
 
@@ -119,9 +127,20 @@
     // Web / Digital bucket
     "sitio web": "web",
     "digital": "web",
-    "ux": "ux",
-    "ui": "ui",
     "responsivo": "web",
+
+    // UX/UI (unificado)
+    "ux": "ux ui",
+    "ui": "ux ui",
+    "ux/ui": "ux ui",
+    "ui/ux": "ux ui",
+
+    // Diseño de servicio (unificado)
+    "servicio": "diseno servicio",
+    "diseño servicio": "diseno servicio",
+    "diseno servicio": "diseno servicio",
+    "diseño de servicio": "diseno servicio",
+    "diseno de servicio": "diseno servicio",
 
     // Motion / Audiovisual bucket
     "motion graphics": "animación",
@@ -129,17 +148,49 @@
     "audiovisual": "animación",
     "stop-motion": "animación",
 
-    // Museografía / Espacios bucket
+    // Espacio (unificado)
+    "espacios": "espacio",
+    "espacio": "espacio",
+
+    // Exhibición (unificado)
+    "exhibicion": "exhibicion",
+    "exhibición": "exhibicion",
+    "exphibicion": "exhibicion",
+    "exposición": "exhibicion",
+    "exposicion": "exhibicion",
+    "expo arte": "exhibicion",
+    "exposición de arte": "exhibicion",
+    "exposicion de arte": "exhibicion",
+    "identidad exposicion": "exhibicion",
+    "identidad exposición": "exhibicion",
+
+    // Fotografía (unificado)
+    "fotografia": "fotografia",
+    "fotografía": "fotografia",
+    "fotografia de moda": "fotografia",
+    "fotografía de moda": "fotografia",
+
+    // Afiche (unificado)
+    "afiche": "afiche",
+    "afiche impreso": "afiche",
+    "afiche digital": "afiche",
+
+    // Portada disco (unificado)
+    "portada": "portada disco",
+    "portada de disco": "portada disco",
+    "portada de discos": "portada disco",
+    "musica": "portada disco",
+    "música": "portada disco",
+
+    // Museografía (mantener existente)
     "museografia": "museografía",
     "museografía": "museografía",
-    "identidad exposicion": "museografía",
-    "identidad exposición": "museografía",
     "instalacion": "museografía",
     "instalación": "museografía",
     "iluminacion museografica": "museografía",
     "iluminación museografica": "museografía",
 
-    // Gráfico bucket (si quieres mantenerlo como categoría propia)
+    // Gráfico bucket
     "grafico": "gráfico",
     "gráfico": "gráfico",
   };
@@ -164,6 +215,11 @@
     "señalética": "Señalética",
     "fotografia": "Fotografía",
     "fotografía": "Fotografía",
+    "exhibicion": "Exhibición",
+    "espacio": "Espacio",
+    "ux ui": "UX UI",
+    "diseno servicio": "Diseño servicio",
+    "portada disco": "Portada disco",
     "moda": "Moda",
     "vestuario": "Vestuario",
     "musica": "Música",
@@ -255,6 +311,11 @@
       "museografía": "Museografía",
       "museografia": "Museografía",
       "web": "Web",
+      "ux ui": "UX UI",
+      "diseno servicio": "Diseño servicio",
+      "espacio": "Espacio",
+      "exhibicion": "Exhibición",
+      "portada disco": "Portada disco",
       "ux": "UX",
       "ui": "UI",
       "animación": "Animación",
@@ -2481,8 +2542,9 @@
       }
       activeList = list;
       // Sincronizar highlight de categorías si el término coincide con una categoría
-      const matchingCat = tokens.length === 1
-        ? Object.keys(CAT_LABELS).find(catKey => norm(catKey) === tokens[0])
+      const normalizedTerm = q.replace(/\s+/g, ' ').trim();
+      const matchingCat = normalizedTerm
+        ? Object.keys(CAT_LABELS).find(catKey => norm(catKey) === normalizedTerm)
         : '';
       highlightActiveCategory(matchingCat || '');
     }else{
