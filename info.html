@@ -6,23 +6,508 @@
   <title>Información — Referencioteca</title>
   <link rel="stylesheet" href="embed.css">
   <link rel="stylesheet" href="index.css">
+  <style>
+    :root {
+      --refinfo-accent: #f15a29;
+      --refinfo-border: rgba(255, 255, 255, 0.12);
+      --refinfo-soft: rgba(255, 255, 255, 0.06);
+    }
+
+    .refinfo {
+      width: min(1400px, calc(100vw - 32px));
+      margin: clamp(18px, 3vw, 34px) auto 64px;
+      color: var(--ink);
+    }
+
+    .refinfo__layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(320px, 0.9fr);
+      gap: clamp(14px, 2vw, 24px);
+      align-items: start;
+    }
+
+    .refinfo__main {
+      border: 1px solid var(--refinfo-border);
+      border-radius: 18px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(241, 90, 41, 0.12), transparent 44%),
+        radial-gradient(circle at 90% 0%, rgba(68, 108, 255, 0.12), transparent 36%),
+        #101116;
+    }
+
+    .refinfo__hero {
+      padding: clamp(20px, 3.2vw, 38px);
+      border-bottom: 1px solid var(--refinfo-border);
+    }
+
+    .refinfo__eyebrow {
+      margin: 0 0 14px;
+      font-size: 0.82rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #bbbbc4;
+    }
+
+    .refinfo__title {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      line-height: 1.06;
+      letter-spacing: 0.01em;
+      max-width: 20ch;
+    }
+
+    .refinfo__leadgrid {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .refinfo__lead {
+      margin: 0;
+      color: #d0d0d8;
+      font-size: clamp(1rem, 1.5vw, 1.16rem);
+      line-height: 1.45;
+      max-width: 34ch;
+    }
+
+    .refinfo__section {
+      padding: clamp(18px, 2.2vw, 28px) clamp(20px, 2.8vw, 34px);
+      border-bottom: 1px solid var(--refinfo-soft);
+    }
+
+    .refinfo__section:last-child {
+      border-bottom: none;
+    }
+
+    .refinfo__section h2 {
+      margin: 0 0 12px;
+      font-size: clamp(1.06rem, 2vw, 1.36rem);
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+    }
+
+    .refinfo__section p {
+      margin: 0 0 12px;
+      color: #cbccd6;
+      line-height: 1.58;
+      max-width: 72ch;
+    }
+
+    .refinfo__section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .refinfo__rows {
+      border-top: 1px solid var(--refinfo-soft);
+    }
+
+    .refinfo__row {
+      display: grid;
+      grid-template-columns: minmax(140px, 0.38fr) 1fr;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--refinfo-soft);
+    }
+
+    .refinfo__row:last-child {
+      border-bottom: none;
+    }
+
+    .refinfo__k {
+      color: #f0f0f3;
+      font-weight: 600;
+    }
+
+    .refinfo__v {
+      color: #d0d1da;
+    }
+
+    .refinfo__two {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .refinfo__box {
+      border: 1px solid var(--refinfo-soft);
+      border-radius: 12px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .refinfo__box h3 {
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #e2e2e8;
+    }
+
+    .refinfo__box p {
+      margin: 0;
+      font-size: 0.94rem;
+      color: #cacbd5;
+      line-height: 1.5;
+    }
+
+    .refinfo__aside {
+      position: sticky;
+      top: 78px;
+      border: 1px solid var(--refinfo-border);
+      border-radius: 18px;
+      background: #111218;
+      overflow: hidden;
+    }
+
+    .refinfo__media {
+      aspect-ratio: 4 / 5;
+      width: 100%;
+      position: relative;
+      background: #08080b;
+    }
+
+    .refinfo__media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 1;
+      transition: opacity 0.45s ease;
+    }
+
+    .refinfo__media img.is-fading {
+      opacity: 0.25;
+    }
+
+    .refinfo__mediabar {
+      padding: 12px 14px 14px;
+      border-top: 1px solid var(--refinfo-soft);
+      display: grid;
+      gap: 10px;
+    }
+
+    .refinfo__caption {
+      margin: 0;
+      color: #d6d7e0;
+      font-size: 0.9rem;
+      line-height: 1.45;
+      min-height: 2.6em;
+    }
+
+    .refinfo__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+      color: #a9aab6;
+      font-size: 0.84rem;
+    }
+
+    .refinfo__clock {
+      color: #f4f4f7;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .refinfo__controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .refinfo__controls button {
+      border: 1px solid var(--refinfo-border);
+      background: transparent;
+      color: #f0f0f3;
+      border-radius: 999px;
+      padding: 0.32rem 0.72rem;
+      font: inherit;
+      font-size: 0.84rem;
+      cursor: pointer;
+    }
+
+    .refinfo__controls button:hover {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .refinfo__status {
+      margin: 0;
+      padding: 14px;
+      border-top: 1px solid var(--refinfo-soft);
+      color: #bdbfc9;
+      font-size: 0.84rem;
+      line-height: 1.4;
+      background: rgba(241, 90, 41, 0.08);
+    }
+
+    .refinfo a {
+      color: #f1f1f3;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.35);
+    }
+
+    .refinfo a:hover {
+      text-decoration-color: rgba(255, 255, 255, 0.7);
+    }
+
+    @media (max-width: 1100px) {
+      .refinfo__layout {
+        grid-template-columns: 1fr;
+      }
+
+      .refinfo__aside {
+        position: static;
+        order: -1;
+      }
+
+      .refinfo__media {
+        aspect-ratio: 16 / 10;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .refinfo {
+        width: calc(100vw - 20px);
+      }
+
+      .refinfo__leadgrid,
+      .refinfo__two {
+        grid-template-columns: 1fr;
+      }
+
+      .refinfo__row {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="ref2d__top ref2d__top--internal" role="banner">
     <a class="ref2d__brand" href="index.html">REFERENCIOTECA</a>
     <div class="ref2d__header-actions">
-      <a class="ref2d__header-btn ref2d__header-btn--secondary" href="info.html">Información</a>
+      <a class="ref2d__header-btn ref2d__header-btn--secondary" href="info.html" aria-current="page">Información</a>
       <a class="ref2d__header-btn ref2d__header-btn--secondary" href="submit.html">Submit</a>
       <a class="ref2d__header-chip" href="indexoteca.html">Indexoteca <span aria-hidden="true">↗</span></a>
     </div>
   </header>
 
-  <main class="ref2d-internal__main" role="main">
-    <h1 class="ref2d-internal__title">Sobre Referencioteca</h1>
-    <div class="ref2d-internal__content">
-      <p>Referencioteca es un proyecto en desarrollo que busca mapear, organizar y facilitar la búsqueda curada de proyectos y trayectorias que ex estudiantes de Diseño UC han producido a lo largo del tiempo.</p>
-      <p>Si quieres saber más o solicitar edición o retiro de tu registro: <a href="mailto:referencioteca.cl@gmail.com">referencioteca.cl@gmail.com</a></p>
+  <main class="refinfo" role="main">
+    <div class="refinfo__layout">
+      <section class="refinfo__main">
+        <header class="refinfo__hero">
+          <p class="refinfo__eyebrow">Información del proyecto</p>
+          <h1 class="refinfo__title">Referencioteca es un archivo vivo para observar, conectar y reconocer trayectorias en diseño.</h1>
+          <div class="refinfo__leadgrid">
+            <p class="refinfo__lead">Reunimos proyectos publicados de ex estudiantes de Diseño UC para facilitar su descubrimiento, estudio y difusión, con atribución y enlaces a las fuentes originales.</p>
+            <p class="refinfo__lead">La plataforma crece de forma gradual. Puedes usar esta página como base editable para sumar equipo, metodología, hitos, criterios curatoriales y datos de contacto.</p>
+          </div>
+        </header>
+
+        <section class="refinfo__section">
+          <h2>Qué es Referencioteca</h2>
+          <p>Referencioteca es una plataforma de referencia y búsqueda curada orientada al diseño, donde cada proyecto mantiene autoría, año, área y vínculo de origen. El objetivo es visibilizar prácticas diversas, generar contexto y facilitar conexiones entre generaciones.</p>
+          <p>Puedes editar este bloque para afinar tono editorial, alcance temporal, criterios de selección y declaración pública del proyecto.</p>
+        </section>
+
+        <section class="refinfo__section">
+          <h2>Cómo usar la plataforma</h2>
+          <div class="refinfo__rows">
+            <div class="refinfo__row">
+              <div class="refinfo__k">Vista Infinita</div>
+              <div class="refinfo__v">Exploración visual abierta para descubrir proyectos por relación temática, tags y similitudes formales.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Vista Grilla</div>
+              <div class="refinfo__v">Orden tipo masonry para lectura rápida de portafolio. Incluye botón aleatorio para reordenar sin recargar.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Vista Lista</div>
+              <div class="refinfo__v">Índice ordenable por proyecto, autor y año. Ideal para consultas comparativas o navegación directa.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Búsqueda</div>
+              <div class="refinfo__v">Admite múltiples palabras clave. Si no hay match estricto, aplica coincidencia parcial para evitar resultados vacíos.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="refinfo__section">
+          <h2>Criterios editoriales y curaduría</h2>
+          <div class="refinfo__two">
+            <article class="refinfo__box">
+              <h3>Criterios mínimos</h3>
+              <p>Autoría identificable, año aproximado, área o disciplina, y enlace público verificable. Se priorizan proyectos con contexto claro.</p>
+            </article>
+            <article class="refinfo__box">
+              <h3>Fuentes</h3>
+              <p>Sitios oficiales de autores/as, portafolios, publicaciones y redes públicas. Siempre con atribución y link al origen.</p>
+            </article>
+            <article class="refinfo__box">
+              <h3>Actualización</h3>
+              <p>Revisión periódica de links activos y mejora continua de metadatos. Se pueden corregir registros por solicitud.</p>
+            </article>
+            <article class="refinfo__box">
+              <h3>Transparencia</h3>
+              <p>Este espacio es editable para documentar cambios de criterio, límites de cobertura y decisiones curatoriales.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="refinfo__section">
+          <h2>Línea de tiempo (editable)</h2>
+          <div class="refinfo__rows">
+            <div class="refinfo__row">
+              <div class="refinfo__k">2026</div>
+              <div class="refinfo__v">Lanzamiento público beta de Referencioteca + habilitación de vistas Infinita, Grilla y Lista.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Próximo hito</div>
+              <div class="refinfo__v">[Completar] Publicación de metodología de clasificación y actualización de panel de métricas.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Próxima versión</div>
+              <div class="refinfo__v">[Completar] Mejoras de accesibilidad, filtros avanzados y automatización de verificación de enlaces.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="refinfo__section">
+          <h2>Equipo y colaboraciones (editable)</h2>
+          <div class="refinfo__rows">
+            <div class="refinfo__row">
+              <div class="refinfo__k">Dirección</div>
+              <div class="refinfo__v">[Nombre Apellido] — [Rol].</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Investigación</div>
+              <div class="refinfo__v">[Nombre Apellido], [Nombre Apellido].</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Desarrollo</div>
+              <div class="refinfo__v">[Nombre Apellido].</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">Agradecimientos</div>
+              <div class="refinfo__v">[Instituciones, docentes, colaboradores, comunidades].</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="refinfo__section">
+          <h2>Preguntas frecuentes</h2>
+          <div class="refinfo__rows">
+            <div class="refinfo__row">
+              <div class="refinfo__k">¿Cómo propongo un proyecto?</div>
+              <div class="refinfo__v">Desde <a href="submit.html">Submit</a> puedes enviar los datos básicos para evaluación editorial.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">¿Puedo pedir cambios?</div>
+              <div class="refinfo__v">Sí. Escríbenos con el detalle del ajuste y el enlace del proyecto para actualizar metadatos.</div>
+            </div>
+            <div class="refinfo__row">
+              <div class="refinfo__k">¿Puedo solicitar retiro?</div>
+              <div class="refinfo__v">Sí. Puedes pedir la edición o retiro escribiendo a <a href="mailto:referencioteca.cl@gmail.com">referencioteca.cl@gmail.com</a>.</div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <aside class="refinfo__aside" aria-label="Panel visual dinámico">
+        <figure class="refinfo__media">
+          <img id="refinfoImage" src="IMG/Sofia-Garrido.jpg" alt="Registro visual de Referencioteca">
+        </figure>
+        <div class="refinfo__mediabar">
+          <p class="refinfo__caption" id="refinfoCaption">Registro de proyectos en circulación pública.</p>
+          <div class="refinfo__meta">
+            <span id="refinfoLocation">Santiago, Chile</span>
+            <span class="refinfo__clock" id="refinfoClock">--:--:--</span>
+          </div>
+          <div class="refinfo__controls">
+            <button type="button" id="refinfoPrev">Anterior</button>
+            <button type="button" id="refinfoNext">Siguiente</button>
+          </div>
+        </div>
+        <p class="refinfo__status">Estado: página informativa editable. Puedes cambiar textos, secciones, imágenes y estructura según evolución del proyecto.</p>
+      </aside>
     </div>
   </main>
+
+  <script>
+    (function () {
+      const imageEl = document.getElementById('refinfoImage');
+      const captionEl = document.getElementById('refinfoCaption');
+      const clockEl = document.getElementById('refinfoClock');
+      const nextBtn = document.getElementById('refinfoNext');
+      const prevBtn = document.getElementById('refinfoPrev');
+
+      if (!imageEl || !captionEl) return;
+
+      const slides = [
+        { src: 'IMG/Sofia-Garrido.jpg', caption: 'Proyectos y memorias visuales de diseño en circulación.' },
+        { src: 'IMG/sofia-garrido-2.jpg', caption: 'Capas de autoría y colaboración documentadas en cada ficha.' },
+        { src: 'IMG/Santillan_1.jpg', caption: 'La curaduría conecta disciplinas, generaciones y contextos.' },
+        { src: 'IMG/iv-1.avif', caption: 'Navegación flexible: descubrimiento libre, grilla y lectura indexada.' },
+        { src: 'IMG/perez-c_1.png', caption: 'Cada registro prioriza atribución, fuente y trazabilidad.' },
+        { src: 'IMG/chaud_1.png', caption: 'Referencioteca crece como archivo vivo y colectivo.' }
+      ];
+
+      let current = 0;
+      let timer = null;
+
+      function renderSlide(index) {
+        const safe = (index + slides.length) % slides.length;
+        current = safe;
+        const slide = slides[safe];
+        imageEl.classList.add('is-fading');
+        setTimeout(() => {
+          imageEl.src = slide.src;
+          imageEl.alt = slide.caption;
+          captionEl.textContent = slide.caption;
+          imageEl.classList.remove('is-fading');
+        }, 130);
+      }
+
+      function move(direction) {
+        renderSlide(current + direction);
+        restartAuto();
+      }
+
+      function startAuto() {
+        timer = window.setInterval(() => {
+          renderSlide(current + 1);
+        }, 4200);
+      }
+
+      function restartAuto() {
+        if (timer) window.clearInterval(timer);
+        startAuto();
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => move(1));
+      if (prevBtn) prevBtn.addEventListener('click', () => move(-1));
+
+      renderSlide(0);
+      startAuto();
+
+      if (clockEl) {
+        const formatter = new Intl.DateTimeFormat('es-CL', {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false,
+          timeZone: 'America/Santiago'
+        });
+
+        function updateClock() {
+          clockEl.textContent = formatter.format(new Date());
+        }
+
+        updateClock();
+        window.setInterval(updateClock, 1000);
+      }
+    })();
+  </script>
 </body>
 </html>

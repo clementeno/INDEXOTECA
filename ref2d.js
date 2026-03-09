@@ -29,9 +29,6 @@
   const indexList = $("#ref2dIndexList");
   const indexBody = $("#ref2dIndexBody");
   const btnRandom = $("#ref2dRandom");
-  const infoBtn = $("#ref2dInfoBtn");
-  const infoOverlay = $("#ref2dInfoOverlay");
-  const infoClose = $("#ref2dInfoClose");
   const headerMoreBtn = $("#ref2dHeaderMore");
   const headerMoreDropdown = $("#ref2dHeaderMoreDropdown");
 
@@ -2834,56 +2831,12 @@
     headerMoreBtn.setAttribute('aria-expanded', 'false');
   }
 
-  function openSimpleOverlay(el) {
-    if (!el) return;
-    el.removeAttribute('hidden');
-    document.body.style.overflow = "hidden";
-    document.body.classList.add('is-modal-open');
-  }
-
-  function closeSimpleOverlay(el) {
-    if (!el) return;
-    el.setAttribute('hidden', '');
-    document.body.style.overflow = "";
-    document.body.classList.remove('is-modal-open');
-  }
-
-  function initHeaderModals() {
-    if (infoBtn) {
-      infoBtn.addEventListener('click', () => {
-        closeHeaderMore();
-        openSimpleOverlay(infoOverlay);
-      });
-    }
-
-    if (infoClose) {
-      infoClose.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        closeSimpleOverlay(infoOverlay);
-      });
-    }
-
-
-    if (infoOverlay) {
-      infoOverlay.addEventListener('click', (e) => {
-        if (e.target === infoOverlay) closeSimpleOverlay(infoOverlay);
-      });
-    }
-
+  function initHeaderMore() {
     if (headerMoreBtn && headerMoreDropdown) {
       headerMoreBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         if (headerMoreDropdown.hidden) openHeaderMore();
         else closeHeaderMore();
-      });
-
-      headerMoreDropdown.addEventListener('click', (e) => {
-        const actionBtn = e.target.closest('button[data-action]');
-        if (!actionBtn) return;
-        const action = actionBtn.dataset.action;
-        closeHeaderMore();
-        if (action === 'info') openSimpleOverlay(infoOverlay);
       });
 
       document.addEventListener('click', (e) => {
@@ -2897,7 +2850,6 @@
     document.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape') return;
       closeHeaderMore();
-      if (infoOverlay && !infoOverlay.hidden) closeSimpleOverlay(infoOverlay);
     });
   }
 
@@ -2989,7 +2941,7 @@
   // Inicializar panel de categorías
   initCategoryPanel();
   initViewSwitcher();
-  initHeaderModals();
+  initHeaderMore();
   initRandomButton();
   initIndexSorting();
   

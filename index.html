@@ -37,18 +37,6 @@
   </div>
 </div>
 
-<!-- Modal Info (descripción del proyecto) -->
-<div class="ref2d__wip-overlay ref2d__header-modal" id="ref2dInfoOverlay" hidden>
-  <div class="ref2d__wip-modal" role="dialog" aria-labelledby="ref2dInfoTitle" aria-modal="true">
-    <button class="ref2d__wip-close" id="ref2dInfoClose" aria-label="Cerrar">×</button>
-    <h2 class="ref2d__wip-title" id="ref2dInfoTitle">Sobre Referencioteca</h2>
-    <div class="ref2d__wip-content">
-      <p>Referencioteca es un proyecto en desarrollo que busca mapear, organizar y facilitar la búsqueda curada de proyectos y trayectorias que ex estudiantes de Diseño UC han producido a lo largo del tiempo.</p>
-      <p>Si quieres saber más o solicitar edición o retiro de tu registro: <a href="mailto:referencioteca.cl@gmail.com">referencioteca.cl@gmail.com</a></p>
-    </div>
-  </div>
-</div>
-
 <!--  REFERENCIOTECA 2D — Contenedor principal -->
 <section class="ref2d">
   <header class="ref2d__top">
@@ -70,13 +58,13 @@
           <button type="button" data-view="index">Lista</button>
         </div>
       </div>
-      <button class="ref2d__header-btn ref2d__header-btn--secondary" id="ref2dInfoBtn" type="button" aria-controls="ref2dInfoOverlay">Información</button>
+      <a class="ref2d__header-btn ref2d__header-btn--secondary" href="info.html">Información</a>
       <a class="ref2d__header-btn ref2d__header-btn--secondary" href="submit.html">Submit</a>
       <a class="ref2d__header-chip" href="indexoteca.html">Indexoteca <span aria-hidden="true">↗</span></a>
       <div class="ref2d__header-more-wrap">
         <button class="ref2d__header-more" id="ref2dHeaderMore" type="button" aria-expanded="false" aria-haspopup="true" aria-label="Más opciones">⋯</button>
         <div class="ref2d__header-more-dropdown" id="ref2dHeaderMoreDropdown" hidden>
-          <button type="button" data-action="info">Información</button>
+          <a href="info.html">Información</a>
           <a href="submit.html">Submit</a>
           <a href="indexoteca.html">Indexoteca ↗</a>
         </div>
