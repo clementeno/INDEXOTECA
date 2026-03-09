@@ -523,6 +523,20 @@
       url: "https://open.spotify.com/intl-es/album/6b3ijspHJK294Ao2HM5eWJ?si=e_KzcDHuTmabWIE5BYPMFA"
     },
 
+    /* ------------- Música — Vicente Acuña ------------- */
+    {
+      src: "https://freight.cargo.site/t/original/i/K2831772530303672050896792400579/Acuna-Vicente-SSF_CASE_Felicidadpublica_19.png",
+      orientation: "sq",
+      span: 2,
+      tags: ["Gráfico","Branding","Museografía"],
+      title: "Museum Site Santa Fe",
+      author: "Felicidad Pública, Vicente Acuña",
+      collab: "Design Direction: Simón Sepúlveda, Piedad Rivadeneira. Creative Direction: Simón Sepúlveda. Graphic Design: Pau Geis, Antonia Guzmán, Vicente Acuña",
+      area: "Gráfico",
+      year: "2022",
+      url: "https://felicidadpublica.cl/project/site-santa-fe/"
+    },
+
     /* ------------- Gracia González — SIENTO EL VIENTO ------------- */
     {
       src: "https://freight.cargo.site/t/original/i/O2578339362511643761230079275715/Captura-de-pantalla-2025-10-01-a-las-14.33.36.png",
