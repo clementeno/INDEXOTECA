@@ -114,6 +114,42 @@
     .ref2d-submit__fallback a:hover {
       text-decoration-color: rgba(255,255,255,0.65);
     }
+    .ref2d-submit__wordband {
+      width: 100%;
+      overflow: hidden;
+      background: #dcdde1;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      margin-top: 36px;
+      user-select: none;
+    }
+    .ref2d-submit__wordtrack {
+      display: flex;
+      width: max-content;
+      animation: ref2dSubmitMarquee 28s linear infinite;
+      will-change: transform;
+    }
+    .ref2d-submit__wordline {
+      margin: 0;
+      padding: clamp(10px, 1.8vw, 18px) 0 clamp(4px, 1.3vw, 10px);
+      font-size: clamp(3.2rem, 16vw, 13rem);
+      font-weight: 800;
+      letter-spacing: 0.015em;
+      line-height: 0.9;
+      color: #0b0d0f;
+      white-space: nowrap;
+      text-transform: uppercase;
+      padding-right: 48px;
+    }
+    @keyframes ref2dSubmitMarquee {
+      from { transform: translate3d(0, 0, 0); }
+      to { transform: translate3d(-50%, 0, 0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ref2d-submit__wordtrack {
+        animation: none;
+      }
+    }
     @media (max-width: 780px) {
       .ref2d-submit {
         max-width: calc(100% - 24px);
@@ -221,6 +257,13 @@
       <a href="mailto:referencioteca.cl@gmail.com?subject=Propuesta%20de%20proyecto%20—%20Referencioteca">referencioteca.cl@gmail.com</a>.
     </p>
   </main>
+
+  <section class="ref2d-submit__wordband" aria-hidden="true">
+    <div class="ref2d-submit__wordtrack">
+      <p class="ref2d-submit__wordline">SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT</p>
+      <p class="ref2d-submit__wordline">SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT SUBMIT</p>
+    </div>
+  </section>
 
   <script>
     (function () {
