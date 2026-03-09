@@ -1785,6 +1785,10 @@
     globalId = 0;
     genPtr = 0;
     applyTransform();
+    if (activeList.length === 0) {
+      updateCount();
+      return;
+    }
     const vw = viewport.clientWidth, vh = viewport.clientHeight;
     const startIdx = Math.floor((-vw*0.5) / (COL_W+GAP)) - 2;
     const endIdx   = Math.floor((vw*1.5) / (COL_W+GAP)) + 2;
@@ -2199,6 +2203,29 @@
     }, FILTER_DEBOUNCE_MS);
   }
 
+  function tokenizeSearchTerm(term) {
+    return norm(term)
+      .split(/\s+/)
+      .map((t) => t.trim())
+      .filter(Boolean);
+  }
+
+  function getFilteredProjects(tokens) {
+    if (!tokens.length) return DB_ORDERED.slice();
+
+    const strict = DB.filter((x) => {
+      const hay = x._search || '';
+      return tokens.every((tok) => hay.includes(tok));
+    });
+    if (strict.length) return strict;
+
+    // Fallback tolerante: si no hay match estricto, mostrar coincidencias parciales
+    return DB.filter((x) => {
+      const hay = x._search || '';
+      return tokens.some((tok) => hay.includes(tok));
+    });
+  }
+
   /* ===== Filtro que reordena (robusto) ===== */
   function applyFilter(term){
     if (filterDebounceTimer !== null) {
@@ -2206,8 +2233,9 @@
       filterDebounceTimer = null;
     }
     const q = norm(term);
+    const tokens = tokenizeSearchTerm(term);
     if(q){
-      const list = DB.filter(x => (x._search || '').includes(q));
+      const list = getFilteredProjects(tokens);
       if(list.length === 0){
         activeList = [];
         if (activeView === 'bento') {
@@ -2226,7 +2254,9 @@
       }
       activeList = list;
       // Sincronizar highlight de categorías si el término coincide con una categoría
-      const matchingCat = Object.keys(CAT_LABELS).find(catKey => norm(catKey) === q);
+      const matchingCat = tokens.length === 1
+        ? Object.keys(CAT_LABELS).find(catKey => norm(catKey) === tokens[0])
+        : '';
       highlightActiveCategory(matchingCat || '');
     }else{
       // Sin filtro: usar el orden reordenado inicial
