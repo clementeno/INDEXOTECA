@@ -1508,6 +1508,75 @@
   year: "2026",
   url: "https://www.instagram.com/zipi.cl/"
 },
+/* ------------------ Dulces Paula — Paulina Astudillo ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/F2831958625153064817217015067331/Astudillo-Paulina-Captura-de-pantalla-2026-03-09-a-las-17.37.51.png",
+  orientation: "v",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Dulces Paula",
+  author: "Paulina Astudillo",
+  collab: "Diseño gráfico: Paulina Astudillo y equipo Otros Pérez. Identidad desarrollada en Otros Pérez",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "2026",
+  url: "https://www.instagram.com/p/DU3QMA-kVtX/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+},
+
+/* ------------------ Vestigios — Carolina Pacheco ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2831969376376679576986435662531/pacheco-Carolina-16.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["museografía","exhibición","investigación"],
+  title: "Vestigios",
+  author: "Carolina Pacheco",
+  collab: "Idea original, investigación, dirección creativa y ejecución: Colectivo Ronda (Yael Berkowitz, Aníbal Fuentes, Natalia Cerda, Carolina Pacheco, Francisca Feijoo, Loreto Leiva). Fotografías: Benjamín Salazar",
+  area: "Museografía / Exhibición / Investigación",
+  year: "2022",
+  url: "https://www.caropacheco.work/vestigios"
+},
+
+/* ------------------ El Delantal Vestido — Camila Ríos ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/P2831969376413573065133854765763/Rios-camila-Captura-de-Pantalla-2024-11-27-a-las-14.46.28.jpg.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["museografía","exhibición","investigación"],
+  title: "El Delantal Vestido",
+  author: "Camila Ríos",
+  collab: "Curaduría: Camila Ríos Erazo. Diseño, investigación y desarrollo etapa Textiles domésticos: Camila Ríos Erazo y Loreto Casanueva Reyes",
+  area: "Museografía / Exhibición / Investigación",
+  year: "2024",
+  url: ["https://camilarios.com/el-delantal-vestido","https://www.instagram.com/p/DB2ONWqujBV/?img_index=1"]
+},
+
+/* ------------------ Calcáreo — Carolina Pacheco ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2831969376395126321060145214147/pacheco-carolina-2-2-5-lateral.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","biomaterial","investigación"],
+  title: "Calcáreo",
+  author: "Carolina Pacheco",
+  collab: "Proyecto de título en Diseño UC. Profesores guía: Alejandro Durán, María José Besoaín, Aníbal Fuentes, Alejandro Weiss. Fotografías: Omar Faundez, Antonia Valencia, Carolina Pacheco",
+  area: "Producto / Biomaterial / Investigación",
+  year: "2019",
+  url: "https://www.caropacheco.work/calcareo"
+},
+
+/* ------------------ AjuarParn — Camila Ríos ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/B2831969376432019809207564317379/Rios-Camila-21949970_10155734500863430_4521371404219177019_o.jpg.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","packaging","textil"],
+  title: "AjuarParn",
+  author: "Camila Ríos",
+  collab: "",
+  area: "Producto / Packaging / Textil",
+  year: "2017",
+  url: "https://camilarios.com/parn"
+},
 /* ------------------ Guaico — Joaquín Gajardo ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/M2825598558502218669086967542467/Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
