@@ -27,18 +27,15 @@
     }
 
     .refinfo__main {
-      border: 1px solid var(--refinfo-border);
-      border-radius: 18px;
-      overflow: hidden;
-      background:
-        radial-gradient(circle at 10% 15%, rgba(241, 90, 41, 0.12), transparent 44%),
-        radial-gradient(circle at 90% 0%, rgba(68, 108, 255, 0.12), transparent 36%),
-        #101116;
+      border: none;
+      border-radius: 0;
+      overflow: visible;
+      background: transparent;
     }
 
     .refinfo__hero {
       padding: clamp(20px, 3.2vw, 38px);
-      border-bottom: 1px solid var(--refinfo-border);
+      border-bottom: 1px solid var(--refinfo-soft);
     }
 
     .refinfo__eyebrow {
@@ -131,10 +128,11 @@
     }
 
     .refinfo__box {
-      border: 1px solid var(--refinfo-soft);
-      border-radius: 12px;
-      padding: 12px 14px;
-      background: rgba(255, 255, 255, 0.02);
+      border: none;
+      border-bottom: 1px solid var(--refinfo-soft);
+      border-radius: 0;
+      padding: 4px 0 12px;
+      background: transparent;
     }
 
     .refinfo__box h3 {
@@ -192,7 +190,7 @@
     }
 
     .refinfo__mediabar {
-      padding: 12px 14px 14px;
+      padding: 12px 0 14px;
       border-top: 1px solid var(--refinfo-soft);
       display: grid;
       gap: 10px;
@@ -243,12 +241,12 @@
 
     .refinfo__status {
       margin: 0;
-      padding: 14px;
+      padding: 14px 0 0;
       border-top: 1px solid var(--refinfo-soft);
       color: #bdbfc9;
       font-size: 0.84rem;
       line-height: 1.4;
-      background: rgba(241, 90, 41, 0.08);
+      background: transparent;
     }
 
     .refinfo a {
