@@ -1569,7 +1569,7 @@
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
-  title: "Dulces Paula",
+  title: "Postres Paula",
   author: "Paulina Astudillo",
   collab: "Diseño gráfico: Paulina Astudillo y equipo Otros Pérez. Identidad desarrollada en Otros Pérez",
   area: "Branding / Identidad visual / Gráfico",
@@ -1603,6 +1603,76 @@
   area: "Museografía / Exhibición / Investigación",
   year: "2024",
   url: ["https://camilarios.com/el-delantal-vestido","https://www.instagram.com/p/DB2ONWqujBV/?img_index=1"]
+},
+
+/* ------------------ Sonic Ecologies 2.0 — Joaquín Rosas ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2832966899834431604011737494211/rosas-joaquin-1.png",
+  orientation: "v",
+  span: 1,
+  tags: ["museografía","exhibición","investigación"],
+  title: "Sonic Ecologies 2.0",
+  author: "Joaquín Rosas",
+  collab: "Moving Works + Low Studio. Universidad Adolfo Ibáñez (2023). Fotografías: Hurto Visual",
+  area: "Museografía / Exhibición / Investigación",
+  year: "2023",
+  url: "https://joaquinrosas.com/SONIC-ECOLOGIES-EXHIBITION"
+},
+
+/* ------------------ Gubii Bags — Joaquín Rosas ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/G2832966899852878348085447045827/ROSAS-JOAQUIN2-Gubbi-Sesion-Jun-7_1340_c.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","packaging","textil"],
+  title: "Gubii Bags",
+  author: "Joaquín Rosas",
+  collab: "Diseño de mochila infantil para la marca Gubii. Incluye: diseño de logo, identidad gráfica y sistema visual. Ilustraciones de animales chilenos",
+  area: "Producto / Packaging / Textil",
+  year: "2025",
+  url: "https://joaquinrosas.com/GUBII-BAGS"
+},
+
+/* ------------------ Across Andes 2025 Volcano Edition — Joaquín Rosas ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/C2832966899815984859938027942595/rosas-joaquin-MAPAAA-2025-Final_1340_c.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "Across Andes 2025 Volcano Edition",
+  author: "Joaquín Rosas",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2025",
+  url: "https://joaquinrosas.com/ACROSS-ANDES-MAP"
+},
+
+/* ------------------ Natural Killer — Leopoldo Herrera ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2832967861795241559817435165379/herrera-leopoldo.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","juego de mesa"],
+  title: "Natural Killer",
+  author: "Leopoldo Herrera",
+  collab: "Co-creador: Leopoldo Herrera",
+  area: "Producto / Juego de mesa",
+  year: "2024",
+  url: "https://www.behance.net/gallery/210222175/Natural-Killer-Boardgame"
+},
+
+/* ------------------ Con Devuelta — Isabel Díaz-del Río ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/M2832974993122033015192994394819/rios-isabel.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["servicio","social","ecología"],
+  title: "Con Devuelta",
+  author: "Isabel Díaz-del Río",
+  collab: "",
+  area: "Servicio / Social / Ecología",
+  year: "2022",
+  url: ["https://condevuelta.cl","https://www.elmostrador.cl/agenda-pais/agenda-innovacion/2023/08/31/con-devuelta-la-startup-que-busca-eliminar-el-packaging-desechable-en-los-locales-de-comida/"]
 },
 
 /* ------------------ Calcáreo — Carolina Pacheco ------------------ */
