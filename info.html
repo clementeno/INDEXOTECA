@@ -166,15 +166,22 @@
       width: 100%;
       position: relative;
       background: #08080b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
     }
 
     .refinfo__media img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
       display: block;
       opacity: 1;
       transition: opacity 0.45s ease;
+      border-radius: 12px;
     }
 
     .refinfo__media img.is-fading {
@@ -416,7 +423,7 @@
 
       <aside class="refinfo__aside" aria-label="Panel visual dinámico">
         <figure class="refinfo__media">
-          <img id="refinfoImage" src="IMG/Sofia-Garrido.jpg" alt="Registro visual de Referencioteca">
+          <img id="refinfoImage" src="IMG/r0.jpg" alt="Registro visual de Referencioteca">
         </figure>
         <div class="refinfo__mediabar">
           <p class="refinfo__caption" id="refinfoCaption">Registro de proyectos en circulación pública.</p>
@@ -446,11 +453,10 @@
 
       const slides = [
         { src: 'IMG/r0.jpg', caption: 'Proyectos y memorias visuales de diseño en circulación.' },
-        { src: 'IMG/r.1.jpg', caption: 'Capas de autoría y colaboración documentadas en cada ficha.' },
-        { src: 'IMG/r.2.jpg', caption: 'La curaduría conecta disciplinas, generaciones y contextos.' },
+        { src: 'IMG/r1.jpg', caption: 'Capas de autoría y colaboración documentadas en cada ficha.' },
+        { src: 'IMG/r2.jpg', caption: 'La curaduría conecta disciplinas, generaciones y contextos.' },
         { src: 'IMG/r3.jpg', caption: 'Navegación flexible: descubrimiento libre, grilla y lectura indexada.' },
-        { src: 'IMG/r4.jpg', caption: 'Cada registro prioriza atribución, fuente y trazabilidad.' },
-        { src: 'IMG/chaud_1.png', caption: 'Referencioteca crece como archivo vivo y colectivo.' }
+        { src: 'IMG/r4.jpg', caption: 'Cada registro prioriza atribución, fuente y trazabilidad.' }
       ];
 
       let current = 0;
@@ -468,6 +474,10 @@
           imageEl.classList.remove('is-fading');
         }, 130);
       }
+
+      imageEl.addEventListener('error', () => {
+        move(1);
+      });
 
       function move(direction) {
         renderSlide(current + direction);
