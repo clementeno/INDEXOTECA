@@ -900,6 +900,146 @@
   url: "https://pilar-fundamental.com/campana-ugn"
 },
 
+/* ------------------ Fintual — Valentina Andrea Pavez Benítez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/P2834855301990374870633509499587/Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ux","ui","web"],
+  title: "Fintual",
+  author: "Valentina Andrea Pavez Benítez",
+  collab: "",
+  area: "UX / UI / Web",
+  year: "2025",
+  url: "https://www.behance.net/gallery/223316221/Caso-Estudio-Fintual"
+},
+
+/* ------------------ Hackathon Junior — Sophia López Pinoleo ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Y2834854149308677936744757670595/hackathon.png",
+  orientation: "v",
+  span: 1,
+  tags: ["gráfico","ilustración"],
+  title: "Hackathon Junior",
+  author: "Sophia López Pinoleo",
+  collab: "",
+  area: "Gráfico / Ilustración",
+  year: "2025",
+  url: "https://www.behance.net/gallery/228796131/DIPLOMAS-HACKATHON-JUNIOR-CHICAS-SUPERPODEROSAS"
+},
+
+/* ------------------ Descartadas — Vanessa Vásquez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/K2834851674641066960460989280963/vasquez-Vanessa-7a2b2e29-3d63-4564-9627-504ab6a59e1b.png",
+  orientation: "v",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Descartadas",
+  author: "Vanessa Vásquez",
+  collab: "",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "N/A",
+  url: "https://vvasquezzumaran15fd.myportfolio.com/descartadas-identidad-grafica"
+},
+
+/* ------------------ Orniflor viaja a Chiloé — Valentina Rey Carmona ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/J2834851674659513704534698832579/Rey-Valentin-aportada-chiloe2.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","gráfico","diagramación"],
+  title: "Orniflor viaja a Chiloé",
+  author: "Valentina Rey Carmona",
+  collab: "Proyecto para Fundación Juntos Incluimos",
+  area: "Editorial / Gráfico / Diagramación",
+  year: "2024",
+  url: "https://www.behance.net/gallery/173198799/Orniflor-viaja-a-chilo"
+},
+
+/* ------------------ Libro infantil — Valentina Rey Carmona ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/H2834851674677960448608408384195/Rey-Valentina.png",
+  orientation: "v",
+  span: 1,
+  tags: ["portada","ilustración","infantil"],
+  title: "Libro infantil",
+  author: "Valentina Rey Carmona",
+  collab: "",
+  area: "Portada / Ilustración / Infantil",
+  year: "2024",
+  url: "https://www.behance.net/gallery/182931307/Ilustraciones-editoriales"
+},
+
+/* ------------------ Cartas de Póker (Coca-Cola) — Tamara Santibáñez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/P2834851674696407192682117935811/Santibanez-Tamara.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "Cartas de Póker (Coca-Cola)",
+  author: "Tamara Santibáñez",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2025",
+  url: "https://www.behance.net/gallery/233763201/Cartas-de-poker-para-Coca-Cola"
+},
+
+/* ------------------ Descargables Imanix — Sofía Daza Urzúa ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2834851674714853936755827487427/Daza-Sofia.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","editorial","gráfico"],
+  title: "Descargables Imanix",
+  author: "Sofía Daza Urzúa",
+  collab: "",
+  area: "Ilustración / Editorial / Gráfico",
+  year: "2025",
+  url: "https://www.behance.net/gallery/225293267/Descargables-Imanix"
+},
+
+/* ------------------ Talana (UX/UI) — Rafaella Espildora ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/M2834851674604173472313570177731/Espildora-Rafella.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ux","ui","servicio"],
+  title: "Talana",
+  author: "Rafaella Espildora",
+  collab: "",
+  area: "UX / UI / Servicio",
+  year: "2024",
+  url: "https://www.behance.net/gallery/196546331/UXUI-SaaS-HR"
+},
+
+/* ------------------ Revista N°2 Museo Histórico de Carabineros — Paulina Padilla ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/R2834851279235107740496750392003/PADILLA-PAULINA-1f75b2_fd084dd76c2b4662b346409b24ab3b7b.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial"],
+  title: "Revista N°2 Museo Histórico de Carabineros de Chile",
+  author: "Paulina Padilla",
+  collab: "",
+  area: "Editorial",
+  year: "2013",
+  url: "https://www.paulinapadilla.cl/editorial"
+},
+
+/* ------------------ Campaña Funa y Acoso — Pilar Saavedra ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/N2834851674622620216387279729347/Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
+  orientation: "v",
+  span: 1,
+  tags: ["afiche"],
+  title: "Campaña Funa y Acoso",
+  author: "Pilar Saavedra",
+  collab: "",
+  area: "Afiche",
+  year: "2023",
+  url: "https://pilar-fundamental.com/campana-ugn"
+},
+
 /* ------------------ Resistencia gráfica. Dictadura en Chile (APJ – Tallersol) — Nicole Cristi ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/L2834736126320671324158845989571/Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
