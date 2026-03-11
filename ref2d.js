@@ -678,7 +678,7 @@
 /* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Hugo Palmarola ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/A2834736126412905044527393747651/Gonzalez-Yazmin.jpeg",
-  orientation: "v",
+  orientation: "sq",
   span: 1,
   tags: ["editorial","investigación","exposición"],
   title: "Cómo diseñar una revolución. La vía chilena al diseño",
