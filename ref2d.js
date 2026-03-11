@@ -549,6 +549,229 @@
       year: "2022",
       url: "https://ilmato.com/paloma-mami-1"
     },
+    /* ------------------ Acuerdo de Escazú — Carolina Pinochet ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/T2834736126505138764895941505731/Pinochet-Carolina-Captura-de-pantalla-2026-03-10-a-las-19.38.36.png",
+  orientation: "v",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Acuerdo de Escazú",
+  author: "Carolina Pinochet",
+  collab: "Trabajo para Ministerio de Medio Ambiente. Proyecto desarrollado en Estudio Postal",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "2023",
+  url: "https://www.estudiopostal.cl/portfolio-collections/ilustracion/acuerdo-de-escazu"
+},
+
+/* ------------------ Agenda Palpa — Macarena Valdés Domínguez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2834736126523585508969651057347/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.00.33.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","editorial","gráfico"],
+  title: "Agenda Palpa",
+  author: "Macarena Valdés Domínguez",
+  collab: "Proyecto desarrollado en Qüina Studio",
+  area: "Ilustración / Editorial / Gráfico",
+  year: "2025",
+  url: "https://www.behance.net/gallery/216455243/Agenda-Palpa-2025"
+},
+
+/* ------------------ La Roi (Packaging) — Macarena Valdés Domínguez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2834736126542032253043360608963/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.02.56.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico","packaging"],
+  title: "La Roi",
+  author: "Macarena Valdés Domínguez",
+  collab: "Proyecto desarrollado en Qüina Studio",
+  area: "Ilustración / Gráfico / Packaging",
+  year: "2024",
+  url: "https://www.behance.net/gallery/199970619/Diseno-de-packaging-Chocolate-Le-Roi-Chocolat"
+},
+
+/* ------------------ EMG-One — Franco Gnecco ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/K2834736126431351788601103299267/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.17.16.png",
+  orientation: "sq",
+  span: 1,
+  tags: ["producto","industrial","salud"],
+  title: "EMG-One",
+  author: "Franco Gnecco",
+  collab: "Equipo: Lorena O’Ryan, Alejandro Durán, Franco Gnecco",
+  area: "Producto / Industrial / Salud",
+  year: "2025",
+  url: "https://www.instagram.com/p/DKD2iZENyWz/?img_index=1"
+},
+
+/* ------------------ Materia Lignum — Catalina Fuenzalida ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2834736126486692020822231954115/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.23.25.png",
+  orientation: "h",
+  span: 2,
+  tags: ["museografía","exhibición","investigación","biomaterial"],
+  title: "Materia Lignum",
+  author: "Catalina Fuenzalida",
+  collab: "Desarrollado por Spectro Studio, conformado por Franco Gnecco, Damian Araos y Catalina Fuenzalida",
+  area: "Museografía / Exhibición / Investigación / Biomaterial",
+  year: "2024",
+  url: "https://www.instagram.com/p/C3770iKu8ye/?img_index=1"
+},
+
+/* ------------------ Materia Lignum — Franco Gnecco ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/P2834736126468245276748522402499/Fuenzalida-Catalina-Captura-de-pantalla-2026-03-11-a-las-10.23.05.png",
+  orientation: "h",
+  span: 1,
+  tags: ["museografía","exhibición","investigación","biomaterial"],
+  title: "Materia Lignum",
+  author: "Franco Gnecco",
+  collab: "Desarrollado por Spectro Studio, conformado por Franco Gnecco, Damian Araos y Catalina Fuenzalida",
+  area: "Museografía / Exhibición / Investigación / Biomaterial",
+  year: "2024",
+  url: "https://www.instagram.com/p/C3770iKu8ye/?img_index=1"
+},
+
+/* ------------------ Materia Lignum — Damian Araos ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/C2834736126449798532674812850883/Araos-Damina-Captura-de-pantalla-2026-03-11-a-las-10.20.21.png",
+  orientation: "h",
+  span: 1,
+  tags: ["museografía","exhibición","investigación","biomaterial"],
+  title: "Materia Lignum",
+  author: "Damian Araos",
+  collab: "Desarrollado por Spectro Studio, conformado por Franco Gnecco, Damian Araos y Catalina Fuenzalida",
+  area: "Museografía / Exhibición / Investigación / Biomaterial",
+  year: "2024",
+  url: "https://www.instagram.com/p/C3770iKu8ye/?img_index=1"
+},
+
+/* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Yazmin Jiménez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2834737330487230967770956378819/Banner-web-_-Lanzamiento-de-libro-CDUR-scaled.jpg",
+  orientation: "h",
+  span: 2,
+  tags: ["editorial","investigación","exposición"],
+  title: "Cómo diseñar una revolución. La vía chilena al diseño",
+  author: "Yazmin Jiménez",
+  collab: "Autores: Eden Medina, Pedro Ignacio Alonso, Hugo Palmarola. Diseño: Yazmín González. Editores: Lars Müller Publishers",
+  area: "Editorial / Investigación / Exposición",
+  year: "2023",
+  url: ["https://www.behance.net/gallery/233641951/Libro-Como-disenar-una-revolucion","https://www.cclm.cl/exposicion/como-disenar-una-revolucion/"]
+},
+
+/* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Pedro Álvarez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2834737090993152658799847748291/153819.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","investigación","exposición"],
+  title: "Cómo diseñar una revolución. La vía chilena al diseño",
+  author: "Pedro Álvarez",
+  collab: "Autores: Eden Medina, Pedro Ignacio Alonso, Hugo Palmarola. Diseño: Yazmín González. Editores: Lars Müller Publishers",
+  area: "Editorial / Investigación / Exposición",
+  year: "2023",
+  url: "https://www.cclm.cl/exposicion/como-disenar-una-revolucion/"
+},
+
+/* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Hugo Palmarola ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/A2834736126412905044527393747651/Gonzalez-Yazmin.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","investigación","exposición"],
+  title: "Cómo diseñar una revolución. La vía chilena al diseño",
+  author: "Hugo Palmarola",
+  collab: "Autores: Eden Medina, Pedro Ignacio Alonso, Hugo Palmarola. Diseño: Yazmín González. Editores: Lars Müller Publishers",
+  area: "Editorial / Investigación / Exposición",
+  year: "2023",
+  url: "https://www.cclm.cl/exposicion/como-disenar-una-revolucion/"
+},
+
+/* ------------------ DASON — Patricio Fuentes ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/S2834736126394458300453684196035/fuentes-PAtricio-IMG_5086-scaled.jpeg",
+  orientation: "v",
+  span: 2,
+  tags: ["producto","salud","investigación"],
+  title: "DASON",
+  author: "Patricio Fuentes",
+  collab: "Desarrollado en colaboración con Stanford University",
+  area: "Producto / Salud / Investigación",
+  year: "2025",
+  url: "https://diseno.uc.cl/2025/05/proyecto-dason-innovacion-frugal-desde-diseno-uc-para-la-salud-pediatrica-global/"
+},
+
+/* ------------------ Galería de Arte Gráfico A3 — Alejandra Amenábar ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/K2834742337136486757354070028995/A3-Amenabar-Alejandra-Captura-de-pantalla-2026-03-11-a-las-11.34.26.png",
+  orientation: "v",
+  span: 1,
+  tags: ["arte","galería"],
+  title: "Galería de Arte Gráfico A3",
+  author: "Alejandra Amenábar",
+  collab: "Socia fundadora",
+  area: "Arte / Galería",
+  year: "N/A",
+  url: "https://a3press.com"
+},
+
+/* ------------------ Olivia y el Terremoto Invisible — Antonia Piña ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2834736126376011556379974644419/pina-antonia-MV5BNTZjYTczNmQtZjJlZS00NmJiLWFiMTctYzMxMThhZDRhNzdjXkEyXkFqcGc._V1_FMjpg_UX1000_.jpeg",
+  orientation: "v",
+  span: 2,
+  tags: ["dirección creativa","dirección de arte","animación"],
+  title: "Olivia y el Terremoto Invisible",
+  author: "Antonia Piña",
+  collab: "Dirección: Irene Iborra. Supervisión de arte en Pájaro Pip",
+  area: "Dirección creativa / Dirección de arte / Animación",
+  year: "2025",
+  url: ["https://www.instagram.com/p/DTk-PIijiUK/?hl=es&img_index=1","https://pajaro.cl"]
+},
+
+/* ------------------ EXVIVO — Julie Carles ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2834736126339118068232555541187/Julie-Carles-Captura-de-pantalla-2026-03-11-a-las-11.14.07.png",
+  orientation: "h",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "EXVIVO",
+  author: "Julie Carles",
+  collab: "Proyecto desarrollado en Draft Estudio",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "2025",
+  url: "https://draft.cl/work/project-ex-vivo/"
+},
+
+/* ------------------ DENSE — Vicente Carmona ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2834736126357564812306265092803/Carmona-Vicente-Captura-de-pantalla-2026-03-11-a-las-11.19.36.png",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","industrial","investigación"],
+  title: "DENSE",
+  author: "Vicente Carmona",
+  collab: "",
+  area: "Producto / Industrial / Investigación",
+  year: "2023",
+  url: "https://viscente.design/dense"
+},
+
+/* ------------------ Resistencia gráfica. Dictadura en Chile (APJ – Tallersol) — Nicole Cristi ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2834736126320671324158845989571/Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","investigación"],
+  title: "Resistencia gráfica. Dictadura en Chile (APJ – Tallersol)",
+  author: "Nicole Cristi",
+  collab: "Co-autora: Nicole Cristi",
+  area: "Editorial / Investigación",
+  year: "2023",
+  url: "https://www.uc.cl/agenda/actividad/presentacion-de-investigacion-resistencia-grafica-dictadura-en-chile-apj-tallersol"
+},
 
     /* ------------- Sofía Garrido ------------- */
     {
