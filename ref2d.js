@@ -762,7 +762,7 @@
 /* ------------------ Fintual — Valentina Andrea Pavez Benítez ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/P2834855301990374870633509499587/Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["ux","ui","web"],
   title: "Fintual",
@@ -776,7 +776,7 @@
 /* ------------------ Hackathon Junior — Sophia López Pinoleo ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/Y2834854149308677936744757670595/hackathon.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["gráfico","ilustración"],
   title: "Hackathon Junior",
@@ -832,7 +832,7 @@
 /* ------------------ Cartas de Póker (Coca-Cola) — Tamara Santibáñez ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/P2834851674696407192682117935811/Santibanez-Tamara.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["ilustración","gráfico"],
   title: "Cartas de Póker (Coca-Cola)",
@@ -860,7 +860,7 @@
 /* ------------------ Talana (UX/UI) — Rafaella Espildora ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/M2834851674604173472313570177731/Espildora-Rafella.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["ux","ui","servicio"],
   title: "Talana",
@@ -889,7 +889,7 @@
 {
   src: "https://freight.cargo.site/t/original/i/N2834851674622620216387279729347/Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
   orientation: "v",
-  span: 1,
+  span: 2,
   tags: ["afiche"],
   title: "Campaña Funa y Acoso",
   author: "Pilar Saavedra",
