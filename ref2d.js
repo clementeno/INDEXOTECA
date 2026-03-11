@@ -886,6 +886,173 @@
   url: "https://www.paulinapadilla.cl/editorial"
 },
 
+/* ------------------ Aralí — Aranda Feres Ojeda ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2835041680329330561722121401027/feres-aranda-5_77c650d6-239f-407d-a6a8-8d316462fe81.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","artesanía"],
+  title: "Aralí",
+  author: "Aranda Feres Ojeda",
+  collab: "",
+  area: "Producto / Artesanía",
+  year: "2024",
+  url: "https://arali.store/collections/aranda-1"
+},
+
+/* ------------------ Afiche n°1 — Gianfranco Music Wachtendorff ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/A2835041680366224049869540504259/Gianfranco-Music-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.png",
+  orientation: "v",
+  span: 1,
+  tags: ["afiche","afiche digital","gráfico"],
+  title: "Afiche n°1",
+  author: "Gianfranco Music Wachtendorff",
+  collab: "",
+  area: "Afiche / Afiche digital / Gráfico",
+  year: "2025",
+  url: "https://gianfrancomw.myportfolio.com/posters-semana-novata-2023"
+},
+
+/* ------------------ Afiche n°2 — Gianfranco Music Wachtendorff ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/C2835041680347777305795830952643/Gianfranco-Music-Wachtendorff-7485022f-8fb6-4b6e-888d-2462ee018664_rw_1200.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["afiche","afiche digital","gráfico"],
+  title: "Afiche n°2",
+  author: "Gianfranco Music Wachtendorff",
+  collab: "",
+  area: "Afiche / Afiche digital / Gráfico",
+  year: "2025",
+  url: "https://gianfrancomw.myportfolio.com/posters-semana-novata-2023"
+},
+
+/* ------------------ Sin nombre — Gianfranco Music Wachtendorff ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/G2835041680384670793943250055875/Gianfranco-Music-3-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["fotografía","moda","editorial"],
+  title: "Sin nombre",
+  author: "Gianfranco Music Wachtendorff",
+  collab: "",
+  area: "Fotografía / Moda / Editorial",
+  year: "N/A",
+  url: "https://gianfrancomw.myportfolio.com/varios"
+},
+
+/* ------------------ Colección 3 Chol1: Bichos — Antonino Reinoso ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/A2835041680310883817648411849411/Captura-de-pantalla-2026-03-11-a-las-15.39.07.png",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","industrial"],
+  title: "Colección 3 Chol1: Bichos",
+  author: "Antonino Reinoso",
+  collab: "Producido en Chol1",
+  area: "Producto / Industrial",
+  year: "2019",
+  url: "https://www.behance.net/gallery/84664443/Coleccion-3-Chol1-Bichos"
+},
+
+/* ------------------ Taboo* — Emilia Ferrari ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/G2835044931199038671556402688707/Captura-de-pantalla-2026-03-11-a-las-16.08.04.png",
+  orientation: "v",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Taboo*",
+  author: "Emilia Ferrari",
+  collab: "",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "2024",
+  url: "https://jueves13.work/taboo"
+},
+
+/* ------------------ dos2 — Emilia Ferrari ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/X2835041680476904514311797813955/Captura-de-pantalla-2026-03-11-a-las-15.42.59.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ux","ui","servicio"],
+  title: "dos2",
+  author: "Emilia Ferrari",
+  collab: "Proyecto de título",
+  area: "UX / UI / Servicio",
+  year: "2025",
+  url: "https://www.behance.net/gallery/225638573/dos2"
+},
+
+/* ------------------ Mueble Don Melchor — Carolina Planas ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/F2835044255826844644902298923715/43fef9_efcf8eedf8d33bba27b941bb467583a7.jpg.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["industrial","espacios","vitrinaje"],
+  title: "Mueble Don Melchor",
+  author: "Carolina Planas",
+  collab: "",
+  area: "Industrial / Espacios / Vitrinaje",
+  year: "N/A",
+  url: "https://caroplanas.wixsite.com/caroplanasi"
+},
+
+/* ------------------ RRSS - Viela — Antonella Vila Garcia ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2835041680458457770238088262339/Captura-de-pantalla-2026-03-11-a-las-15.47.30.png",
+  orientation: "v",
+  span: 1,
+  tags: ["rrss","gráfico"],
+  title: "RRSS - Viela",
+  author: "Antonella Vila Garcia",
+  collab: "",
+  area: "RRSS / Gráfico",
+  year: "2023",
+  url: "https://www.behance.net/gallery/172562123/Post-historias-de-instagram"
+},
+
+/* ------------------ Viella — Antonella Vila Garcia ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/F2835041680440011026164378710723/Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
+  orientation: "v",
+  span: 1,
+  tags: ["branding","identidad visual","gráfico"],
+  title: "Viella",
+  author: "Antonella Vila Garcia",
+  collab: "",
+  area: "Branding / Identidad visual / Gráfico",
+  year: "2023",
+  url: "https://www.behance.net/gallery/161160095/Identidad-Viella"
+},
+
+/* ------------------ Proust Cerámica — Magdalena Proust Iligaray ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Y2835041680421564282090669159107/Captura-de-pantalla-2026-03-11-a-las-15.53.10.png",
+  orientation: "v",
+  span: 1,
+  tags: ["producto","artesanía"],
+  title: "Proust Cerámica",
+  author: "Magdalena Proust Iligaray",
+  collab: "",
+  area: "Producto / Artesanía",
+  year: "N/A",
+  url: "https://www.instagram.com/proust.ceramica/"
+},
+
+/* ------------------ COSTA — Andrés Valdivieso Vera ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/R2835041680403117538016959607491/Captura-de-pantalla-2026-03-11-a-las-16.03.13.png",
+  orientation: "v",
+  span: 1,
+  tags: ["producto"],
+  title: "COSTA",
+  author: "Andrés Valdivieso Vera",
+  collab: "Claudia Marcano",
+  area: "Producto",
+  year: "2025",
+  url: "https://www.behance.net/gallery/218091267/COSTA-Designed-with-HyphaLite"
+},
 /* ------------------ Campaña Funa y Acoso — Pilar Saavedra ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/N2834851674622620216387279729347/Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
