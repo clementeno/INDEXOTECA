@@ -88,6 +88,16 @@ body {
 .ref2d__search-wrapper{position:relative; flex:1 1 auto; min-width:0;}
 .ref2d__search{height:40px; border-radius:999px; border:1px solid #2a2a2e; background:#141418; color:var(--ink); padding:0 16px; width:100%;}
 .ref2d__count{flex-shrink:0; padding:6px 12px; border-radius:999px; background:var(--chip); color:var(--ink-dim); font-size:.9rem;}
+.ref2d__count--action{
+  border:1px solid rgba(255,255,255,0.2);
+  color:var(--ink);
+  cursor:pointer;
+  transition:background-color .15s ease, border-color .15s ease;
+}
+.ref2d__count--action:hover{
+  background:rgba(255,255,255,0.08);
+  border-color:rgba(255,255,255,0.35);
+}
 .ref2d__header-actions{display:flex; align-items:center; gap:0.5rem 0.75rem; flex-wrap:wrap;}
 .ref2d__catToggle{font:inherit; padding:0.35rem 0.75rem; border-radius:999px; border:1px solid rgba(255,255,255,0.3); background:transparent; color:inherit; cursor:pointer; display:inline-flex; align-items:center; gap:0.25rem; transition:background-color 0.15s ease;}
 .ref2d__catToggle:hover{background:rgba(255,255,255,0.08);}

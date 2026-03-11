@@ -29,6 +29,7 @@
   const indexList = $("#ref2dIndexList");
   const indexBody = $("#ref2dIndexBody");
   const btnRandom = $("#ref2dRandom");
+  const btnSearchRandom = $("#ref2dSearchRandom");
   const headerMoreBtn = $("#ref2dHeaderMore");
   const headerMoreDropdown = $("#ref2dHeaderMoreDropdown");
 
@@ -2459,6 +2460,8 @@
     if (indexList) indexList.hidden = !isIndex;
     if (btnCenter) btnCenter.hidden = !isBento;
     if (btnRandom) btnRandom.hidden = !isGrid;
+    if (count) count.hidden = isGrid;
+    if (btnSearchRandom) btnSearchRandom.hidden = !isGrid;
 
     renderActiveView();
   }
@@ -3349,13 +3352,14 @@
   }
 
   function initRandomButton() {
-    if (!btnRandom) return;
-    btnRandom.addEventListener('click', () => {
+    const onRandomClick = () => {
       if (activeView !== 'grid') return;
       activeList = shuffleArray(activeList);
       renderMultiGridView();
       updateCount();
-    });
+    };
+    if (btnRandom) btnRandom.addEventListener('click', onRandomClick);
+    if (btnSearchRandom) btnSearchRandom.addEventListener('click', onRandomClick);
   }
 
   function initIndexSorting() {
