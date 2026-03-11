@@ -1595,8 +1595,8 @@
 /* ------------------ Los Heroes Magazine Covers — Daniela Reyes Muñoz ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/H2825598558557558901308096197315/Reyes-Daniela-abril2023_670.jpg",
-  orientation: "v",
-  span: 1,
+  orientation: "h",
+  span: 2,
   tags: ["ilustración","gráfico"],
   title: "Los Heroes Magazine Covers",
   author: "Daniela Reyes Muñoz",
