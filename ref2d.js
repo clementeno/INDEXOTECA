@@ -1325,7 +1325,7 @@
 /* ------------------ Pequén — Elisa Aguirre ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/T2836714247389257057862945288899/Aguirre-Elisa-3c82918c-ebd6-4a47-892e-220fb1ee7cba_rw_3840.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["branding","gráfico","educación"],
   title: "Pequén",
@@ -1415,7 +1415,7 @@
 /* ------------------ Pedagogías para habitar el jardín infantil — Alberto González ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/U2836725192026983430477014577859/158400-1200-auto.jpg",
-  orientation: "v",
+  orientation: "sq",
   span: 1,
   tags: ["investigación","publicación académica"],
   title: "Pedagogías para habitar el jardín infantil",
@@ -1429,7 +1429,7 @@
 /* ------------------ RutaCL Typeface — Rodrigo Ramírez ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/E2836724512633399195754228560579/mini_magick20180818-12931-p4pb7n.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["investigación","publicación académica"],
   title: "The design of RutaCL: Developing and measuring performance for highway typeface",
@@ -1454,7 +1454,10 @@
   collab: "Co-autora: Javiera Manzi",
   area: "Editorial / Investigación",
   year: "2016",
-  url: "https://www.uc.cl/agenda/actividad/presentacion-de-investigacion-resistencia-grafica-dictadura-en-chile-apj-tallersol", "https://artishockrevista.com/2016/06/13/resistencia-grafica-dictadura-chile-apj-tallersol/"
+  url: [
+    "https://www.uc.cl/agenda/actividad/presentacion-de-investigacion-resistencia-grafica-dictadura-en-chile-apj-tallersol",
+    "https://artishockrevista.com/2016/06/13/resistencia-grafica-dictadura-chile-apj-tallersol"
+  ]
 },
 
     /* ------------- Sofía Garrido ------------- */
