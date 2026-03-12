@@ -31,6 +31,7 @@
   const indexBody = $("#ref2dIndexBody");
   const simpleView = $("#ref2dSimpleView");
   const simpleGrid = $("#ref2dSimpleGrid");
+  const btnSimpleRefresh = $("#ref2dSimpleRefresh");
   const btnRandom = $("#ref2dRandom");
   const btnSearchRandom = $("#ref2dSearchRandom");
   const headerMoreBtn = $("#ref2dHeaderMore");
@@ -3030,8 +3031,10 @@
 
     if (!activeList.length) {
       simpleGrid.innerHTML = '<p class="ref2d__empty">Sin resultados para esta búsqueda.</p>';
+      if (btnSimpleRefresh) btnSimpleRefresh.disabled = true;
       return;
     }
+    if (btnSimpleRefresh) btnSimpleRefresh.disabled = false;
 
     const picks = getSimpleSelectionFromCategories(activeList, SIMPLE_CARD_COUNT);
     const frag = document.createDocumentFragment();
@@ -3174,9 +3177,10 @@
       gridRenderToken += 1;
     }
     if (btnSearchRandom) {
-      btnSearchRandom.hidden = !(isGrid || isSimple);
-      btnSearchRandom.textContent = isSimple ? 'Actualizar 3' : 'Aleatorio';
+      btnSearchRandom.hidden = !isGrid;
+      btnSearchRandom.textContent = 'Aleatorio';
     }
+    if (btnSimpleRefresh) btnSimpleRefresh.hidden = !isSimple;
 
     renderActiveView();
   }
@@ -4146,6 +4150,7 @@
     };
     if (btnRandom) btnRandom.addEventListener('click', onRandomClick);
     if (btnSearchRandom) btnSearchRandom.addEventListener('click', onRandomClick);
+    if (btnSimpleRefresh) btnSimpleRefresh.addEventListener('click', onRandomClick);
   }
 
   function initIndexSorting() {
