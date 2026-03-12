@@ -130,6 +130,9 @@
     "sitio web": "web",
     "digital": "web",
     "responsivo": "web",
+    "desarrollo web": "web",
+    "portafolio web": "web",
+    "ecommerce": "web",
 
     // UX/UI (unificado)
     "ux": "ux ui",
@@ -171,6 +174,36 @@
     "fotografía": "fotografia",
     "fotografia de moda": "fotografia",
     "fotografía de moda": "fotografia",
+
+    // Impreso (unificado)
+    "risografia": "impreso",
+    "risografía": "impreso",
+    "serigrafia": "impreso",
+    "serigrafía": "impreso",
+    "impresion": "impreso",
+    "impresión": "impreso",
+
+    // Textil (unificado)
+    "vestuario": "textil",
+    "indumentaria": "textil",
+    "patronaje": "textil",
+
+    // Publicación académica (unificado)
+    "articulo academico": "pub academica",
+    "artículo academico": "pub academica",
+    "articulo académico": "pub academica",
+    "artículo académico": "pub academica",
+    "paper": "pub academica",
+    "publicacion academica": "pub academica",
+    "publicación academica": "pub academica",
+    "publicacion académica": "pub academica",
+    "publicación académica": "pub academica",
+
+    // Biomateriales + Artesanía
+    "biomaterial": "biomateriales",
+    "biomateriales": "biomateriales",
+    "artesania": "artesania",
+    "artesanía": "artesania",
 
     // Afiche (unificado)
     "afiche": "afiche",
@@ -222,6 +255,11 @@
     "ux ui": "UX UI",
     "diseno servicio": "Diseño servicio",
     "portada disco": "Portada disco",
+    "impreso": "Impreso",
+    "textil": "Textil",
+    "pub academica": "Pub. Académica",
+    "biomateriales": "Biomateriales",
+    "artesania": "Artesanía",
     "moda": "Moda",
     "vestuario": "Vestuario",
     "musica": "Música",
@@ -318,6 +356,11 @@
       "espacio": "Espacio",
       "exhibicion": "Exhibición",
       "portada disco": "Portada disco",
+      "impreso": "Impreso",
+      "textil": "Textil",
+      "pub academica": "Pub. Académica",
+      "biomateriales": "Biomateriales",
+      "artesania": "Artesanía",
       "ux": "UX",
       "ui": "UI",
       "animación": "Animación",
@@ -3362,9 +3405,7 @@
       activeList = list;
       // Sincronizar highlight de categorías si el término coincide con una categoría
       const normalizedTerm = q.replace(/\s+/g, ' ').trim();
-      const matchingCat = normalizedTerm
-        ? Object.keys(CAT_LABELS).find(catKey => norm(catKey) === normalizedTerm)
-        : '';
+      const matchingCat = normalizedTerm ? canonicalTagKey(normalizedTerm) : '';
       highlightActiveCategory(matchingCat || '');
     }else{
       // Sin filtro: usar el orden reordenado inicial
