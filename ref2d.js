@@ -1583,6 +1583,33 @@
       year: "—",
       url: "https://individual-frame-992587.framer.app/art-direction"
     },
+    /* ------------------ Biosfera Somos Agua — Josefina Carvalho ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/J2836860966243025197469608129219/Captura-de-pantalla-2026-03-12-a-las-19.28.41.png",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","ilustración","ecología"],
+  title: "Biosfera Somos Agua",
+  author: "Josefina Carvalho",
+  collab: "Autor del libro: Juan Pablo Orrego. Diagramación e ilustración: Josefina Carvalho, Magdalena Larraín",
+  area: "Editorial / Ilustración / Ecología",
+  year: "2021",
+  url: "https://www.instagram.com/p/CQG4mvRDHNH/?img_index=1"
+},
+
+/* ------------------ Biosfera Somos Agua — Magdalena Larraín ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/C2836860966224578453395898577603/Captura-de-pantalla-2026-03-12-a-las-19.28.49.png",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","ilustración","ecología"],
+  title: "Biosfera Somos Agua",
+  author: "Magdalena Larraín",
+  collab: "Autor del libro: Juan Pablo Orrego. Diagramación e ilustración: Josefina Carvalho, Magdalena Larraín",
+  area: "Editorial / Ilustración / Ecología",
+  year: "2021",
+  url: "https://www.instagram.com/p/CQG4mvRDHNH/?img_index=1"
+},
 
     /* ------------- Avita — imagen González ------------- */
     {
