@@ -418,6 +418,14 @@
   /* Cámara 2D */
   let camX = 0, camY = 0;
   const applyTransform = ()=> plane.style.transform = `translate3d(${camX}px, ${camY}px, 0)`;
+  let transformRaf = null;
+  function requestTransformApply() {
+    if (transformRaf !== null) return;
+    transformRaf = requestAnimationFrame(() => {
+      transformRaf = null;
+      applyTransform();
+    });
+  }
 
   /* Columnas (masonry por columna) */
   const columns = new Map();
@@ -3011,19 +3019,66 @@
   let filterDebounceTimer = null;
   const FILTER_DEBOUNCE_MS = 220;
   let fillAroundRaf = null;
-  const BENTO_PREFETCH_X = 1.35;
-  const BENTO_PREFETCH_Y = 1.35;
-  const BENTO_CULL_MARGIN = 2600;
-  const BENTO_MAX_ITEMS_IN_DOM = 700;
-  const BENTO_MAX_NEW_PER_PASS = 190;
+  const BENTO_PREFETCH_X = 1.22;
+  const BENTO_PREFETCH_Y = 1.2;
+  const BENTO_CULL_MARGIN = 1800;
+  const BENTO_MAX_ITEMS_IN_DOM = 480;
+  const BENTO_MAX_NEW_PER_PASS = 120;
   const SIMPLE_CARD_COUNT = 3;
+  const ORIENTATION_SQUARE_TOLERANCE = 0.08;
+  const orientationBySrc = new Map();
+  let orientationRefreshTimer = null;
+  const ORIENTATION_REFRESH_MS = 260;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
+
+  function inferOrientationFromSize(width, height) {
+    if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return null;
+    const ratio = width / height;
+    if (Math.abs(ratio - 1) <= ORIENTATION_SQUARE_TOLERANCE) return 'sq';
+    return ratio > 1 ? 'h' : 'v';
+  }
+
+  function getEffectiveOrientation(meta) {
+    const src = meta?.src || '';
+    if (src && orientationBySrc.has(src)) return orientationBySrc.get(src);
+    return meta?.orientation || 'h';
+  }
+
+  function queueOrientationRefresh() {
+    if (orientationRefreshTimer !== null) return;
+    orientationRefreshTimer = setTimeout(() => {
+      orientationRefreshTimer = null;
+      if (activeView === 'bento') {
+        resetWorld();
+        return;
+      }
+      if (activeView === 'grid') {
+        renderMultiGridView();
+        updateCount();
+        return;
+      }
+      if (activeView === 'simple') {
+        renderSimpleView();
+        updateCount();
+      }
+    }, ORIENTATION_REFRESH_MS);
+  }
+
+  function registerImageOrientation(meta, img) {
+    if (!meta || !meta.src || !img) return;
+    const detected = inferOrientationFromSize(img.naturalWidth, img.naturalHeight);
+    if (!detected) return;
+    const current = orientationBySrc.get(meta.src);
+    if (current === detected) return;
+    orientationBySrc.set(meta.src, detected);
+    queueOrientationRefresh();
+  }
 
   /* Crear tarjeta */
   let globalId = 0;
   function makeCard(i, dir, meta){
     if(!meta) return;
-    const orient = meta.orientation || 'h';
+    const orient = getEffectiveOrientation(meta);
     const span2  = meta.span===2;
     const tags   = (meta.tags||[]);
 
@@ -3088,6 +3143,7 @@
       img.loading='lazy';
       img.decoding='async';
       img.fetchPriority = 'low';
+      img.addEventListener('load', () => registerImageOrientation(meta, img), { once: true });
       Object.assign(img.style,{position:'absolute',inset:'0',width:'100%',height:'100%',objectFit:'cover'});
       el.appendChild(img);
     }
@@ -3124,7 +3180,7 @@
     const maxTags = Number.isFinite(options.maxTags) ? options.maxTags : 4;
     const onImageLoad = typeof options.onImageLoad === 'function' ? options.onImageLoad : null;
     const el = document.createElement('article');
-    const orient = meta.orientation || 'h';
+    const orient = getEffectiveOrientation(meta);
     const isFeatured = meta.span === 2;
     el.className = `${className} is-${orient} ${isFeatured ? 'is-featured' : ''}`;
     el.dataset.tags   = (meta.tags || []).join(' | ');
@@ -3148,6 +3204,7 @@
       img.decoding = 'async';
       img.fetchPriority = 'low';
       img.alt = meta.title || '';
+      img.addEventListener('load', () => registerImageOrientation(meta, img), { once: true });
       if (onImageLoad) {
         img.addEventListener('load', onImageLoad);
         img.addEventListener('error', onImageLoad);
@@ -3573,8 +3630,8 @@
     const endIdx   = Math.floor((vw*1.5) / (COL_W+GAP)) + 2;
     for(let i=startIdx; i<=endIdx; i++){
       const col = ensureColumn(i);
-      while(col.yDown < vh*0.8) makeCard(i,'down', nextMeta());
-      while(col.yUp   > -vh*0.8) makeCard(i,'up',   nextMeta());
+      while(col.yDown < vh*0.62) makeCard(i,'down', nextMeta());
+      while(col.yUp   > -vh*0.62) makeCard(i,'up',   nextMeta());
     }
     updateCount();
     requestFillAround();
@@ -3652,7 +3709,7 @@
       
       camX += dx;
       camY += dy;
-      applyTransform();
+      requestTransformApply();
       requestFillAround();
       
       lastX = currentX;
@@ -3715,7 +3772,7 @@
     if (activeView !== 'bento') return;
     e.preventDefault();
     camX -= e.deltaX; camY -= e.deltaY;
-    applyTransform();
+    requestTransformApply();
     requestFillAround();
   },{passive:false});
   if (btnCenter) {
@@ -3929,6 +3986,7 @@
   function applySuggestion(value) {
     if (!search) return;
     search.value = value;
+    updateSearchClearVisibility();
     queueFilter(value, true);
     if (suggestionsBox) {
       suggestionsBox.hidden = true;
@@ -4018,6 +4076,7 @@
     }
     const q = norm(term);
     const tokens = tokenizeSearchTerm(term);
+    updateSearchClearVisibility();
     if(q){
       const list = getFilteredProjects(tokens);
       if(list.length === 0){
@@ -4258,6 +4317,8 @@
       if (search) search.value = key;
       applyFilter(key);
     }
+    closeSuggestions();
+    updateSearchClearVisibility();
     highlightActiveCategory(key);
   }
 
