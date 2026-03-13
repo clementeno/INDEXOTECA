@@ -2482,6 +2482,292 @@
   year: "2025",
   url: "https://www.linkedin.com/in/catalina-harasic-gil-9239a844/details/projects/?profileUrn=urn%3Ali%3Afsd_profile%3AACoAAAlm0SsBad8u2IpnSwXl7YUI3xvZq3sFM20"
 },
+/* ------------------ Dynamics of coastal picoeukaryote communities — Alejandro Durán ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2838253457734292878869043557059/X01411136.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["investigación","publicación académica"],
+  title: "Dynamics of coastal picoeukaryote communities in response to oil spill disturbances",
+  author: "Alejandro Durán",
+  collab: "Desarrollado con: Benjamín Glasner, Isidora Morel-Letelier, Esteban Osses, Camilo Gálvez-Aracena, Rodrigo De la Iglesia",
+  area: "Investigación / Publicación académica",
+  year: "2026",
+  url: "https://www.sciencedirect.com/science/article/abs/pii/S0141113625008050"
+},
+
+/* ------------------ Flora Nativa — María José Carmona ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/J2838253457715846134795334005443/nativa.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","ilustración","ecología"],
+  title: "Flora Nativa",
+  author: "María José Carmona",
+  collab: "Autores: Juan Vidal y colaboradores. Ilustraciones: María José Carmona. Editorial Amanuta. Institución: IEB Senda Darwin CNCA",
+  area: "Editorial / Ilustración / Ecología",
+  year: "2016",
+  url: "https://mjcarmona.com/libros-publicados"
+},
+
+/* ------------------ Al agua — María José Carmona ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2838253457697399390721624453827/824f334f-4c26-48e3-93ee-95d5a45b865b_rw_3840.JPG",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","ilustración","ecología"],
+  title: "Al agua",
+  author: "María José Carmona",
+  collab: "Ilustrado junto a Loreto Salinas. Texto: Sam García. Editorial Manivela",
+  area: "Editorial / Ilustración / Ecología",
+  year: "2021",
+  url: "https://mjcarmona.com/libros-publicados"
+},
+
+/* ------------------ Panchita recorre Chiloé — Gabriela Sandoval ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/R2838259050418161146130902495939/plantilla-13.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["exhibición","cultura","experiencia"],
+  title: "Panchita recorre Chiloé",
+  author: "Gabriela Sandoval",
+  collab: "Creado por: Malvina García, Gabriela Sandoval",
+  area: "Exhibición / Cultura / Experiencia",
+  year: "2021–2023",
+  url: "https://panchitarecorrechiloe.cl"
+},
+
+/* ------------------ Mou Studio — Martina Palominos ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Y2838253457678952646647914902211/Diseno-sin-titulo-4-1.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["textil","indumentaria","moda"],
+  title: "Mou Studio",
+  author: "Martina Palominos",
+  collab: "",
+  area: "Textil / Indumentaria / Moda",
+  year: "N/A",
+  url: [
+    "https://www.ed.cl/archivo/recomendados/mou-studio-el-taller-textil-donde-el-color-y-el-oficio-se-encuentran/",
+    "https://www.instagram.com/moustudio/?hl=es"
+  ]
+},
+
+/* ------------------ Misión Korex — Teresita Reymond ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/G2838253457660505902574205350595/mision-korex.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["servicio","innovación","educación"],
+  title: "Misión Korex: Estrategia gamificada para potenciar la actividad física en escolares",
+  author: "Teresita de Jesús Reymond",
+  collab: "Guiatura: Patricia Manns",
+  area: "Servicio / Innovación / Educación",
+  year: "2024",
+  url: [
+    "https://www.uc.cl/noticias/estudiantes-uc-se-adjudican-financiamiento-publico-para-convertir-sus-tesis-en-innovaciones-con-impacto-social/",
+    "https://diseno.uc.cl/2025/09/teresita-reymond-disenadora-uc-se-adjudico-concurso-viu-2025-con-su-proyecto-de-tesis/"
+  ]
+},
+
+/* ------------------ El Pescador de Chiloé — Gabriela Sandoval ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/J2838253457531378694058238489283/En-que-consiste_Set-Pescador-compress.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["exhibición","cultura","experiencia"],
+  title: "El Pescador de Chiloé",
+  author: "Gabriela Sandoval",
+  collab: "Autoras: Gabriela Sandoval, Magdalena Schroeder, Malvina García",
+  area: "Exhibición / Cultura / Experiencia",
+  year: "2025",
+  url: [
+    "https://panchitarecorrechiloe.cl/pescador-de-chiloe/",
+    "https://panchitarecorrechiloe.cl"
+  ]
+},
+
+/* ------------------ Ari-test — Macarena Silva ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2838253457642059158500495798979/WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["investigación","salud","servicio"],
+  title: "Ari-test",
+  author: "Macarena Silva",
+  collab: "Liderado por Macarena Silva. Desarrollado en Ari Health Design",
+  area: "Investigación / Salud / Servicio",
+  year: "2022",
+  url: "https://alumni.uc.cl/actualidad/iniciativa-para-la-deteccion-del-vph-creada-por-disenadora-uc-macarena-silva-obtiene-premio-latinoamericano/"
+},
+
+/* ------------------ Resonancias Tectónicas — Marcos Chillet ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/N2838258980855489244172183352003/Captura-de-pantalla-2026-03-13-a-las-16.31.45.png",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","investigación"],
+  title: "Resonancias Tectónicas",
+  author: "Marcos Chillet",
+  collab: "Autores: Pablo Hermansen, Martín Tironi, Carlos Chilet, Carola Ureta. Editorial: Ediciones UC",
+  area: "Editorial / Investigación",
+  year: "2024",
+  url: [
+    "https://artishockrevista.com/2021/06/14/resonancias-tectonicas-chile-bienal-diseno-londres-2021/",
+    "https://lea.uc.cl/resonancias-tectonicas/p"
+  ]
+},
+
+/* ------------------ Salud Oportuna — Sara Riveros ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2838253457549825438131948040899/Group-147.png.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["servicio","innovación","investigación"],
+  title: "Salud Oportuna",
+  author: "Sara Riveros",
+  collab: "Desarrollado en Laboratorio de Innovación Pública UC (LIP)",
+  area: "Servicio / Innovación / Investigación",
+  year: "2019–en curso",
+  url: "https://www.saludoportuna.cl/soluciones"
+},
+
+/* ------------------ GOLDFISH — María Jesús Contreras ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/V2838253642017266175227464200899/Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "GOLDFISH",
+  author: "María Jesús Contreras",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2022",
+  url: "https://www.mariajesuscontreras.com"
+},
+
+/* ------------------ Stilllife 1 — María Jesús Contreras ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2838253641998819431153754649283/Captura-de-pantalla-2026-03-13-a-las-16.00.27.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "Stilllife 1",
+  author: "María Jesús Contreras",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2022",
+  url: "https://www.mariajesuscontreras.com"
+},
+
+/* ------------------ 30 Grad Mag — María Jesús Contreras ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Z2838253641980372687080045097667/Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "30 Grad Mag",
+  author: "María Jesús Contreras",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2022",
+  url: "https://www.mariajesuscontreras.com"
+},
+
+/* ------------------ Frog Party — María Jesús Contreras ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/H2838253641961925943006335546051/Captura-de-pantalla-2026-03-13-a-las-16.02.20.png",
+  orientation: "v",
+  span: 1,
+  tags: ["ilustración","gráfico"],
+  title: "Frog Party",
+  author: "María Jesús Contreras",
+  collab: "",
+  area: "Ilustración / Gráfico",
+  year: "2022",
+  url: "https://www.mariajesuscontreras.com"
+},
+
+/* ------------------ Metro 21 — Josefina Andreu ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2838253457623612414426786247363/metro21-4.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["galería","cultura"],
+  title: "Metro 21",
+  author: "Josefina Andreu",
+  collab: "Directora: Josefina Andreu",
+  area: "Galería / Cultura",
+  year: "2021",
+  url: [
+    "https://www.metro21.cl",
+    "https://amosantiago.cl/galeria-metro-21-arte-conceptual-a-la-calle/"
+  ]
+},
+
+/* ------------------ Confluencia — Josefina Andreu ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/S2838253457512931949984528937667/IMG-PAG-04.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["editorial","dirección creativa"],
+  title: "Confluencia: Ruta de 52 murales en la Región Metropolitana",
+  author: "Josefina Andreu",
+  collab: "",
+  area: "Editorial / Dirección creativa",
+  year: "2024",
+  url: "https://www.metro21.cl/proyectos/confluencia-ruta-de-murales-de-la-region-metropolitana/"
+},
+
+/* ------------------ Borrowed Matter / Materia Prestada — Sofía Guridi ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2838253457605165670353076695747/Materia-Prestada-11.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["exhibición","cultura","experiencia"],
+  title: "Borrowed Matter / Materia Prestada",
+  author: "Sofía Guridi",
+  collab: "Curador: Juan Pablo Vergara. Bienal de Diseño de Londres 2023",
+  area: "Exhibición / Cultura / Experiencia",
+  year: "2023",
+  url: [
+    "https://sofiaguridi.xyz/borrowed-mattermateria-prestada",
+    "https://www.zancada.com/materia-prestada-borrowed-matter/"
+  ]
+},
+
+/* ------------------ Dissolvable Biotextile Keyboard — Sofía Guridi ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2838253457586718926279367144131/756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["exhibición","objeto","experiencia"],
+  title: "Dissolvable Biotextile Keyboard",
+  author: "Sofía Guridi",
+  collab: "Fotografía: Vertti Virasjoki. Presentado en Dutch Design Week 2024",
+  area: "Objeto / Exhibición",
+  year: "2024",
+  url: "https://sofiaguridi.xyz/dissolvable-biotextile-keyboard"
+},
+
+/* ------------------ Palpa — Josefa Cortés ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2838253457568272182205657592515/Palpa.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["salud","servicio","investigación","producto"],
+  title: "Palpa",
+  author: "Josefa Cortés",
+  collab: "",
+  area: "Salud / Servicio / Investigación / Producto",
+  year: "2019–en curso",
+  url: [
+    "https://palpa.cl",
+    "https://alumni.uc.cl/actualidad/josefa-cortes-disenadora-uc-dentro-de-losas-100-jovenes-lideres-2020/"
+  ]
+},
 
 /* ------------------ El Delantal Vestido (Iluminación) — Catalina Harasic ------------------ */
 {
