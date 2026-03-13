@@ -884,11 +884,11 @@
   src: "https://freight.cargo.site/t/original/i/H2834851674677960448608408384195/Rey-Valentina.png",
   orientation: "v",
   span: 1,
-  tags: ["portada","ilustración","infantil"],
+  tags: ["ilustración","infantil"],
   title: "Libro infantil",
   author: "Valentina Rey Carmona",
   collab: "",
-  area: "Portada / Ilustración / Infantil",
+  area: "Ilustración / Infantil",
   year: "2024",
   url: "https://www.behance.net/gallery/182931307/Ilustraciones-editoriales"
 },
