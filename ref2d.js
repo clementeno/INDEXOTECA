@@ -2610,6 +2610,47 @@
   year: "2022",
   url: "https://alumni.uc.cl/actualidad/iniciativa-para-la-deteccion-del-vph-creada-por-disenadora-uc-macarena-silva-obtiene-premio-latinoamericano/"
 },
+/* ------------------ Deseo, Carne y Voluntad — Javiera Donoso ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2838275320999836480166714356419/a3407688467_16.jpg",
+  orientation: "sq",
+  span: 2,
+  tags: ["cover art","dirección de arte"],
+  title: "Deseo, Carne y Voluntad",
+  author: "Javiera Donoso",
+  collab: "Banda: Candelabro",
+  area: "Cover Art / Dirección de arte",
+  year: "2025",
+  url: "https://soloartistaschilenos.cl/deseo-carne-y-voluntad-de-candelabro-un-abrazo-a-la-espiritualidad-y-una-feroz-demostracion-de-madurez-musical/"
+},
+
+/* ------------------ Ahora o nunca — Javiera Donoso ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2838275388164431652543191790275/Captura-de-pantalla-2026-03-13-a-las-16.43.15.png",
+  orientation: "sq",
+  span: 1,
+  tags: ["cover art","dirección de arte"],
+  title: "Ahora o nunca",
+  author: "Javiera Donoso",
+  collab: "Banda: Candelabro",
+  area: "Cover Art / Dirección de arte",
+  year: "2024",
+  url: "https://www.instagram.com/p/C2vNeBzvoNz/"
+},
+
+/* ------------------ Si el mundo se acabara hoy — Pablo González ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2838277900592527747710412337859/66725.jpg",
+  orientation: "sq",
+  span: 1,
+  tags: ["cover art","dirección de arte"],
+  title: "Si el mundo se acabara hoy",
+  author: "Pablo González",
+  collab: "Banda: Ad Portas",
+  area: "Cover Art / Dirección de arte",
+  year: "2025",
+  url: "https://portaldisc.com/contenido/single-adportas-si-el-mundo-acaba-hoy"
+},
 
 /* ------------------ Resonancias Tectónicas — Marcos Chillet ------------------ */
 {
@@ -2618,7 +2659,7 @@
   span: 1,
   tags: ["editorial","investigación"],
   title: "Resonancias Tectónicas",
-  author: "Marcos Chillet",
+  author: "Marcos Chilet",
   collab: "Autores: Pablo Hermansen, Martín Tironi, Carlos Chilet, Carola Ureta. Editorial: Ediciones UC",
   area: "Editorial / Investigación",
   year: "2024",
