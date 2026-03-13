@@ -2527,9 +2527,9 @@
 /* ------------------ Panchita recorre Chiloé — Gabriela Sandoval ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/R2838259050418161146130902495939/plantilla-13.jpeg",
-  orientation: "v",
-  span: 1,
-  tags: ["exhibición","cultura","experiencia"],
+  orientation: "h",
+  span: 2,
+  tags: ["exhibición","cultura","experiencia","artesanía"],
   title: "Panchita recorre Chiloé",
   author: "Gabriela Sandoval",
   collab: "Creado por: Malvina García, Gabriela Sandoval",
@@ -2575,9 +2575,9 @@
 /* ------------------ El Pescador de Chiloé — Gabriela Sandoval ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/J2838253457531378694058238489283/En-que-consiste_Set-Pescador-compress.jpg",
-  orientation: "v",
+  orientation: "h",
   span: 1,
-  tags: ["exhibición","cultura","experiencia"],
+  tags: ["exhibición","cultura","experiencia","artesanía"],
   title: "El Pescador de Chiloé",
   author: "Gabriela Sandoval",
   collab: "Autoras: Gabriela Sandoval, Magdalena Schroeder, Malvina García",
@@ -2592,7 +2592,7 @@
 /* ------------------ Ari-test — Macarena Silva ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/O2838253457642059158500495798979/WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["investigación","salud","servicio"],
   title: "Ari-test",
@@ -2679,7 +2679,7 @@
 {
   src: "https://freight.cargo.site/t/original/i/V2838253642017266175227464200899/Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
   orientation: "v",
-  span: 1,
+  span: 2,
   tags: ["ilustración","gráfico"],
   title: "GOLDFISH",
   author: "María Jesús Contreras",
@@ -2706,8 +2706,8 @@
 /* ------------------ 30 Grad Mag — María Jesús Contreras ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/Z2838253641980372687080045097667/Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
-  orientation: "v",
-  span: 1,
+  orientation: "h",
+  span: 2,
   tags: ["ilustración","gráfico"],
   title: "30 Grad Mag",
   author: "María Jesús Contreras",
@@ -2752,7 +2752,7 @@
 {
   src: "https://freight.cargo.site/t/original/i/S2838253457512931949984528937667/IMG-PAG-04.jpg",
   orientation: "v",
-  span: 1,
+  span: 2,
   tags: ["editorial","dirección creativa"],
   title: "Confluencia: Ruta de 52 murales en la Región Metropolitana",
   author: "Josefina Andreu",
@@ -2782,8 +2782,8 @@
 /* ------------------ Dissolvable Biotextile Keyboard — Sofía Guridi ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/Q2838253457586718926279367144131/756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
-  orientation: "v",
-  span: 1,
+  orientation: "h",
+  span: 2,
   tags: ["exhibición","objeto","experiencia"],
   title: "Dissolvable Biotextile Keyboard",
   author: "Sofía Guridi",
