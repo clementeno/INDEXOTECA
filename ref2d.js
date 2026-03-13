@@ -4057,6 +4057,7 @@
       clearTimeout(filterDebounceTimer);
       filterDebounceTimer = null;
     }
+    updateSearchClearVisibility();
     const q = norm(term);
     const tokens = tokenizeSearchTerm(term);
     if(q){
