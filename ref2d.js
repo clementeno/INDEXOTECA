@@ -2629,6 +2629,151 @@
   year: "2024",
   url: "https://www.instagram.com/p/C2vNeBzvoNz/"
 },
+/* ------------------ The Art of Talking About Art — María Jesús Vidal Lynch ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2839502320717933601075579269827/Captura-de-pantalla-2026-03-14-a-las-11.12.16.png",
+  orientation: "v",
+  span: 1,
+  tags: ["servicio","cultura","exhibición"],
+  title: "The Art of Talking About Art",
+  author: "María Jesús Vidal Lynch",
+  collab: "Research & design of the overall project",
+  area: "Servicio / Cultura / Exhibición",
+  year: "2023",
+  url: "https://mjvidallynch.myportfolio.com/the-art-of-talking-about-art"
+},
+
+/* ------------------ Refugia — Constanza Weinreich Siraqyan ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2839495259691683810607121248963/1770321553813.jpeg",
+  orientation: "v",
+  span: 1,
+  tags: ["dirección creativa","identidad visual"],
+  title: "Refugia",
+  author: "Constanza Weinreich Siraqyan",
+  collab: "Vomva: branding y dirección. Constanza Weinreich: diseño visual y dirección",
+  area: "Dirección creativa / Identidad visual",
+  year: "2025",
+  url: "https://www.linkedin.com/posts/c-weinreich_dise%C3%B1o-de-identidad-visual-y-marca-de-refugia-activity-7425266784230084608-_xkG"
+},
+
+/* ------------------ MUDA — Ignacia Bianchi ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/C2839495436356151804523497075395/Captura-de-pantalla-2026-03-14-a-las-10.44.05.png",
+  orientation: "v",
+  span: 1,
+  tags: ["indumentaria","objeto","textil"],
+  title: "MUDA",
+  author: "Ignacia Bianchi",
+  collab: "Fotografía: Dillan González",
+  area: "Indumentaria / Objeto / Textil",
+  year: "2025",
+  url: [
+    "https://ignaciabianchi.myportfolio.com/muda",
+    "https://www.linkedin.com/posts/ignacia-bianchi-977853372_muy-feliz-de-contarles-que-el-pasado-22-de-activity-7415438031157186560-Xggu"
+  ]
+},
+
+/* ------------------ Regularidad Irregular — Ignacia Bianchi ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2839495259673237066533411697347/d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
+  orientation: "v",
+  span: 1,
+  tags: ["indumentaria","objeto","textil"],
+  title: "Regularidad Irregular",
+  author: "Ignacia Bianchi",
+  collab: "",
+  area: "Indumentaria / Objeto / Textil",
+  year: "2024",
+  url: "https://ignaciabianchi.myportfolio.com/pleats-pleats-pleats"
+},
+
+/* ------------------ Hati: El Equilibrio de los Espíritus — Clara Valenzuela Lowey ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/F2839500316442296504385377088195/625530226_17872909344521833_8996592620757902267_n.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["juego de mesa","producto"],
+  title: "Hati: El Equilibrio de los Espíritus",
+  author: "Clara Valenzuela Lowey",
+  collab: "Financiado por FONDART",
+  area: "Juego de mesa / Producto",
+  year: "2024",
+  url: "https://www.instagram.com/p/DV11EWUFhSp/"
+},
+
+/* ------------------ La ciudad como texto — Carola Ureta ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/B2839501183845096338355913175747/Captura-de-pantalla-2026-03-14-a-las-11.12.54.png",
+  orientation: "v",
+  span: 1,
+  tags: ["web","experiencia","cultura"],
+  title: "La ciudad como texto",
+  author: "Carola Ureta",
+  collab: "Desarrollo web: Felipe Sologuren",
+  area: "Web / Experiencia / Cultura",
+  year: "2020",
+  url: [
+    "https://www.laciudadcomotexto.cl",
+    "https://www.instagram.com/laciudadcomotexto"
+  ]
+},
+
+/* ------------------ Metanoien — Tomás Corvalán Azócar ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2839495259654790322459702145731/DSC_2551-e1531948324611.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["moda","indumentaria","cultura"],
+  title: "Metanoien",
+  author: "Tomás Corvalán Azócar",
+  collab: "",
+  area: "Moda / Indumentaria / Cultura",
+  year: "2018",
+  url: "https://pousta.com/tomas-corvalan-azocar-metanoien/"
+},
+
+/* ------------------ Diseño basado en Simbiogénesis — Daniela Rojas-Levy ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/T2839495259636343578385992594115/cover_issue_305_es_ES.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["investigación","publicación académica"],
+  title: "Desde la bio-imitación a la bioextrapolación: Diseño basado en Simbiogénesis",
+  author: "Daniela Rojas-Levy",
+  collab: "Durán-Vargas, A., & Rojas-Levy, D. (2021)",
+  area: "Investigación / Publicación académica",
+  year: "2021",
+  url: "https://dspace.palermo.edu/ojs/index.php/cdc/article/view/5004"
+},
+
+/* ------------------ Humanidad Teenager — Benjamín Saíz ------------------ */
+{
+  src: "",
+  orientation: "v",
+  span: 1,
+  tags: ["cover art","dirección de arte"],
+  title: "Humanidad Teenager",
+  author: "Benjamín Saíz",
+  collab: "",
+  area: "Cover Art / Dirección de arte",
+  year: "2021",
+  url: "https://www.behance.net/gallery/111240593/Humanidad-Teenager-Portada-y-Animaciones"
+},
+
+/* ------------------ CHT Lab — Benjamín Saíz ------------------ */
+{
+  src: "",
+  orientation: "v",
+  span: 1,
+  tags: ["identidad visual"],
+  title: "CHT Lab",
+  author: "Benjamín Saíz",
+  collab: "",
+  area: "Identidad visual",
+  year: "2021",
+  url: "https://www.behance.net/gallery/111241797/CHT-Lab-2021"
+},
 
 /* ------------------ Si el mundo se acabara hoy — Pablo González ------------------ */
 {
