@@ -3218,7 +3218,7 @@
 /* ------------------ Confluencia — Josefina Andreu ------------------ */
 {
   src: "https://freight.cargo.site/t/original/i/S2838253457512931949984528937667/IMG-PAG-04.jpg",
-  orientation: "v",
+  orientation: "h",
   span: 2,
   tags: ["editorial","dirección creativa"],
   title: "Confluencia: Ruta de 52 murales en la Región Metropolitana",
