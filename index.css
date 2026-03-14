@@ -83,6 +83,13 @@ div.caution-processing{--processing-opacity: .08;position:absolute;inset:0;opaci
 .ref2d__view-card-head{padding:10px 12px 0;}
 .ref2d__view-card-head h3{margin:0; font-size:0.95rem; color:var(--ink);}
 .ref2d__view-card-head p{margin:0.3rem 0 0; color:var(--ink-dim); font-size:0.8rem;}
+.ref2d__view-card-head .ref2d__view-card-role{
+  margin-top:0.2rem;
+  font-size:0.74rem;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  color:rgba(255,255,255,0.7);
+}
 .ref2d__view-card-tags{display:flex; flex-wrap:wrap; gap:8px; padding:10px 12px 12px;}
 
 .ref2d__indexList{

@@ -17,7 +17,8 @@
         sheetFig = document.querySelector(".sheet__figure");
   const sTitle  = $("#sheetTitle"),
         sAuthor = $("#sheetAuthor"),
-        sCollab = $("#sheetCollab"),
+        sRole   = $("#sheetRole"),
+        sCredits = $("#sheetCredits"),
         sArea   = $("#sheetArea"),
         sYear   = $("#sheetYear"),
         sTags   = $("#sheetTags"),
@@ -311,7 +312,240 @@
       (canonicalKey ? canonicalKey.charAt(0).toUpperCase() + canonicalKey.slice(1) : "—");
   };
 
+  const ROLE_DISPLAY = {
+    "designer": "Designer",
+    "photographer": "Photographer",
+    "illustrator": "Illustrator",
+    "art director": "Art director",
+    "creative director": "Creative director",
+    "editor": "Editor",
+    "curator": "Curator",
+    "researcher": "Researcher",
+    "web developer": "Web developer",
+    "director": "Director",
+    "producer": "Producer",
+    "co-author": "Co-author",
+    "typographer": "Typographer",
+    "guide": "Guide",
+    "lighting designer": "Lighting designer",
+  };
+
+  const ROLE_ALIASES = {
+    "disenador": "designer",
+    "disenadora": "designer",
+    "diseñador": "designer",
+    "diseñadora": "designer",
+    "diseno": "designer",
+    "diseño": "designer",
+    "design": "designer",
+    "graphic design": "designer",
+    "identidad grafica": "designer",
+    "identidad gráfica": "designer",
+    "diagramacion": "designer",
+    "diagramación": "designer",
+    "fotografia": "photographer",
+    "fotografía": "photographer",
+    "ilustracion": "illustrator",
+    "ilustración": "illustrator",
+    "direccion de arte": "art director",
+    "dirección de arte": "art director",
+    "art direction": "art director",
+    "creative direction": "creative director",
+    "direccion creativa": "creative director",
+    "dirección creativa": "creative director",
+    "curaduria": "curator",
+    "curaduría": "curator",
+    "investigacion": "researcher",
+    "investigación": "researcher",
+    "research": "researcher",
+    "desarrollo web": "web developer",
+    "web development": "web developer",
+    "director": "director",
+    "direccion": "director",
+    "dirección": "director",
+    "produccion": "producer",
+    "producción": "producer",
+    "editor": "editor",
+    "editores": "editor",
+    "editorial": "editor",
+    "autor": "author",
+    "autora": "author",
+    "autores": "author",
+    "autoras": "author",
+    "coautor": "co-author",
+    "co autora": "co-author",
+    "co-autora": "co-author",
+    "co-autor": "co-author",
+    "coautora": "co-author",
+    "typography": "typographer",
+    "tipografia": "typographer",
+    "tipografía": "typographer",
+    "guiatura": "guide",
+    "guia": "guide",
+    "guía": "guide",
+    "iluminacion": "lighting designer",
+    "iluminación": "lighting designer",
+  };
+
+  const CREDIT_STOP_WORDS = new Set([
+    "y", "and", "con", "por", "de", "del", "la", "el", "los", "las", "the",
+    "autor", "autora", "autores", "autoras", "coautor", "coautora", "coautores",
+    "fotografia", "ilustracion", "ilustraciones", "diagramacion", "diseno", "design",
+    "graphic", "creative", "direction", "editor", "editorial", "investigacion",
+    "curaduria", "guiatura", "produccion", "desarrollo", "web", "proyecto", "trabajo",
+    "realizado", "studio", "estudio"
+  ]);
+
+  function splitCreditSegments(raw) {
+    const normalized = String(raw || "").replace(/\s+/g, " ").trim();
+    if (!normalized) return [];
+    const withBreaks = normalized
+      .replace(/\s*\|\s*/g, "\n")
+      .replace(/;\s+(?=[A-Za-zÁÉÍÓÚÜÑ@][^:]{1,70}:)/g, "\n")
+      .replace(/\.\s+(?=[A-Za-zÁÉÍÓÚÜÑ@][^:]{1,70}:)/g, "\n");
+    return withBreaks
+      .split("\n")
+      .map((line) => line.trim())
+      .filter(Boolean);
+  }
+
+  function cleanAuthorName(raw) {
+    return String(raw || "")
+      .replace(/\(([^)]*)\)/g, " ")
+      .replace(/\s+/g, " ")
+      .replace(/\s+,/g, ",")
+      .replace(/,\s*$/, "")
+      .trim();
+  }
+
+  function splitAuthorNames(raw) {
+    return cleanAuthorName(raw)
+      .split(/\s*(?:,|\/| y | and | & )\s*/i)
+      .map((name) => name.trim())
+      .filter(Boolean);
+  }
+
+  function toNameKey(value) {
+    return norm(value)
+      .replace(/[^a-z0-9@]+/g, " ")
+      .trim();
+  }
+
+  function escapeRegExp(value) {
+    return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
+
+  function normalizeRoleLabel(raw) {
+    const key = norm(raw)
+      .replace(/[^a-z0-9/&+\s-]+/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    if (!key) return "";
+    if (ROLE_ALIASES[key]) return ROLE_ALIASES[key];
+    if (key.includes("coautor") || key.includes("co autor")) return "co-author";
+    if (key.includes("autor") || key.includes("author")) return "author";
+    if (key.includes("fotografia") || key.includes("photo")) return "photographer";
+    if (key.includes("ilustr")) return "illustrator";
+    if (key.includes("curadur")) return "curator";
+    if (key.includes("investig") || key.includes("research")) return "researcher";
+    if (key.includes("tipograf") || key.includes("typograph")) return "typographer";
+    if (key.includes("iluminacion") || key.includes("lighting")) return "lighting designer";
+    if (key.includes("desarrollo web") || key.includes("web development")) return "web developer";
+    if (key.includes("guiatura") || key.includes("guia") || key.includes("guide")) return "guide";
+    if (key.includes("direction") || key.includes("direccion")) {
+      if (key.includes("creative") || key.includes("creativa")) return "creative director";
+      if (key.includes("arte") || key.includes("art")) return "art director";
+      return "director";
+    }
+    if (key.includes("editor")) return "editor";
+    if (key.includes("produccion") || key.includes("production")) return "producer";
+    if (
+      key.includes("diseno") ||
+      key.includes("design") ||
+      key.includes("diagramacion") ||
+      key.includes("branding") ||
+      key.includes("identidad")
+    ) return "designer";
+    return "";
+  }
+
+  function extractCreditLabel(segment) {
+    const colonMatch = String(segment || "").match(/^([^:]{2,80}):\s*(.+)$/);
+    if (colonMatch) {
+      return { label: colonMatch[1].trim(), details: colonMatch[2].trim() };
+    }
+    const roleMatch = String(segment || "").match(/^(.{2,60}?)\s+(?:por|de)\s+(.+)$/i);
+    if (!roleMatch) return null;
+    if (!normalizeRoleLabel(roleMatch[1])) return null;
+    return { label: roleMatch[1].trim(), details: roleMatch[2].trim() };
+  }
+
+  function stripAuthorFromCredit(text, authorKeys) {
+    let cleaned = norm(text)
+      .replace(/[^a-z0-9@]+/g, " ")
+      .trim();
+    authorKeys.forEach((key) => {
+      if (!key || key.length < 4) return;
+      cleaned = cleaned.replace(new RegExp(`\\b${escapeRegExp(key)}\\b`, "g"), " ");
+    });
+    cleaned = cleaned
+      .split(/\s+/)
+      .filter((token) => token && !CREDIT_STOP_WORDS.has(token))
+      .join(" ")
+      .trim();
+    return cleaned;
+  }
+
+  function deriveDisplayPeople(meta) {
+    const authorName = cleanAuthorName(meta.author) || "—";
+    const authorKeys = splitAuthorNames(meta.author)
+      .map(toNameKey)
+      .filter((key) => key.length >= 4);
+    const authorRoleMatch = String(meta.author || "").match(/\(([^)]*)\)/);
+    let roleCanonical = normalizeRoleLabel(meta.role || "");
+    if (!roleCanonical && authorRoleMatch) {
+      roleCanonical = normalizeRoleLabel(authorRoleMatch[1]);
+    }
+
+    const credits = [];
+    const seenCreditLines = new Set();
+    splitCreditSegments(meta.collab).forEach((segment) => {
+      const normalizedSegment = toNameKey(segment);
+      const segmentHasAuthor = authorKeys.some((name) => normalizedSegment.includes(name));
+      const labeled = extractCreditLabel(segment);
+      const segmentRole = labeled ? normalizeRoleLabel(labeled.label) : "";
+
+      if (!roleCanonical && segmentHasAuthor && segmentRole && segmentRole !== "author") {
+        roleCanonical = segmentRole;
+      }
+
+      let keepSegment = true;
+      if (segmentHasAuthor && segmentRole) {
+        const segmentDetails = labeled ? labeled.details : segment;
+        const residue = stripAuthorFromCredit(segmentDetails, authorKeys);
+        if (!residue) keepSegment = false;
+      }
+
+      if (!keepSegment) return;
+      const dedupeKey = toNameKey(segment);
+      if (!dedupeKey || seenCreditLines.has(dedupeKey)) return;
+      seenCreditLines.add(dedupeKey);
+      credits.push(segment);
+    });
+
+    return {
+      author: authorName,
+      role: ROLE_DISPLAY[roleCanonical] || ROLE_DISPLAY.designer,
+      credits: credits.join("\n")
+    };
+  }
+
   function normalizeProjectTags(p) {
+    const people = deriveDisplayPeople(p);
+    p._displayAuthor = people.author || "—";
+    p._displayRole = people.role || ROLE_DISPLAY.designer;
+    p._displayCredits = people.credits || "";
+
     const raw = Array.isArray(p.tags) ? p.tags.slice() : [];
     const keys = [];
     const seen = new Set();
@@ -332,8 +566,11 @@
     const hay = [
       p.title || "",
       p.author || "",
+      p._displayAuthor || "",
+      p._displayRole || "",
       p.area || "",
       p.collab || "",
+      p._displayCredits || "",
       raw.join(" "),
       p.tags.join(" "),
       keys.join(" ")
@@ -3257,11 +3494,13 @@
     el.dataset.id      = meta.id ?? globalId;
     el.dataset.tags    = tags.join(' | ');
     el.dataset.title   = meta.title || '—';
-    el.dataset.author  = meta.author || '—';
+    el.dataset.author  = meta._displayAuthor || meta.author || '—';
+    el.dataset.role    = meta._displayRole || 'Designer';
     el.dataset.area    = meta.area || '—';
     el.dataset.year    = meta.year || '—';
     el.dataset.url     = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
-    el.dataset.collab  = meta.collab || '';
+    el.dataset.collab  = meta._displayCredits || meta.collab || '';
+    el.dataset.credits = meta._displayCredits || meta.collab || '';
     el._meta = meta;
 
     const proxy = document.createElement('div');
@@ -3315,11 +3554,13 @@
     el.className = `${className} is-${orient} ${isFeatured ? 'is-featured' : ''}`;
     el.dataset.tags   = (meta.tags || []).join(' | ');
     el.dataset.title  = meta.title || '—';
-    el.dataset.author = meta.author || '—';
+    el.dataset.author = meta._displayAuthor || meta.author || '—';
+    el.dataset.role   = meta._displayRole || 'Designer';
     el.dataset.area   = meta.area || '—';
     el.dataset.year   = meta.year || '—';
     el.dataset.url    = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
-    el.dataset.collab = meta.collab || '';
+    el.dataset.collab = meta._displayCredits || meta.collab || '';
+    el.dataset.credits = meta._displayCredits || meta.collab || '';
     el._meta = meta;
 
     const body = document.createElement('div');
@@ -3347,9 +3588,14 @@
     const title = document.createElement('h3');
     title.textContent = meta.title || '—';
     const author = document.createElement('p');
-    author.textContent = meta.author || '—';
+    author.className = 'ref2d__view-card-author';
+    author.textContent = meta._displayAuthor || meta.author || '—';
+    const role = document.createElement('p');
+    role.className = 'ref2d__view-card-role';
+    role.textContent = `Rol: ${meta._displayRole || 'Designer'}`;
     head.appendChild(title);
     head.appendChild(author);
+    head.appendChild(role);
     body.appendChild(head);
 
     const tagsWrap = document.createElement('div');
@@ -3539,8 +3785,8 @@
       return fallback * listSortDir;
     }
 
-    const valueA = listSortKey === 'author' ? a.author : a.title;
-    const valueB = listSortKey === 'author' ? b.author : b.title;
+    const valueA = listSortKey === 'author' ? (a._displayAuthor || a.author) : a.title;
+    const valueB = listSortKey === 'author' ? (b._displayAuthor || b.author) : b.title;
     return normalizedTextValue(valueA).localeCompare(normalizedTextValue(valueB), 'es') * listSortDir;
   }
 
@@ -3566,7 +3812,7 @@
     updateIndexSortUI();
 
     if (!activeList.length) {
-      indexBody.innerHTML = '<tr><td colspan="5" class="ref2d__index-empty">Sin resultados para esta búsqueda.</td></tr>';
+      indexBody.innerHTML = '<tr><td colspan="6" class="ref2d__index-empty">Sin resultados para esta búsqueda.</td></tr>';
       return;
     }
 
@@ -3577,7 +3823,8 @@
       const firstUrl = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
       tr.innerHTML = `
         <td>${meta.title || '—'}</td>
-        <td>${meta.author || '—'}</td>
+        <td>${meta._displayAuthor || meta.author || '—'}</td>
+        <td>${meta._displayRole || 'Designer'}</td>
         <td>${meta.area || '—'}</td>
         <td>${meta.year || '—'}</td>
         <td>${firstUrl ? `<a href="${firstUrl}" target="_blank" rel="noopener">↗</a>` : '—'}</td>
@@ -3587,11 +3834,13 @@
         const ghost = document.createElement('div');
         ghost.dataset.tags = (meta.tags || []).join(' | ');
         ghost.dataset.title = meta.title || '—';
-        ghost.dataset.author = meta.author || '—';
+        ghost.dataset.author = meta._displayAuthor || meta.author || '—';
+        ghost.dataset.role = meta._displayRole || 'Designer';
         ghost.dataset.area = meta.area || '—';
         ghost.dataset.year = meta.year || '—';
         ghost.dataset.url = firstUrl;
-        ghost.dataset.collab = meta.collab || '';
+        ghost.dataset.collab = meta._displayCredits || meta.collab || '';
+        ghost.dataset.credits = meta._displayCredits || meta.collab || '';
         ghost._meta = meta;
         openSpotlight(ghost);
       });
@@ -3930,20 +4179,8 @@
     // El CSS con max-width, max-height y object-fit: contain se encarga de todo
   }
 
-  function formatCollabText(raw) {
-    const normalized = String(raw || "").replace(/\s+/g, " ").trim();
-    if (!normalized) return "—";
-
-    const withBreaks = normalized
-      .replace(/\s*\|\s*/g, "\n")
-      .replace(/;\s+(?=[A-Za-zÁÉÍÓÚÜÑ][^:]{1,50}:)/g, "\n")
-      .replace(/\.\s+(?=[A-Za-zÁÉÍÓÚÜÑ][^:]{1,50}:)/g, "\n");
-
-    const lines = withBreaks
-      .split("\n")
-      .map((line) => line.trim())
-      .filter(Boolean);
-
+  function formatCreditsText(raw) {
+    const lines = splitCreditSegments(raw);
     return lines.length ? lines.join("\n") : "—";
   }
 
@@ -3952,10 +4189,15 @@
     const meta = el._meta || {};
 
     sTitle.textContent  = el.dataset.title  || meta.title  || "—";
-    sAuthor.textContent = el.dataset.author || meta.author || "—";
+    sAuthor.textContent = el.dataset.author || meta._displayAuthor || meta.author || "—";
+    if (sRole) {
+      sRole.textContent = el.dataset.role || meta._displayRole || "Designer";
+    }
 
-    const collabText = meta.collab || el.dataset.collab || "";
-    sCollab.textContent = formatCollabText(collabText);
+    const creditsText = meta._displayCredits || el.dataset.credits || meta.collab || el.dataset.collab || "";
+    if (sCredits) {
+      sCredits.textContent = formatCreditsText(creditsText);
+    }
 
     sArea.textContent   = el.dataset.area   || meta.area   || "—";
     sYear.textContent   = el.dataset.year   || meta.year   || "—";
@@ -4346,7 +4588,7 @@
     add(item){
       const id = DB.length;
       const newItem = Object.assign(
-        {id, src:"", orientation:"h", span:1, tags:[], title:"—", author:"—", collab:"", area:"—", year:"—", url:""},
+        {id, src:"", orientation:"h", span:1, tags:[], title:"—", author:"—", role:"", collab:"", area:"—", year:"—", url:""},
         item
       );
       normalizeProjectTags(newItem);

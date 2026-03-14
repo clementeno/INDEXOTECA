@@ -575,9 +575,10 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 
 .sheet__meta{ display:grid; grid-template-columns:auto 1fr; gap:8px 12px; margin:.5rem 0 1rem; }
 .sheet__meta dt{color:var(--ink-dim);} .sheet__meta dd{margin:0;}
-#sheetCollab{
+#sheetCredits{
   white-space:pre-line;
   line-height:1.4;
+  overflow-wrap:anywhere;
 }
 .sheet__tags{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px;}
 .sheet__link{ display:inline-block; padding:10px 12px; border-radius:10px; background:#1f1f24; border:1px solid #2a2a2e; color:#fff; text-decoration:none;}
