@@ -313,7 +313,7 @@
   };
 
   const ROLE_DISPLAY = {
-    "designer": "Designer",
+    "designer": "Diseñador/a",
     "photographer": "Photographer",
     "illustrator": "Illustrator",
     "art director": "Art director",
@@ -329,6 +329,27 @@
     "guide": "Guide",
     "lighting designer": "Lighting designer",
   };
+
+  const FEMALE_NAME_HINTS = new Set([
+    "alejandra", "antonia", "antonella", "aranda", "bernardita", "camila", "carola",
+    "carolina", "catalina", "chiara", "colomba", "constanza", "daniela", "elisa",
+    "emilia", "fernanda", "felicidad", "florencia", "gabriela", "gracia", "ignacia",
+    "isabel", "javiera", "josefa", "josefina", "julie", "karina", "kimberly", "magdalena",
+    "macarena", "manuela", "marisol", "martina", "maria", "naomi", "nicole", "paula",
+    "paulina", "pilar", "rafaella", "sara", "sofia", "sophia", "tamara", "teresita",
+    "trinidad", "valentina", "vanessa", "victoria", "yasmin", "yazmin"
+  ]);
+
+  const MALE_NAME_HINTS = new Set([
+    "alejandro", "andres", "antonino", "benjamin", "camilo", "carlos", "clemente",
+    "cristobal", "damian", "daniel", "domingo", "esteban", "felipe", "francisco",
+    "franco", "gianfranco", "gonzalo", "hugo", "joaquin", "jose", "juan",
+    "leon", "lukas", "marcos", "martin", "matias", "maximiliano", "nicolas", "pablo",
+    "patricio", "pedro", "rodrigo", "sergio", "tomas", "vicente"
+  ]);
+
+  const MALE_A_EXCEPTIONS = new Set(["luca", "nikita"]);
+  const FEMALE_O_EXCEPTIONS = new Set(["consuelo"]);
 
   const ROLE_ALIASES = {
     "disenador": "designer",
@@ -425,6 +446,36 @@
       .filter(Boolean);
   }
 
+  function inferNameGender(rawName) {
+    const firstName = norm(String(rawName || "").trim())
+      .replace(/^@/, "")
+      .split(/\s+/)
+      .filter(Boolean)[0] || "";
+    if (!firstName) return "unknown";
+    if (FEMALE_NAME_HINTS.has(firstName)) return "female";
+    if (MALE_NAME_HINTS.has(firstName)) return "male";
+    if (firstName.endsWith("a") && !MALE_A_EXCEPTIONS.has(firstName)) return "female";
+    if (firstName.endsWith("o") && !FEMALE_O_EXCEPTIONS.has(firstName)) return "male";
+    return "unknown";
+  }
+
+  function inferDesignerRoleByAuthors(authorRaw) {
+    const names = splitAuthorNames(authorRaw);
+    if (!names.length) return "Diseñador/a";
+    const counts = { female: 0, male: 0, unknown: 0 };
+    names.forEach((name) => {
+      const gender = inferNameGender(name);
+      counts[gender] += 1;
+    });
+    if (counts.female > 0 && counts.male === 0 && counts.unknown === 0) {
+      return names.length > 1 ? "Diseñadoras" : "Diseñadora";
+    }
+    if (counts.male > 0 && counts.female === 0 && counts.unknown === 0) {
+      return names.length > 1 ? "Diseñadores" : "Diseñador";
+    }
+    return names.length > 1 ? "Diseñadores/as" : "Diseñador/a";
+  }
+
   function toNameKey(value) {
     return norm(value)
       .replace(/[^a-z0-9@]+/g, " ")
@@ -498,6 +549,7 @@
 
   function deriveDisplayPeople(meta) {
     const authorName = cleanAuthorName(meta.author) || "—";
+    const inferredDesignerRole = inferDesignerRoleByAuthors(meta.author);
     const authorKeys = splitAuthorNames(meta.author)
       .map(toNameKey)
       .filter((key) => key.length >= 4);
@@ -533,9 +585,14 @@
       credits.push(segment);
     });
 
+    let roleLabel = ROLE_DISPLAY[roleCanonical] || inferredDesignerRole;
+    if (!roleCanonical || roleCanonical === "designer" || roleCanonical === "author") {
+      roleLabel = inferredDesignerRole;
+    }
+
     return {
       author: authorName,
-      role: ROLE_DISPLAY[roleCanonical] || ROLE_DISPLAY.designer,
+      role: roleLabel,
       credits: credits.join("\n")
     };
   }
@@ -543,7 +600,7 @@
   function normalizeProjectTags(p) {
     const people = deriveDisplayPeople(p);
     p._displayAuthor = people.author || "—";
-    p._displayRole = people.role || ROLE_DISPLAY.designer;
+    p._displayRole = people.role || "Diseñador/a";
     p._displayCredits = people.credits || "";
 
     const raw = Array.isArray(p.tags) ? p.tags.slice() : [];
@@ -3495,7 +3552,7 @@
     el.dataset.tags    = tags.join(' | ');
     el.dataset.title   = meta.title || '—';
     el.dataset.author  = meta._displayAuthor || meta.author || '—';
-    el.dataset.role    = meta._displayRole || 'Designer';
+    el.dataset.role    = meta._displayRole || 'Diseñador/a';
     el.dataset.area    = meta.area || '—';
     el.dataset.year    = meta.year || '—';
     el.dataset.url     = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
@@ -3555,7 +3612,7 @@
     el.dataset.tags   = (meta.tags || []).join(' | ');
     el.dataset.title  = meta.title || '—';
     el.dataset.author = meta._displayAuthor || meta.author || '—';
-    el.dataset.role   = meta._displayRole || 'Designer';
+    el.dataset.role   = meta._displayRole || 'Diseñador/a';
     el.dataset.area   = meta.area || '—';
     el.dataset.year   = meta.year || '—';
     el.dataset.url    = Array.isArray(meta.url) ? meta.url[0] : (meta.url || '');
@@ -3592,7 +3649,7 @@
     author.textContent = meta._displayAuthor || meta.author || '—';
     const role = document.createElement('p');
     role.className = 'ref2d__view-card-role';
-    role.textContent = `Rol: ${meta._displayRole || 'Designer'}`;
+    role.textContent = `Rol: ${meta._displayRole || 'Diseñador/a'}`;
     head.appendChild(title);
     head.appendChild(author);
     head.appendChild(role);
@@ -3824,7 +3881,7 @@
       tr.innerHTML = `
         <td>${meta.title || '—'}</td>
         <td>${meta._displayAuthor || meta.author || '—'}</td>
-        <td>${meta._displayRole || 'Designer'}</td>
+        <td>${meta._displayRole || 'Diseñador/a'}</td>
         <td>${meta.area || '—'}</td>
         <td>${meta.year || '—'}</td>
         <td>${firstUrl ? `<a href="${firstUrl}" target="_blank" rel="noopener">↗</a>` : '—'}</td>
@@ -3835,7 +3892,7 @@
         ghost.dataset.tags = (meta.tags || []).join(' | ');
         ghost.dataset.title = meta.title || '—';
         ghost.dataset.author = meta._displayAuthor || meta.author || '—';
-        ghost.dataset.role = meta._displayRole || 'Designer';
+        ghost.dataset.role = meta._displayRole || 'Diseñador/a';
         ghost.dataset.area = meta.area || '—';
         ghost.dataset.year = meta.year || '—';
         ghost.dataset.url = firstUrl;
@@ -4191,7 +4248,7 @@
     sTitle.textContent  = el.dataset.title  || meta.title  || "—";
     sAuthor.textContent = el.dataset.author || meta._displayAuthor || meta.author || "—";
     if (sRole) {
-      sRole.textContent = el.dataset.role || meta._displayRole || "Designer";
+      sRole.textContent = el.dataset.role || meta._displayRole || "Diseñador/a";
     }
 
     const creditsText = meta._displayCredits || el.dataset.credits || meta.collab || el.dataset.collab || "";
