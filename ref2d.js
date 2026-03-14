@@ -2026,7 +2026,7 @@
       tags: ["Servicio","Salud","Producto"],
       title: "Baby.kine",
       author: "Trinidad Burgos",
-      collab: "Iván Caro",
+      collab: "Co-autor:Iván Caro",
       area: "Servicio / Salud / Producto",
       year: "N/A",
       url: "https://trinidadburgos.com/baby-kine-en/"
