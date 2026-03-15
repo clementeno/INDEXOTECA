@@ -2437,6 +2437,8 @@
       id: "ilustraciones-quanticas",
       title: "Ilustraciones Quánticas",
       author: "Camila Correa",
+      orientation: "v",
+      span: 1,
       role: "",
       collab: "Cliente: Quántica",
       area: "Ilustración",
