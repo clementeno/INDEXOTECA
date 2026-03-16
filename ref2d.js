@@ -2948,7 +2948,7 @@
 
 /* ------------------ Antagonista — Bernardita Hoffmann ------------------ */
 {
-  src: "IMG/remote-originals/143_Hoffmann-Bernardita-1.JPG",
+  src: "IMG/remote-originals/143_Hoffmann-Bernardita-1.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial","packaging"],
@@ -3242,7 +3242,7 @@
 
 /* ------------------ Regularidad Irregular — Ignacia Bianchi ------------------ */
 {
-  src: "IMG/remote-originals/162_d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
+  src: "IMG/remote-originals/162_d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.jpg",
   orientation: "v",
   span: 1,
   tags: ["indumentaria","objeto","textil"],
