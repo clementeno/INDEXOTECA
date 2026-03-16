@@ -1749,7 +1749,7 @@
 /* ------------------ Viella — Antonella Vila Garcia ------------------ */
 {
   src: "IMG/remote-originals/062_Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
   title: "Viella",
@@ -3392,7 +3392,7 @@
 /* ------------------ Salud Oportuna — Sara Riveros ------------------ */
 {
   src: "IMG/remote-originals/171_Group-147.png.jpg",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["servicio","innovación","investigación"],
   title: "Salud Oportuna",
@@ -3407,7 +3407,7 @@
 /* ------------------ GOLDFISH — María Jesús Contreras ------------------ */
 {
   src: "IMG/remote-originals/172_Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
-  orientation: "v",
+  orientation: "sq",
   span: 2,
   tags: ["ilustración","gráfico"],
   title: "GOLDFISH",
