@@ -3915,6 +3915,19 @@
     if (raw === 'v' || raw === 'sq' || raw === 'h') return raw;
     return 'h';
   };
+  const getOrientationFromDimensions = (width, height) => {
+    if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return "";
+    const ratio = width / height;
+    if (Math.abs(ratio - 1) <= 0.08) return 'sq';
+    return ratio > 1 ? 'h' : 'v';
+  };
+  const getOrientationFromElement = (el) => {
+    if (!el || !el.classList) return "";
+    if (el.classList.contains('ratio-sq') || el.classList.contains('is-sq')) return 'sq';
+    if (el.classList.contains('ratio-v') || el.classList.contains('is-v')) return 'v';
+    if (el.classList.contains('ratio-h') || el.classList.contains('is-h')) return 'h';
+    return "";
+  };
   let transformRaf = null;
   const requestTransform = () => {
     if (transformRaf !== null) return;
@@ -4761,8 +4774,19 @@
       meta.src ||
       el.dataset.src ||
       "data:image/gif;base64,R0lGODlhAQABAAAAACw=";
-    sheetImg.src = src;
+    const orientFromCard = getOrientationFromElement(el);
+    const orientFromImage = imgNode ? getOrientationFromDimensions(imgNode.naturalWidth, imgNode.naturalHeight) : "";
+    const orientFromMeta = normalizeOrientation(meta.orientation || "");
+    const orientHint = orientFromCard || orientFromImage || orientFromMeta || 'h';
+
+    if (sheetFig) {
+      sheetFig.style.aspectRatio = ORIENTATION_ASPECT_CSS[orientHint] || ORIENTATION_ASPECT_CSS.h;
+    }
+
     sheetImg.alt = el.dataset.title || meta.title || "";
+    if (sheetImg.src !== src) {
+      sheetImg.src = src;
+    }
     // Ya no necesitamos calcular tamaños - el CSS se encarga de todo
     // Mantenemos el listener de resize por si se necesita en el futuro
     _onResizeWhileOpen = null;
