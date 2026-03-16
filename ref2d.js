@@ -834,7 +834,7 @@
   const DB = [
     /* ------------- Ignacia Santillán ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/L2666098984706343401554480411331/Santillan_1.jpg",
+      src: "IMG/remote-originals/001_Santillan_1.jpg",
       orientation: "v",
       span: 1,
       tags: ["Editorial","Experimental","Fanzine","Objeto editorial","Gráfico"],
@@ -849,7 +849,7 @@
 
     /* ------------------ L'uccello — Weichi He (2016) ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/X2679365385941296012751710663363/2016_Luccello.jpg",
+      src: "IMG/remote-originals/002_2016_Luccello.jpg",
       orientation: "h",
       span: 2,
       tags: ["Identidad visual","Identidad gráfica","branding"],
@@ -864,7 +864,7 @@
 
     /* ------------------ Max Fett Specimen — Weichi He (2020) ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/N2679362792458206457704720315075/MaxFett_4.jpg",
+      src: "IMG/remote-originals/003_MaxFett_4.jpg",
       orientation: "v",
       span: 1,
       tags: ["editorial","tipografía","gráfico","impreso"],
@@ -878,7 +878,7 @@
     },
 
     {
-      src: "https://freight.cargo.site/t/original/i/E2666098984632556425259642204867/Santillan_2.jpg",
+      src: "IMG/remote-originals/004_Santillan_2.jpg",
       orientation: "v",
       span: 1,
       tags: ["Afiche","Afiche digital","risografía","Gráfico"],
@@ -891,7 +891,7 @@
       url: "https://www.instagram.com/p/DPEx3F9j9wF/"
     },
     {
-      src: "https://freight.cargo.site/t/original/i/R2666098984687896657480770859715/Santillan_3.jpg",
+      src: "IMG/remote-originals/005_Santillan_3.jpg",
       orientation: "v",
       span: 1,
       tags: ["Editorial","Experimental","Fanzine","Objeto editorial","Gráfico"],
@@ -906,7 +906,7 @@
 
     /* ------------- Gracia González / FIT ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/W2666098984614109681185932653251/Gonzalez-g_1.jpg",
+      src: "IMG/remote-originals/006_Gonzalez-g_1.jpg",
       orientation: "v",
       span: 1,
       tags: ["Editorial","Objeto editorial","Gráfico","Infantil"],
@@ -919,7 +919,7 @@
       url: "https://graciastudio.cl/15/"
     },
     {
-      src: "https://freight.cargo.site/t/original/i/Q2666105329021245696185729495747/gonzalez-g_2.png",
+      src: "IMG/remote-originals/007_gonzalez-g_2.png",
       orientation: "h",
       span: 1,
       tags: ["Identidad visual","Identidad gráfica","branding"],
@@ -934,7 +934,7 @@
 
     /* ------------- RETORNO — Andrés Miquel  (2 vistas) ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/Q2666098984595662937112223101635/miquel_1.png",
+      src: "IMG/remote-originals/008_miquel_1.png",
       orientation: "v",
       span: 2,
       tags: ["Moda","Editorial","fotografía de moda","dirección de arte","vestuario"],
@@ -947,7 +947,7 @@
       url: ["https://www.instagram.com/p/DPO39QgDY3z/?img_index=0", "https://schonmagazine.com/retorno/"]
     },
     {
-      src: "https://freight.cargo.site/t/original/i/L2578592035202173407474317996739/Captura-de-pantalla-2025-10-01-a-las-18.22.21.png",
+      src: "IMG/remote-originals/009_Captura-de-pantalla-2025-10-01-a-las-18.22.21.png",
       orientation: "v",
       span: 1,
       tags: ["Moda","Editorial","fotografía de moda","dirección de arte","vestuario"],
@@ -961,7 +961,7 @@
     },
 
     {
-      src: "https://freight.cargo.site/t/original/i/X2831921117369892999512004702915/gutierrez-fernanda-1.jpg",
+      src: "IMG/remote-originals/010_gutierrez-fernanda-1.jpg",
       orientation: "v",
       span: 1,
       tags: ["Moda","Editorial","fotografía de moda","dirección de arte","vestuario"],
@@ -975,7 +975,7 @@
     },
     /* ------------- Paula Santa María ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/Z2666098984577216193038513550019/santa-maria_1.jpg",
+      src: "IMG/remote-originals/011_santa-maria_1.jpg",
       orientation: "h",
       span: 2,
       tags: ["Videojuego","animación","arte"],
@@ -990,7 +990,7 @@
 
     /* ------------- Bombus Chilensis ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/Q2666098984669449913407061308099/Pinto_1.jpg",
+      src: "IMG/remote-originals/012_Pinto_1.jpg",
       orientation: "h",
       span: 2,
       tags: ["Audiovisual","animación","stop-motion","Teatro"],
@@ -1008,7 +1008,7 @@
 
     /* ------------- Matías Vial / Il mato ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/G2666098984651003169333351756483/ilmato_1.jpg",
+      src: "IMG/remote-originals/013_ilmato_1.jpg",
       orientation: "v",
       span: 1,
       tags: ["dirección creativa","fotografía","gráfico"],
@@ -1022,7 +1022,7 @@
     },
     /* ------------------ Acuerdo de Escazú — Carolina Pinochet ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/T2834736126505138764895941505731/Pinochet-Carolina-Captura-de-pantalla-2026-03-10-a-las-19.38.36.png",
+  src: "IMG/remote-originals/014_Pinochet-Carolina-Captura-de-pantalla-2026-03-10-a-las-19.38.36.png",
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -1037,7 +1037,7 @@
 
 /* ------------------ Agenda Palpa — Macarena Valdés Domínguez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2834736126523585508969651057347/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.00.33.png",
+  src: "IMG/remote-originals/015_Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.00.33.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","editorial","gráfico"],
@@ -1052,7 +1052,7 @@
 
 /* ------------------ La Roi (Packaging) — Macarena Valdés Domínguez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2834736126542032253043360608963/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.02.56.png",
+  src: "IMG/remote-originals/016_Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.02.56.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","gráfico","packaging"],
@@ -1067,7 +1067,7 @@
 
 /* ------------------ EMG-One — Franco Gnecco ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2834736126431351788601103299267/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.17.16.png",
+  src: "IMG/remote-originals/017_Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.17.16.png",
   orientation: "sq",
   span: 1,
   tags: ["producto","industrial","salud"],
@@ -1082,7 +1082,7 @@
 
 /* ------------------ Materia Lignum — Catalina Fuenzalida ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2834736126486692020822231954115/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.23.25.png",
+  src: "IMG/remote-originals/018_Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.23.25.png",
   orientation: "h",
   span: 2,
   tags: ["museografía","exhibición","investigación","biomaterial"],
@@ -1097,7 +1097,7 @@
 
 /* ------------------ Materia Lignum — Franco Gnecco ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2834736126468245276748522402499/Fuenzalida-Catalina-Captura-de-pantalla-2026-03-11-a-las-10.23.05.png",
+  src: "IMG/remote-originals/019_Fuenzalida-Catalina-Captura-de-pantalla-2026-03-11-a-las-10.23.05.png",
   orientation: "h",
   span: 1,
   tags: ["museografía","exhibición","investigación","biomaterial"],
@@ -1112,7 +1112,7 @@
 
 /* ------------------ Materia Lignum — Damian Araos ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2834736126449798532674812850883/Araos-Damina-Captura-de-pantalla-2026-03-11-a-las-10.20.21.png",
+  src: "IMG/remote-originals/020_Araos-Damina-Captura-de-pantalla-2026-03-11-a-las-10.20.21.png",
   orientation: "h",
   span: 1,
   tags: ["museografía","exhibición","investigación","biomaterial"],
@@ -1127,7 +1127,7 @@
 
 /* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Yazmin Jiménez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2834737330487230967770956378819/Banner-web-_-Lanzamiento-de-libro-CDUR-scaled.jpg",
+  src: "IMG/remote-originals/021_Banner-web-_-Lanzamiento-de-libro-CDUR-scaled.jpg",
   orientation: "h",
   span: 2,
   tags: ["editorial","investigación","exposición"],
@@ -1142,7 +1142,7 @@
 
 /* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Pedro Álvarez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2834737090993152658799847748291/153819.jpg",
+  src: "IMG/remote-originals/022_153819.jpg",
   orientation: "v",
   span: 1,
   tags: ["editorial","investigación","exposición"],
@@ -1157,7 +1157,7 @@
 
 /* ------------------ Cómo diseñar una revolución. La vía chilena al diseño — Hugo Palmarola ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/A2834736126412905044527393747651/Gonzalez-Yazmin.jpeg",
+  src: "IMG/remote-originals/023_Gonzalez-Yazmin.jpeg",
   orientation: "sq",
   span: 1,
   tags: ["editorial","investigación","exposición"],
@@ -1172,7 +1172,7 @@
 
 /* ------------------ DASON — Patricio Fuentes ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/S2834736126394458300453684196035/fuentes-PAtricio-IMG_5086-scaled.jpeg",
+  src: "IMG/remote-originals/024_fuentes-PAtricio-IMG_5086-scaled.jpeg",
   orientation: "v",
   span: 2,
   tags: ["producto","salud","investigación"],
@@ -1187,7 +1187,7 @@
 
 /* ------------------ Galería de Arte Gráfico A3 — Alejandra Amenábar ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2834742337136486757354070028995/A3-Amenabar-Alejandra-Captura-de-pantalla-2026-03-11-a-las-11.34.26.png",
+  src: "IMG/remote-originals/025_A3-Amenabar-Alejandra-Captura-de-pantalla-2026-03-11-a-las-11.34.26.png",
   orientation: "v",
   span: 1,
   tags: ["arte","galería"],
@@ -1202,7 +1202,7 @@
 
 /* ------------------ Olivia y el Terremoto Invisible — Antonia Piña ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2834736126376011556379974644419/pina-antonia-MV5BNTZjYTczNmQtZjJlZS00NmJiLWFiMTctYzMxMThhZDRhNzdjXkEyXkFqcGc._V1_FMjpg_UX1000_.jpeg",
+  src: "IMG/remote-originals/026_pina-antonia-MV5BNTZjYTczNmQtZjJlZS00NmJiLWFiMTctYzMxMThhZDRhNzdjXkEyXkFqcGc._V1_FMjpg_UX1000_.jpeg",
   orientation: "v",
   span: 2,
   tags: ["dirección creativa","dirección de arte","animación"],
@@ -1217,7 +1217,7 @@
 
 /* ------------------ EXVIVO — Julie Carles ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/W2834736126339118068232555541187/Julie-Carles-Captura-de-pantalla-2026-03-11-a-las-11.14.07.png",
+  src: "IMG/remote-originals/027_Julie-Carles-Captura-de-pantalla-2026-03-11-a-las-11.14.07.png",
   orientation: "h",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -1232,7 +1232,7 @@
 
 /* ------------------ DENSE — Vicente Carmona ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2834736126357564812306265092803/Carmona-Vicente-Captura-de-pantalla-2026-03-11-a-las-11.19.36.png",
+  src: "IMG/remote-originals/028_Carmona-Vicente-Captura-de-pantalla-2026-03-11-a-las-11.19.36.png",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial","investigación"],
@@ -1247,7 +1247,7 @@
 
 /* ------------------ Fintual — Valentina Andrea Pavez Benítez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2834855301990374870633509499587/Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
+  src: "IMG/remote-originals/029_Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
   orientation: "h",
   span: 1,
   tags: ["ux","ui","web"],
@@ -1262,7 +1262,7 @@
 
 /* ------------------ Hackathon Junior — Sophia López Pinoleo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Y2834854149308677936744757670595/hackathon.png",
+  src: "IMG/remote-originals/030_hackathon.png",
   orientation: "h",
   span: 1,
   tags: ["gráfico","ilustración"],
@@ -1277,7 +1277,7 @@
 
 /* ------------------ Descartadas — Vanessa Vásquez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2834851674641066960460989280963/vasquez-Vanessa-7a2b2e29-3d63-4564-9627-504ab6a59e1b.png",
+  src: "IMG/remote-originals/031_vasquez-Vanessa-7a2b2e29-3d63-4564-9627-504ab6a59e1b.png",
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -1292,7 +1292,7 @@
 
 /* ------------------ Orniflor viaja a Chiloé — Valentina Rey Carmona ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/J2834851674659513704534698832579/Rey-Valentin-aportada-chiloe2.jpg",
+  src: "IMG/remote-originals/032_Rey-Valentin-aportada-chiloe2.jpg",
   orientation: "v",
   span: 1,
   tags: ["editorial","gráfico","diagramación"],
@@ -1307,7 +1307,7 @@
 
 /* ------------------ Libro infantil — Valentina Rey Carmona ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/H2834851674677960448608408384195/Rey-Valentina.png",
+  src: "IMG/remote-originals/033_Rey-Valentina.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","infantil"],
@@ -1322,7 +1322,7 @@
 
 /* ------------------ Cartas de Póker (Coca-Cola) — Tamara Santibáñez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2834851674696407192682117935811/Santibanez-Tamara.png",
+  src: "IMG/remote-originals/034_Santibanez-Tamara.png",
   orientation: "h",
   span: 1,
   tags: ["ilustración","gráfico"],
@@ -1337,7 +1337,7 @@
 
 /* ------------------ Descargables Imanix — Sofía Daza Urzúa ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/W2834851674714853936755827487427/Daza-Sofia.png",
+  src: "IMG/remote-originals/035_Daza-Sofia.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","editorial","gráfico"],
@@ -1352,7 +1352,7 @@
 
 /* ------------------ Talana (UX/UI) — Rafaella Espildora ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/M2834851674604173472313570177731/Espildora-Rafella.png",
+  src: "IMG/remote-originals/036_Espildora-Rafella.png",
   orientation: "h",
   span: 1,
   tags: ["ux","ui","servicio"],
@@ -1367,7 +1367,7 @@
 
 /* ------------------ Revista N°2 Museo Histórico de Carabineros — Paulina Padilla ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2834851279235107740496750392003/PADILLA-PAULINA-1f75b2_fd084dd76c2b4662b346409b24ab3b7b.jpg",
+  src: "IMG/remote-originals/037_PADILLA-PAULINA-1f75b2_fd084dd76c2b4662b346409b24ab3b7b.jpg",
   orientation: "v",
   span: 1,
   tags: ["editorial"],
@@ -1382,7 +1382,7 @@
 
 /* ------------------ Aralí — Aranda Feres Ojeda ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2835041680329330561722121401027/feres-aranda-5_77c650d6-239f-407d-a6a8-8d316462fe81.jpeg",
+  src: "IMG/remote-originals/038_feres-aranda-5_77c650d6-239f-407d-a6a8-8d316462fe81.jpeg",
   orientation: "v",
   span: 1,
   tags: ["producto","artesanía"],
@@ -1397,7 +1397,7 @@
 
 /* ------------------ Afiche n°1 — Gianfranco Music Wachtendorff ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/A2835041680366224049869540504259/Gianfranco-Music-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.png",
+  src: "IMG/remote-originals/039_Gianfranco-Music-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.png",
   orientation: "sq",
   span: 2,
   tags: ["afiche","afiche digital","gráfico"],
@@ -1412,7 +1412,7 @@
 
 /* ------------------ Vestuario obra "Hotel O'clock" — María Soledad Albornoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/M2836337163916842722668132643523/albornoz-soledad-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+  src: "IMG/remote-originals/040_albornoz-soledad-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
   orientation: "h",
   span: 2,
   tags: ["vestuario","teatro","indumentaria"],
@@ -1427,7 +1427,7 @@
 
 /* ------------------ Vestuario obra "Bailame" — María Soledad Albornoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2836337163898395978594423091907/albornoz-soledad-2-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+  src: "IMG/remote-originals/041_albornoz-soledad-2-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
   orientation: "h",
   span: 1,
   tags: ["vestuario","teatro","indumentaria"],
@@ -1442,7 +1442,7 @@
 
 /* ------------------ Colaboración cervecería LOA — María Jesús Lafuente ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Z2836337163879949234520713540291/Lafuente-Captura-de-pantalla-2026-03-12-a-las-10.27.11.png",
+  src: "IMG/remote-originals/042_Lafuente-Captura-de-pantalla-2026-03-12-a-las-10.27.11.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","packaging","gráfico"],
@@ -1457,7 +1457,7 @@
 
 /* ------------------ Arrebol Spa — María Jesús Lafuente ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/H2836334657391704731087968613059/arrebolCaptura-de-pantalla-2026-03-12-a-las-10.30.04.png",
+  src: "IMG/remote-originals/043_arrebolCaptura-de-pantalla-2026-03-12-a-las-10.30.04.png",
   orientation: "h",
   span: 1,
   tags: ["afiche","ilustración","gráfico"],
@@ -1472,7 +1472,7 @@
 
 /* ------------------ alegría alegría (fotografía) — María Inés Alarcón ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2836334657410151475161678164675/Alarcon-MariaInes-1Captura-de-pantalla-2026-03-12-a-las-10.53.27.png",
+  src: "IMG/remote-originals/044_Alarcon-MariaInes-1Captura-de-pantalla-2026-03-12-a-las-10.53.27.png",
   orientation: "h",
   span: 1,
   tags: ["fotografía"],
@@ -1487,7 +1487,7 @@
 
 /* ------------------ Rediseño portada Juan Salvador Gaviota — María Inés Alarcón ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2836334657428598219235387716291/Alarcon-MariaInes-2Captura-de-pantalla-2026-03-12-a-las-10.56.05.png",
+  src: "IMG/remote-originals/045_Alarcon-MariaInes-2Captura-de-pantalla-2026-03-12-a-las-10.56.05.png",
   orientation: "sq",
   span: 1,
   tags: ["ilustración","gráfico"],
@@ -1502,7 +1502,7 @@
 
 /* ------------------ Circular Pet — León Quesney Cox ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/O2836334657373257987014259061443/Quesneyb9f9ce_c2d979ca09e44dfd8158696da129e7e2_mv2.jpg.jpg",
+  src: "IMG/remote-originals/046_Quesneyb9f9ce_c2d979ca09e44dfd8158696da129e7e2_mv2.jpg.jpg",
   orientation: "h",
   span: 1,
   tags: ["packaging","servicio"],
@@ -1517,7 +1517,7 @@
 
 /* ------------------ La Batea Deco — Josefina Stückrath ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/O2836334657336364498866839958211/Josefina-Stuckrath-1Captura-de-pantalla-2026-03-12-a-las-11.05.59.png",
+  src: "IMG/remote-originals/047_Josefina-Stuckrath-1Captura-de-pantalla-2026-03-12-a-las-11.05.59.png",
   orientation: "v",
   span: 1,
   tags: ["branding","gráfico","web"],
@@ -1532,7 +1532,7 @@
 
 /* ------------------ Tere Gott — Josefina Stückrath ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Z2836334657354811242940549509827/Josefina-Stuckrath-2Captura-de-pantalla-2026-03-12-a-las-11.07.34.png",
+  src: "IMG/remote-originals/048_Josefina-Stuckrath-2Captura-de-pantalla-2026-03-12-a-las-11.07.34.png",
   orientation: "h",
   span: 1,
   tags: ["branding","gráfico","web"],
@@ -1547,7 +1547,7 @@
 
 /* ------------------ ALBADELUX — Josefa González Gil ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/X2836334657317917754793130406595/Gonzalez-Josefa-Captura-de-pantalla-2026-03-12-a-las-11.13.55.png",
+  src: "IMG/remote-originals/049_Gonzalez-Josefa-Captura-de-pantalla-2026-03-12-a-las-11.13.55.png",
   orientation: "v",
   span: 1,
   tags: ["branding","packaging","gráfico"],
@@ -1562,7 +1562,7 @@
 
 /* ------------------ Cajas de Puzzles (varias) — Florencia Rodríguez Errázuriz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2836334657299471010719420854979/Florencia-Rodriguez-ErrazurizCaptura-de-pantalla-2026-03-12-a-las-11.15.31.png",
+  src: "IMG/remote-originals/050_Florencia-Rodriguez-ErrazurizCaptura-de-pantalla-2026-03-12-a-las-11.15.31.png",
   orientation: "h",
   span: 1,
   tags: ["branding","packaging","gráfico"],
@@ -1577,7 +1577,7 @@
 
 /* ------------------ Real Travel App — Colomba Plass ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Y2836334657281024266645711303363/Plass-colombaCaptura-de-pantalla-2026-03-12-a-las-11.21.45.png",
+  src: "IMG/remote-originals/051_Plass-colombaCaptura-de-pantalla-2026-03-12-a-las-11.21.45.png",
   orientation: "h",
   span: 1,
   tags: ["audiovisual","fotografía","dirección creativa"],
@@ -1592,7 +1592,7 @@
 
 /* ------------------ Silla Mudra — Chiara Antillo Heilenkötter ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/X2836334657244130778498292200131/Chiara-Antillosilla-mudra-madera-escultural2.jpg",
+  src: "IMG/remote-originals/052_Chiara-Antillosilla-mudra-madera-escultural2.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial","objeto"],
@@ -1607,7 +1607,7 @@
 
 /* ------------------ Silla alta Pliego — Chiara Antillo Heilenkötter ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2836334657262577522572001751747/Chiara-Antillosilla-2.jpg",
+  src: "IMG/remote-originals/053_Chiara-Antillosilla-2.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial","objeto"],
@@ -1622,7 +1622,7 @@
 
 /* ------------------ Historia de la infografía en Chile (2018) — Gonzalo Morales ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/J2836334753314773914377637016259/Captura-de-pantalla-2026-03-12-a-las-11.32.10.png",
+  src: "IMG/remote-originals/054_Captura-de-pantalla-2026-03-12-a-las-11.32.10.png",
   orientation: "sq",
   span: 2,
   tags: ["investigación","publicación académica"],
@@ -1637,7 +1637,7 @@
 
 /* ------------------ Afiche n°2 — Gianfranco Music Wachtendorff ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2835041680347777305795830952643/Gianfranco-Music-Wachtendorff-7485022f-8fb6-4b6e-888d-2462ee018664_rw_1200.jpeg",
+  src: "IMG/remote-originals/055_Gianfranco-Music-Wachtendorff-7485022f-8fb6-4b6e-888d-2462ee018664_rw_1200.jpeg",
   orientation: "sq",
   span: 2,
   tags: ["afiche","afiche digital","gráfico"],
@@ -1652,7 +1652,7 @@
 
 /* ------------------ Sin nombre — Gianfranco Music Wachtendorff ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2835041680384670793943250055875/Gianfranco-Music-3-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.jpeg",
+  src: "IMG/remote-originals/056_Gianfranco-Music-3-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.jpeg",
   orientation: "v",
   span: 1,
   tags: ["fotografía","moda","editorial"],
@@ -1667,7 +1667,7 @@
 
 /* ------------------ Colección 3 Chol1: Bichos — Antonino Reinoso ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/A2835041680310883817648411849411/Captura-de-pantalla-2026-03-11-a-las-15.39.07.png",
+  src: "IMG/remote-originals/057_Captura-de-pantalla-2026-03-11-a-las-15.39.07.png",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial"],
@@ -1682,7 +1682,7 @@
 
 /* ------------------ Taboo* — Emilia Ferrari ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2835044931199038671556402688707/Captura-de-pantalla-2026-03-11-a-las-16.08.04.png",
+  src: "IMG/remote-originals/058_Captura-de-pantalla-2026-03-11-a-las-16.08.04.png",
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -1697,7 +1697,7 @@
 
 /* ------------------ dos2 — Emilia Ferrari ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/X2835041680476904514311797813955/Captura-de-pantalla-2026-03-11-a-las-15.42.59.png",
+  src: "IMG/remote-originals/059_Captura-de-pantalla-2026-03-11-a-las-15.42.59.png",
   orientation: "v",
   span: 1,
   tags: ["ux","ui","servicio"],
@@ -1712,7 +1712,7 @@
 
 /* ------------------ Mueble Don Melchor — Carolina Planas ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2835044255826844644902298923715/43fef9_efcf8eedf8d33bba27b941bb467583a7.jpg.jpg",
+  src: "IMG/remote-originals/060_43fef9_efcf8eedf8d33bba27b941bb467583a7.jpg.jpg",
   orientation: "v",
   span: 1,
   tags: ["industrial","espacios","vitrinaje"],
@@ -1727,7 +1727,7 @@
 
 /* ------------------ RRSS - Viela — Antonella Vila Garcia ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2835041680458457770238088262339/Captura-de-pantalla-2026-03-11-a-las-15.47.30.png",
+  src: "IMG/remote-originals/061_Captura-de-pantalla-2026-03-11-a-las-15.47.30.png",
   orientation: "v",
   span: 1,
   tags: ["rrss","gráfico"],
@@ -1742,7 +1742,7 @@
 
 /* ------------------ Viella — Antonella Vila Garcia ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2835041680440011026164378710723/Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
+  src: "IMG/remote-originals/062_Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -1757,7 +1757,7 @@
 
 /* ------------------ Proust Cerámica — Magdalena Proust Iligaray ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Y2835041680421564282090669159107/Captura-de-pantalla-2026-03-11-a-las-15.53.10.png",
+  src: "IMG/remote-originals/063_Captura-de-pantalla-2026-03-11-a-las-15.53.10.png",
   orientation: "v",
   span: 1,
   tags: ["producto","artesanía"],
@@ -1772,7 +1772,7 @@
 
 /* ------------------ COSTA — Andrés Valdivieso Vera ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2835041680403117538016959607491/Captura-de-pantalla-2026-03-11-a-las-16.03.13.png",
+  src: "IMG/remote-originals/064_Captura-de-pantalla-2026-03-11-a-las-16.03.13.png",
   orientation: "v",
   span: 1,
   tags: ["producto"],
@@ -1786,7 +1786,7 @@
 },
 /* ------------------ Campaña Funa y Acoso — Pilar Saavedra ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/N2834851674622620216387279729347/Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
+  src: "IMG/remote-originals/065_Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
   orientation: "v",
   span: 2,
   tags: ["afiche"],
@@ -1801,7 +1801,7 @@
 
 /* ------------------ Pequén — Elisa Aguirre ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/T2836714247389257057862945288899/Aguirre-Elisa-3c82918c-ebd6-4a47-892e-220fb1ee7cba_rw_3840.png",
+  src: "IMG/remote-originals/066_Aguirre-Elisa-3c82918c-ebd6-4a47-892e-220fb1ee7cba_rw_3840.png",
   orientation: "h",
   span: 1,
   tags: ["branding","gráfico","educación"],
@@ -1816,7 +1816,7 @@
 
 /* ------------------ Paneles Voladores — Hugo Palmarola ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2836714089798722436162245833411/a-740x1024-1.png",
+  src: "IMG/remote-originals/067_a-740x1024-1.png",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1834,7 +1834,7 @@
 
 /* ------------------ Cosmopolitical encounters — Pablo Hermansen ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2836714089780275692088536281795/rjce_a_1433705_f0002_c.jpg",
+  src: "IMG/remote-originals/068_rjce_a_1433705_f0002_c.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1852,7 +1852,7 @@
 
 /* ------------------ Hacer y componer — Francisco Gálvez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2836714089743382203941117178563/hacer_y_componer-1-768x1121.jpg",
+  src: "IMG/remote-originals/069_hacer_y_componer-1-768x1121.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1867,7 +1867,7 @@
 
 /* ------------------ Hacer y componer 2.0 — Francisco Gálvez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/S2836714089761828948014826730179/51iAgF1DOuL._AC_UF1000-1000_QL80_.jpg",
+  src: "IMG/remote-originals/070_51iAgF1DOuL._AC_UF1000-1000_QL80_.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1882,7 +1882,7 @@
 
 /* ------------------ Pedagogías para habitar el jardín infantil — Patricia Manns ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2836724512651845939827938112195/813k52dMx9L._AC_UF1000-1000_QL80_.jpg",
+  src: "IMG/remote-originals/071_813k52dMx9L._AC_UF1000-1000_QL80_.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1897,7 +1897,7 @@
 
 /* ------------------ Pedagogías para habitar el jardín infantil — Alberto González ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2836725192026983430477014577859/158400-1200-auto.jpg",
+  src: "IMG/remote-originals/072_158400-1200-auto.jpg",
   orientation: "sq",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1912,7 +1912,7 @@
 
 /* ------------------ RutaCL Typeface — Rodrigo Ramírez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2836724512633399195754228560579/mini_magick20180818-12931-p4pb7n.png",
+  src: "IMG/remote-originals/073_mini_magick20180818-12931-p4pb7n.png",
   orientation: "h",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -1930,7 +1930,7 @@
 
 /* ------------------ Resistencia gráfica. Dictadura en Chile (APJ – Tallersol) — Nicole Cristi ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2834736126320671324158845989571/Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
+  src: "IMG/remote-originals/074_Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","investigación"],
@@ -1948,7 +1948,7 @@
 
     /* ------------- Sofía Garrido ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/E2578321841997036736708759466691/Sofia-Garrido.jpg",
+      src: "IMG/remote-originals/075_Sofia-Garrido.jpg",
       orientation: "v",
       span: 2,
       tags: ["editorial"],
@@ -1961,7 +1961,7 @@
       url: "https://sofiagarrido.work/Instrucciones"
     },
     {
-      src: "https://freight.cargo.site/t/original/i/K2578321841978589992635049915075/sofia-garrido-2.jpg",
+      src: "IMG/remote-originals/076_sofia-garrido-2.jpg",
       orientation: "v",
       span: 2,
       tags: ["editorial","Publicación digital"],
@@ -1976,7 +1976,7 @@
 
     /* ------------- Música — Vicente Acuña ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/H2578329735838441222942344295107/600x600bf-60.jpg",
+      src: "IMG/remote-originals/077_600x600bf-60.jpg",
       orientation: "sq",
       span: 2,
       tags: ["Música","dirección de arte","Portada de disco"],
@@ -1991,7 +1991,7 @@
 
     /* ------------- felicidad — Vicente Acuña ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/K2831772530303672050896792400579/Acuna-Vicente-SSF_CASE_Felicidadpublica_19.png",
+      src: "IMG/remote-originals/078_Acuna-Vicente-SSF_CASE_Felicidadpublica_19.png",
       orientation: "v",
       span: 2,
       tags: ["Gráfico","Branding","Museografía"],
@@ -2006,7 +2006,7 @@
 
     /* ------------- Gracia González — SIENTO EL VIENTO ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/O2578339362511643761230079275715/Captura-de-pantalla-2025-10-01-a-las-14.33.36.png",
+      src: "IMG/remote-originals/079_Captura-de-pantalla-2025-10-01-a-las-14.33.36.png",
       orientation: "h",
       span: 2,
       tags: ["editorial","Experimental","educación"],
@@ -2021,7 +2021,7 @@
 
     /* ------------- DIÁLOGOS IMPRESOS ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/S2578348945336935636310210065091/IL-POSO.jpg",
+      src: "IMG/remote-originals/080_IL-POSO.jpg",
       orientation: "h",
       span: 2,
       tags: ["Museografia","Exposición de arte","editorial"],
@@ -2041,7 +2041,7 @@
 
     /* ------------- 60 años Kérastase ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/Z2666134078142757364005956170435/finat_1.jpg",
+      src: "IMG/remote-originals/081_finat_1.jpg",
       orientation: "sq",
       span: 1,
       tags: ["Fotografía"],
@@ -2056,7 +2056,7 @@
 
     /* ------------- Avita — imagen Bustos ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/O2666141979953155290082067296963/bustos_1.png",
+      src: "IMG/remote-originals/082_bustos_1.png",
       orientation: "v",
       span: 1,
       tags: ["Dirección de arte","Dirección creativa","Moda"],
@@ -2070,7 +2070,7 @@
     },
     /* ------------------ Biosfera Somos Agua — Josefina Carvalho ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/J2836860966243025197469608129219/Captura-de-pantalla-2026-03-12-a-las-19.28.41.png",
+  src: "IMG/remote-originals/083_Captura-de-pantalla-2026-03-12-a-las-19.28.41.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","ilustración","ecología"],
@@ -2085,7 +2085,7 @@
 
 /* ------------------ Biosfera Somos Agua — Magdalena Larraín ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2836860966224578453395898577603/Captura-de-pantalla-2026-03-12-a-las-19.28.49.png",
+  src: "IMG/remote-originals/084_Captura-de-pantalla-2026-03-12-a-las-19.28.49.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","ilustración","ecología"],
@@ -2100,7 +2100,7 @@
 
     /* ------------- Avita — imagen González ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/N2666140515576823742723021812419/gonzalez-m_1.png",
+      src: "IMG/remote-originals/085_gonzalez-m_1.png",
       orientation: "v",
       span: 1,
       tags: ["Dirección de arte","Dirección creativa","Moda"],
@@ -2115,7 +2115,7 @@
 
     /* ------------- Guided by the Moon ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/R2666145362938444455824157258435/vidosola_1.png",
+      src: "IMG/remote-originals/086_vidosola_1.png",
       orientation: "v",
       span: 1,
       tags: ["Editorial","gráfico","diagramación"],
@@ -2130,7 +2130,7 @@
 
     /* ------------- PC Factory — UX/UI ------------- */
     {
-      src: "https://freight.cargo.site/t/original/i/B2666150212476780969623019795139/morales-const_1.png",
+      src: "IMG/remote-originals/087_morales-const_1.png",
       orientation: "sq",
       span: 1,
       tags: ["UX","UI","Web","Responsivo"],
@@ -2145,7 +2145,7 @@
 
     /* ------------------ Manual Verde — Sergio Ramírez ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/G2666169531973210294520941851331/ramirez-s_1.png",
+      src: "IMG/remote-originals/088_ramirez-s_1.png",
       orientation: "v",
       span: 2,
       tags: ["editorial","diagramación","gráfico","ilustración"],
@@ -2160,7 +2160,7 @@
 
     /* ------------------ Museo Histórico Nacional — Sergio Ramírez ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/K2666171734403772230999147492035/ramirez-s_2.jpeg",
+      src: "IMG/remote-originals/089_ramirez-s_2.jpeg",
       orientation: "h",
       span: 2,
       tags: ["Identidad visual","Identidad gráfica","branding"],
@@ -2175,7 +2175,7 @@
 
     /* ------------------ TYPE SPECIMEN FANZINE — Jose Chaud ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/R2666177053153491003674164933315/chaud_1.png",
+      src: "IMG/remote-originals/090_chaud_1.png",
       orientation: "v",
       span: 1,
       tags: ["Afiche","Afiche digital","Gráfico","Fanzine"],
@@ -2190,7 +2190,7 @@
 
     /* ------------------ TYPE SPECIMEN FANZINE — Jose Chaud ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/P2727063650870470385298921960131/Trinidad-Bustos-2-portfolio-baby-kine-simulation-doll-muneco-simulacion-IA-AI-2.png",
+      src: "IMG/remote-originals/091_Trinidad-Bustos-2-portfolio-baby-kine-simulation-doll-muneco-simulacion-IA-AI-2.png",
       orientation: "v",
       span: 2,
       tags: ["Servicio","Salud","Producto"],
@@ -2205,7 +2205,7 @@
 
     /* ------------------ Emprendekit — Kimberly McCartney ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/I2666184354540816074578080510659/Kim_1.png",
+      src: "IMG/remote-originals/092_Kim_1.png",
       orientation: "v",
       span: 1,
       tags: ["diseño de servicio","ux/ui"],
@@ -2220,7 +2220,7 @@
 
     /* ------------------ FPO Módulo Bienal Arquitectura — Catalina Pérez ------------------ */
     {
-      src: "https://freight.cargo.site/t/original/i/D2666188928152754733829469975235/perez-c_1.png",
+      src: "IMG/remote-originals/093_perez-c_1.png",
       orientation: "h",
       span: 1,
       tags: ["identidad visual","Identidad gráfica","branding","museografía","instalación","exposición"],
@@ -2242,7 +2242,7 @@
       area: "Branding / Identidad visual",
       year: 2024,
       tags: ["branding", "identidad visual", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/Q2726499716232156261692270392003/Stickers_Pastelito.jpg",
+      src: "IMG/remote-originals/094_Stickers_Pastelito.jpg",
       url: "https://naomialtmann.cargo.site/pastelito"
     },
     {
@@ -2256,7 +2256,7 @@
       area: "Servicio / Salud",
       year: 2024,
       tags: ["salud", "servicio"],
-      src: "https://freight.cargo.site/t/original/i/M2726499846300148725418318836419/Captura-de-pantalla-2026-01-02-a-las-13.33.28.png",
+      src: "IMG/remote-originals/095_Captura-de-pantalla-2026-01-02-a-las-13.33.28.png",
       url: "https://fernandagn.myportfolio.com/add-proyecto-de-titulo"
     },
     {
@@ -2270,7 +2270,7 @@
       area: "Ilustración / Editorial / Infantil",
       year: 2024,
       tags: ["ilustración", "editorial", "infantil"],
-      src: "https://freight.cargo.site/t/original/i/B2726511460573131717762821337795/Captura-de-pantalla-2026-01-02-a-las-13.42.40.png",
+      src: "IMG/remote-originals/096_Captura-de-pantalla-2026-01-02-a-las-13.42.40.png",
       url: [
         "https://www.magdalenaperezv.com/Una-Clase-de-Bichos",
         "https://www.instagram.com/magdalenaperezv"
@@ -2278,7 +2278,7 @@
     },
     /* ------------------ Papel Lustre — Matías Prado ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2729666710956146180077182726851/SARA-GUBBINS-Captura-de-pantalla-2026-01-04-a-las-13.07.13.png",
+  src: "IMG/remote-originals/097_SARA-GUBBINS-Captura-de-pantalla-2026-01-04-a-las-13.07.13.png",
   orientation: "v",
   span: 1,
   tags: ["gráfico", "ilustración"],
@@ -2293,7 +2293,7 @@
 
 /* ------------------ Joyas Maite Araia — Javiera Naranjo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2729665819941513931758420570819/Javiera-Naranjo-image-66e65f5b-1715-43e0-ae6a-1c34883b472c.jpg",
+  src: "IMG/remote-originals/098_Javiera-Naranjo-image-66e65f5b-1715-43e0-ae6a-1c34883b472c.jpg",
   orientation: "v",
   span: 0,
   tags: ["fotografía", "moda", "editorial"],
@@ -2308,7 +2308,7 @@
 
 /* ------------------ INEDEBLE — Javiera Naranjo, Paulina Carrasco ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2729665819959960675832130122435/Javiera-Naranjo-image-723d4605-f436-4ccd-bc6f-8cdfee64515f.jpg",
+  src: "IMG/remote-originals/099_Javiera-Naranjo-image-723d4605-f436-4ccd-bc6f-8cdfee64515f.jpg",
   orientation: "v",
   span: 0,
   tags: ["fotografía", "moda", "dirección creativa", "editorial"],
@@ -2323,7 +2323,7 @@
 
 /* ------------------ Raíces vivas: nuestra fusión — Magdalena Leigh ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Z2729673748555030996934510195395/Magdalena-Leigh-Captura-de-pantalla-2026-01-04-a-las-13.22.37.png",
+  src: "IMG/remote-originals/100_Magdalena-Leigh-Captura-de-pantalla-2026-01-04-a-las-13.22.37.png",
   orientation: "v",
   span: 1,
   tags: ["fotografía", "moda", "editorial"],
@@ -2345,7 +2345,7 @@
       area: "Ilustración / Editorial",
       year: 2019,
       tags: ["ilustración", "editorial", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/D2726525513690148695247142990531/Captura-de-pantalla-2026-01-02-a-las-14.00.36.png",
+      src: "IMG/remote-originals/101_Captura-de-pantalla-2026-01-02-a-las-14.00.36.png",
       url: [
         "https://www.magdalenaperezv.com/La-Mesa-Latina",
         "https://ciudademergente.org/construir-tacticas/2020/9/22/kit-la-mesa-latina"
@@ -2362,7 +2362,7 @@
       area: "Servicio / Salud / Social",
       year: "N/A",
       tags: ["servicio", "salud", "social"],
-      src: "https://freight.cargo.site/t/original/i/U2726524557798317539691887801027/Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
+      src: "IMG/remote-originals/102_Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
       url: "https://feromagnoli.framer.website/cases/red-apa"
     },
     {
@@ -2374,7 +2374,7 @@
       area: "Editorial / Dirección de arte",
       year: 2025,
       tags: ["editorial", "dirección de arte", "ilustración"],
-      src: "https://freight.cargo.site/t/original/i/U2726524557798317539691887801027/Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
+      src: "IMG/remote-originals/102_Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
       url: "https://pilar-fundamental.com/ugm-catastro"
     },
     {
@@ -2386,7 +2386,7 @@
       area: "Identidad visual",
       year: 2023,
       tags: ["identidad visual", "branding", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/G2726524557816764283765597352643/Captura-de-pantalla-2026-01-02-a-las-13.57.55.png",
+      src: "IMG/remote-originals/103_Captura-de-pantalla-2026-01-02-a-las-13.57.55.png",
       url: "https://pilar-fundamental.com/espacioede"
     },
     {
@@ -2398,7 +2398,7 @@
       area: "Ilustración / Editorial",
       year: 2021,
       tags: ["ilustración", "editorial", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/A2726524557835211027839306904259/Captura-de-pantalla-2026-01-02-a-las-13.58.22.png",
+      src: "IMG/remote-originals/104_Captura-de-pantalla-2026-01-02-a-las-13.58.22.png",
       url: "https://pilar-fundamental.com/loie-fuller"
     },
     {
@@ -2410,7 +2410,7 @@
       area: "Afiche / Gráfico",
       year: 2022,
       tags: ["afiche", "diagramación", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/P2726531106761398588056902513347/Captura-de-pantalla-2026-01-02-a-las-14.03.58.png",
+      src: "IMG/remote-originals/105_Captura-de-pantalla-2026-01-02-a-las-14.03.58.png",
       url: "https://www.behance.net/gallery/156824561/Expo-Fireflies-Patagonia"
     },
     {
@@ -2422,7 +2422,7 @@
       area: "Identidad visual",
       year: "N/A",
       tags: ["identidad visual", "branding", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/X2726539009475686973744781669059/Copia-de-avatar_ig_400.jpg",
+      src: "IMG/remote-originals/106_Copia-de-avatar_ig_400.jpg",
       url: "https://cargocollective.com/ccharnecker/Imagen-de-marca"
     },
     {
@@ -2434,7 +2434,7 @@
       area: "Música / Dirección de arte",
       year: "N/A",
       tags: ["música", "gráfico", "dirección de arte", "portada"],
-      src: "https://freight.cargo.site/t/original/i/Z2726539009494133717818491220675/kittsy_DANZA_OTONO_v6_800.png",
+      src: "IMG/remote-originals/107_kittsy_DANZA_OTONO_v6_800.png",
       url: "https://cargocollective.com/ccharnecker/Arte-discos-1"
     },
     {
@@ -2448,7 +2448,7 @@
       area: "Ilustración",
       year: "N/A",
       tags: ["ilustración", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/K2726539009512580461892200772291/fisica1_2-botella-globo_1000.jpg",
+      src: "IMG/remote-originals/108_fisica1_2-botella-globo_1000.jpg",
       url: "https://cargocollective.com/ccharnecker/Ilustraciones-Quantica"
     },
     {
@@ -2460,7 +2460,7 @@
       area: "Editorial / Gráfico",
       year: "N/A",
       tags: ["editorial", "diagramación", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/X2726543467352753314542444294851/d4acb2d4-a35f-4c33-b786-81974f5c3e20_rw_1920.jpg",
+      src: "IMG/remote-originals/109_d4acb2d4-a35f-4c33-b786-81974f5c3e20_rw_1920.jpg",
       url: "https://colombamedina.myportfolio.com/copia-de-de-mukachevo-al-fin-del-mundo"
     },
     {
@@ -2472,7 +2472,7 @@
       area: "Identidad visual",
       year: "N/A",
       tags: ["identidad visual", "branding", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/R2726545631026705952156881990339/4521c585-4a16-4ab5-9b1f-d76b06ca8705_rw_3840.png",
+      src: "IMG/remote-originals/110_4521c585-4a16-4ab5-9b1f-d76b06ca8705_rw_3840.png",
       url: "https://colombamedina.myportfolio.com/identida-de-marca"
     },
     {
@@ -2486,7 +2486,7 @@
       area: "Fotografía / Risografía",
       year: "N/A",
       tags: ["fotografía", "risografía"],
-      src: "https://freight.cargo.site/t/original/i/W2726551712327931243837344133827/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.19.58.png",
+      src: "IMG/remote-originals/111_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.19.58.png",
       url: "https://mabellov.myportfolio.com/riso-1"
     },
     {
@@ -2500,12 +2500,12 @@
       area: "Risografía",
       year: 2022,
       tags: ["risografía"],
-      src: "https://freight.cargo.site/t/original/i/E2726551712346377987911053685443/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.59.png",
+      src: "IMG/remote-originals/112_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.59.png",
       url: "https://mabellov.myportfolio.com/riso-2"
     },
     /* ------------------ No tengo amigos tengo amores — Andrés Miquel ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2729689188073992322207602651843/Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.36.36.png",
+  src: "IMG/remote-originals/113_Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.36.36.png",
   orientation: "v",
   span: 2,
   tags: ["ilustración", "gráfico"],
@@ -2520,7 +2520,7 @@
 
 /* ------------------ Los Mil Nombres de María Camaleón — Andrés Miquel ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2729689188055545578133893100227/Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.38.08.png",
+  src: "IMG/remote-originals/114_Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.38.08.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración", "gráfico"],
@@ -2535,7 +2535,7 @@
 
 /* ------------------ Chini and the Technicians — Karina Hyland ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2729705002246325784521688429251/Karina-Hyland-02625b89-857f-4d69-9f47-edb7a081e016_rw_1920.jpg",
+  src: "IMG/remote-originals/115_Karina-Hyland-02625b89-857f-4d69-9f47-edb7a081e016_rw_1920.jpg",
   orientation: "h",
   span: 0,
   tags: ["iluminación"],
@@ -2550,7 +2550,7 @@
 
 /* ------------------ DEFAULT — Manuela Garretón, Tomás Ossandón ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2729705002264772528595397980867/Karina-Hyland-a7f3c303-c16e-4b68-bc30-df77e99a0763.jpg",
+  src: "IMG/remote-originals/116_Karina-Hyland-a7f3c303-c16e-4b68-bc30-df77e99a0763.jpg",
   orientation: "h",
   span: 1,
   tags: ["instalación", "web", "iluminación", "investigación"],
@@ -2568,7 +2568,7 @@
 
 /* ------------------ P/H<25> — Vicente Puig ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2729712403485876526415406904003/Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.56.10.png",
+  src: "IMG/remote-originals/117_Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.56.10.png",
   orientation: "h",
   span: 0,
   tags: ["branding", "identidad visual", "gráfico"],
@@ -2583,7 +2583,7 @@
 
 /* ------------------ REITE: rebranding — Vicente Puig ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2729712403504323270489116455619/Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.59.20.png",
+  src: "IMG/remote-originals/118_Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.59.20.png",
   orientation: "v",
   span: 1,
   tags: ["branding", "identidad visual", "gráfico"],
@@ -2598,7 +2598,7 @@
 
 /* ------------------ DRP_01 — Benjamín Becerra ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/W2729729462721201243755679003331/Benjamin-Becerra-Captura-de-pantalla-2026-01-04-a-las-14.02.30.png",
+  src: "IMG/remote-originals/119_Benjamin-Becerra-Captura-de-pantalla-2026-01-04-a-las-14.02.30.png",
   orientation: "v",
   span: 1,
   tags: ["vestuario", "moda"],
@@ -2620,7 +2620,7 @@
       area: "Risografía",
       year: "N/A",
       tags: ["risografía"],
-      src: "https://freight.cargo.site/t/original/i/F2726551712364824731984763237059/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.33.png",
+      src: "IMG/remote-originals/120_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.33.png",
       url: "https://mabellov.myportfolio.com/riso-3"
     },
     {
@@ -2632,7 +2632,7 @@
       area: "Ilustración / Muralismo",
       year: 2024,
       tags: ["ilustración", "muralismo"],
-      src: "https://freight.cargo.site/t/original/i/P2726560875508242186098885210819/Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.08.png",
+      src: "IMG/remote-originals/121_Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.08.png",
       url: "https://readymag.website/u3068913620/portafoliomojona/proyectomojona/"
     },
     {
@@ -2644,12 +2644,12 @@
       area: "Producto",
       year: "2024/2025",
       tags: ["producto"],
-      src: "https://freight.cargo.site/t/original/i/T2726560875526688930172594762435/Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.18.png",
+      src: "IMG/remote-originals/122_Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.18.png",
       url: "https://readymag.website/u3068913620/portafoliomojona/proyectotoyngtravelgames/"
     },
 /* ------------------ De Cancelling — Domingo Smart ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2825598558428431692792129336003/Smart-Domingo.png",
+  src: "IMG/remote-originals/123_Smart-Domingo.png",
   orientation: "v",
   span: 2,
   tags: ["soundscape","experimental","investigación","museografía"],
@@ -2664,7 +2664,7 @@
 
 /* ------------------ PACKAGING FL-01 — Domingo Smart ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/T2825598558705132853897772610243/Smart-Domingo-1.jpg",
+  src: "IMG/remote-originals/124_Smart-Domingo-1.jpg",
   orientation: "v",
   span: 1,
   tags: ["packaging","serigrafía","industrial"],
@@ -2679,7 +2679,7 @@
 
 /* ------------------ Mesa Lateral — Domingo Smart ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/W2825598558686686109824063058627/Smart-Domingo-3.jpg",
+  src: "IMG/remote-originals/125_Smart-Domingo-3.jpg",
   orientation: "v",
   span: 2,
   tags: ["mobiliario","industrial","producto"],
@@ -2694,7 +2694,7 @@
 
 /* ------------------ Axigo — Tomás Sánchez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/X2825598558446878436865838887619/Sanchez-Tomas.png",
+  src: "IMG/remote-originals/126_Sanchez-Tomas.png",
   orientation: "h",
   span: 2,
   tags: ["servicio","deportes","salud"],
@@ -2709,7 +2709,7 @@
 
 /* ------------------ Centralcorp — Francisco Poulsen ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/O2825598558668239365750353507011/Poulsen-Francisco-1.jpg",
+  src: "IMG/remote-originals/127_Poulsen-Francisco-1.jpg",
   orientation: "h",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -2724,7 +2724,7 @@
 
 /* ------------------ Olivo — Francisco Poulsen ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2825598558649792621676643955395/Poulsen-Francisco-2.jpg",
+  src: "IMG/remote-originals/128_Poulsen-Francisco-2.jpg",
   orientation: "h",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -2739,7 +2739,7 @@
 
 /* ------------------ Délano — Francisco Poulsen ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2825598558631345877602934403779/Poulsen-Francisco-3.jpg",
+  src: "IMG/remote-originals/129_Poulsen-Francisco-3.jpg",
   orientation: "h",
   span: 1,
   tags: ["branding","web","gráfico"],
@@ -2754,7 +2754,7 @@
 
 /* ------------------ Sala simulación AVD — Valentina Navarrete ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2825598558612899133529224852163/Navarrete-Valentina.jpg",
+  src: "IMG/remote-originals/130_Navarrete-Valentina.jpg",
   orientation: "h",
   span: 1,
   tags: ["industrial","espacios","salud"],
@@ -2769,7 +2769,7 @@
 
 /* ------------------ Salud oportuna en el sistema público de Chile — Felipe Vilches Ivelić ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2825598558409984948718419784387/Vilches-Felipe-04.jpg",
+  src: "IMG/remote-originals/131_Vilches-Felipe-04.jpg",
   orientation: "h",
   span: 2,
   tags: ["animación","audiovisual","motion graphics","salud"],
@@ -2784,7 +2784,7 @@
 
 /* ------------------ El delantal vestido — Felipe Vilches Ivelić ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2825598558465325180939548439235/Vilches-Felipe.png",
+  src: "IMG/remote-originals/132_Vilches-Felipe.png",
   orientation: "h",
   span: 2,
   tags: ["animación","audiovisual","motion graphics","museografía"],
@@ -2799,7 +2799,7 @@
 
 /* ------------------ De Este a Oeste, de Norte a Sur — Felipe Vilches Ivelić ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2825598558391538204644710232771/Vilches-Felipe-05.jpg",
+  src: "IMG/remote-originals/133_Vilches-Felipe-05.jpg",
   orientation: "v",
   span: 1,
   tags: ["animación","audiovisual","motion graphics"],
@@ -2814,7 +2814,7 @@
 
 /* ------------------ Péndulo — Daniela Reyes Muñoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/O2825598558483771925013257990851/Reyes-Daniela.png",
+  src: "IMG/remote-originals/134_Reyes-Daniela.png",
   orientation: "h",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -2829,7 +2829,7 @@
 
 /* ------------------ Cositas Fanzine — Daniela Reyes Muñoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2825598558594452389455515300547/Reyes-Daniela-cositas1_670.jpg",
+  src: "IMG/remote-originals/135_Reyes-Daniela-cositas1_670.jpg",
   orientation: "h",
   span: 2,
   tags: ["ilustración","gráfico"],
@@ -2844,7 +2844,7 @@
 
 /* ------------------ Mujeres Inspiradoras — Daniela Reyes Muñoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2825598558576005645381805748931/Reyes-Daniela-STEM2_670.jpg",
+  src: "IMG/remote-originals/136_Reyes-Daniela-STEM2_670.jpg",
   orientation: "h",
   span: 2,
   tags: ["ilustración","gráfico"],
@@ -2859,7 +2859,7 @@
 
 /* ------------------ Los Heroes Magazine Covers — Daniela Reyes Muñoz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/H2825598558557558901308096197315/Reyes-Daniela-abril2023_670.jpg",
+  src: "IMG/remote-originals/137_Reyes-Daniela-abril2023_670.jpg",
   orientation: "h",
   span: 2,
   tags: ["ilustración","gráfico"],
@@ -2874,7 +2874,7 @@
 
 /* ------------------ Disonia — Joaquín Gajardo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/N2825598558539112157234386645699/Gajardo-Joaquin-6624043949c81673fb06bf59_Mesa-de-trabajo-18-copia-9.jpg",
+  src: "IMG/remote-originals/138_Gajardo-Joaquin-6624043949c81673fb06bf59_Mesa-de-trabajo-18-copia-9.jpg",
   orientation: "h",
   span: 1,
   tags: ["desarrollo web","servicios","portafolio"],
@@ -2889,7 +2889,7 @@
 
 /* ------------------ TOPO COLECTIVO — Joaquín Gajardo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2825598558520665413160677094083/Gajardo-Joaquin-66831724e1980d57e502d3b2_Mesa-de-trabajo-18-copia-4.jpg",
+  src: "IMG/remote-originals/139_Gajardo-Joaquin-66831724e1980d57e502d3b2_Mesa-de-trabajo-18-copia-4.jpg",
   orientation: "h",
   span: 1,
   tags: ["desarrollo web","servicios","ecommerce"],
@@ -2903,7 +2903,7 @@
 },
 /* ------------------ La Raíz del Aire — Florencia Caro / Colomba Acosta ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2831918759230364336851473871555/Caro-Florencia-Captura-de-pantalla-2026-03-09-a-las-16.27.21.png",
+  src: "IMG/remote-originals/140_Caro-Florencia-Captura-de-pantalla-2026-03-09-a-las-16.27.21.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","diagramación","gráfico"],
@@ -2918,7 +2918,7 @@
 
 /* ------------------ Raíz Rituales — Colomba Acosta / Florencia Caro ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2831918759248811080925183423171/Acosta--Colomba-Captura-de-pantalla-2026-03-09-a-las-16.30.34.png",
+  src: "IMG/remote-originals/141_Acosta--Colomba-Captura-de-pantalla-2026-03-09-a-las-16.30.34.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","fanzine","impresión"],
@@ -2933,7 +2933,7 @@
 
 /* ------------------ Decide Chile — Constanza Morales ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Y2831921117406786487659423806147/morales-constanza-1.jpg",
+  src: "IMG/remote-originals/142_morales-constanza-1.jpg",
   orientation: "v",
   span: 1,
   tags: ["ux","ui","web","responsivo"],
@@ -2948,7 +2948,7 @@
 
 /* ------------------ Antagonista — Bernardita Hoffmann ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/K2831918759304151313146312078019/Hoffmann-Bernardita-1.JPG",
+  src: "IMG/remote-originals/143_Hoffmann-Bernardita-1.JPG",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial","packaging"],
@@ -2963,7 +2963,7 @@
 
 /* ------------------ Batallas en el barrio — Magdalena Leigh ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2831918759285704569072602526403/leigh-magdalena.jpeg",
+  src: "IMG/remote-originals/144_leigh-magdalena.jpeg",
   orientation: "v",
   span: 1,
   tags: ["cultura","museografía","investigación"],
@@ -2978,7 +2978,7 @@
 
 /* ------------------ POLKA DOT — Fernanda Gutiérrez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2831921117351446255438295151299/gutierrez-fernanda-2.jpg",
+  src: "IMG/remote-originals/145_gutierrez-fernanda-2.jpg",
   orientation: "v",
   span: 1,
   tags: ["dirección de arte","moda","fotografía"],
@@ -2993,7 +2993,7 @@
 
 /* ------------------ Fresca Rebeca (producto) — Fernanda Gutiérrez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2831921117388339743585714254531/gutierrez-fernanda-3.jpg.jpg",
+  src: "IMG/remote-originals/146_gutierrez-fernanda-3.jpg.jpg",
   orientation: "v",
   span: 1,
   tags: ["dirección de arte","moda","fotografía"],
@@ -3008,7 +3008,7 @@
 
 /* ------------------ Presente — Daniela Gajardo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2831918759267257824998892974787/Gajardo-Daniela-Captura-de-pantalla-2026-03-09-a-las-17.02.33.png",
+  src: "IMG/remote-originals/147_Gajardo-Daniela-Captura-de-pantalla-2026-03-09-a-las-17.02.33.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","textil","gráfico","afiche"],
@@ -3023,7 +3023,7 @@
 
 /* ------------------ Restaurant KrossBar — Catalina Harasic ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2831938879131019020006840545987/Harasic-Catalina.jpeg",
+  src: "IMG/remote-originals/148_Harasic-Catalina.jpeg",
   orientation: "v",
   span: 1,
   tags: ["iluminación","industrial","espacio"],
@@ -3037,7 +3037,7 @@
 },
 /* ------------------ Dynamics of coastal picoeukaryote communities — Alejandro Durán ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2838253457734292878869043557059/X01411136.jpg",
+  src: "IMG/remote-originals/149_X01411136.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -3052,7 +3052,7 @@
 
 /* ------------------ Flora Nativa — María José Carmona ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/J2838253457715846134795334005443/nativa.jpg",
+  src: "IMG/remote-originals/150_nativa.jpg",
   orientation: "v",
   span: 1,
   tags: ["editorial","ilustración","ecología"],
@@ -3067,7 +3067,7 @@
 
 /* ------------------ Al agua — María José Carmona ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2838253457697399390721624453827/824f334f-4c26-48e3-93ee-95d5a45b865b_rw_3840.JPG",
+  src: "IMG/remote-originals/151_824f334f-4c26-48e3-93ee-95d5a45b865b_rw_3840.JPG",
   orientation: "v",
   span: 1,
   tags: ["editorial","ilustración","ecología"],
@@ -3082,7 +3082,7 @@
 
 /* ------------------ Panchita recorre Chiloé — Gabriela Sandoval ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2838259050418161146130902495939/plantilla-13.jpeg",
+  src: "IMG/remote-originals/152_plantilla-13.jpeg",
   orientation: "h",
   span: 2,
   tags: ["exhibición","cultura","experiencia","artesanía"],
@@ -3097,7 +3097,7 @@
 
 /* ------------------ Mou Studio — Martina Palominos ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Y2838253457678952646647914902211/Diseno-sin-titulo-4-1.jpg",
+  src: "IMG/remote-originals/153_Diseno-sin-titulo-4-1.jpg",
   orientation: "v",
   span: 1,
   tags: ["textil","indumentaria","moda"],
@@ -3115,7 +3115,7 @@
 
 /* ------------------ Misión Korex — Teresita Reymond ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2838253457660505902574205350595/mision-korex.jpg",
+  src: "IMG/remote-originals/154_mision-korex.jpg",
   orientation: "v",
   span: 1,
   tags: ["servicio","innovación","educación"],
@@ -3133,7 +3133,7 @@
 
 /* ------------------ El Pescador de Chiloé — Gabriela Sandoval ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/J2838253457531378694058238489283/En-que-consiste_Set-Pescador-compress.jpg",
+  src: "IMG/remote-originals/155_En-que-consiste_Set-Pescador-compress.jpg",
   orientation: "h",
   span: 1,
   tags: ["exhibición","cultura","experiencia","artesanía"],
@@ -3151,7 +3151,7 @@
 
 /* ------------------ Ari-test — Macarena Silva ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/O2838253457642059158500495798979/WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
+  src: "IMG/remote-originals/156_WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
   orientation: "h",
   span: 1,
   tags: ["investigación","salud","servicio"],
@@ -3165,7 +3165,7 @@
 },
 /* ------------------ Deseo, Carne y Voluntad — Javiera Donoso ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2838275320999836480166714356419/a3407688467_16.jpg",
+  src: "IMG/remote-originals/157_a3407688467_16.jpg",
   orientation: "sq",
   span: 2,
   tags: ["cover art","dirección de arte"],
@@ -3180,7 +3180,7 @@
 
 /* ------------------ Ahora o nunca — Javiera Donoso ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2838275388164431652543191790275/Captura-de-pantalla-2026-03-13-a-las-16.43.15.png",
+  src: "IMG/remote-originals/158_Captura-de-pantalla-2026-03-13-a-las-16.43.15.png",
   orientation: "sq",
   span: 1,
   tags: ["cover art","dirección de arte"],
@@ -3194,7 +3194,7 @@
 },
 /* ------------------ The Art of Talking About Art — María Jesús Vidal Lynch ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/L2839502320717933601075579269827/Captura-de-pantalla-2026-03-14-a-las-11.12.16.png",
+  src: "IMG/remote-originals/159_Captura-de-pantalla-2026-03-14-a-las-11.12.16.png",
   orientation: "v",
   span: 1,
   tags: ["servicio","cultura","exhibición"],
@@ -3209,7 +3209,7 @@
 
 /* ------------------ Refugia — Constanza Weinreich Siraqyan ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2839495259691683810607121248963/1770321553813.jpeg",
+  src: "IMG/remote-originals/160_1770321553813.jpeg",
   orientation: "v",
   span: 1,
   tags: ["dirección creativa","identidad visual"],
@@ -3224,7 +3224,7 @@
 
 /* ------------------ MUDA — Ignacia Bianchi ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2839495436356151804523497075395/Captura-de-pantalla-2026-03-14-a-las-10.44.05.png",
+  src: "IMG/remote-originals/161_Captura-de-pantalla-2026-03-14-a-las-10.44.05.png",
   orientation: "v",
   span: 1,
   tags: ["indumentaria","objeto","textil"],
@@ -3242,7 +3242,7 @@
 
 /* ------------------ Regularidad Irregular — Ignacia Bianchi ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2839495259673237066533411697347/d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
+  src: "IMG/remote-originals/162_d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
   orientation: "v",
   span: 1,
   tags: ["indumentaria","objeto","textil"],
@@ -3257,7 +3257,7 @@
 
 /* ------------------ Hati: El Equilibrio de los Espíritus — Clara Valenzuela Lowey ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2839500316442296504385377088195/625530226_17872909344521833_8996592620757902267_n.jpg",
+  src: "IMG/remote-originals/163_625530226_17872909344521833_8996592620757902267_n.jpg",
   orientation: "v",
   span: 1,
   tags: ["juego de mesa","producto"],
@@ -3272,7 +3272,7 @@
 
 /* ------------------ La ciudad como texto — Carola Ureta ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2839501183845096338355913175747/Captura-de-pantalla-2026-03-14-a-las-11.12.54.png",
+  src: "IMG/remote-originals/164_Captura-de-pantalla-2026-03-14-a-las-11.12.54.png",
   orientation: "v",
   span: 1,
   tags: ["web","experiencia","cultura"],
@@ -3290,7 +3290,7 @@
 
 /* ------------------ Metanoien — Tomás Corvalán Azócar ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2839495259654790322459702145731/DSC_2551-e1531948324611.jpg",
+  src: "IMG/remote-originals/165_DSC_2551-e1531948324611.jpg",
   orientation: "v",
   span: 1,
   tags: ["moda","indumentaria","cultura"],
@@ -3305,7 +3305,7 @@
 
 /* ------------------ Diseño basado en Simbiogénesis — Daniela Rojas-Levy ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/T2839495259636343578385992594115/cover_issue_305_es_ES.jpg",
+  src: "IMG/remote-originals/166_cover_issue_305_es_ES.jpg",
   orientation: "v",
   span: 1,
   tags: ["investigación","publicación académica"],
@@ -3320,7 +3320,7 @@
 
 /* ------------------ Humanidad Teenager — Benjamín Saíz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2840105943655249519298499523267/Captura-de-pantalla-2026-03-14-a-las-11.17.17.png",
+  src: "IMG/remote-originals/167_Captura-de-pantalla-2026-03-14-a-las-11.17.17.png",
   orientation: "h",
   span: 1,
   tags: ["cover art","dirección de arte"],
@@ -3335,7 +3335,7 @@
 
 /* ------------------ CHT Lab — Benjamín Saíz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/X2840102851445987187440071684803/Captura-de-pantalla-2026-03-14-a-las-11.18.22.png",
+  src: "IMG/remote-originals/168_Captura-de-pantalla-2026-03-14-a-las-11.18.22.png",
   orientation: "h",
   span: 1,
   tags: ["identidad visual"],
@@ -3350,7 +3350,7 @@
 
 /* ------------------ Si el mundo se acabara hoy — Pablo González ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2838277900592527747710412337859/66725.jpg",
+  src: "IMG/remote-originals/169_66725.jpg",
   orientation: "sq",
   span: 1,
   tags: ["cover art","dirección de arte"],
@@ -3365,7 +3365,7 @@
 
 /* ------------------ Resonancias Tectónicas — Marcos Chillet ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/N2838258980855489244172183352003/Captura-de-pantalla-2026-03-13-a-las-16.31.45.png",
+  src: "IMG/remote-originals/170_Captura-de-pantalla-2026-03-13-a-las-16.31.45.png",
   orientation: "v",
   span: 1,
   tags: ["editorial","investigación"],
@@ -3383,7 +3383,7 @@
 
 /* ------------------ Salud Oportuna — Sara Riveros ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2838253457549825438131948040899/Group-147.png.jpg",
+  src: "IMG/remote-originals/171_Group-147.png.jpg",
   orientation: "v",
   span: 1,
   tags: ["servicio","innovación","investigación"],
@@ -3398,7 +3398,7 @@
 
 /* ------------------ GOLDFISH — María Jesús Contreras ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/V2838253642017266175227464200899/Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
+  src: "IMG/remote-originals/172_Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
   orientation: "v",
   span: 2,
   tags: ["ilustración","gráfico"],
@@ -3413,7 +3413,7 @@
 
 /* ------------------ Stilllife 1 — María Jesús Contreras ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2838253641998819431153754649283/Captura-de-pantalla-2026-03-13-a-las-16.00.27.png",
+  src: "IMG/remote-originals/173_Captura-de-pantalla-2026-03-13-a-las-16.00.27.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","gráfico"],
@@ -3428,7 +3428,7 @@
 
 /* ------------------ 30 Grad Mag — María Jesús Contreras ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Z2838253641980372687080045097667/Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
+  src: "IMG/remote-originals/174_Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
   orientation: "h",
   span: 2,
   tags: ["ilustración","gráfico"],
@@ -3443,7 +3443,7 @@
 
 /* ------------------ Frog Party — María Jesús Contreras ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/H2838253641961925943006335546051/Captura-de-pantalla-2026-03-13-a-las-16.02.20.png",
+  src: "IMG/remote-originals/175_Captura-de-pantalla-2026-03-13-a-las-16.02.20.png",
   orientation: "v",
   span: 1,
   tags: ["ilustración","gráfico"],
@@ -3458,7 +3458,7 @@
 
 /* ------------------ Metro 21 — Josefina Andreu ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2838253457623612414426786247363/metro21-4.jpg",
+  src: "IMG/remote-originals/176_metro21-4.jpg",
   orientation: "v",
   span: 1,
   tags: ["galería","cultura"],
@@ -3476,7 +3476,7 @@
 
 /* ------------------ Confluencia — Josefina Andreu ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/S2838253457512931949984528937667/IMG-PAG-04.jpg",
+  src: "IMG/remote-originals/177_IMG-PAG-04.jpg",
   orientation: "h",
   span: 2,
   tags: ["editorial","dirección creativa"],
@@ -3491,7 +3491,7 @@
 
 /* ------------------ Borrowed Matter / Materia Prestada — Sofía Guridi ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2838253457605165670353076695747/Materia-Prestada-11.jpg",
+  src: "IMG/remote-originals/178_Materia-Prestada-11.jpg",
   orientation: "v",
   span: 1,
   tags: ["exhibición","cultura","experiencia"],
@@ -3509,7 +3509,7 @@
 
 /* ------------------ Dissolvable Biotextile Keyboard — Sofía Guridi ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2838253457586718926279367144131/756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
+  src: "IMG/remote-originals/179_756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
   orientation: "h",
   span: 2,
   tags: ["exhibición","objeto","experiencia"],
@@ -3524,7 +3524,7 @@
 
 /* ------------------ Palpa — Josefa Cortés ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/E2838253457568272182205657592515/Palpa.jpg",
+  src: "IMG/remote-originals/180_Palpa.jpg",
   orientation: "v",
   span: 1,
   tags: ["salud","servicio","investigación","producto"],
@@ -3542,7 +3542,7 @@
 
 /* ------------------ El Delantal Vestido (Iluminación) — Catalina Harasic ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2831938879149465764080550097603/Harasic-Catalina-2.jpeg",
+  src: "IMG/remote-originals/181_Harasic-Catalina-2.jpeg",
   orientation: "v",
   span: 1,
   tags: ["iluminación","industrial","espacio"],
@@ -3557,7 +3557,7 @@
 
 /* ------------------ Zipi — Maximiliano Contreras ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2831946269671458199149019083459/Contreras-Maximiliano-Captura-de-pantalla-2026-03-09-a-las-17.24.59.png",
+  src: "IMG/remote-originals/182_Contreras-Maximiliano-Captura-de-pantalla-2026-03-09-a-las-17.24.59.png",
   orientation: "v",
   span: 1,
   tags: ["producto","industrial"],
@@ -3571,7 +3571,7 @@
 },
 /* ------------------ Dulces Paula — Paulina Astudillo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2831958625153064817217015067331/Astudillo-Paulina-Captura-de-pantalla-2026-03-09-a-las-17.37.51.png",
+  src: "IMG/remote-originals/183_Astudillo-Paulina-Captura-de-pantalla-2026-03-09-a-las-17.37.51.png",
   orientation: "v",
   span: 1,
   tags: ["branding","identidad visual","gráfico"],
@@ -3586,7 +3586,7 @@
 
 /* ------------------ Vestigios — Carolina Pacheco ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2831969376376679576986435662531/pacheco-Carolina-16.jpg",
+  src: "IMG/remote-originals/184_pacheco-Carolina-16.jpg",
   orientation: "v",
   span: 1,
   tags: ["museografía","exhibición","investigación"],
@@ -3601,7 +3601,7 @@
 
 /* ------------------ El Delantal Vestido — Camila Ríos ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/P2831969376413573065133854765763/Rios-camila-Captura-de-Pantalla-2024-11-27-a-las-14.46.28.jpg.jpg",
+  src: "IMG/remote-originals/185_Rios-camila-Captura-de-Pantalla-2024-11-27-a-las-14.46.28.jpg.jpg",
   orientation: "v",
   span: 1,
   tags: ["museografía","exhibición","investigación"],
@@ -3616,7 +3616,7 @@
 
 /* ------------------ Sonic Ecologies 2.0 — Joaquín Rosas ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/W2832966899834431604011737494211/rosas-joaquin-1.png",
+  src: "IMG/remote-originals/186_rosas-joaquin-1.png",
   orientation: "v",
   span: 1,
   tags: ["museografía","exhibición","investigación"],
@@ -3631,7 +3631,7 @@
 
 /* ------------------ Gubii Bags — Joaquín Rosas ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/G2832966899852878348085447045827/ROSAS-JOAQUIN2-Gubbi-Sesion-Jun-7_1340_c.jpeg",
+  src: "IMG/remote-originals/187_ROSAS-JOAQUIN2-Gubbi-Sesion-Jun-7_1340_c.jpeg",
   orientation: "v",
   span: 1,
   tags: ["producto","packaging","textil"],
@@ -3646,7 +3646,7 @@
 
 /* ------------------ Across Andes 2025 Volcano Edition — Joaquín Rosas ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2832966899815984859938027942595/rosas-joaquin-MAPAAA-2025-Final_1340_c.jpeg",
+  src: "IMG/remote-originals/188_rosas-joaquin-MAPAAA-2025-Final_1340_c.jpeg",
   orientation: "v",
   span: 1,
   tags: ["ilustración","gráfico"],
@@ -3661,7 +3661,7 @@
 
 /* ------------------ Natural Killer — Leopoldo Herrera ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/Q2832967861795241559817435165379/herrera-leopoldo.jpg",
+  src: "IMG/remote-originals/189_herrera-leopoldo.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","juego de mesa"],
@@ -3676,7 +3676,7 @@
 
 /* ------------------ Con Devuelta — Isabel Díaz-del Río ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/M2832974993122033015192994394819/rios-isabel.jpg",
+  src: "IMG/remote-originals/190_rios-isabel.jpg",
   orientation: "sq",
   span: 1,
   tags: ["servicio","social","ecología"],
@@ -3691,7 +3691,7 @@
 
 /* ------------------ Calcáreo — Carolina Pacheco ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/D2831969376395126321060145214147/pacheco-carolina-2-2-5-lateral.jpg",
+  src: "IMG/remote-originals/191_pacheco-carolina-2-2-5-lateral.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","biomaterial","investigación"],
@@ -3706,7 +3706,7 @@
 
 /* ------------------ AjuarParn — Camila Ríos ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2831969376432019809207564317379/Rios-Camila-21949970_10155734500863430_4521371404219177019_o.jpg.jpg",
+  src: "IMG/remote-originals/192_Rios-Camila-21949970_10155734500863430_4521371404219177019_o.jpg.jpg",
   orientation: "v",
   span: 1,
   tags: ["producto","packaging","textil"],
@@ -3720,7 +3720,7 @@
 },
 /* ------------------ Guaico — Joaquín Gajardo ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/M2825598558502218669086967542467/Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
+  src: "IMG/remote-originals/193_Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
   orientation: "h",
   span: 2,
   tags: ["desarrollo web","servicios","ecommerce"],
@@ -3735,7 +3735,7 @@
 
 /* ------------------ A Punto — María José Díaz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/C2840101210589655086901745889987/Captura-de-pantalla-2026-03-14-a-las-20.16.15.png",
+  src: "IMG/remote-originals/194_Captura-de-pantalla-2026-03-14-a-las-20.16.15.png",
   orientation: "h",
   span: 1,
   tags: ["identidad visual","dirección creativa"],
@@ -3750,7 +3750,7 @@
 
 /* ------------------ VSPT — María José Díaz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/R2840101210552761598754326786755/Captura-de-pantalla-2026-03-14-a-las-19.39.31.png",
+  src: "IMG/remote-originals/195_Captura-de-pantalla-2026-03-14-a-las-19.39.31.png",
   orientation: "h",
   span: 1,
   tags: ["identidad visual","dirección creativa"],
@@ -3765,7 +3765,7 @@
 
 /* ------------------ Resurgir: un poema a las raíces — Magdalena Sáez ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/B2840101210608101830975455441603/Captura-de-pantalla-2026-03-14-a-las-20.15.40.png",
+  src: "IMG/remote-originals/196_Captura-de-pantalla-2026-03-14-a-las-20.15.40.png",
   orientation: "sq",
   span: 1,
   tags: ["dirección creativa","objeto","moda","fotografía"],
@@ -3780,7 +3780,7 @@
 
 /* ------------------ Resurgir: un poema a las raíces — María Jesús Vallejos ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/I2840101210644995319122874544835/Captura-de-pantalla-2026-03-14-a-las-20.15.27.png",
+  src: "IMG/remote-originals/197_Captura-de-pantalla-2026-03-14-a-las-20.15.27.png",
   orientation: "sq",
   span: 1,
   tags: ["dirección creativa","objeto","moda","fotografía"],
@@ -3795,7 +3795,7 @@
 
 /* ------------------ Resurgir: un poema a las raíces — Sebastián Tala ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/U2840101210626548575049164993219/Captura-de-pantalla-2026-03-14-a-las-20.15.33.png",
+  src: "IMG/remote-originals/198_Captura-de-pantalla-2026-03-14-a-las-20.15.33.png",
   orientation: "sq",
   span: 1,
   tags: ["dirección creativa","objeto","moda","fotografía"],
@@ -3810,7 +3810,7 @@
 
 /* ------------------ Resurgir: un poema a las raíces — Giuliana Mellafe ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/H2840101210663442063196584096451/Captura-de-pantalla-2026-03-14-a-las-20.15.21.png",
+  src: "IMG/remote-originals/199_Captura-de-pantalla-2026-03-14-a-las-20.15.21.png",
   orientation: "sq",
   span: 1,
   tags: ["dirección creativa","objeto","moda","fotografía"],
@@ -3825,7 +3825,7 @@
 
 /* ------------------ Resurgir: un poema a las raíces — Josefina Véliz ------------------ */
 {
-  src: "https://freight.cargo.site/t/original/i/F2840101210571208342828036338371/Captura-de-pantalla-2026-03-14-a-las-20.15.47.png",
+  src: "IMG/remote-originals/200_Captura-de-pantalla-2026-03-14-a-las-20.15.47.png",
   orientation: "sq",
   span: 1,
   tags: ["dirección creativa","objeto","moda","fotografía"],
@@ -3848,7 +3848,7 @@
       area: "Branding / Identidad visual",
       year: 2022,
       tags: ["branding", "identidad visual", "gráfico"],
-      src: "https://freight.cargo.site/t/original/i/A2726565970425168368382203343555/Francisca-Torres-Captura-de-pantalla-2026-01-02-a-las-14.35.51.png",
+      src: "IMG/remote-originals/201_Francisca-Torres-Captura-de-pantalla-2026-01-02-a-las-14.35.51.png",
       url: "https://flen.es/campana-dia-del-nino"
     }
     
