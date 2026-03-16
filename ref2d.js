@@ -2002,9 +2002,9 @@
       span: 2,
       tags: ["Gráfico","Branding","Museografía"],
       title: "Museum Site Santa Fe",
-      author: "Felicidad Pública, Vicente Acuña",
-      role: "",
-      collab: "Design Direction: Simón Sepúlveda, Piedad Rivadeneira. Creative Direction: Simón Sepúlveda. Graphic Design: Pau Geis, Antonia Guzmán, Vicente Acuña",
+      author: "Vicente Acuña",
+      role: "Diseñadora",
+      collab: "Desarrollado en: Felicidad Pública. Design Direction: Simón Sepúlveda, Piedad Rivadeneira. Creative Direction: Simón Sepúlveda. Graphic Design: Pau Geis, Antonia Guzmán, Vicente Acuña",
       area: "Gráfico / Museografía / Branding",
       year: "2022",
       url: "https://felicidadpublica.cl/project/site-santa-fe/"
@@ -3904,6 +3904,171 @@
   area: "Vjing (visuales) / Música",
   year: "2025",
   url: "https://www.instagram.com/p/DGouSMEu-Dc/?img_index=1"
+},
+
+/* ------------------ Palabras marchitas — Aribel González ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/F2842920037112566209814003659459/DSC_0095.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["editorial"],
+  title: "Palabras marchitas",
+  author: "Aribel González",
+  role: "Diseñadora",
+  collab: "Poemas: Simón Pešutic. Proyecto desarrollado desde estudio Otros Pérez.",
+  area: "Editorial",
+  year: "2023",
+  url: "https://ariariari.com/Palabras-Marchitas"
+},
+
+/* ------------------ Aguas Andinas — Aribel González ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2842920037075672721666584556227/portadillas-05.png",
+  orientation: "h",
+  span: 1,
+  tags: ["infografía"],
+  title: "Aguas Andinas",
+  author: "Aribel González",
+  role: "",
+  collab: "Diseño de la memoria anual de Aguas Andinas 2017 y sus filiales. Diseño editorial, infografías e ilustraciones. Proyecto desarrollado desde estudio Otros Pérez.",
+  area: "Infografía",
+  year: "2018",
+  url: "https://ariariari.com/Aguas-Andinas"
+},
+
+/* ------------------ INTRÉPIDA ATELIER — Hyemin An ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/M2842920037094119465740294107843/intrepida_1_c281191f-4945-4cb2-ba82-bd107a8b3f06.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["producto","experiencia"],
+  title: "INTRÉPIDA ATELIER",
+  author: "Hyemin An",
+  role: "Diseñadora / Fundadora",
+  collab: "Intrépida Atelier",
+  area: "Producto / Experiencia",
+  year: "N/A",
+  url: "https://intrepidaatelier.com"
+},
+
+/* ------------------ Movimiento, vida, huellas / Libro de Artista — Hyemin An ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2842920177953457212586430247619/Captura-de-pantalla-2026-03-16-a-las-13.41.00.png",
+  orientation: "h",
+  span: 1,
+  tags: ["editorial","objeto"],
+  title: "Movimiento, vida, huellas / Libro de Artista",
+  author: "Hyemin An",
+  role: "Diseñadora",
+  collab: "",
+  area: "Editorial / Objeto",
+  year: "2017",
+  url: "https://www.behance.net/gallery/57938283/Movimiento-vida-huellas-Libro-de-Artista"
+},
+
+/* ------------------ Theragun PRO Plus - By Therabody — Nicolás Robertson ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2842920177971903956660139799235/Captura-de-pantalla-2026-03-16-a-las-13.51.39.png",
+  orientation: "h",
+  span: 1,
+  tags: ["objeto","producto"],
+  title: "Theragun PRO Plus - By Therabody",
+  author: "Nicolás Robertson",
+  role: "Diseñador",
+  collab: "Agency: DNGR | @dngr.ltd. Addt'l CMF: Nicolás Robertson | @nicordf.",
+  area: "Objeto / Producto",
+  year: "2023",
+  url: "https://www.behance.net/gallery/182010403/Theragun-PRO-Plus-By-Therabody"
+},
+
+/* ------------------ PHOTOVOLTAIC TRAINING BENCH — Nicolás Robertson ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Z2842921988630515255694888219331/banco-de-entrenamiento-1.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["diseño conceptual"],
+  title: "PHOTOVOLTAIC TRAINING BENCH",
+  author: "Nicolás Robertson",
+  role: "",
+  collab: "Cliente: Phineal (in-house project). Servicio: Concept design, 3D modelling y DFM.",
+  area: "Diseño conceptual",
+  year: "2018",
+  url: "https://nicolasrobertson.com/index.php/project/giz-pv-training-module/"
+},
+
+/* ------------------ Dominó — Shuting Zhong Xie ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2842920037057225977592875004611/Domino-2-1.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["dirección de arte"],
+  title: "Dominó",
+  author: "Shuting Zhong Xie",
+  role: "Diseñadora / Directora de arte",
+  collab: "Desarrollado en Sabado Sabado Estudio.",
+  area: "Dirección de arte",
+  year: "2025",
+  url: "https://sabadosabado.com/proyectos/domino/"
+},
+
+/* ------------------ Night - Cranberry Mag — Emiliana Montes ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/D2842924084069961564657694487235/IMG_1511_JPG.jpg.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["estilismo","moda"],
+  title: "Night - Cranberry Mag",
+  author: "Emiliana Montes",
+  role: "Estilista de moda / Diseñadora",
+  collab: "Cranberry Chic. Foto: @paolavelasquezdiaz. Asistencia foto: @pepo_fernandez. Styling: @saralavinh.",
+  area: "Estilismo / Moda",
+  year: "N/A",
+  url: "https://www.emilianamontes.com/copia-de-rodrigo-2"
+},
+
+/* ------------------ Revista Ya - mariana di girolamo — Emiliana Montes ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2842924084088408308731404038851/RVYA001Y2002.jpg.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["estilismo","moda"],
+  title: "Revista Ya - mariana di girolamo",
+  author: "Emiliana Montes",
+  role: "Estilista de moda / Diseñadora",
+  collab: "Revista YA. Foto: @sergio.a.lopez. Styling: @kemilyheart.hills. Asistencia styling: @venvusvenus.",
+  area: "Estilismo / Moda",
+  year: "2024",
+  url: "https://www.emilianamontes.com/copia-de-rodrigo-1"
+},
+
+/* ------------------ CANTAR EL OLVIDO — Esteban Millar ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/N2842920177990350700733849350851/Captura-de-pantalla-2026-03-16-a-las-14.38.40.png",
+  orientation: "h",
+  span: 1,
+  tags: ["cover art","dirección de arte","música"],
+  title: "CANTAR EL OLVIDO",
+  author: "Esteban Millar",
+  role: "Diseñador",
+  collab: "Diseño, diagramación y dirección de arte: Esteban Millar. Fotografía: Luis Vicente Fresno.",
+  area: "Cover art / Dirección de arte / Música",
+  year: "2021",
+  url: "https://www.linkedin.com/posts/esteban-millar-k_portafolio-2026-brief-activity-7414781774389563392-b6-h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENdsFEB8cHH4aAjoEic9bK9fxqH37Fjuro"
+},
+
+/* ------------------ EMPLEOS VERDES — Esteban Millar ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/R2842923341772980038585337459395/Captura-de-pantalla-2026-03-16-a-las-14.46.15.png",
+  orientation: "h",
+  span: 1,
+  tags: ["editorial","dirección creativa"],
+  title: "EMPLEOS VERDES",
+  author: "Esteban Millar",
+  role: "Diseñador",
+  collab: "Diseño, diagramación y dirección de arte: Esteban Millar, Joce Quezada. Diseño de información: Esteban Millar. Fotografía: Gregorio Valdés.",
+  area: "Editorial / Dirección creativa",
+  year: "2023",
+  url: "https://www.linkedin.com/posts/esteban-millar-k_portafolio-2026-brief-activity-7414781774389563392-b6-h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENdsFEB8cHH4aAjoEic9bK9fxqH37Fjuro"
 },
 
     /* ------------------ Campaña día del niño — Francisca Torres ------------------ */
