@@ -1,0 +1,1620 @@
+{
+  "generated_at": "2026-03-16T00:24:34.636Z",
+  "summary": {
+    "total": 201,
+    "downloaded": 0,
+    "cached": 0,
+    "errors": 201,
+    "bytes": 0
+  },
+  "items": [
+    {
+      "index": 1,
+      "status": "error",
+      "bytes": 0,
+      "file": "001_Santillan_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2666098984706343401554480411331/Santillan_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 2,
+      "status": "error",
+      "bytes": 0,
+      "file": "002_2016_Luccello.jpg",
+      "url": "https://freight.cargo.site/t/original/i/X2679365385941296012751710663363/2016_Luccello.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 3,
+      "status": "error",
+      "bytes": 0,
+      "file": "003_MaxFett_4.jpg",
+      "url": "https://freight.cargo.site/t/original/i/N2679362792458206457704720315075/MaxFett_4.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 4,
+      "status": "error",
+      "bytes": 0,
+      "file": "004_Santillan_2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/E2666098984632556425259642204867/Santillan_2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 5,
+      "status": "error",
+      "bytes": 0,
+      "file": "005_Santillan_3.jpg",
+      "url": "https://freight.cargo.site/t/original/i/R2666098984687896657480770859715/Santillan_3.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 6,
+      "status": "error",
+      "bytes": 0,
+      "file": "006_Gonzalez-g_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/W2666098984614109681185932653251/Gonzalez-g_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 7,
+      "status": "error",
+      "bytes": 0,
+      "file": "007_gonzalez-g_2.png",
+      "url": "https://freight.cargo.site/t/original/i/Q2666105329021245696185729495747/gonzalez-g_2.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 8,
+      "status": "error",
+      "bytes": 0,
+      "file": "008_miquel_1.png",
+      "url": "https://freight.cargo.site/t/original/i/Q2666098984595662937112223101635/miquel_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 9,
+      "status": "error",
+      "bytes": 0,
+      "file": "009_Captura-de-pantalla-2025-10-01-a-las-18.22.21.png",
+      "url": "https://freight.cargo.site/t/original/i/L2578592035202173407474317996739/Captura-de-pantalla-2025-10-01-a-las-18.22.21.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 10,
+      "status": "error",
+      "bytes": 0,
+      "file": "010_gutierrez-fernanda-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/X2831921117369892999512004702915/gutierrez-fernanda-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 11,
+      "status": "error",
+      "bytes": 0,
+      "file": "011_santa-maria_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Z2666098984577216193038513550019/santa-maria_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 12,
+      "status": "error",
+      "bytes": 0,
+      "file": "012_Pinto_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2666098984669449913407061308099/Pinto_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 13,
+      "status": "error",
+      "bytes": 0,
+      "file": "013_ilmato_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/G2666098984651003169333351756483/ilmato_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 14,
+      "status": "error",
+      "bytes": 0,
+      "file": "014_Pinochet-Carolina-Captura-de-pantalla-2026-03-10-a-las-19.38.36.png",
+      "url": "https://freight.cargo.site/t/original/i/T2834736126505138764895941505731/Pinochet-Carolina-Captura-de-pantalla-2026-03-10-a-las-19.38.36.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 15,
+      "status": "error",
+      "bytes": 0,
+      "file": "015_Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.00.33.png",
+      "url": "https://freight.cargo.site/t/original/i/D2834736126523585508969651057347/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.00.33.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 16,
+      "status": "error",
+      "bytes": 0,
+      "file": "016_Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.02.56.png",
+      "url": "https://freight.cargo.site/t/original/i/I2834736126542032253043360608963/Valdes-Macarena-Captura-de-pantalla-2026-03-11-a-las-10.02.56.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 17,
+      "status": "error",
+      "bytes": 0,
+      "file": "017_Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.17.16.png",
+      "url": "https://freight.cargo.site/t/original/i/K2834736126431351788601103299267/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.17.16.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 18,
+      "status": "error",
+      "bytes": 0,
+      "file": "018_Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.23.25.png",
+      "url": "https://freight.cargo.site/t/original/i/U2834736126486692020822231954115/Gnecco-Franco-Captura-de-pantalla-2026-03-11-a-las-10.23.25.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 19,
+      "status": "error",
+      "bytes": 0,
+      "file": "019_Fuenzalida-Catalina-Captura-de-pantalla-2026-03-11-a-las-10.23.05.png",
+      "url": "https://freight.cargo.site/t/original/i/P2834736126468245276748522402499/Fuenzalida-Catalina-Captura-de-pantalla-2026-03-11-a-las-10.23.05.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 20,
+      "status": "error",
+      "bytes": 0,
+      "file": "020_Araos-Damina-Captura-de-pantalla-2026-03-11-a-las-10.20.21.png",
+      "url": "https://freight.cargo.site/t/original/i/C2834736126449798532674812850883/Araos-Damina-Captura-de-pantalla-2026-03-11-a-las-10.20.21.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 21,
+      "status": "error",
+      "bytes": 0,
+      "file": "021_Banner-web-_-Lanzamiento-de-libro-CDUR-scaled.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2834737330487230967770956378819/Banner-web-_-Lanzamiento-de-libro-CDUR-scaled.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 22,
+      "status": "error",
+      "bytes": 0,
+      "file": "022_153819.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2834737090993152658799847748291/153819.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 23,
+      "status": "error",
+      "bytes": 0,
+      "file": "023_Gonzalez-Yazmin.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/A2834736126412905044527393747651/Gonzalez-Yazmin.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 24,
+      "status": "error",
+      "bytes": 0,
+      "file": "024_fuentes-PAtricio-IMG_5086-scaled.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/S2834736126394458300453684196035/fuentes-PAtricio-IMG_5086-scaled.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 25,
+      "status": "error",
+      "bytes": 0,
+      "file": "025_A3-Amenabar-Alejandra-Captura-de-pantalla-2026-03-11-a-las-11.34.26.png",
+      "url": "https://freight.cargo.site/t/original/i/K2834742337136486757354070028995/A3-Amenabar-Alejandra-Captura-de-pantalla-2026-03-11-a-las-11.34.26.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 26,
+      "status": "error",
+      "bytes": 0,
+      "file": "026_pina-antonia-MV5BNTZjYTczNmQtZjJlZS00NmJiLWFiMTctYzMxMThhZDRhNzdjXkEyXkFqcGc._V1_FMjpg_UX1000_.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/Q2834736126376011556379974644419/pina-antonia-MV5BNTZjYTczNmQtZjJlZS00NmJiLWFiMTctYzMxMThhZDRhNzdjXkEyXkFqcGc._V1_FMjpg_UX1000_.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 27,
+      "status": "error",
+      "bytes": 0,
+      "file": "027_Julie-Carles-Captura-de-pantalla-2026-03-11-a-las-11.14.07.png",
+      "url": "https://freight.cargo.site/t/original/i/W2834736126339118068232555541187/Julie-Carles-Captura-de-pantalla-2026-03-11-a-las-11.14.07.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 28,
+      "status": "error",
+      "bytes": 0,
+      "file": "028_Carmona-Vicente-Captura-de-pantalla-2026-03-11-a-las-11.19.36.png",
+      "url": "https://freight.cargo.site/t/original/i/V2834736126357564812306265092803/Carmona-Vicente-Captura-de-pantalla-2026-03-11-a-las-11.19.36.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 29,
+      "status": "error",
+      "bytes": 0,
+      "file": "029_Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
+      "url": "https://freight.cargo.site/t/original/i/P2834855301990374870633509499587/Captura-de-pantalla-2026-03-11-a-las-13.16.23.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 30,
+      "status": "error",
+      "bytes": 0,
+      "file": "030_hackathon.png",
+      "url": "https://freight.cargo.site/t/original/i/Y2834854149308677936744757670595/hackathon.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 31,
+      "status": "error",
+      "bytes": 0,
+      "file": "031_vasquez-Vanessa-7a2b2e29-3d63-4564-9627-504ab6a59e1b.png",
+      "url": "https://freight.cargo.site/t/original/i/K2834851674641066960460989280963/vasquez-Vanessa-7a2b2e29-3d63-4564-9627-504ab6a59e1b.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 32,
+      "status": "error",
+      "bytes": 0,
+      "file": "032_Rey-Valentin-aportada-chiloe2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/J2834851674659513704534698832579/Rey-Valentin-aportada-chiloe2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 33,
+      "status": "error",
+      "bytes": 0,
+      "file": "033_Rey-Valentina.png",
+      "url": "https://freight.cargo.site/t/original/i/H2834851674677960448608408384195/Rey-Valentina.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 34,
+      "status": "error",
+      "bytes": 0,
+      "file": "034_Santibanez-Tamara.png",
+      "url": "https://freight.cargo.site/t/original/i/P2834851674696407192682117935811/Santibanez-Tamara.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 35,
+      "status": "error",
+      "bytes": 0,
+      "file": "035_Daza-Sofia.png",
+      "url": "https://freight.cargo.site/t/original/i/W2834851674714853936755827487427/Daza-Sofia.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 36,
+      "status": "error",
+      "bytes": 0,
+      "file": "036_Espildora-Rafella.png",
+      "url": "https://freight.cargo.site/t/original/i/M2834851674604173472313570177731/Espildora-Rafella.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 37,
+      "status": "error",
+      "bytes": 0,
+      "file": "037_PADILLA-PAULINA-1f75b2_fd084dd76c2b4662b346409b24ab3b7b.jpg",
+      "url": "https://freight.cargo.site/t/original/i/R2834851279235107740496750392003/PADILLA-PAULINA-1f75b2_fd084dd76c2b4662b346409b24ab3b7b.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 38,
+      "status": "error",
+      "bytes": 0,
+      "file": "038_feres-aranda-5_77c650d6-239f-407d-a6a8-8d316462fe81.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/U2835041680329330561722121401027/feres-aranda-5_77c650d6-239f-407d-a6a8-8d316462fe81.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 39,
+      "status": "error",
+      "bytes": 0,
+      "file": "039_Gianfranco-Music-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.png",
+      "url": "https://freight.cargo.site/t/original/i/A2835041680366224049869540504259/Gianfranco-Music-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 40,
+      "status": "error",
+      "bytes": 0,
+      "file": "040_albornoz-soledad-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/M2836337163916842722668132643523/albornoz-soledad-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 41,
+      "status": "error",
+      "bytes": 0,
+      "file": "041_albornoz-soledad-2-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/R2836337163898395978594423091907/albornoz-soledad-2-d0121ec3-e775-49e9-978e-8d1430062baa_rw_1920.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 42,
+      "status": "error",
+      "bytes": 0,
+      "file": "042_Lafuente-Captura-de-pantalla-2026-03-12-a-las-10.27.11.png",
+      "url": "https://freight.cargo.site/t/original/i/Z2836337163879949234520713540291/Lafuente-Captura-de-pantalla-2026-03-12-a-las-10.27.11.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 43,
+      "status": "error",
+      "bytes": 0,
+      "file": "043_arrebolCaptura-de-pantalla-2026-03-12-a-las-10.30.04.png",
+      "url": "https://freight.cargo.site/t/original/i/H2836334657391704731087968613059/arrebolCaptura-de-pantalla-2026-03-12-a-las-10.30.04.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 44,
+      "status": "error",
+      "bytes": 0,
+      "file": "044_Alarcon-MariaInes-1Captura-de-pantalla-2026-03-12-a-las-10.53.27.png",
+      "url": "https://freight.cargo.site/t/original/i/L2836334657410151475161678164675/Alarcon-MariaInes-1Captura-de-pantalla-2026-03-12-a-las-10.53.27.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 45,
+      "status": "error",
+      "bytes": 0,
+      "file": "045_Alarcon-MariaInes-2Captura-de-pantalla-2026-03-12-a-las-10.56.05.png",
+      "url": "https://freight.cargo.site/t/original/i/P2836334657428598219235387716291/Alarcon-MariaInes-2Captura-de-pantalla-2026-03-12-a-las-10.56.05.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 46,
+      "status": "error",
+      "bytes": 0,
+      "file": "046_Quesneyb9f9ce_c2d979ca09e44dfd8158696da129e7e2_mv2.jpg.jpg",
+      "url": "https://freight.cargo.site/t/original/i/O2836334657373257987014259061443/Quesneyb9f9ce_c2d979ca09e44dfd8158696da129e7e2_mv2.jpg.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 47,
+      "status": "error",
+      "bytes": 0,
+      "file": "047_Josefina-Stuckrath-1Captura-de-pantalla-2026-03-12-a-las-11.05.59.png",
+      "url": "https://freight.cargo.site/t/original/i/O2836334657336364498866839958211/Josefina-Stuckrath-1Captura-de-pantalla-2026-03-12-a-las-11.05.59.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 48,
+      "status": "error",
+      "bytes": 0,
+      "file": "048_Josefina-Stuckrath-2Captura-de-pantalla-2026-03-12-a-las-11.07.34.png",
+      "url": "https://freight.cargo.site/t/original/i/Z2836334657354811242940549509827/Josefina-Stuckrath-2Captura-de-pantalla-2026-03-12-a-las-11.07.34.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 49,
+      "status": "error",
+      "bytes": 0,
+      "file": "049_Gonzalez-Josefa-Captura-de-pantalla-2026-03-12-a-las-11.13.55.png",
+      "url": "https://freight.cargo.site/t/original/i/X2836334657317917754793130406595/Gonzalez-Josefa-Captura-de-pantalla-2026-03-12-a-las-11.13.55.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 50,
+      "status": "error",
+      "bytes": 0,
+      "file": "050_Florencia-Rodriguez-ErrazurizCaptura-de-pantalla-2026-03-12-a-las-11.15.31.png",
+      "url": "https://freight.cargo.site/t/original/i/B2836334657299471010719420854979/Florencia-Rodriguez-ErrazurizCaptura-de-pantalla-2026-03-12-a-las-11.15.31.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 51,
+      "status": "error",
+      "bytes": 0,
+      "file": "051_Plass-colombaCaptura-de-pantalla-2026-03-12-a-las-11.21.45.png",
+      "url": "https://freight.cargo.site/t/original/i/Y2836334657281024266645711303363/Plass-colombaCaptura-de-pantalla-2026-03-12-a-las-11.21.45.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 52,
+      "status": "error",
+      "bytes": 0,
+      "file": "052_Chiara-Antillosilla-mudra-madera-escultural2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/X2836334657244130778498292200131/Chiara-Antillosilla-mudra-madera-escultural2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 53,
+      "status": "error",
+      "bytes": 0,
+      "file": "053_Chiara-Antillosilla-2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2836334657262577522572001751747/Chiara-Antillosilla-2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 54,
+      "status": "error",
+      "bytes": 0,
+      "file": "054_Captura-de-pantalla-2026-03-12-a-las-11.32.10.png",
+      "url": "https://freight.cargo.site/t/original/i/J2836334753314773914377637016259/Captura-de-pantalla-2026-03-12-a-las-11.32.10.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 55,
+      "status": "error",
+      "bytes": 0,
+      "file": "055_Gianfranco-Music-Wachtendorff-7485022f-8fb6-4b6e-888d-2462ee018664_rw_1200.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/C2835041680347777305795830952643/Gianfranco-Music-Wachtendorff-7485022f-8fb6-4b6e-888d-2462ee018664_rw_1200.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 56,
+      "status": "error",
+      "bytes": 0,
+      "file": "056_Gianfranco-Music-3-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/G2835041680384670793943250055875/Gianfranco-Music-3-Wachtendorff-2-ca55e895-7d6a-44c6-a77d-78b5454f0fa0_rw_1920.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 57,
+      "status": "error",
+      "bytes": 0,
+      "file": "057_Captura-de-pantalla-2026-03-11-a-las-15.39.07.png",
+      "url": "https://freight.cargo.site/t/original/i/A2835041680310883817648411849411/Captura-de-pantalla-2026-03-11-a-las-15.39.07.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 58,
+      "status": "error",
+      "bytes": 0,
+      "file": "058_Captura-de-pantalla-2026-03-11-a-las-16.08.04.png",
+      "url": "https://freight.cargo.site/t/original/i/G2835044931199038671556402688707/Captura-de-pantalla-2026-03-11-a-las-16.08.04.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 59,
+      "status": "error",
+      "bytes": 0,
+      "file": "059_Captura-de-pantalla-2026-03-11-a-las-15.42.59.png",
+      "url": "https://freight.cargo.site/t/original/i/X2835041680476904514311797813955/Captura-de-pantalla-2026-03-11-a-las-15.42.59.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 60,
+      "status": "error",
+      "bytes": 0,
+      "file": "060_43fef9_efcf8eedf8d33bba27b941bb467583a7.jpg.jpg",
+      "url": "https://freight.cargo.site/t/original/i/F2835044255826844644902298923715/43fef9_efcf8eedf8d33bba27b941bb467583a7.jpg.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 61,
+      "status": "error",
+      "bytes": 0,
+      "file": "061_Captura-de-pantalla-2026-03-11-a-las-15.47.30.png",
+      "url": "https://freight.cargo.site/t/original/i/Q2835041680458457770238088262339/Captura-de-pantalla-2026-03-11-a-las-15.47.30.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 62,
+      "status": "error",
+      "bytes": 0,
+      "file": "062_Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
+      "url": "https://freight.cargo.site/t/original/i/F2835041680440011026164378710723/Captura-de-pantalla-2026-03-11-a-las-15.48.30.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 63,
+      "status": "error",
+      "bytes": 0,
+      "file": "063_Captura-de-pantalla-2026-03-11-a-las-15.53.10.png",
+      "url": "https://freight.cargo.site/t/original/i/Y2835041680421564282090669159107/Captura-de-pantalla-2026-03-11-a-las-15.53.10.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 64,
+      "status": "error",
+      "bytes": 0,
+      "file": "064_Captura-de-pantalla-2026-03-11-a-las-16.03.13.png",
+      "url": "https://freight.cargo.site/t/original/i/R2835041680403117538016959607491/Captura-de-pantalla-2026-03-11-a-las-16.03.13.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 65,
+      "status": "error",
+      "bytes": 0,
+      "file": "065_Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
+      "url": "https://freight.cargo.site/t/original/i/N2834851674622620216387279729347/Saavedra-Pilar-Captura-de-pantalla-2026-03-11-a-las-13.10.59.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 66,
+      "status": "error",
+      "bytes": 0,
+      "file": "066_Aguirre-Elisa-3c82918c-ebd6-4a47-892e-220fb1ee7cba_rw_3840.png",
+      "url": "https://freight.cargo.site/t/original/i/T2836714247389257057862945288899/Aguirre-Elisa-3c82918c-ebd6-4a47-892e-220fb1ee7cba_rw_3840.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 67,
+      "status": "error",
+      "bytes": 0,
+      "file": "067_a-740x1024-1.png",
+      "url": "https://freight.cargo.site/t/original/i/C2836714089798722436162245833411/a-740x1024-1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 68,
+      "status": "error",
+      "bytes": 0,
+      "file": "068_rjce_a_1433705_f0002_c.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2836714089780275692088536281795/rjce_a_1433705_f0002_c.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 69,
+      "status": "error",
+      "bytes": 0,
+      "file": "069_hacer_y_componer-1-768x1121.jpg",
+      "url": "https://freight.cargo.site/t/original/i/K2836714089743382203941117178563/hacer_y_componer-1-768x1121.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 70,
+      "status": "error",
+      "bytes": 0,
+      "file": "070_51iAgF1DOuL._AC_UF1000-1000_QL80_.jpg",
+      "url": "https://freight.cargo.site/t/original/i/S2836714089761828948014826730179/51iAgF1DOuL._AC_UF1000-1000_QL80_.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 71,
+      "status": "error",
+      "bytes": 0,
+      "file": "071_813k52dMx9L._AC_UF1000-1000_QL80_.jpg",
+      "url": "https://freight.cargo.site/t/original/i/U2836724512651845939827938112195/813k52dMx9L._AC_UF1000-1000_QL80_.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 72,
+      "status": "error",
+      "bytes": 0,
+      "file": "072_158400-1200-auto.jpg",
+      "url": "https://freight.cargo.site/t/original/i/U2836725192026983430477014577859/158400-1200-auto.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 73,
+      "status": "error",
+      "bytes": 0,
+      "file": "073_mini_magick20180818-12931-p4pb7n.png",
+      "url": "https://freight.cargo.site/t/original/i/E2836724512633399195754228560579/mini_magick20180818-12931-p4pb7n.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 74,
+      "status": "error",
+      "bytes": 0,
+      "file": "074_Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
+      "url": "https://freight.cargo.site/t/original/i/L2834736126320671324158845989571/Cristi-Nicole-Captura-de-pantalla-2026-03-11-a-las-11.25.22.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 75,
+      "status": "error",
+      "bytes": 0,
+      "file": "075_Sofia-Garrido.jpg",
+      "url": "https://freight.cargo.site/t/original/i/E2578321841997036736708759466691/Sofia-Garrido.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 76,
+      "status": "error",
+      "bytes": 0,
+      "file": "076_sofia-garrido-2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/K2578321841978589992635049915075/sofia-garrido-2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 77,
+      "status": "error",
+      "bytes": 0,
+      "file": "077_600x600bf-60.jpg",
+      "url": "https://freight.cargo.site/t/original/i/H2578329735838441222942344295107/600x600bf-60.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 78,
+      "status": "error",
+      "bytes": 0,
+      "file": "078_Acuna-Vicente-SSF_CASE_Felicidadpublica_19.png",
+      "url": "https://freight.cargo.site/t/original/i/K2831772530303672050896792400579/Acuna-Vicente-SSF_CASE_Felicidadpublica_19.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 79,
+      "status": "error",
+      "bytes": 0,
+      "file": "079_Captura-de-pantalla-2025-10-01-a-las-14.33.36.png",
+      "url": "https://freight.cargo.site/t/original/i/O2578339362511643761230079275715/Captura-de-pantalla-2025-10-01-a-las-14.33.36.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 80,
+      "status": "error",
+      "bytes": 0,
+      "file": "080_IL-POSO.jpg",
+      "url": "https://freight.cargo.site/t/original/i/S2578348945336935636310210065091/IL-POSO.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 81,
+      "status": "error",
+      "bytes": 0,
+      "file": "081_finat_1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Z2666134078142757364005956170435/finat_1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 82,
+      "status": "error",
+      "bytes": 0,
+      "file": "082_bustos_1.png",
+      "url": "https://freight.cargo.site/t/original/i/O2666141979953155290082067296963/bustos_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 83,
+      "status": "error",
+      "bytes": 0,
+      "file": "083_Captura-de-pantalla-2026-03-12-a-las-19.28.41.png",
+      "url": "https://freight.cargo.site/t/original/i/J2836860966243025197469608129219/Captura-de-pantalla-2026-03-12-a-las-19.28.41.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 84,
+      "status": "error",
+      "bytes": 0,
+      "file": "084_Captura-de-pantalla-2026-03-12-a-las-19.28.49.png",
+      "url": "https://freight.cargo.site/t/original/i/C2836860966224578453395898577603/Captura-de-pantalla-2026-03-12-a-las-19.28.49.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 85,
+      "status": "error",
+      "bytes": 0,
+      "file": "085_gonzalez-m_1.png",
+      "url": "https://freight.cargo.site/t/original/i/N2666140515576823742723021812419/gonzalez-m_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 86,
+      "status": "error",
+      "bytes": 0,
+      "file": "086_vidosola_1.png",
+      "url": "https://freight.cargo.site/t/original/i/R2666145362938444455824157258435/vidosola_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 87,
+      "status": "error",
+      "bytes": 0,
+      "file": "087_morales-const_1.png",
+      "url": "https://freight.cargo.site/t/original/i/B2666150212476780969623019795139/morales-const_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 88,
+      "status": "error",
+      "bytes": 0,
+      "file": "088_ramirez-s_1.png",
+      "url": "https://freight.cargo.site/t/original/i/G2666169531973210294520941851331/ramirez-s_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 89,
+      "status": "error",
+      "bytes": 0,
+      "file": "089_ramirez-s_2.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/K2666171734403772230999147492035/ramirez-s_2.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 90,
+      "status": "error",
+      "bytes": 0,
+      "file": "090_chaud_1.png",
+      "url": "https://freight.cargo.site/t/original/i/R2666177053153491003674164933315/chaud_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 91,
+      "status": "error",
+      "bytes": 0,
+      "file": "091_Trinidad-Bustos-2-portfolio-baby-kine-simulation-doll-muneco-simulacion-IA-AI-2.png",
+      "url": "https://freight.cargo.site/t/original/i/P2727063650870470385298921960131/Trinidad-Bustos-2-portfolio-baby-kine-simulation-doll-muneco-simulacion-IA-AI-2.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 92,
+      "status": "error",
+      "bytes": 0,
+      "file": "092_Kim_1.png",
+      "url": "https://freight.cargo.site/t/original/i/I2666184354540816074578080510659/Kim_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 93,
+      "status": "error",
+      "bytes": 0,
+      "file": "093_perez-c_1.png",
+      "url": "https://freight.cargo.site/t/original/i/D2666188928152754733829469975235/perez-c_1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 94,
+      "status": "error",
+      "bytes": 0,
+      "file": "094_Stickers_Pastelito.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2726499716232156261692270392003/Stickers_Pastelito.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 95,
+      "status": "error",
+      "bytes": 0,
+      "file": "095_Captura-de-pantalla-2026-01-02-a-las-13.33.28.png",
+      "url": "https://freight.cargo.site/t/original/i/M2726499846300148725418318836419/Captura-de-pantalla-2026-01-02-a-las-13.33.28.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 96,
+      "status": "error",
+      "bytes": 0,
+      "file": "096_Captura-de-pantalla-2026-01-02-a-las-13.42.40.png",
+      "url": "https://freight.cargo.site/t/original/i/B2726511460573131717762821337795/Captura-de-pantalla-2026-01-02-a-las-13.42.40.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 97,
+      "status": "error",
+      "bytes": 0,
+      "file": "097_SARA-GUBBINS-Captura-de-pantalla-2026-01-04-a-las-13.07.13.png",
+      "url": "https://freight.cargo.site/t/original/i/G2729666710956146180077182726851/SARA-GUBBINS-Captura-de-pantalla-2026-01-04-a-las-13.07.13.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 98,
+      "status": "error",
+      "bytes": 0,
+      "file": "098_Javiera-Naranjo-image-66e65f5b-1715-43e0-ae6a-1c34883b472c.jpg",
+      "url": "https://freight.cargo.site/t/original/i/F2729665819941513931758420570819/Javiera-Naranjo-image-66e65f5b-1715-43e0-ae6a-1c34883b472c.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 99,
+      "status": "error",
+      "bytes": 0,
+      "file": "099_Javiera-Naranjo-image-723d4605-f436-4ccd-bc6f-8cdfee64515f.jpg",
+      "url": "https://freight.cargo.site/t/original/i/C2729665819959960675832130122435/Javiera-Naranjo-image-723d4605-f436-4ccd-bc6f-8cdfee64515f.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 100,
+      "status": "error",
+      "bytes": 0,
+      "file": "100_Magdalena-Leigh-Captura-de-pantalla-2026-01-04-a-las-13.22.37.png",
+      "url": "https://freight.cargo.site/t/original/i/Z2729673748555030996934510195395/Magdalena-Leigh-Captura-de-pantalla-2026-01-04-a-las-13.22.37.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 101,
+      "status": "error",
+      "bytes": 0,
+      "file": "101_Captura-de-pantalla-2026-01-02-a-las-14.00.36.png",
+      "url": "https://freight.cargo.site/t/original/i/D2726525513690148695247142990531/Captura-de-pantalla-2026-01-02-a-las-14.00.36.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 102,
+      "status": "error",
+      "bytes": 0,
+      "file": "102_Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
+      "url": "https://freight.cargo.site/t/original/i/U2726524557798317539691887801027/Captura-de-pantalla-2026-01-02-a-las-13.56.31.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 103,
+      "status": "error",
+      "bytes": 0,
+      "file": "103_Captura-de-pantalla-2026-01-02-a-las-13.57.55.png",
+      "url": "https://freight.cargo.site/t/original/i/G2726524557816764283765597352643/Captura-de-pantalla-2026-01-02-a-las-13.57.55.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 104,
+      "status": "error",
+      "bytes": 0,
+      "file": "104_Captura-de-pantalla-2026-01-02-a-las-13.58.22.png",
+      "url": "https://freight.cargo.site/t/original/i/A2726524557835211027839306904259/Captura-de-pantalla-2026-01-02-a-las-13.58.22.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 105,
+      "status": "error",
+      "bytes": 0,
+      "file": "105_Captura-de-pantalla-2026-01-02-a-las-14.03.58.png",
+      "url": "https://freight.cargo.site/t/original/i/P2726531106761398588056902513347/Captura-de-pantalla-2026-01-02-a-las-14.03.58.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 106,
+      "status": "error",
+      "bytes": 0,
+      "file": "106_Copia-de-avatar_ig_400.jpg",
+      "url": "https://freight.cargo.site/t/original/i/X2726539009475686973744781669059/Copia-de-avatar_ig_400.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 107,
+      "status": "error",
+      "bytes": 0,
+      "file": "107_kittsy_DANZA_OTONO_v6_800.png",
+      "url": "https://freight.cargo.site/t/original/i/Z2726539009494133717818491220675/kittsy_DANZA_OTONO_v6_800.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 108,
+      "status": "error",
+      "bytes": 0,
+      "file": "108_fisica1_2-botella-globo_1000.jpg",
+      "url": "https://freight.cargo.site/t/original/i/K2726539009512580461892200772291/fisica1_2-botella-globo_1000.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 109,
+      "status": "error",
+      "bytes": 0,
+      "file": "109_d4acb2d4-a35f-4c33-b786-81974f5c3e20_rw_1920.jpg",
+      "url": "https://freight.cargo.site/t/original/i/X2726543467352753314542444294851/d4acb2d4-a35f-4c33-b786-81974f5c3e20_rw_1920.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 110,
+      "status": "error",
+      "bytes": 0,
+      "file": "110_4521c585-4a16-4ab5-9b1f-d76b06ca8705_rw_3840.png",
+      "url": "https://freight.cargo.site/t/original/i/R2726545631026705952156881990339/4521c585-4a16-4ab5-9b1f-d76b06ca8705_rw_3840.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 111,
+      "status": "error",
+      "bytes": 0,
+      "file": "111_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.19.58.png",
+      "url": "https://freight.cargo.site/t/original/i/W2726551712327931243837344133827/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.19.58.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 112,
+      "status": "error",
+      "bytes": 0,
+      "file": "112_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.59.png",
+      "url": "https://freight.cargo.site/t/original/i/E2726551712346377987911053685443/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.59.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 113,
+      "status": "error",
+      "bytes": 0,
+      "file": "113_Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.36.36.png",
+      "url": "https://freight.cargo.site/t/original/i/R2729689188073992322207602651843/Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.36.36.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 114,
+      "status": "error",
+      "bytes": 0,
+      "file": "114_Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.38.08.png",
+      "url": "https://freight.cargo.site/t/original/i/G2729689188055545578133893100227/Andres-Miquel-Captura-de-pantalla-2026-01-04-a-las-13.38.08.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 115,
+      "status": "error",
+      "bytes": 0,
+      "file": "115_Karina-Hyland-02625b89-857f-4d69-9f47-edb7a081e016_rw_1920.jpg",
+      "url": "https://freight.cargo.site/t/original/i/U2729705002246325784521688429251/Karina-Hyland-02625b89-857f-4d69-9f47-edb7a081e016_rw_1920.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 116,
+      "status": "error",
+      "bytes": 0,
+      "file": "116_Karina-Hyland-a7f3c303-c16e-4b68-bc30-df77e99a0763.jpg",
+      "url": "https://freight.cargo.site/t/original/i/I2729705002264772528595397980867/Karina-Hyland-a7f3c303-c16e-4b68-bc30-df77e99a0763.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 117,
+      "status": "error",
+      "bytes": 0,
+      "file": "117_Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.56.10.png",
+      "url": "https://freight.cargo.site/t/original/i/E2729712403485876526415406904003/Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.56.10.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 118,
+      "status": "error",
+      "bytes": 0,
+      "file": "118_Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.59.20.png",
+      "url": "https://freight.cargo.site/t/original/i/I2729712403504323270489116455619/Vicente-Puig-Captura-de-pantalla-2026-01-04-a-las-13.59.20.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 119,
+      "status": "error",
+      "bytes": 0,
+      "file": "119_Benjamin-Becerra-Captura-de-pantalla-2026-01-04-a-las-14.02.30.png",
+      "url": "https://freight.cargo.site/t/original/i/W2729729462721201243755679003331/Benjamin-Becerra-Captura-de-pantalla-2026-01-04-a-las-14.02.30.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 120,
+      "status": "error",
+      "bytes": 0,
+      "file": "120_Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.33.png",
+      "url": "https://freight.cargo.site/t/original/i/F2726551712364824731984763237059/Martina-AbelloCaptura-de-pantalla-2026-01-02-a-las-14.21.33.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 121,
+      "status": "error",
+      "bytes": 0,
+      "file": "121_Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.08.png",
+      "url": "https://freight.cargo.site/t/original/i/P2726560875508242186098885210819/Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.08.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 122,
+      "status": "error",
+      "bytes": 0,
+      "file": "122_Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.18.png",
+      "url": "https://freight.cargo.site/t/original/i/T2726560875526688930172594762435/Sofia-AlvarezCaptura-de-pantalla-2026-01-02-a-las-14.32.18.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 123,
+      "status": "error",
+      "bytes": 0,
+      "file": "123_Smart-Domingo.png",
+      "url": "https://freight.cargo.site/t/original/i/D2825598558428431692792129336003/Smart-Domingo.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 124,
+      "status": "error",
+      "bytes": 0,
+      "file": "124_Smart-Domingo-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/T2825598558705132853897772610243/Smart-Domingo-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 125,
+      "status": "error",
+      "bytes": 0,
+      "file": "125_Smart-Domingo-3.jpg",
+      "url": "https://freight.cargo.site/t/original/i/W2825598558686686109824063058627/Smart-Domingo-3.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 126,
+      "status": "error",
+      "bytes": 0,
+      "file": "126_Sanchez-Tomas.png",
+      "url": "https://freight.cargo.site/t/original/i/X2825598558446878436865838887619/Sanchez-Tomas.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 127,
+      "status": "error",
+      "bytes": 0,
+      "file": "127_Poulsen-Francisco-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/O2825598558668239365750353507011/Poulsen-Francisco-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 128,
+      "status": "error",
+      "bytes": 0,
+      "file": "128_Poulsen-Francisco-2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/K2825598558649792621676643955395/Poulsen-Francisco-2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 129,
+      "status": "error",
+      "bytes": 0,
+      "file": "129_Poulsen-Francisco-3.jpg",
+      "url": "https://freight.cargo.site/t/original/i/U2825598558631345877602934403779/Poulsen-Francisco-3.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 130,
+      "status": "error",
+      "bytes": 0,
+      "file": "130_Navarrete-Valentina.jpg",
+      "url": "https://freight.cargo.site/t/original/i/V2825598558612899133529224852163/Navarrete-Valentina.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 131,
+      "status": "error",
+      "bytes": 0,
+      "file": "131_Vilches-Felipe-04.jpg",
+      "url": "https://freight.cargo.site/t/original/i/D2825598558409984948718419784387/Vilches-Felipe-04.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 132,
+      "status": "error",
+      "bytes": 0,
+      "file": "132_Vilches-Felipe.png",
+      "url": "https://freight.cargo.site/t/original/i/I2825598558465325180939548439235/Vilches-Felipe.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 133,
+      "status": "error",
+      "bytes": 0,
+      "file": "133_Vilches-Felipe-05.jpg",
+      "url": "https://freight.cargo.site/t/original/i/L2825598558391538204644710232771/Vilches-Felipe-05.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 134,
+      "status": "error",
+      "bytes": 0,
+      "file": "134_Reyes-Daniela.png",
+      "url": "https://freight.cargo.site/t/original/i/O2825598558483771925013257990851/Reyes-Daniela.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 135,
+      "status": "error",
+      "bytes": 0,
+      "file": "135_Reyes-Daniela-cositas1_670.jpg",
+      "url": "https://freight.cargo.site/t/original/i/V2825598558594452389455515300547/Reyes-Daniela-cositas1_670.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 136,
+      "status": "error",
+      "bytes": 0,
+      "file": "136_Reyes-Daniela-STEM2_670.jpg",
+      "url": "https://freight.cargo.site/t/original/i/D2825598558576005645381805748931/Reyes-Daniela-STEM2_670.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 137,
+      "status": "error",
+      "bytes": 0,
+      "file": "137_Reyes-Daniela-abril2023_670.jpg",
+      "url": "https://freight.cargo.site/t/original/i/H2825598558557558901308096197315/Reyes-Daniela-abril2023_670.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 138,
+      "status": "error",
+      "bytes": 0,
+      "file": "138_Gajardo-Joaquin-6624043949c81673fb06bf59_Mesa-de-trabajo-18-copia-9.jpg",
+      "url": "https://freight.cargo.site/t/original/i/N2825598558539112157234386645699/Gajardo-Joaquin-6624043949c81673fb06bf59_Mesa-de-trabajo-18-copia-9.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 139,
+      "status": "error",
+      "bytes": 0,
+      "file": "139_Gajardo-Joaquin-66831724e1980d57e502d3b2_Mesa-de-trabajo-18-copia-4.jpg",
+      "url": "https://freight.cargo.site/t/original/i/B2825598558520665413160677094083/Gajardo-Joaquin-66831724e1980d57e502d3b2_Mesa-de-trabajo-18-copia-4.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 140,
+      "status": "error",
+      "bytes": 0,
+      "file": "140_Caro-Florencia-Captura-de-pantalla-2026-03-09-a-las-16.27.21.png",
+      "url": "https://freight.cargo.site/t/original/i/U2831918759230364336851473871555/Caro-Florencia-Captura-de-pantalla-2026-03-09-a-las-16.27.21.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 141,
+      "status": "error",
+      "bytes": 0,
+      "file": "141_Acosta--Colomba-Captura-de-pantalla-2026-03-09-a-las-16.30.34.png",
+      "url": "https://freight.cargo.site/t/original/i/D2831918759248811080925183423171/Acosta--Colomba-Captura-de-pantalla-2026-03-09-a-las-16.30.34.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 142,
+      "status": "error",
+      "bytes": 0,
+      "file": "142_morales-constanza-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Y2831921117406786487659423806147/morales-constanza-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 143,
+      "status": "error",
+      "bytes": 0,
+      "file": "143_Hoffmann-Bernardita-1.JPG",
+      "url": "https://freight.cargo.site/t/original/i/K2831918759304151313146312078019/Hoffmann-Bernardita-1.JPG",
+      "error": "fetch failed"
+    },
+    {
+      "index": 144,
+      "status": "error",
+      "bytes": 0,
+      "file": "144_leigh-magdalena.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/I2831918759285704569072602526403/leigh-magdalena.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 145,
+      "status": "error",
+      "bytes": 0,
+      "file": "145_gutierrez-fernanda-2.jpg",
+      "url": "https://freight.cargo.site/t/original/i/I2831921117351446255438295151299/gutierrez-fernanda-2.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 146,
+      "status": "error",
+      "bytes": 0,
+      "file": "146_gutierrez-fernanda-3.jpg.jpg",
+      "url": "https://freight.cargo.site/t/original/i/P2831921117388339743585714254531/gutierrez-fernanda-3.jpg.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 147,
+      "status": "error",
+      "bytes": 0,
+      "file": "147_Gajardo-Daniela-Captura-de-pantalla-2026-03-09-a-las-17.02.33.png",
+      "url": "https://freight.cargo.site/t/original/i/R2831918759267257824998892974787/Gajardo-Daniela-Captura-de-pantalla-2026-03-09-a-las-17.02.33.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 148,
+      "status": "error",
+      "bytes": 0,
+      "file": "148_Harasic-Catalina.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/V2831938879131019020006840545987/Harasic-Catalina.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 149,
+      "status": "error",
+      "bytes": 0,
+      "file": "149_X01411136.jpg",
+      "url": "https://freight.cargo.site/t/original/i/V2838253457734292878869043557059/X01411136.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 150,
+      "status": "error",
+      "bytes": 0,
+      "file": "150_nativa.jpg",
+      "url": "https://freight.cargo.site/t/original/i/J2838253457715846134795334005443/nativa.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 151,
+      "status": "error",
+      "bytes": 0,
+      "file": "151_824f334f-4c26-48e3-93ee-95d5a45b865b_rw_3840.JPG",
+      "url": "https://freight.cargo.site/t/original/i/V2838253457697399390721624453827/824f334f-4c26-48e3-93ee-95d5a45b865b_rw_3840.JPG",
+      "error": "fetch failed"
+    },
+    {
+      "index": 152,
+      "status": "error",
+      "bytes": 0,
+      "file": "152_plantilla-13.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/R2838259050418161146130902495939/plantilla-13.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 153,
+      "status": "error",
+      "bytes": 0,
+      "file": "153_Diseno-sin-titulo-4-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Y2838253457678952646647914902211/Diseno-sin-titulo-4-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 154,
+      "status": "error",
+      "bytes": 0,
+      "file": "154_mision-korex.jpg",
+      "url": "https://freight.cargo.site/t/original/i/G2838253457660505902574205350595/mision-korex.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 155,
+      "status": "error",
+      "bytes": 0,
+      "file": "155_En-que-consiste_Set-Pescador-compress.jpg",
+      "url": "https://freight.cargo.site/t/original/i/J2838253457531378694058238489283/En-que-consiste_Set-Pescador-compress.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 156,
+      "status": "error",
+      "bytes": 0,
+      "file": "156_WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/O2838253457642059158500495798979/WhatsApp-Image-2023-09-01-at-12.49.38.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 157,
+      "status": "error",
+      "bytes": 0,
+      "file": "157_a3407688467_16.jpg",
+      "url": "https://freight.cargo.site/t/original/i/E2838275320999836480166714356419/a3407688467_16.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 158,
+      "status": "error",
+      "bytes": 0,
+      "file": "158_Captura-de-pantalla-2026-03-13-a-las-16.43.15.png",
+      "url": "https://freight.cargo.site/t/original/i/I2838275388164431652543191790275/Captura-de-pantalla-2026-03-13-a-las-16.43.15.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 159,
+      "status": "error",
+      "bytes": 0,
+      "file": "159_Captura-de-pantalla-2026-03-14-a-las-11.12.16.png",
+      "url": "https://freight.cargo.site/t/original/i/L2839502320717933601075579269827/Captura-de-pantalla-2026-03-14-a-las-11.12.16.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 160,
+      "status": "error",
+      "bytes": 0,
+      "file": "160_1770321553813.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/I2839495259691683810607121248963/1770321553813.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 161,
+      "status": "error",
+      "bytes": 0,
+      "file": "161_Captura-de-pantalla-2026-03-14-a-las-10.44.05.png",
+      "url": "https://freight.cargo.site/t/original/i/C2839495436356151804523497075395/Captura-de-pantalla-2026-03-14-a-las-10.44.05.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 162,
+      "status": "error",
+      "bytes": 0,
+      "file": "162_d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
+      "url": "https://freight.cargo.site/t/original/i/E2839495259673237066533411697347/d422a906-7be4-4738-bae6-211bf10a9bfb_rw_1920.JPG",
+      "error": "fetch failed"
+    },
+    {
+      "index": 163,
+      "status": "error",
+      "bytes": 0,
+      "file": "163_625530226_17872909344521833_8996592620757902267_n.jpg",
+      "url": "https://freight.cargo.site/t/original/i/F2839500316442296504385377088195/625530226_17872909344521833_8996592620757902267_n.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 164,
+      "status": "error",
+      "bytes": 0,
+      "file": "164_Captura-de-pantalla-2026-03-14-a-las-11.12.54.png",
+      "url": "https://freight.cargo.site/t/original/i/B2839501183845096338355913175747/Captura-de-pantalla-2026-03-14-a-las-11.12.54.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 165,
+      "status": "error",
+      "bytes": 0,
+      "file": "165_DSC_2551-e1531948324611.jpg",
+      "url": "https://freight.cargo.site/t/original/i/U2839495259654790322459702145731/DSC_2551-e1531948324611.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 166,
+      "status": "error",
+      "bytes": 0,
+      "file": "166_cover_issue_305_es_ES.jpg",
+      "url": "https://freight.cargo.site/t/original/i/T2839495259636343578385992594115/cover_issue_305_es_ES.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 167,
+      "status": "error",
+      "bytes": 0,
+      "file": "167_Captura-de-pantalla-2026-03-14-a-las-11.17.17.png",
+      "url": "https://freight.cargo.site/t/original/i/D2840105943655249519298499523267/Captura-de-pantalla-2026-03-14-a-las-11.17.17.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 168,
+      "status": "error",
+      "bytes": 0,
+      "file": "168_Captura-de-pantalla-2026-03-14-a-las-11.18.22.png",
+      "url": "https://freight.cargo.site/t/original/i/X2840102851445987187440071684803/Captura-de-pantalla-2026-03-14-a-las-11.18.22.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 169,
+      "status": "error",
+      "bytes": 0,
+      "file": "169_66725.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2838277900592527747710412337859/66725.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 170,
+      "status": "error",
+      "bytes": 0,
+      "file": "170_Captura-de-pantalla-2026-03-13-a-las-16.31.45.png",
+      "url": "https://freight.cargo.site/t/original/i/N2838258980855489244172183352003/Captura-de-pantalla-2026-03-13-a-las-16.31.45.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 171,
+      "status": "error",
+      "bytes": 0,
+      "file": "171_Group-147.png.jpg",
+      "url": "https://freight.cargo.site/t/original/i/E2838253457549825438131948040899/Group-147.png.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 172,
+      "status": "error",
+      "bytes": 0,
+      "file": "172_Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
+      "url": "https://freight.cargo.site/t/original/i/V2838253642017266175227464200899/Captura-de-pantalla-2026-03-13-a-las-16.00.11.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 173,
+      "status": "error",
+      "bytes": 0,
+      "file": "173_Captura-de-pantalla-2026-03-13-a-las-16.00.27.png",
+      "url": "https://freight.cargo.site/t/original/i/I2838253641998819431153754649283/Captura-de-pantalla-2026-03-13-a-las-16.00.27.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 174,
+      "status": "error",
+      "bytes": 0,
+      "file": "174_Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
+      "url": "https://freight.cargo.site/t/original/i/Z2838253641980372687080045097667/Captura-de-pantalla-2026-03-13-a-las-16.01.50.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 175,
+      "status": "error",
+      "bytes": 0,
+      "file": "175_Captura-de-pantalla-2026-03-13-a-las-16.02.20.png",
+      "url": "https://freight.cargo.site/t/original/i/H2838253641961925943006335546051/Captura-de-pantalla-2026-03-13-a-las-16.02.20.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 176,
+      "status": "error",
+      "bytes": 0,
+      "file": "176_metro21-4.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2838253457623612414426786247363/metro21-4.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 177,
+      "status": "error",
+      "bytes": 0,
+      "file": "177_IMG-PAG-04.jpg",
+      "url": "https://freight.cargo.site/t/original/i/S2838253457512931949984528937667/IMG-PAG-04.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 178,
+      "status": "error",
+      "bytes": 0,
+      "file": "178_Materia-Prestada-11.jpg",
+      "url": "https://freight.cargo.site/t/original/i/I2838253457605165670353076695747/Materia-Prestada-11.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 179,
+      "status": "error",
+      "bytes": 0,
+      "file": "179_756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2838253457586718926279367144131/756dfc7d-4a2c-4280-8ce0-a60bb348ce95_rw_3840.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 180,
+      "status": "error",
+      "bytes": 0,
+      "file": "180_Palpa.jpg",
+      "url": "https://freight.cargo.site/t/original/i/E2838253457568272182205657592515/Palpa.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 181,
+      "status": "error",
+      "bytes": 0,
+      "file": "181_Harasic-Catalina-2.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/D2831938879149465764080550097603/Harasic-Catalina-2.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 182,
+      "status": "error",
+      "bytes": 0,
+      "file": "182_Contreras-Maximiliano-Captura-de-pantalla-2026-03-09-a-las-17.24.59.png",
+      "url": "https://freight.cargo.site/t/original/i/B2831946269671458199149019083459/Contreras-Maximiliano-Captura-de-pantalla-2026-03-09-a-las-17.24.59.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 183,
+      "status": "error",
+      "bytes": 0,
+      "file": "183_Astudillo-Paulina-Captura-de-pantalla-2026-03-09-a-las-17.37.51.png",
+      "url": "https://freight.cargo.site/t/original/i/F2831958625153064817217015067331/Astudillo-Paulina-Captura-de-pantalla-2026-03-09-a-las-17.37.51.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 184,
+      "status": "error",
+      "bytes": 0,
+      "file": "184_pacheco-Carolina-16.jpg",
+      "url": "https://freight.cargo.site/t/original/i/I2831969376376679576986435662531/pacheco-Carolina-16.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 185,
+      "status": "error",
+      "bytes": 0,
+      "file": "185_Rios-camila-Captura-de-Pantalla-2024-11-27-a-las-14.46.28.jpg.jpg",
+      "url": "https://freight.cargo.site/t/original/i/P2831969376413573065133854765763/Rios-camila-Captura-de-Pantalla-2024-11-27-a-las-14.46.28.jpg.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 186,
+      "status": "error",
+      "bytes": 0,
+      "file": "186_rosas-joaquin-1.png",
+      "url": "https://freight.cargo.site/t/original/i/W2832966899834431604011737494211/rosas-joaquin-1.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 187,
+      "status": "error",
+      "bytes": 0,
+      "file": "187_ROSAS-JOAQUIN2-Gubbi-Sesion-Jun-7_1340_c.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/G2832966899852878348085447045827/ROSAS-JOAQUIN2-Gubbi-Sesion-Jun-7_1340_c.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 188,
+      "status": "error",
+      "bytes": 0,
+      "file": "188_rosas-joaquin-MAPAAA-2025-Final_1340_c.jpeg",
+      "url": "https://freight.cargo.site/t/original/i/C2832966899815984859938027942595/rosas-joaquin-MAPAAA-2025-Final_1340_c.jpeg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 189,
+      "status": "error",
+      "bytes": 0,
+      "file": "189_herrera-leopoldo.jpg",
+      "url": "https://freight.cargo.site/t/original/i/Q2832967861795241559817435165379/herrera-leopoldo.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 190,
+      "status": "error",
+      "bytes": 0,
+      "file": "190_rios-isabel.jpg",
+      "url": "https://freight.cargo.site/t/original/i/M2832974993122033015192994394819/rios-isabel.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 191,
+      "status": "error",
+      "bytes": 0,
+      "file": "191_pacheco-carolina-2-2-5-lateral.jpg",
+      "url": "https://freight.cargo.site/t/original/i/D2831969376395126321060145214147/pacheco-carolina-2-2-5-lateral.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 192,
+      "status": "error",
+      "bytes": 0,
+      "file": "192_Rios-Camila-21949970_10155734500863430_4521371404219177019_o.jpg.jpg",
+      "url": "https://freight.cargo.site/t/original/i/B2831969376432019809207564317379/Rios-Camila-21949970_10155734500863430_4521371404219177019_o.jpg.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 193,
+      "status": "error",
+      "bytes": 0,
+      "file": "193_Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
+      "url": "https://freight.cargo.site/t/original/i/M2825598558502218669086967542467/Gajardo-Joaquin-65f0f31b0ed2f6147a720a72_GUAICO-STUDIO-1.jpg",
+      "error": "fetch failed"
+    },
+    {
+      "index": 194,
+      "status": "error",
+      "bytes": 0,
+      "file": "194_Captura-de-pantalla-2026-03-14-a-las-20.16.15.png",
+      "url": "https://freight.cargo.site/t/original/i/C2840101210589655086901745889987/Captura-de-pantalla-2026-03-14-a-las-20.16.15.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 195,
+      "status": "error",
+      "bytes": 0,
+      "file": "195_Captura-de-pantalla-2026-03-14-a-las-19.39.31.png",
+      "url": "https://freight.cargo.site/t/original/i/R2840101210552761598754326786755/Captura-de-pantalla-2026-03-14-a-las-19.39.31.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 196,
+      "status": "error",
+      "bytes": 0,
+      "file": "196_Captura-de-pantalla-2026-03-14-a-las-20.15.40.png",
+      "url": "https://freight.cargo.site/t/original/i/B2840101210608101830975455441603/Captura-de-pantalla-2026-03-14-a-las-20.15.40.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 197,
+      "status": "error",
+      "bytes": 0,
+      "file": "197_Captura-de-pantalla-2026-03-14-a-las-20.15.27.png",
+      "url": "https://freight.cargo.site/t/original/i/I2840101210644995319122874544835/Captura-de-pantalla-2026-03-14-a-las-20.15.27.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 198,
+      "status": "error",
+      "bytes": 0,
+      "file": "198_Captura-de-pantalla-2026-03-14-a-las-20.15.33.png",
+      "url": "https://freight.cargo.site/t/original/i/U2840101210626548575049164993219/Captura-de-pantalla-2026-03-14-a-las-20.15.33.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 199,
+      "status": "error",
+      "bytes": 0,
+      "file": "199_Captura-de-pantalla-2026-03-14-a-las-20.15.21.png",
+      "url": "https://freight.cargo.site/t/original/i/H2840101210663442063196584096451/Captura-de-pantalla-2026-03-14-a-las-20.15.21.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 200,
+      "status": "error",
+      "bytes": 0,
+      "file": "200_Captura-de-pantalla-2026-03-14-a-las-20.15.47.png",
+      "url": "https://freight.cargo.site/t/original/i/F2840101210571208342828036338371/Captura-de-pantalla-2026-03-14-a-las-20.15.47.png",
+      "error": "fetch failed"
+    },
+    {
+      "index": 201,
+      "status": "error",
+      "bytes": 0,
+      "file": "201_Francisca-Torres-Captura-de-pantalla-2026-01-02-a-las-14.35.51.png",
+      "url": "https://freight.cargo.site/t/original/i/A2726565970425168368382203343555/Francisca-Torres-Captura-de-pantalla-2026-01-02-a-las-14.35.51.png",
+      "error": "fetch failed"
+    }
+  ]
+}

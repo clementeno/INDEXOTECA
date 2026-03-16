@@ -4493,6 +4493,7 @@
   let downTarget = null;
   let activePid = null;
   let suppressClickUntil = 0; // Para evitar clicks fantasma después de drag
+  const CARD_CONTEXT_BLOCK_SELECTOR = '.ref2d__item, .ref2d__view-card, .ref2d__simple-card';
   
   function resetPointerState(){
     isDown = false;
@@ -4590,6 +4591,18 @@
   window.addEventListener('pointermove', onPointerMove, { passive: false });
   window.addEventListener('pointerup', onPointerUp, { passive: false });
   window.addEventListener('pointercancel', onPointerCancel, { passive: false });
+  
+  // Bloqueo de click derecho / arrastre en imágenes de tarjetas (infinita, grilla, simple)
+  document.addEventListener('contextmenu', (e) => {
+    if (e.target && e.target.closest(CARD_CONTEXT_BLOCK_SELECTOR)) {
+      e.preventDefault();
+    }
+  });
+  document.addEventListener('dragstart', (e) => {
+    if (e.target && e.target.closest(CARD_CONTEXT_BLOCK_SELECTOR)) {
+      e.preventDefault();
+    }
+  });
   
   // Handler de click para abrir popup (solo si no hubo drag)
   viewport.addEventListener('click', (e) => {
