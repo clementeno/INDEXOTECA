@@ -160,12 +160,17 @@
     "diseno servicio": "diseno servicio",
     "diseño de servicio": "diseno servicio",
     "diseno de servicio": "diseno servicio",
+    "deporte": "diseno servicio",
+    "deportes": "diseno servicio",
 
     // Motion / Audiovisual bucket
     "motion graphics": "animación",
     "animacion": "animación",
     "audiovisual": "animación",
     "stop-motion": "animación",
+    "vjing": "visuales",
+    "vj": "visuales",
+    "vjing (visuales)": "visuales",
 
     // Espacio (unificado)
     "espacios": "espacio",
@@ -2556,9 +2561,9 @@
   span: 1,
   tags: ["instalación", "web", "iluminación", "investigación"],
   title: "DEFAULT",
-  author: "Manuela Garretón, Tomás Ossandón",
-  role: "",
-  collab: "Iluminación, diseño y asistencia de investigación por: Karina Hyland",
+  author: "Karina Hyland",
+  role: "Iluminación, diseño",
+  collab: "Autores: Manuela Garretón, Tomás Ossandón. Iluminación, diseño y asistencia de investigación por: Karina Hyland",
   area: "Instalación / Web / Iluminación / Investigación",
   year: "2017",
   url: [
