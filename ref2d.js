@@ -1949,7 +1949,7 @@
     /* ------------- Sofía Garrido ------------- */
     {
       src: "IMG/remote-originals/075_Sofia-Garrido.jpg",
-      orientation: "v",
+      orientation: "h",
       span: 2,
       tags: ["editorial"],
       title: "INSTRUCCIONES PARA DIBUJAR SU CAMINAR",
@@ -2615,6 +2615,8 @@
       id: "anthology",
       title: "Anthology",
       author: "Martina Abello",
+      orientation: "v",
+  span: 2,
       role: "",
       collab: "Curso VNC-2371-A Arts Books and Abstract Comics – SVA",
       area: "Risografía",
@@ -2904,7 +2906,7 @@
 /* ------------------ La Raíz del Aire — Florencia Caro / Colomba Acosta ------------------ */
 {
   src: "IMG/remote-originals/140_Caro-Florencia-Captura-de-pantalla-2026-03-09-a-las-16.27.21.png",
-  orientation: "v",
+  orientation: "h",
   span: 1,
   tags: ["editorial","diagramación","gráfico"],
   title: "La Raíz del Aire",
