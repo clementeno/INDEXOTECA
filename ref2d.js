@@ -4071,6 +4071,195 @@
   url: "https://www.linkedin.com/posts/esteban-millar-k_portafolio-2026-brief-activity-7414781774389563392-b6-h?utm_source=share&utm_medium=member_desktop&rcm=ACoAAENdsFEB8cHH4aAjoEic9bK9fxqH37Fjuro"
 },
 
+/* ------------------ Know Your Tools: Neuroscience and Service Design — Gaspar Jarry ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2843099405430519474241067758275/touchpoint.15-2.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["investigación","publicación académica"],
+  title: "Know Your Tools: Neuroscience and Service Design",
+  author: "Gaspar Jarry",
+  role: "",
+  collab: "Autores: Paula Wuth, Gaspar Jarry, Catalina Meza, Andrés Couve.",
+  area: "Investigación / Publicación académica",
+  year: "2024",
+  url: "https://www.logos-verlag.de/cgi-bin/engpapermid?doi=10.30819/touchpoint.15-2.10&lng=deu&id="
+},
+
+/* ------------------ Know Your Tools: Neuroscience and Service Design — Catalina Meza ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/U2843099405430519474241067758275/touchpoint.15-2.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["investigación","publicación académica"],
+  title: "Know Your Tools: Neuroscience and Service Design",
+  author: "Catalina Meza",
+  role: "",
+  collab: "Autores: Paula Wuth, Gaspar Jarry, Catalina Meza, Andrés Couve.",
+  area: "Investigación / Publicación académica",
+  year: "2024",
+  url: [
+    "https://www.logos-verlag.de/cgi-bin/engpapermid?doi=10.30819/touchpoint.15-2.10&lng=deu&id=",
+    "https://www.instagram.com/p/DASD2BmNpsw/?img_index=1"
+  ]
+},
+
+/* ------------------ Ecualizando futuros — Gaspar Jarry ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/J2843099405412072730167358206659/1ecd9621-90b1-4c41-89cb-f876083d0e31_rw_1920.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["servicio","cultura","investigación"],
+  title: "Ecualizando futuros",
+  author: "Gaspar Jarry",
+  role: "",
+  collab: "Guiatura: Manuela Garretón.",
+  area: "Servicio / Cultura / Investigación",
+  year: "2023",
+  url: "https://gasparjarry.myportfolio.com/ecualizando-futuros"
+},
+
+/* ------------------ ¿Dónde viven tus monstruos? — Isidora Silva ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/W2843102067221902334234527740611/Captura-de-pantalla-2026-03-16-a-las-16.54.59.png",
+  orientation: "h",
+  span: 1,
+  tags: ["editorial","ilustración","infantil"],
+  title: "¿Dónde viven tus monstruos?",
+  author: "Isidora Silva",
+  role: "",
+  collab: "",
+  area: "Editorial / Ilustración / Infantil",
+  year: "2020",
+  url: "https://www.behance.net/gallery/110237953/Donde-viven-tus-monstruos"
+},
+
+/* ------------------ La naturaleza de la tecnología — Isidora Silva ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2843102067258795822381946843843/Captura-de-pantalla-2026-03-16-a-las-16.56.28.png",
+  orientation: "h",
+  span: 1,
+  tags: ["editorial","experimental","digital"],
+  title: "La naturaleza de la tecnología",
+  author: "Isidora Silva",
+  role: "",
+  collab: "Por Isidora Silva y Antonia Van de Wyngard - 2021.",
+  area: "Editorial / Experimental / Digital",
+  year: "2021",
+  url: "https://www.behance.net/gallery/168081973/La-naturaleza-de-la-tecnologia-Publicacion-Digital"
+},
+
+/* ------------------ Aurora Botánica — Javiera Palma ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/L2843099748337045060427922748099/IMG_5697.jpg.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["ecología","producto","innovación"],
+  title: "Aurora Botánica",
+  author: "Javiera Palma",
+  role: "Diseñadora / Fundadora",
+  collab: "",
+  area: "Ecología / Producto / Innovación",
+  year: "2021",
+  url: [
+    "https://aurorabotanica.cl",
+    "https://www.instagram.com/aurorabotanica.cl"
+  ]
+},
+
+/* ------------------ Patitas Perdidas — Nicole Cavada ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2843102067240349078308237292227/Captura-de-pantalla-2026-03-16-a-las-17.05.28.png",
+  orientation: "h",
+  span: 1,
+  tags: ["ux ui","app","servicio"],
+  title: "Patitas Perdidas",
+  author: "Nicole Cavada",
+  role: "Diseñadora",
+  collab: "",
+  area: "UX UI / App / Servicio",
+  year: "2024",
+  url: "https://www.behance.net/gallery/189928253/Patitas-perdidas"
+},
+
+/* ------------------ Audio Rutas de Barrio — Paz Osorio Schmied ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/O2843099405393625986093648655043/Mesa-de-trabajo-6-3-1024x1024-1.png",
+  orientation: "sq",
+  span: 1,
+  tags: ["innovación","cultura","servicio"],
+  title: "Audio Rutas de Barrio",
+  author: "Paz Osorio Schmied",
+  role: "Diseñadora / Directora de diseño",
+  collab: "Idea y gestión: Marchantes. Cofinanciamiento: Fondart Regional 2022 (MINCAP).",
+  area: "Innovación / Cultura / Servicio",
+  year: "2022",
+  url: [
+    "https://marchantes.cl/audiorutas/",
+    "https://www.instagram.com/Marchantes.cl"
+  ]
+},
+
+/* ------------------ Viajes Lectores — Francisca Torres ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/G2843101258535088886881494446787/close-up-colorful-books-pile-1200x900.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["educación","servicio","cultura"],
+  title: "Viajes Lectores",
+  author: "Francisca Torres",
+  role: "",
+  collab: "",
+  area: "Educación / Servicio / Cultura",
+  year: "2023",
+  url: "https://www.instagram.com/viajeslectores?igsh=MnNvNzR1aDNxdXNj"
+},
+
+/* ------------------ Redes sociales: NewFuture — Victoria Garcia ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/T2843099405356732497946229551811/e2ad85a3-cea4-4cbd-9ec2-40b793c45789_rw_3840.png",
+  orientation: "h",
+  span: 1,
+  tags: ["rrss","identidad visual"],
+  title: "Redes sociales: NewFuture",
+  author: "Victoria Garcia",
+  role: "",
+  collab: "Entidad de desarrollo: NewFuture. Equipo: Paula Wuth, Victoria García. Año: 2022-2025.",
+  area: "RRSS / Identidad visual",
+  year: "2022",
+  url: "https://victoriagarciast.myportfolio.com/redes-sociales-newfuture"
+},
+
+/* ------------------ Escuela sin Fronteras — Catalina Hepp ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/B2843099405375179242019939103427/DSCF1870-scaled.jpg",
+  orientation: "h",
+  span: 1,
+  tags: ["servicio","innovación","educación"],
+  title: "Escuela sin Fronteras",
+  author: "Catalina Hepp",
+  role: "",
+  collab: "Service Design Award 2020/21 Winner. Best Student Project.",
+  area: "Servicio / Innovación / Educación",
+  year: "2020",
+  url: "https://www.service-design-network.org/community-knowledge/escuela-sin-fronteras"
+},
+
+/* ------------------ Viajes Lectores — Victoria Garcia ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/R2843099405338285753872520000195/376d35fd-1f19-4e45-8588-b6a9872068da_rw_3840.png",
+  orientation: "h",
+  span: 1,
+  tags: ["identidad visual","ilustración","educación"],
+  title: "Viajes Lectores",
+  author: "Victoria Garcia",
+  role: "",
+  collab: "Entidad de desarrollo: NewFuture. Financiamiento: Proyecto financiado por Innova FOSIS. Equipo: Catalina Hepp, Camila Silva, Maili Ow, Joaquín Rosas, Natalia Hevia, Victoria García, Mariana Zeballos, Trinidad Borghero, Tomás Sanchez.",
+  area: "Identidad visual / Ilustración / Educación",
+  year: "2023",
+  url: "https://victoriagarciast.myportfolio.com/viajes-lectores"
+},
+
     /* ------------------ Campaña día del niño — Francisca Torres ------------------ */
     {
       id: "campana-dia-del-nino",
