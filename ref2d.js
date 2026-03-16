@@ -3841,6 +3841,66 @@
   url: "https://www.behance.net/gallery/234618837/Resurgir"
 },
 
+/* ------------------ Bote de pesca — Alejandra Echeverría ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/Q2842814634021795767848800826051/Alejandra-Echeverria.png",
+  orientation: "sq",
+  span: 1,
+  tags: ["identidad visual"],
+  title: "Bote de pesca",
+  author: "Alejandra Echeverría",
+  role: "Diseñadora",
+  collab: "",
+  area: "Identidad visual",
+  year: "2021",
+  url: "https://www.behance.net/gallery/201814673/BDPManual-de-Marca"
+},
+
+/* ------------------ Candelabro Lollapalooza 2026 — Carlos Nauto Paez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/K2842814634040242511922510377667/Nauto-Carlos-Captura-de-pantalla-2026-03-16-a-las-12.53.47.png",
+  orientation: "h",
+  span: 2,
+  tags: ["vjing","visuales","música"],
+  title: "Candelabro Lollapalooza 2026",
+  author: "Carlos Nauto Paez",
+  role: "Visualista / Diseñador",
+  collab: "Diseño y operación de visuales para el show de @candelabro.candelabro en @lollapaloozacl.",
+  area: "Vjing (visuales) / Música",
+  year: "2026",
+  url: "https://www.instagram.com/p/DV6uYi7Cek4/?img_index=8"
+},
+
+/* ------------------ Pedro Ruminot - Festival de Viña del Mar 2027 — Carlos Nauto Paez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/S2842814634077136000069929480899/Nauto-Carlos-Captura-de-pantalla-2026-03-16-a-las-12.58.03.png",
+  orientation: "sq",
+  span: 1,
+  tags: ["vjing","visuales","música"],
+  title: "Pedro Ruminot - Festival de Viña del Mar 2027",
+  author: "Carlos Nauto Paez",
+  role: "Visualista / Diseñador",
+  collab: "Diseño de entorno 3D, visuales, operación de backup de visuales y asistencia en diseño para @pedroruminot en el @elfestivaldevina 2025.",
+  area: "Vjing (visuales) / Música",
+  year: "2025",
+  url: "https://www.instagram.com/p/DGt_-6PuOwo/?img_index=1"
+},
+
+/* ------------------ Juan Pablo López - Festival de Viña del Mar 2026 — Carlos Nauto Paez ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/E2842814634058689255996219929283/Nauto-Carlos-Captura-de-pantalla-2026-03-16-a-las-13.00.33.png",
+  orientation: "h",
+  span: 1,
+  tags: ["vjing","visuales","música"],
+  title: "Juan Pablo López - Festival de Viña del Mar 2026",
+  author: "Carlos Nauto Paez",
+  role: "Visualista / Diseñador",
+  collab: "Dirección creativa, visuales y operación de visuales junto a María José Tapia.",
+  area: "Vjing (visuales) / Música",
+  year: "2025",
+  url: "https://www.instagram.com/p/DGouSMEu-Dc/?img_index=1"
+},
+
     /* ------------------ Campaña día del niño — Francisca Torres ------------------ */
     {
       id: "campana-dia-del-nino",
