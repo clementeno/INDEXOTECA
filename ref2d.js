@@ -234,11 +234,10 @@
     "afiche digital": "afiche",
 
     // Portada disco (unificado)
-    "portada": "cover art",
+    "disco": "cover art",
+    "EP": "cover art",
     "portada de disco": "cover art",
     "portada de discos": "cover art",
-    "musica": "cover art",
-    "música": "cover art",
 
     // Museografía (mantener existente)
     "museografia": "museografía",
@@ -2294,6 +2293,35 @@
       src: "IMG/remote-originals/095_Captura-de-pantalla-2026-01-02-a-las-13.33.28.png",
       url: "https://fernandagn.myportfolio.com/add-proyecto-de-titulo"
     },
+    /* ------------------ LOYALTTY — Juan Pablo Valenzuela ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/A2843377305187268050867133559491/59cb6462-ee27-43ff-9915-b824fcb67c4e_rw_3840.jpg",
+  orientation: "v",
+  span: 1,
+  tags: ["objeto", "artesanía", "moda", "indumentaria"],
+  title: "LOYALTTY",
+  author: "Juan Pablo Valenzuela",
+  role: "Diseñador",
+  collab: "Desarrollado en The Glass Lab @theglasslab.cl",
+  area: "Objeto / Artesanía / Moda / Indumentaria",
+  year: "2024",
+  url: "https://yeipivalenzuela.myportfolio.com/loyaltty"
+},
+
+/* ------------------ Black — Juan Pablo Valenzuela ------------------ */
+{
+  src: "https://freight.cargo.site/t/original/i/I2843377305205714794940843111107/5bfec8f9-e5ea-409e-9aed-efe06707094a_rw_3840.png",
+  orientation: "v",
+  span: 1,
+  tags: ["objeto", "artesanía", "moda", "indumentaria"],
+  title: "Black",
+  author: "Juan Pablo Valenzuela",
+  role: "Diseñador",
+  collab: "Desarrollado en The Glass Lab @theglasslab.cl",
+  area: "Objeto / Artesanía / Moda / Indumentaria",
+  year: "2024",
+  url: "https://yeipivalenzuela.myportfolio.com/black"
+},
     {
       id: "una-clase-de-bichos",
       orientation: "v",
@@ -3915,7 +3943,7 @@
   author: "Carlos Nauto Paez",
   role: "Visualista / Diseñador",
   collab: "Diseño de entorno 3D, visuales, operación de backup de visuales y asistencia en diseño para @pedroruminot en el @elfestivaldevina 2025.",
-  area: "Vjing (visuales) / Música",
+  area: "Vjing (visuales) / gráfico / Shows",
   year: "2025",
   url: "https://www.instagram.com/p/DGt_-6PuOwo/?img_index=1"
 },
@@ -3930,7 +3958,7 @@
   author: "Carlos Nauto Paez",
   role: "Visualista / Diseñador",
   collab: "Dirección creativa, visuales y operación de visuales junto a María José Tapia.",
-  area: "Vjing (visuales) / Música",
+  area: "Vjing (visuales) / gráfico / Shows",
   year: "2025",
   url: "https://www.instagram.com/p/DGouSMEu-Dc/?img_index=1"
 },
