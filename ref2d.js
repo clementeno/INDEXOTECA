@@ -2312,9 +2312,9 @@
   span: 1,
   tags: ["gráfico", "ilustración"],
   title: "Papel Lustre",
-  author: "Matías Prado",
-  role: "",
-  collab: "Feoperohermoso.cl | Diseño por: Sara Gubbins",
+  author: "Sara Gubbins",
+  role: "Diseñadora",
+  collab: "Autor: Matías Prado en Feoperohermoso.cl",
   area: "Gráfico / Ilustración",
   year: "2025",
   url: "https://www.feoperohermoso.cl/products/papel-lustre-12-x-12-cm"
