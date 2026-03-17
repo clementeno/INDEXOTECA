@@ -309,6 +309,8 @@
     "social": "Social",
     "afiche": "Afiche",
     "iluminación": "Iluminación",
+    "rrss": "RRSS",
+    "Rrss": "RRSS",
     "iluminacion": "Iluminación",
   };
 
