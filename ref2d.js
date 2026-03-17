@@ -830,8 +830,8 @@
   let camX = 0, camY = 0;
   let camScale = 1;
   const CAM_SCALE_MAX = 1;
-  const CAM_SCALE_MIN = 0.5;
-  const CAM_SCALE_STEP = 0.1;
+  const CAM_SCALE_MIN = 0.38;
+  const CAM_SCALE_STEP = 0.08;
   const clampCamScale = (value) => Math.min(CAM_SCALE_MAX, Math.max(CAM_SCALE_MIN, value));
   const applyTransform = ()=> plane.style.transform = `translate3d(${camX}px, ${camY}px, 0) scale(${camScale})`;
 
@@ -4370,19 +4370,19 @@
   let lastLiteFillCamY = 0;
   const BENTO_PREFETCH_X = 1.35;
   const BENTO_PREFETCH_Y = 1.35;
-  const BENTO_PREFETCH_MIN_X = 1.1;
-  const BENTO_PREFETCH_MIN_Y = 1.1;
-  const BENTO_LITE_PREFETCH_MIN_X = 1.02;
-  const BENTO_LITE_PREFETCH_MIN_Y = 1.02;
+  const BENTO_PREFETCH_MIN_X = 1.06;
+  const BENTO_PREFETCH_MIN_Y = 1.06;
+  const BENTO_LITE_PREFETCH_MIN_X = 1.0;
+  const BENTO_LITE_PREFETCH_MIN_Y = 1.0;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
   const BENTO_MAX_NEW_PER_PASS = 160;
-  const BENTO_MAX_NEW_PER_PASS_MIN = 96;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 64;
-  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 24;
-  const BENTO_LITE_FILL_INTERVAL_MS = 110;
-  const BENTO_SETTLE_FULL_DELAY_MS = 140;
-  const BENTO_LITE_MIN_MOVE_SCREEN = 24;
+  const BENTO_MAX_NEW_PER_PASS_MIN = 72;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 44;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 14;
+  const BENTO_LITE_FILL_INTERVAL_MS = 130;
+  const BENTO_SETTLE_FULL_DELAY_MS = 160;
+  const BENTO_LITE_MIN_MOVE_SCREEN = 30;
   const SIMPLE_CARD_COUNT = 3;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
   const ORIENTATION_RATIO = { h: 4 / 3, v: 3 / 4, sq: 1 };
@@ -4457,8 +4457,8 @@
     else requestFillAround(false);
     updateZoomButtons();
   };
-  const zoomBy = (deltaScale) => {
-    zoomTo(camScale + deltaScale);
+  const zoomBy = (deltaScale, useLiteFill = true) => {
+    zoomTo(camScale + deltaScale, undefined, undefined, useLiteFill);
   };
 
   /* Crear tarjeta */
@@ -5268,13 +5268,13 @@
   if (btnZoomOut) {
     btnZoomOut.addEventListener('click', ()=>{
       if (activeView !== 'bento') return;
-      zoomBy(-CAM_SCALE_STEP);
+      zoomBy(-CAM_SCALE_STEP, true);
     });
   }
   if (btnZoomIn) {
     btnZoomIn.addEventListener('click', ()=>{
       if (activeView !== 'bento') return;
-      zoomBy(CAM_SCALE_STEP);
+      zoomBy(CAM_SCALE_STEP, true);
     });
   }
   if (btnCenter) {
