@@ -4364,20 +4364,25 @@
   const FILTER_DEBOUNCE_MS = 220;
   let fillAroundRaf = null;
   let fillAroundLiteTimer = null;
+  let fillAroundSettleTimer = null;
   let fillAroundNeedsFullPass = false;
+  let lastLiteFillCamX = 0;
+  let lastLiteFillCamY = 0;
   const BENTO_PREFETCH_X = 1.35;
   const BENTO_PREFETCH_Y = 1.35;
   const BENTO_PREFETCH_MIN_X = 1.1;
   const BENTO_PREFETCH_MIN_Y = 1.1;
-  const BENTO_LITE_PREFETCH_MIN_X = 1.04;
-  const BENTO_LITE_PREFETCH_MIN_Y = 1.04;
+  const BENTO_LITE_PREFETCH_MIN_X = 1.02;
+  const BENTO_LITE_PREFETCH_MIN_Y = 1.02;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
   const BENTO_MAX_NEW_PER_PASS = 160;
   const BENTO_MAX_NEW_PER_PASS_MIN = 96;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 88;
-  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 48;
-  const BENTO_LITE_FILL_INTERVAL_MS = 70;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 64;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 24;
+  const BENTO_LITE_FILL_INTERVAL_MS = 110;
+  const BENTO_SETTLE_FULL_DELAY_MS = 140;
+  const BENTO_LITE_MIN_MOVE_SCREEN = 24;
   const SIMPLE_CARD_COUNT = 3;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
   const ORIENTATION_RATIO = { h: 4 / 3, v: 3 / 4, sq: 1 };
@@ -4448,7 +4453,8 @@
     camX = focusX - (worldX * camScale);
     camY = focusY - (worldY * camScale);
     requestTransform();
-    requestFillAround(useLiteFill);
+    if (useLiteFill) requestFillAroundLiteIfNeeded(true);
+    else requestFillAround(false);
     updateZoomButtons();
   };
   const zoomBy = (deltaScale) => {
@@ -4975,7 +4981,7 @@
         created++;
         if(col.yDown > yBotLimit-(COL_W*2)) yBotLimit += 1500;
         if (created >= maxNewPerPass) {
-          cullFarItems();
+          if (!lite) cullFarItems();
           if (lite) requestFillAroundLite();
           else requestFillAround();
           return;
@@ -4986,20 +4992,24 @@
         created++;
         if(col.yUp   < yTopLimit+(COL_W*2)) yTopLimit -= 1500;
         if (created >= maxNewPerPass) {
-          cullFarItems();
+          if (!lite) cullFarItems();
           if (lite) requestFillAroundLite();
           else requestFillAround();
           return;
         }
       }
     }
-    cullFarItems();
+    if (!lite) cullFarItems();
   }
 
   function requestFillAround(lite = false) {
     if (!lite && fillAroundLiteTimer !== null) {
       clearTimeout(fillAroundLiteTimer);
       fillAroundLiteTimer = null;
+    }
+    if (!lite && fillAroundSettleTimer !== null) {
+      clearTimeout(fillAroundSettleTimer);
+      fillAroundSettleTimer = null;
     }
     if (fillAroundRaf !== null) {
       if (!lite) fillAroundNeedsFullPass = true;
@@ -5008,11 +5018,43 @@
     fillAroundRaf = requestAnimationFrame(() => {
       fillAroundRaf = null;
       fillAround(lite);
+      if (!lite) {
+        lastLiteFillCamX = camX;
+        lastLiteFillCamY = camY;
+      }
       if (fillAroundNeedsFullPass) {
         fillAroundNeedsFullPass = false;
         requestFillAround(false);
       }
     });
+  }
+
+  function queueFullFillAfterInteraction() {
+    if (fillAroundSettleTimer !== null) {
+      clearTimeout(fillAroundSettleTimer);
+    }
+    fillAroundSettleTimer = setTimeout(() => {
+      fillAroundSettleTimer = null;
+      requestFillAround(false);
+    }, BENTO_SETTLE_FULL_DELAY_MS);
+  }
+
+  function requestFillAroundLiteIfNeeded(force = false) {
+    if (force) {
+      lastLiteFillCamX = camX;
+      lastLiteFillCamY = camY;
+      requestFillAroundLite();
+      queueFullFillAfterInteraction();
+      return;
+    }
+    const dx = camX - lastLiteFillCamX;
+    const dy = camY - lastLiteFillCamY;
+    if (Math.hypot(dx, dy) >= BENTO_LITE_MIN_MOVE_SCREEN) {
+      lastLiteFillCamX = camX;
+      lastLiteFillCamY = camY;
+      requestFillAroundLite();
+    }
+    queueFullFillAfterInteraction();
   }
 
   function requestFillAroundLite() {
@@ -5033,6 +5075,10 @@
       clearTimeout(fillAroundLiteTimer);
       fillAroundLiteTimer = null;
     }
+    if (fillAroundSettleTimer !== null) {
+      clearTimeout(fillAroundSettleTimer);
+      fillAroundSettleTimer = null;
+    }
     fillAroundNeedsFullPass = false;
     resetPlaneLimits();
     plane.innerHTML = "";
@@ -5040,6 +5086,8 @@
     globalId = 0;
     genPtr = 0;
     applyTransform();
+    lastLiteFillCamX = camX;
+    lastLiteFillCamY = camY;
     if (activeList.length === 0) {
       updateCount();
       return;
@@ -5132,7 +5180,7 @@
       camX += dx;
       camY += dy;
       requestTransform();
-      requestFillAroundLite();
+      requestFillAroundLiteIfNeeded();
       
       lastX = currentX;
       lastY = currentY;
@@ -5215,7 +5263,7 @@
     }
     camX -= e.deltaX; camY -= e.deltaY;
     requestTransform();
-    requestFillAroundLite();
+    requestFillAroundLiteIfNeeded();
   },{passive:false});
   if (btnZoomOut) {
     btnZoomOut.addEventListener('click', ()=>{
