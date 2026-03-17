@@ -318,6 +318,23 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 .ref2d__item>.ratio-proxy{ width:100%; aspect-ratio:inherit; opacity:0; pointer-events:none; display:block; }
 .ref2d__item img{-webkit-user-drag:none; user-drag:none; pointer-events:none; user-select:none;}
 .ref2d__meta{position:absolute; left:8px; right:8px; bottom:8px; display:flex; flex-wrap:wrap; gap:8px; user-select:none;}
+
+/* LOD en vista infinita: reduce costo de pintura cuando hay zoom-out */
+.ref2d__plane.is-lod-mid .ref2d__meta .ref2d__chip:nth-child(n+2){
+  display:none;
+}
+.ref2d__plane.is-lod-mid .ref2d__item{
+  box-shadow:0 0 0 1px #1a1a1d;
+}
+.ref2d__plane.is-lod-far .ref2d__meta{
+  display:none;
+}
+.ref2d__plane.is-lod-far .ref2d__item{
+  box-shadow:none;
+}
+.ref2d__plane.is-lod-far .ref2d__item:hover{
+  box-shadow:none;
+}
 /* Etiquetas (chips) - aplica a grilla y modal */
 .ref2d__chip{
   background:rgba(0,0,0,0.65);

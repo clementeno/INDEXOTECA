@@ -833,6 +833,8 @@
   const CAM_SCALE_MAX = 1;
   const CAM_SCALE_MIN = 0.38;
   const CAM_SCALE_STEP = 0.08;
+  const CAM_LOD_FAR = 0.56;
+  const CAM_LOD_MID = 0.74;
   let viewportWidth = viewport.clientWidth || 0;
   let viewportHeight = viewport.clientHeight || 0;
   const refreshViewportSize = () => {
@@ -840,7 +842,20 @@
     viewportHeight = viewport.clientHeight || 0;
   };
   const clampCamScale = (value) => Math.min(CAM_SCALE_MAX, Math.max(CAM_SCALE_MIN, value));
-  const applyTransform = ()=> plane.style.transform = `translate3d(${camX}px, ${camY}px, 0) scale(${camScale})`;
+  let currentLodMode = '';
+  const updateBentoLOD = () => {
+    if (!plane) return;
+    const nextMode = camScale <= CAM_LOD_FAR ? 'far' : (camScale <= CAM_LOD_MID ? 'mid' : 'near');
+    if (nextMode === currentLodMode) return;
+    currentLodMode = nextMode;
+    plane.classList.toggle('is-lod-far', nextMode === 'far');
+    plane.classList.toggle('is-lod-mid', nextMode === 'mid');
+    plane.classList.toggle('is-lod-near', nextMode === 'near');
+  };
+  const applyTransform = ()=> {
+    plane.style.transform = `translate3d(${camX}px, ${camY}px, 0) scale(${camScale})`;
+    if (activeView === 'bento') updateBentoLOD();
+  };
 
   /* Columnas (masonry por columna) */
   const columns = new Map();
@@ -5092,6 +5107,10 @@
     if (btnSimpleRefresh) btnSimpleRefresh.hidden = true;
     updateZoomButtons();
     if (isBento) refreshViewportSize();
+    if (!isBento && plane) {
+      plane.classList.remove('is-lod-far', 'is-lod-mid', 'is-lod-near');
+      currentLodMode = '';
+    }
 
     renderActiveView();
   }
@@ -5457,6 +5476,7 @@
     btnCenter.addEventListener('click', ()=>{
       if (activeView !== 'bento') return;
       camX=camY=0;
+      camScale = CAM_SCALE_MAX;
       applyTransform();
       updateZoomButtons();
       requestFillAround();
