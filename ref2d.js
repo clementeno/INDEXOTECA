@@ -4363,11 +4363,21 @@
   let filterDebounceTimer = null;
   const FILTER_DEBOUNCE_MS = 220;
   let fillAroundRaf = null;
+  let fillAroundLiteTimer = null;
+  let fillAroundNeedsFullPass = false;
   const BENTO_PREFETCH_X = 1.35;
   const BENTO_PREFETCH_Y = 1.35;
+  const BENTO_PREFETCH_MIN_X = 1.1;
+  const BENTO_PREFETCH_MIN_Y = 1.1;
+  const BENTO_LITE_PREFETCH_MIN_X = 1.04;
+  const BENTO_LITE_PREFETCH_MIN_Y = 1.04;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
   const BENTO_MAX_NEW_PER_PASS = 160;
+  const BENTO_MAX_NEW_PER_PASS_MIN = 96;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 88;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 48;
+  const BENTO_LITE_FILL_INTERVAL_MS = 70;
   const SIMPLE_CARD_COUNT = 3;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
   const ORIENTATION_RATIO = { h: 4 / 3, v: 3 / 4, sq: 1 };
@@ -4402,7 +4412,28 @@
     if (btnZoomOut) btnZoomOut.disabled = camScale <= CAM_SCALE_MIN + 0.001;
     if (btnZoomIn) btnZoomIn.disabled = camScale >= CAM_SCALE_MAX - 0.001;
   };
-  const zoomTo = (targetScale, clientX, clientY) => {
+  const getZoomProgress = () => {
+    if (CAM_SCALE_MAX === CAM_SCALE_MIN) return 1;
+    const t = (camScale - CAM_SCALE_MIN) / (CAM_SCALE_MAX - CAM_SCALE_MIN);
+    return Math.max(0, Math.min(1, t));
+  };
+  const getDynamicPrefetch = (lite = false) => {
+    const t = getZoomProgress();
+    const baseX = lite ? BENTO_LITE_PREFETCH_MIN_X : BENTO_PREFETCH_MIN_X;
+    const baseY = lite ? BENTO_LITE_PREFETCH_MIN_Y : BENTO_PREFETCH_MIN_Y;
+    return {
+      x: baseX + ((BENTO_PREFETCH_X - baseX) * t),
+      y: baseY + ((BENTO_PREFETCH_Y - baseY) * t)
+    };
+  };
+  const getDynamicMaxNewPerPass = (lite = false) => {
+    const t = getZoomProgress();
+    if (lite) {
+      return Math.round(BENTO_MAX_NEW_PER_PASS_LITE_MIN + ((BENTO_MAX_NEW_PER_PASS_LITE - BENTO_MAX_NEW_PER_PASS_LITE_MIN) * t));
+    }
+    return Math.round(BENTO_MAX_NEW_PER_PASS_MIN + ((BENTO_MAX_NEW_PER_PASS - BENTO_MAX_NEW_PER_PASS_MIN) * t));
+  };
+  const zoomTo = (targetScale, clientX, clientY, useLiteFill = false) => {
     const nextScale = clampCamScale(targetScale);
     if (Math.abs(nextScale - camScale) < 0.0001) {
       updateZoomButtons();
@@ -4417,7 +4448,7 @@
     camX = focusX - (worldX * camScale);
     camY = focusY - (worldY * camScale);
     requestTransform();
-    requestFillAround();
+    requestFillAround(useLiteFill);
     updateZoomButtons();
   };
   const zoomBy = (deltaScale) => {
@@ -4924,13 +4955,15 @@
   }
 
   /* Relleno alrededor de la vista */
-  function fillAround(){
+  function fillAround(lite = false){
     if(activeList.length===0) return;
     const { vw, vh, top, left, right } = getViewportBounds();
-    const leftBound = left - vw * (BENTO_PREFETCH_X - 1);
-    const rightBound = right + vw * (BENTO_PREFETCH_X - 1);
-    const topV  = top - vh * (BENTO_PREFETCH_Y - 1);
-    const bottom = top + vh * BENTO_PREFETCH_Y;
+    const prefetch = getDynamicPrefetch(lite);
+    const maxNewPerPass = getDynamicMaxNewPerPass(lite);
+    const leftBound = left - vw * (prefetch.x - 1);
+    const rightBound = right + vw * (prefetch.x - 1);
+    const topV  = top - vh * (prefetch.y - 1);
+    const bottom = top + vh * prefetch.y;
     const startIdx = Math.floor((leftBound)  / (COL_W+GAP)) - 2;
     const endIdx   = Math.floor((rightBound) / (COL_W+GAP)) + 2;
     let created = 0;
@@ -4941,9 +4974,10 @@
         makeCard(i,'down', nextMeta());
         created++;
         if(col.yDown > yBotLimit-(COL_W*2)) yBotLimit += 1500;
-        if (created >= BENTO_MAX_NEW_PER_PASS) {
+        if (created >= maxNewPerPass) {
           cullFarItems();
-          requestFillAround();
+          if (lite) requestFillAroundLite();
+          else requestFillAround();
           return;
         }
       }
@@ -4951,9 +4985,10 @@
         makeCard(i,'up',   nextMeta());
         created++;
         if(col.yUp   < yTopLimit+(COL_W*2)) yTopLimit -= 1500;
-        if (created >= BENTO_MAX_NEW_PER_PASS) {
+        if (created >= maxNewPerPass) {
           cullFarItems();
-          requestFillAround();
+          if (lite) requestFillAroundLite();
+          else requestFillAround();
           return;
         }
       }
@@ -4961,12 +4996,31 @@
     cullFarItems();
   }
 
-  function requestFillAround() {
-    if (fillAroundRaf !== null) return;
+  function requestFillAround(lite = false) {
+    if (!lite && fillAroundLiteTimer !== null) {
+      clearTimeout(fillAroundLiteTimer);
+      fillAroundLiteTimer = null;
+    }
+    if (fillAroundRaf !== null) {
+      if (!lite) fillAroundNeedsFullPass = true;
+      return;
+    }
     fillAroundRaf = requestAnimationFrame(() => {
       fillAroundRaf = null;
-      fillAround();
+      fillAround(lite);
+      if (fillAroundNeedsFullPass) {
+        fillAroundNeedsFullPass = false;
+        requestFillAround(false);
+      }
     });
+  }
+
+  function requestFillAroundLite() {
+    if (fillAroundNeedsFullPass || fillAroundLiteTimer !== null || fillAroundRaf !== null) return;
+    fillAroundLiteTimer = setTimeout(() => {
+      fillAroundLiteTimer = null;
+      requestFillAround(true);
+    }, BENTO_LITE_FILL_INTERVAL_MS);
   }
 
   /* Reset/reordenar mundo */
@@ -4975,6 +5029,11 @@
       cancelAnimationFrame(fillAroundRaf);
       fillAroundRaf = null;
     }
+    if (fillAroundLiteTimer !== null) {
+      clearTimeout(fillAroundLiteTimer);
+      fillAroundLiteTimer = null;
+    }
+    fillAroundNeedsFullPass = false;
     resetPlaneLimits();
     plane.innerHTML = "";
     columns.clear();
@@ -5073,7 +5132,7 @@
       camX += dx;
       camY += dy;
       requestTransform();
-      requestFillAround();
+      requestFillAroundLite();
       
       lastX = currentX;
       lastY = currentY;
@@ -5086,6 +5145,7 @@
   function onPointerUp(e){
     if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
+    const hadDrag = isDragging;
     
     // Si hubo drag, suprimir clicks por un tiempo
     if(isDragging){
@@ -5093,6 +5153,7 @@
     }
     
     resetPointerState();
+    if (hadDrag) requestFillAround();
   }
   
   // Handler de pointercancel
@@ -5100,6 +5161,7 @@
     if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
     resetPointerState();
+    requestFillAround();
   }
   
   // Agregar listeners normales
@@ -5148,12 +5210,12 @@
     e.preventDefault();
     if (e.ctrlKey || e.metaKey) {
       const zoomFactor = Math.exp(-e.deltaY * 0.0015);
-      zoomTo(camScale * zoomFactor, e.clientX, e.clientY);
+      zoomTo(camScale * zoomFactor, e.clientX, e.clientY, true);
       return;
     }
     camX -= e.deltaX; camY -= e.deltaY;
     requestTransform();
-    requestFillAround();
+    requestFillAroundLite();
   },{passive:false});
   if (btnZoomOut) {
     btnZoomOut.addEventListener('click', ()=>{
