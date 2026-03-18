@@ -51,6 +51,7 @@
   const MOBILE_ALLOWED_VIEWS = new Set(['grid', 'index']);
   const DESKTOP_ALLOWED_VIEWS = new Set(['bento', 'grid', 'index']);
   const REQUEST_CONTACT_EMAIL = "referencioteca.uc@gmail.com"; // Cambiar por correo real de administración
+  const REQUESTS_STORAGE_KEY = "ref2d_admin_requests_v1";
   const REQUEST_TYPES = {
     modify: {
       title: "Modificar Información",
@@ -5892,13 +5893,50 @@
     const cfg = REQUEST_TYPES[activeRequestType] || REQUEST_TYPES.modify;
     const meta = activeSpotlightMeta || {};
     const requesterEmail = (sheetRequestEmail && sheetRequestEmail.value.trim()) ? sheetRequestEmail.value.trim() : "";
-    const lines = [sheetRequestMessage.value.trim()];
+    const message = (sheetRequestMessage.value || "").trim();
+    if (!message) return;
+
+    const urls = Array.isArray(meta.urls) ? meta.urls.filter(Boolean) : [];
+    const firstUrl = urls[0] || meta.url || "";
+    const ticket = {
+      id: `rq_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      createdAt: new Date().toISOString(),
+      type: activeRequestType,
+      typeLabel: cfg.title,
+      projectTitle: meta.title || "Proyecto sin título",
+      projectAuthor: meta.author || "—",
+      projectYear: meta.year || "—",
+      projectArea: meta.area || "—",
+      projectUrl: firstUrl || "",
+      requesterEmail,
+      message,
+      status: "open"
+    };
+
+    try {
+      const raw = localStorage.getItem(REQUESTS_STORAGE_KEY);
+      const list = raw ? JSON.parse(raw) : [];
+      const nextList = Array.isArray(list) ? list : [];
+      nextList.unshift(ticket);
+      localStorage.setItem(REQUESTS_STORAGE_KEY, JSON.stringify(nextList.slice(0, 2000)));
+    } catch (_) {
+      // Si localStorage falla, mantenemos funcionamiento sin romper UI.
+    }
+
+    const lines = [message];
     if (requesterEmail) lines.push("", `[Correo solicitante] ${requesterEmail}`);
     const subject = `${cfg.subject}: ${meta.title || "Proyecto sin título"}`;
     const body = lines.join("\n");
     const href = `mailto:${encodeURIComponent(REQUEST_CONTACT_EMAIL)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = href;
+    if (sheetRequestSend) {
+      const prev = sheetRequestSend.textContent;
+      sheetRequestSend.textContent = "Solicitud guardada";
+      setTimeout(() => {
+        if (sheetRequestSend) sheetRequestSend.textContent = prev || "Enviar solicitud";
+      }, 1400);
+    }
     closeRequestPanel();
+    window.open(href, "_blank", "noopener");
   }
 
   function openSpotlight(el){

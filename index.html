@@ -135,24 +135,29 @@
 
         <a class="sheet__link" id="sheetLink" target="_blank" rel="noopener"></a>
 
-        <div class="sheet__reportActions" id="sheetReportActions" aria-label="Solicitudes del proyecto">
-          <button class="sheet__reportBtn" type="button" data-request-type="modify">MODIFICAR INFORMACIÓN</button>
-          <button class="sheet__reportBtn" type="button" data-request-type="remove">SOLICITAR BAJA</button>
-          <button class="sheet__reportBtn" type="button" data-request-type="link">NOTIFICAR ENLACE</button>
-        </div>
+        <div class="sheet__support">
+          <h4 class="sheet__supportTitle">Soporte del Proyecto</h4>
+          <p class="sheet__supportHint">Si hay algo incorrecto, envíanos una solicitud rápida.</p>
 
-        <section class="sheet__requestPanel" id="sheetRequestPanel" hidden aria-live="polite">
-          <h4 class="sheet__requestTitle" id="sheetRequestTitle">Solicitud</h4>
-          <p class="sheet__requestHint">Se abrirá tu correo con el contenido listo para enviar al equipo.</p>
-          <label class="sheet__requestLabel" for="sheetRequestMessage">Detalle</label>
-          <textarea class="sheet__requestTextarea" id="sheetRequestMessage" rows="5"></textarea>
-          <label class="sheet__requestLabel" for="sheetRequestEmail">Tu correo (opcional)</label>
-          <input class="sheet__requestInput" id="sheetRequestEmail" type="email" placeholder="tu-correo@dominio.com" />
-          <div class="sheet__requestFooter">
-            <button class="sheet__requestSend" id="sheetRequestSend" type="button">Enviar solicitud</button>
-            <button class="sheet__requestCancel" id="sheetRequestCancel" type="button">Cancelar</button>
+          <div class="sheet__reportActions" id="sheetReportActions" aria-label="Solicitudes del proyecto">
+            <button class="sheet__reportBtn is-modify" type="button" data-request-type="modify">Corregir información</button>
+            <button class="sheet__reportBtn is-remove" type="button" data-request-type="remove">Solicitar baja</button>
+            <button class="sheet__reportBtn is-link" type="button" data-request-type="link">Reportar enlace roto</button>
           </div>
-        </section>
+
+          <section class="sheet__requestPanel" id="sheetRequestPanel" hidden aria-live="polite">
+            <h4 class="sheet__requestTitle" id="sheetRequestTitle">Solicitud</h4>
+            <p class="sheet__requestHint">Se abrirá tu correo con el contenido listo para enviar al equipo.</p>
+            <label class="sheet__requestLabel" for="sheetRequestMessage">Detalle</label>
+            <textarea class="sheet__requestTextarea" id="sheetRequestMessage" rows="5"></textarea>
+            <label class="sheet__requestLabel" for="sheetRequestEmail">Tu correo (opcional)</label>
+            <input class="sheet__requestInput" id="sheetRequestEmail" type="email" placeholder="tu-correo@dominio.com" />
+            <div class="sheet__requestFooter">
+              <button class="sheet__requestSend" id="sheetRequestSend" type="button">Enviar solicitud</button>
+              <button class="sheet__requestCancel" id="sheetRequestCancel" type="button">Cancelar</button>
+            </div>
+          </section>
+        </div>
       </aside>
     </div>
   </div>
