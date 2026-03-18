@@ -28,6 +28,7 @@
   const sheetRequestTitle = $("#sheetRequestTitle");
   const sheetRequestMessage = $("#sheetRequestMessage");
   const sheetRequestEmail = $("#sheetRequestEmail");
+  const sheetRequestStatus = $("#sheetRequestStatus");
   const sheetRequestSend = $("#sheetRequestSend");
   const sheetRequestCancel = $("#sheetRequestCancel");
   const bentoControls = $("#ref2dBentoControls");
@@ -5857,6 +5858,11 @@
     if (sheetRequestPanel) sheetRequestPanel.hidden = true;
     if (sheetRequestEmail) sheetRequestEmail.value = "";
     if (sheetRequestMessage) sheetRequestMessage.value = "";
+    if (sheetRequestStatus) {
+      sheetRequestStatus.hidden = true;
+      sheetRequestStatus.classList.remove('is-error');
+      sheetRequestStatus.textContent = "";
+    }
   }
 
   function buildRequestBaseText(typeKey) {
@@ -5885,6 +5891,11 @@
     if (sheetRequestTitle) sheetRequestTitle.textContent = cfg.title;
     sheetRequestMessage.value = buildRequestBaseText(typeKey);
     if (sheetRequestEmail) sheetRequestEmail.required = true;
+    if (sheetRequestStatus) {
+      sheetRequestStatus.hidden = true;
+      sheetRequestStatus.classList.remove('is-error');
+      sheetRequestStatus.textContent = "";
+    }
     sheetRequestPanel.hidden = false;
     requestAnimationFrame(() => sheetRequestMessage.focus());
   }
@@ -5895,15 +5906,32 @@
     const meta = activeSpotlightMeta || {};
     const requesterEmail = (sheetRequestEmail && sheetRequestEmail.value.trim()) ? sheetRequestEmail.value.trim() : "";
     if (!requesterEmail) {
+      if (sheetRequestStatus) {
+        sheetRequestStatus.hidden = false;
+        sheetRequestStatus.classList.add('is-error');
+        sheetRequestStatus.textContent = "Ingresa tu correo para enviar la solicitud.";
+      }
       if (sheetRequestEmail) sheetRequestEmail.focus();
       return;
     }
     if (sheetRequestEmail && !sheetRequestEmail.checkValidity()) {
+      if (sheetRequestStatus) {
+        sheetRequestStatus.hidden = false;
+        sheetRequestStatus.classList.add('is-error');
+        sheetRequestStatus.textContent = "Revisa el formato del correo.";
+      }
       sheetRequestEmail.reportValidity();
       return;
     }
     const message = (sheetRequestMessage.value || "").trim();
-    if (!message) return;
+    if (!message) {
+      if (sheetRequestStatus) {
+        sheetRequestStatus.hidden = false;
+        sheetRequestStatus.classList.add('is-error');
+        sheetRequestStatus.textContent = "Agrega un detalle antes de enviar.";
+      }
+      return;
+    }
 
     const urls = Array.isArray(meta.urls) ? meta.urls.filter(Boolean) : [];
     const firstUrl = urls[0] || meta.url || "";
@@ -5922,24 +5950,35 @@
       status: "open"
     };
 
+    let savedOk = false;
     try {
       const raw = localStorage.getItem(REQUESTS_STORAGE_KEY);
       const list = raw ? JSON.parse(raw) : [];
       const nextList = Array.isArray(list) ? list : [];
       nextList.unshift(ticket);
       localStorage.setItem(REQUESTS_STORAGE_KEY, JSON.stringify(nextList.slice(0, 2000)));
+      savedOk = true;
     } catch (_) {
-      // Si localStorage falla, mantenemos funcionamiento sin romper UI.
+      savedOk = false;
     }
 
-    if (sheetRequestSend) {
-      const prev = sheetRequestSend.textContent;
-      sheetRequestSend.textContent = "Solicitud enviada";
-      setTimeout(() => {
-        if (sheetRequestSend) sheetRequestSend.textContent = prev || "Enviar solicitud";
-      }, 1400);
+    if (!savedOk) {
+      if (sheetRequestStatus) {
+        sheetRequestStatus.hidden = false;
+        sheetRequestStatus.classList.add('is-error');
+        sheetRequestStatus.textContent = "No se pudo guardar la solicitud. Intenta nuevamente.";
+      }
+      return;
     }
-    closeRequestPanel();
+
+    if (sheetRequestStatus) {
+      sheetRequestStatus.hidden = false;
+      sheetRequestStatus.classList.remove('is-error');
+      sheetRequestStatus.textContent = "Solicitud enviada correctamente.";
+    }
+    if (sheetRequestMessage) {
+      sheetRequestMessage.value = "";
+    }
   }
 
   function openSpotlight(el){

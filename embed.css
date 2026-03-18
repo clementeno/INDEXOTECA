@@ -671,6 +671,14 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
   color:var(--ink-dim);
   font-size:0.78rem;
 }
+.sheet__requestStatus{
+  margin:8px 0 0 0;
+  font-size:0.8rem;
+  color:#93f0bf;
+}
+.sheet__requestStatus.is-error{
+  color:#ffadad;
+}
 .sheet__requestTextarea,
 .sheet__requestInput{
   width:100%;

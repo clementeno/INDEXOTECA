@@ -123,6 +123,7 @@
   <main class="wrap">
     <h1>Solicitudes de Referencioteca</h1>
     <div class="sub">Panel local para revisar modificaciones, bajas y enlaces con error.</div>
+    <div class="sub" id="originHint"></div>
 
     <div class="toolbar">
       <input id="q" class="input" placeholder="Buscar por proyecto, autor o texto" />
@@ -164,6 +165,7 @@
       const stats = document.getElementById('stats');
       const exportCsv = document.getElementById('exportCsv');
       const clearAll = document.getElementById('clearAll');
+      const originHint = document.getElementById('originHint');
 
       const esc = (v) => String(v || '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
@@ -216,6 +218,10 @@
           '<span>Abiertas: <b>' + openCount + '</b></span>' +
           '<span>Resueltas: <b>' + resolvedCount + '</b></span>' +
           '<span>Mostrando: <b>' + list.length + '</b></span>';
+
+        if (originHint) {
+          originHint.innerHTML = 'Origen actual: <b>' + esc(window.location.origin || 'file://') + '</b>. Si no ves solicitudes, abre este panel desde el mismo dominio donde se envían (ej: indexoteca-cl.vercel.app).';
+        }
 
         if (!list.length) {
           rows.innerHTML = '<tr><td colspan="6" class="small">Sin solicitudes.</td></tr>';
