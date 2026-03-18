@@ -648,16 +648,6 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 .sheet__reportBtn:hover{
   background:#1f1f24;
 }
-.sheet__reportBtn.is-modify{
-  border-color:#34588f;
-}
-.sheet__reportBtn.is-remove{
-  border-color:#875050;
-}
-.sheet__reportBtn.is-link{
-  border-color:#7d6a32;
-}
-
 .sheet__requestPanel{
   margin-top:12px;
   border:1px solid #2a2a2e;
