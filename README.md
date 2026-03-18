@@ -28,3 +28,4 @@ El reporte marca links en categorías como `ok`, `broken`, `server_error`, `rest
 ### Ver panel HTML (sin terminal)
 
 Abre directamente `reports/link-health/latest.html` en tu navegador.
+# Test-Referencioteca
