@@ -24,44 +24,6 @@
 
 <body>
 
-<!-- Pantalla de acceso inicial -->
-<div class="ref2d__access-overlay" id="ref2dAccessOverlay">
-  <div class="ref2d__access-card" role="dialog" aria-labelledby="accessTitle" aria-modal="true">
-    <h1 class="ref2d__access-title" id="accessTitle">Acceso Referencioteca</h1>
-    <p class="ref2d__access-text">
-      Estamos trabajando en este dispositivo como parte de un proyecto de título.
-      Para ingresar, escribe la clave de acceso.
-    </p>
-    <form class="ref2d__access-form" id="ref2dAccessForm" novalidate>
-      <label class="ref2d__access-label" for="ref2dAccessKey">Clave</label>
-      <input
-        class="ref2d__access-input"
-        id="ref2dAccessKey"
-        name="key"
-        type="password"
-        autocomplete="off"
-        spellcheck="false"
-        required
-      />
-      <button class="ref2d__access-btn" type="submit">Entrar</button>
-      <p class="ref2d__access-status" id="ref2dAccessStatus" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</div>
-
-<!-- Modal institucional (work in progress) -->
-<div class="ref2d__wip-overlay" id="ref2dWipOverlay" hidden>
-  <div class="ref2d__wip-modal" role="dialog" aria-labelledby="wipTitle" aria-modal="true">
-    <button class="ref2d__wip-close" id="ref2dWipClose" aria-label="Cerrar">×</button>
-    <h2 class="ref2d__wip-title" id="wipTitle">Referencioteca</h2>
-    <div class="ref2d__wip-content">
-      <p>Referencioteca está en desarrollo (work in progress) y forma parte de un proyecto de título a desarrollar en julio 2026.</p>
-      <p>Este proyecto busca mapear, organizar y facilitar la búsqueda curada de trayectorias que ex estudiantes de Diseño UC han producido a lo largo del tiempo, con el objetivo de visibilizar la riqueza cultural y proyectual generada en el desarrollo de sus profesiones. Toda la información contenida aquí ha sido recopilada desde fuentes públicas, entregando siempre la atribución correspondiente y el enlace a los sitios originales.</p>
-      <p>Si quieres saber más información o si apareces aquí y no deseas ser parte, puedes solicitar la edición o retiro de tu registro escribiendo a <a href="mailto:referencioteca.cl@gmail.com">referencioteca.cl@gmail.com</a></p>
-    </div>
-  </div>
-</div>
-
 <!--  REFERENCIOTECA 2D — Contenedor principal -->
 <section class="ref2d">
   <header class="ref2d__top">
