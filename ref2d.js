@@ -29,6 +29,7 @@
   const sheetRequestMessage = $("#sheetRequestMessage");
   const sheetRequestEmail = $("#sheetRequestEmail");
   const sheetRequestStatus = $("#sheetRequestStatus");
+  const sheetRequestClose = $("#sheetRequestClose");
   const sheetRequestSend = $("#sheetRequestSend");
   const sheetRequestCancel = $("#sheetRequestCancel");
   const bentoControls = $("#ref2dBentoControls");
@@ -6255,6 +6256,13 @@
   }
   if (sheetRequestCancel) {
     sheetRequestCancel.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      closeRequestPanel();
+    });
+  }
+  if (sheetRequestClose) {
+    sheetRequestClose.addEventListener('click', (e) => {
       e.preventDefault();
       e.stopPropagation();
       closeRequestPanel();

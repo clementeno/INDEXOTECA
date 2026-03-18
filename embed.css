@@ -654,9 +654,27 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
   background:#111218;
   border-radius:12px;
   padding:12px;
+  position:relative;
+}
+.sheet__requestClose{
+  position:absolute;
+  top:8px;
+  right:8px;
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  border:1px solid #2a2a2e;
+  background:#15151a;
+  color:var(--ink);
+  line-height:1;
+  font-size:18px;
+  cursor:pointer;
+}
+.sheet__requestClose:hover{
+  background:#20232e;
 }
 .sheet__requestTitle{
-  margin:0 0 6px 0;
+  margin:0 28px 6px 0;
   font-size:0.95rem;
 }
 .sheet__requestHint{
