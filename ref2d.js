@@ -5139,11 +5139,11 @@
   const BENTO_LITE_PREFETCH_MIN_Y = 1.0;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
-  const BENTO_MAX_NEW_PER_PASS = 160;
-  const BENTO_MAX_NEW_PER_PASS_MIN = 72;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 44;
-  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 14;
-  const BENTO_LITE_FILL_INTERVAL_MS = 130;
+  const BENTO_MAX_NEW_PER_PASS = 140;
+  const BENTO_MAX_NEW_PER_PASS_MIN = 56;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 28;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 10;
+  const BENTO_LITE_FILL_INTERVAL_MS = 180;
   const BENTO_SETTLE_FULL_DELAY_MS = 160;
   const BENTO_INTERACTION_SETTLE_MS = 120;
   const BENTO_LITE_MIN_MOVE_SCREEN = 30;
@@ -5721,10 +5721,10 @@
     const { top, bottom } = getViewportBounds();
     const minVisible = top - BENTO_CULL_MARGIN;
     const maxVisible = bottom + BENTO_CULL_MARGIN;
-    const dynamicMaxItemsInDom = Math.round(420 + (280 * getZoomProgress()));
+    const dynamicMaxItemsInDom = Math.round(300 + (340 * getZoomProgress()));
     let removed = 0;
     const aggressive = total > dynamicMaxItemsInDom;
-    const removeLimit = aggressive ? 120 : 50;
+    const removeLimit = aggressive ? 220 : 70;
 
     for (let idx = children.length - 1; idx >= 0; idx--) {
       const el = children[idx];
@@ -5885,8 +5885,8 @@
     const endIdx   = Math.floor((vw*1.5) / (COL_W+GAP)) + 2;
     for(let i=startIdx; i<=endIdx; i++){
       const col = ensureColumn(i);
-      while(col.yDown < vh*0.7) makeCard(i,'down', nextMeta());
-      while(col.yUp   > -vh*0.7) makeCard(i,'up',   nextMeta());
+      while(col.yDown < vh*1.15) makeCard(i,'down', nextMeta());
+      while(col.yUp   > -vh*1.15) makeCard(i,'up',   nextMeta());
     }
     updateCount();
     requestFillAround();
@@ -6076,14 +6076,8 @@
       if (activeView !== 'bento') return;
       camX=camY=0;
       camScale = CAM_SCALE_MAX;
-      applyTransform();
-      setInteractionActive(false);
-      if (interactionSettleTimer !== null) {
-        clearTimeout(interactionSettleTimer);
-        interactionSettleTimer = null;
-      }
       updateZoomButtons();
-      requestFillAround();
+      resetWorld();
     });
   
   // Logo REFERENCIOTECA: recargar página completa para reordenar proyectos
