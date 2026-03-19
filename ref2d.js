@@ -2981,7 +2981,7 @@
       title: "ADD",
       author: "Fernanda González",
       role: "Diseñadora/investigación",
-      collab: "",
+      collab: "1º Lugar Premios Chile Diseño 2025, categoría Diseño de Servicios / Ponente en Congreso Intesecciones 2025 / Ponente en IV Encuentro de Creación e Investigación 2025",
       area: "Servicio / Salud",
       year: 2024,
       tags: ["salud", "servicio"],
