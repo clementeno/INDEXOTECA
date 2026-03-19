@@ -5080,6 +5080,37 @@
   let DB_ORDERED = USE_RANDOM_SHUFFLE 
     ? shuffleArray(DB) 
     : rotateArray(DB, ROTATION_STEP);
+  const BENTO_SPAN_MODE = "all1"; // "all1" | "random2" | "dataset"
+  const BENTO_RANDOM_SPAN2_RATIO = 0.14;
+  const BENTO_RANDOM_SPAN2_MAX = 48;
+  let bentoSpanByMeta = new WeakMap();
+
+  function getDatasetSpan(meta) {
+    return Number(meta && meta.span) === 2 ? 2 : 1;
+  }
+
+  function rebuildBentoRandomSpans() {
+    bentoSpanByMeta = new WeakMap();
+    DB.forEach((meta) => bentoSpanByMeta.set(meta, 1));
+    if (BENTO_SPAN_MODE !== "random2" || !DB.length) return;
+
+    const shuffled = shuffleArray(DB);
+    const target = Math.max(
+      1,
+      Math.min(BENTO_RANDOM_SPAN2_MAX, Math.round(DB.length * BENTO_RANDOM_SPAN2_RATIO))
+    );
+    for (let i = 0; i < target && i < shuffled.length; i++) {
+      bentoSpanByMeta.set(shuffled[i], 2);
+    }
+  }
+
+  function getBentoSpan(meta) {
+    if (BENTO_SPAN_MODE === "dataset") return getDatasetSpan(meta);
+    if (BENTO_SPAN_MODE === "random2") return bentoSpanByMeta.get(meta) === 2 ? 2 : 1;
+    return 1;
+  }
+
+  rebuildBentoRandomSpans();
 
   /* Activo + generador circular */
   let activeList = DB_ORDERED.slice();
@@ -5200,7 +5231,7 @@
   function makeCard(i, dir, meta){
     if(!meta) return;
     const orient = normalizeOrientation(meta.orientation);
-    const span2  = meta.span===2;
+    const span2  = getBentoSpan(meta) === 2;
     const tags   = (meta.tags||[]);
 
     const w = span2 ? (COL_W*2+GAP) : COL_W;
@@ -5305,7 +5336,7 @@
     const onImageLoad = typeof options.onImageLoad === 'function' ? options.onImageLoad : null;
     const el = document.createElement('article');
     const orient = normalizeOrientation(meta.orientation);
-    const isFeatured = meta.span === 2;
+    const isFeatured = getBentoSpan(meta) === 2;
     el.className = `${className} is-${orient} ${isFeatured ? 'is-featured' : ''}`;
     el.dataset.tags   = (meta.tags || []).join(' | ');
     el.dataset.title  = meta.title || '—';
@@ -6815,6 +6846,7 @@
       );
       normalizeProjectTags(newItem);
       DB.push(newItem);
+      rebuildBentoRandomSpans();
       // Reordenar DB_ORDERED cuando se agrega un nuevo proyecto
       if (USE_RANDOM_SHUFFLE) {
         DB_ORDERED = shuffleArray(DB);
