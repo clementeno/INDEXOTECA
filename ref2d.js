@@ -5520,11 +5520,11 @@
   const BENTO_LITE_PREFETCH_MIN_Y = 1.0;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
-  const BENTO_MAX_NEW_PER_PASS = 140;
-  const BENTO_MAX_NEW_PER_PASS_MIN = 56;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 28;
-  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 10;
-  const BENTO_LITE_FILL_INTERVAL_MS = 180;
+  const BENTO_MAX_NEW_PER_PASS = 132;
+  const BENTO_MAX_NEW_PER_PASS_MIN = 52;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 24;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 8;
+  const BENTO_LITE_FILL_INTERVAL_MS = 210;
   const BENTO_SETTLE_FULL_DELAY_MS = 160;
   const BENTO_INTERACTION_SETTLE_MS = 120;
   const BENTO_LITE_MIN_MOVE_SCREEN = 30;
@@ -5686,24 +5686,11 @@
 
     const metaBox = document.createElement('div');
     metaBox.className='ref2d__meta';
-    tags.slice(0,3).forEach(t=>{
+    tags.slice(0,2).forEach(t=>{
       const c=document.createElement('span');
       c.className='ref2d__chip';
       c.textContent=t;
       c.setAttribute('data-tag', t);
-      // Etiquetas de la grilla también son clickeables
-      c.addEventListener('click', (e)=>{
-        // Suprimir click si acabamos de hacer drag
-        if(performance.now() < suppressClickUntil){
-          e.preventDefault();
-          e.stopPropagation();
-          return;
-        }
-        e.preventDefault();
-        e.stopPropagation(); // Evita que se abra el modal al hacer click en la etiqueta
-        if (search) search.value=t;
-        applyFilter(t);
-      }); // Sin capture phase
       metaBox.appendChild(c);
     });
     el.appendChild(metaBox);
@@ -5772,12 +5759,7 @@
       const chip = document.createElement('span');
       chip.className = 'ref2d__chip';
       chip.textContent = t;
-      chip.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (search) search.value = t;
-        applyFilter(t);
-      });
+      chip.setAttribute('data-tag', t);
       tagsWrap.appendChild(chip);
     });
     body.appendChild(tagsWrap);
@@ -6401,6 +6383,23 @@
     if (e.target && e.target.closest(CARD_CONTEXT_BLOCK_SELECTOR)) {
       e.preventDefault();
     }
+  });
+
+  // Delegación única para filtros por chip (evita miles de listeners individuales).
+  document.addEventListener('click', (e) => {
+    const chip = e.target.closest('.ref2d__chip[data-tag]');
+    if (!chip) return;
+    if (performance.now() < suppressClickUntil) {
+      e.preventDefault();
+      e.stopPropagation();
+      return;
+    }
+    const tag = (chip.getAttribute('data-tag') || '').trim();
+    if (!tag) return;
+    e.preventDefault();
+    e.stopPropagation();
+    if (search) search.value = tag;
+    applyFilter(tag);
   });
   
   // Handler de click para abrir popup (solo si no hubo drag)
