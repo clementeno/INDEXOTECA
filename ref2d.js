@@ -6626,10 +6626,22 @@
   }
 
   function tokenizeSearchTerm(term) {
-    return norm(term)
+    const normalized = norm(term).replace(/\s+/g, ' ').trim();
+    if (!normalized) return [];
+
+    // Prioriza alias de frase completa para búsquedas semánticas:
+    // ej. "poster" -> "afiche", "stop motion" -> "animación".
+    const fullCanonical = canonicalTagKey(normalized);
+    if (fullCanonical && fullCanonical !== normalized) {
+      return [fullCanonical];
+    }
+
+    const tokens = normalized
       .split(/\s+/)
-      .map((t) => t.trim())
+      .map((t) => canonicalTagKey(t.trim()))
       .filter(Boolean);
+
+    return Array.from(new Set(tokens));
   }
 
   function getFilteredProjects(tokens) {
