@@ -1094,7 +1094,6 @@
   const CAM_SCALE_STEP = 0.08;
   const CAM_LOD_FAR = 0.56;
   const CAM_LOD_MID = 0.74;
-  const CAM_LOD_ULTRA = CAM_SCALE_MIN + 0.03;
   let viewportWidth = viewport.clientWidth || 0;
   let viewportHeight = viewport.clientHeight || 0;
   const refreshViewportSize = () => {
@@ -1105,12 +1104,9 @@
   let currentLodMode = '';
   const updateBentoLOD = () => {
     if (!plane) return;
-    const nextMode = camScale <= CAM_LOD_ULTRA
-      ? 'ultra'
-      : (camScale <= CAM_LOD_FAR ? 'far' : (camScale <= CAM_LOD_MID ? 'mid' : 'near'));
+    const nextMode = camScale <= CAM_LOD_FAR ? 'far' : (camScale <= CAM_LOD_MID ? 'mid' : 'near');
     if (nextMode === currentLodMode) return;
     currentLodMode = nextMode;
-    plane.classList.toggle('is-lod-ultra', nextMode === 'ultra');
     plane.classList.toggle('is-lod-far', nextMode === 'far');
     plane.classList.toggle('is-lod-mid', nextMode === 'mid');
     plane.classList.toggle('is-lod-near', nextMode === 'near');
@@ -5522,17 +5518,13 @@
   const BENTO_PREFETCH_MIN_Y = 1.06;
   const BENTO_LITE_PREFETCH_MIN_X = 1.0;
   const BENTO_LITE_PREFETCH_MIN_Y = 1.0;
-  const BENTO_ULTRA_PREFETCH_X = 1.01;
-  const BENTO_ULTRA_PREFETCH_Y = 1.01;
-  const BENTO_ULTRA_LITE_PREFETCH_X = 1.0;
-  const BENTO_ULTRA_LITE_PREFETCH_Y = 1.0;
   const BENTO_CULL_MARGIN = 2600;
   const BENTO_MAX_ITEMS_IN_DOM = 700;
-  const BENTO_MAX_NEW_PER_PASS = 132;
-  const BENTO_MAX_NEW_PER_PASS_MIN = 52;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 24;
-  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 8;
-  const BENTO_LITE_FILL_INTERVAL_MS = 210;
+  const BENTO_MAX_NEW_PER_PASS = 140;
+  const BENTO_MAX_NEW_PER_PASS_MIN = 56;
+  const BENTO_MAX_NEW_PER_PASS_LITE = 28;
+  const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 10;
+  const BENTO_LITE_FILL_INTERVAL_MS = 180;
   const BENTO_SETTLE_FULL_DELAY_MS = 160;
   const BENTO_INTERACTION_SETTLE_MS = 120;
   const BENTO_LITE_MIN_MOVE_SCREEN = 30;
@@ -5577,11 +5569,6 @@
     return Math.max(0, Math.min(1, t));
   };
   const getDynamicPrefetch = (lite = false) => {
-    if (camScale <= CAM_LOD_ULTRA) {
-      return lite
-        ? { x: BENTO_ULTRA_LITE_PREFETCH_X, y: BENTO_ULTRA_LITE_PREFETCH_Y }
-        : { x: BENTO_ULTRA_PREFETCH_X, y: BENTO_ULTRA_PREFETCH_Y };
-    }
     const t = getZoomProgress();
     const baseX = lite ? BENTO_LITE_PREFETCH_MIN_X : BENTO_PREFETCH_MIN_X;
     const baseY = lite ? BENTO_LITE_PREFETCH_MIN_Y : BENTO_PREFETCH_MIN_Y;
@@ -5591,9 +5578,6 @@
     };
   };
   const getDynamicMaxNewPerPass = (lite = false) => {
-    if (camScale <= CAM_LOD_ULTRA) {
-      return lite ? 6 : 22;
-    }
     const t = getZoomProgress();
     if (lite) {
       return Math.round(BENTO_MAX_NEW_PER_PASS_LITE_MIN + ((BENTO_MAX_NEW_PER_PASS_LITE - BENTO_MAX_NEW_PER_PASS_LITE_MIN) * t));
@@ -6066,7 +6050,7 @@
     updateZoomButtons();
     if (isBento) refreshViewportSize();
     if (!isBento && plane) {
-      plane.classList.remove('is-lod-ultra', 'is-lod-far', 'is-lod-mid', 'is-lod-near');
+      plane.classList.remove('is-lod-far', 'is-lod-mid', 'is-lod-near');
       currentLodMode = '';
       setInteractionActive(false);
       if (interactionSettleTimer !== null) {
@@ -6100,12 +6084,10 @@
     const { top, bottom } = getViewportBounds();
     const minVisible = top - BENTO_CULL_MARGIN;
     const maxVisible = bottom + BENTO_CULL_MARGIN;
-    const dynamicMaxItemsInDom = camScale <= CAM_LOD_ULTRA
-      ? 220
-      : Math.round(300 + (340 * getZoomProgress()));
+    const dynamicMaxItemsInDom = Math.round(300 + (340 * getZoomProgress()));
     let removed = 0;
     const aggressive = total > dynamicMaxItemsInDom;
-    const removeLimit = camScale <= CAM_LOD_ULTRA ? 260 : (aggressive ? 220 : 70);
+    const removeLimit = aggressive ? 220 : 70;
 
     for (let idx = children.length - 1; idx >= 0; idx--) {
       const el = children[idx];
@@ -6229,6 +6211,13 @@
 
   /* Reset/reordenar mundo */
   function resetWorld(){
+    if (wheelRaf !== null) {
+      cancelAnimationFrame(wheelRaf);
+      wheelRaf = null;
+    }
+    wheelPanAccumX = 0;
+    wheelPanAccumY = 0;
+    wheelZoomFactor = 1;
     if (fillAroundRaf !== null) {
       cancelAnimationFrame(fillAroundRaf);
       fillAroundRaf = null;
@@ -6284,6 +6273,50 @@
   let activePid = null;
   let suppressClickUntil = 0; // Para evitar clicks fantasma después de drag
   const CARD_CONTEXT_BLOCK_SELECTOR = '.ref2d__item, .ref2d__view-card, .ref2d__simple-card';
+  let wheelPanAccumX = 0;
+  let wheelPanAccumY = 0;
+  let wheelZoomFactor = 1;
+  let wheelZoomClientX = 0;
+  let wheelZoomClientY = 0;
+  let wheelRaf = null;
+
+  function normalizeWheelDelta(delta, mode) {
+    if (mode === 1) return delta * 16; // line mode (Firefox)
+    if (mode === 2) return delta * viewportHeight; // page mode
+    return delta; // pixel mode
+  }
+
+  function flushWheelFrame() {
+    wheelRaf = null;
+    if (activeView !== 'bento') {
+      wheelPanAccumX = 0;
+      wheelPanAccumY = 0;
+      wheelZoomFactor = 1;
+      return;
+    }
+
+    let didChange = false;
+    if (Math.abs(wheelZoomFactor - 1) > 0.0001) {
+      zoomTo(camScale * wheelZoomFactor, wheelZoomClientX, wheelZoomClientY, true);
+      wheelZoomFactor = 1;
+      didChange = true;
+    }
+    if (wheelPanAccumX !== 0 || wheelPanAccumY !== 0) {
+      camX -= wheelPanAccumX;
+      camY -= wheelPanAccumY;
+      wheelPanAccumX = 0;
+      wheelPanAccumY = 0;
+      requestTransform();
+      requestFillAroundLiteIfNeeded(false, true);
+      didChange = true;
+    }
+    if (didChange) scheduleInteractionSettle();
+  }
+
+  function scheduleWheelFrame() {
+    if (wheelRaf !== null) return;
+    wheelRaf = requestAnimationFrame(flushWheelFrame);
+  }
   
   function resetPointerState(){
     isDown = false;
@@ -6446,16 +6479,18 @@
   viewport.addEventListener('wheel',(e)=>{
     if (activeView !== 'bento') return;
     e.preventDefault();
+    const mode = e.deltaMode || 0;
     if (e.ctrlKey || e.metaKey) {
-      const zoomFactor = Math.exp(-e.deltaY * 0.0015);
-      zoomTo(camScale * zoomFactor, e.clientX, e.clientY, true);
-      scheduleInteractionSettle();
+      const dy = normalizeWheelDelta(e.deltaY, mode);
+      wheelZoomFactor *= Math.exp(-dy * 0.0012);
+      wheelZoomClientX = e.clientX;
+      wheelZoomClientY = e.clientY;
+      scheduleWheelFrame();
       return;
     }
-    camX -= e.deltaX; camY -= e.deltaY;
-    requestTransform();
-    requestFillAroundLiteIfNeeded(false, true);
-    scheduleInteractionSettle();
+    wheelPanAccumX += normalizeWheelDelta(e.deltaX, mode);
+    wheelPanAccumY += normalizeWheelDelta(e.deltaY, mode);
+    scheduleWheelFrame();
   },{passive:false});
   if (btnZoomOut) {
     btnZoomOut.addEventListener('click', ()=>{

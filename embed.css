@@ -335,16 +335,6 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 .ref2d__plane.is-lod-far .ref2d__item:hover{
   box-shadow:none;
 }
-.ref2d__plane.is-lod-ultra .ref2d__meta{
-  display:none !important;
-}
-.ref2d__plane.is-lod-ultra .ref2d__item{
-  box-shadow:none !important;
-  outline:none !important;
-}
-.ref2d__plane.is-lod-ultra .ref2d__item:hover{
-  box-shadow:none !important;
-}
 .ref2d__plane.is-interacting .ref2d__meta{
   display:none;
 }
