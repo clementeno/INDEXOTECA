@@ -311,7 +311,7 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 .ref2d__plane{ position:absolute; will-change:transform; transform: translate3d(0,0,0); transform-origin:0 0; user-select:none; }
 
 /* Ítems (igual que antes) */
-.ref2d__item{position:absolute; overflow:hidden; border-radius:var(--rad); box-shadow:0 1px 0 #1c1c20 inset, 0 0 0 1px #1a1a1d; transition: box-shadow .15s ease, transform .2s ease; background:#222; cursor:pointer; user-select:none;}
+.ref2d__item{position:absolute; overflow:hidden; border-radius:var(--rad); box-shadow:0 1px 0 #1c1c20 inset, 0 0 0 1px #1a1a1d; transition: box-shadow .15s ease, transform .2s ease; background:#222; cursor:pointer; user-select:none; content-visibility:auto; contain-intrinsic-size:auto 300px;}
 .ref2d__item:hover{ box-shadow:0 0 0 2px #ffffff30; }
 .ratio-h{ aspect-ratio: 4/3; } .ratio-v{ aspect-ratio: 3/4; } .ratio-sq{ aspect-ratio: 1/1; }
 .norm{ width: var(--colw); } .span-2{ width: calc(var(--colw)*2 + var(--gap)); }
@@ -328,6 +328,9 @@ a.ref2d__header-btn{text-decoration:none; color:var(--ink);}
 }
 .ref2d__plane.is-lod-far .ref2d__meta{
   display:none;
+}
+.ref2d__plane.is-lod-far .ref2d__item img{
+  visibility:hidden;
 }
 .ref2d__plane.is-lod-far .ref2d__item{
   box-shadow:none;

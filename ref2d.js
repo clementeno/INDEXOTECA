@@ -82,6 +82,11 @@
     return;
   }
 
+  // PERF: fuerza pipeline de composición para transformaciones del plano.
+  plane.style.willChange = 'transform';
+  // PERF: inicia el plano en capa compuesta desde el primer frame.
+  plane.style.transform = 'translate3d(0px, 0px, 0) scale(1) translateZ(0)';
+
   /* Estado inicial: overlay cerrado */
   if (overlay) {
     overlay.setAttribute('hidden','');
@@ -1134,7 +1139,8 @@
     interactionSettleTimer = setTimeout(tick, BENTO_INTERACTION_SETTLE_MS);
   };
   const applyTransform = ()=> {
-    plane.style.transform = `translate3d(${camX}px, ${camY}px, 0) scale(${camScale})`;
+    // PERF: translateZ(0) asegura compositing por GPU para pan/zoom continuos.
+    plane.style.transform = `translate3d(${camX}px, ${camY}px, 0) scale(${camScale}) translateZ(0)`;
     if (activeView === 'bento') updateBentoLOD();
   };
 
@@ -5504,6 +5510,8 @@
   let filterDebounceTimer = null;
   const FILTER_DEBOUNCE_MS = 220;
   let fillAroundRaf = null;
+  // PERF: guarda RAF de culling para separar lecturas del ciclo de creación.
+  let cullRaf = null;
   let fillAroundLiteTimer = null;
   let fillAroundSettleTimer = null;
   let interactionSettleTimer = null;
@@ -5518,16 +5526,20 @@
   const BENTO_PREFETCH_MIN_Y = 1.06;
   const BENTO_LITE_PREFETCH_MIN_X = 1.0;
   const BENTO_LITE_PREFETCH_MIN_Y = 1.0;
-  const BENTO_CULL_MARGIN = 2600;
-  const BENTO_MAX_ITEMS_IN_DOM = 700;
+  // PERF: reduce ventana de culling para mantener el DOM más liviano.
+  const BENTO_CULL_MARGIN = 1800;
+  // PERF: limita cantidad máxima de nodos en DOM para bajar costo de layout/paint.
+  const BENTO_MAX_ITEMS_IN_DOM = 400;
   const BENTO_MAX_NEW_PER_PASS = 140;
   const BENTO_MAX_NEW_PER_PASS_MIN = 56;
-  const BENTO_MAX_NEW_PER_PASS_LITE = 28;
+  // PERF: baja presión de inserción en pasadas lite durante pan.
+  const BENTO_MAX_NEW_PER_PASS_LITE = 20;
   const BENTO_MAX_NEW_PER_PASS_LITE_MIN = 10;
   const BENTO_LITE_FILL_INTERVAL_MS = 180;
   const BENTO_SETTLE_FULL_DELAY_MS = 160;
   const BENTO_INTERACTION_SETTLE_MS = 120;
-  const BENTO_LITE_MIN_MOVE_SCREEN = 30;
+  // PERF: exige desplazamiento mayor antes de disparar lite fill.
+  const BENTO_LITE_MIN_MOVE_SCREEN = 50;
   const BENTO_LITE_MIN_MOVE_SCREEN_SQ = BENTO_LITE_MIN_MOVE_SCREEN * BENTO_LITE_MIN_MOVE_SCREEN;
   const SIMPLE_CARD_COUNT = 3;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
@@ -5537,6 +5549,14 @@
     const raw = String(value || '').trim().toLowerCase();
     if (raw === 'v' || raw === 'sq' || raw === 'h') return raw;
     return 'h';
+  };
+  // PERF: usa variante optimizada de cargo.site para reducir bytes por imagen.
+  const optimizeImageSrc = (src) => {
+    if (typeof src !== 'string') return src;
+    if (src.includes('freight.cargo.site/t/original/i/')) {
+      return src.replace('/t/original/', '/t/resized_width-800,quality-75/');
+    }
+    return src;
   };
   const getOrientationFromDimensions = (width, height) => {
     if (!Number.isFinite(width) || !Number.isFinite(height) || width <= 0 || height <= 0) return "";
@@ -5609,7 +5629,8 @@
 
   /* Crear tarjeta */
   let globalId = 0;
-  function makeCard(i, dir, meta){
+  // PERF: permite batch append mediante DocumentFragment para evitar relayout por tarjeta.
+  function makeCard(i, dir, meta, mountTarget = plane){
     if(!meta) return;
     const orient = normalizeOrientation(meta.orientation);
     const span2  = getBentoSpan(meta) === 2;
@@ -5676,10 +5697,13 @@
 
     if(meta.src){
       const img = new Image();
-      img.src = meta.src;
+      // PERF: optimiza fuente de imagen para reducir costo de red/decode.
+      img.src = optimizeImageSrc(meta.src);
       img.loading='lazy';
       img.decoding='async';
       img.fetchPriority = 'low';
+      // PERF: dispara decode asíncrono sin bloquear hilo principal.
+      if (typeof img.decode === 'function') img.decode().catch(() => {});
       Object.assign(img.style,{position:'absolute',inset:'0',width:'100%',height:'100%',objectFit:'cover'});
       el.appendChild(img);
     }
@@ -5708,7 +5732,8 @@
     });
     el.appendChild(metaBox);
 
-    plane.appendChild(el);
+    // PERF: inserta en fragmento cuando exista; fallback al plano para llamadas previas.
+    mountTarget.appendChild(el);
     globalId++;
   }
 
@@ -5738,11 +5763,14 @@
     imgWrap.style.aspectRatio = ORIENTATION_ASPECT_CSS[orient];
     if (meta.src) {
       const img = new Image();
-      img.src = meta.src;
+      // PERF: optimiza fuente de imagen para grilla/simple con variante redimensionada.
+      img.src = optimizeImageSrc(meta.src);
       img.loading = 'lazy';
       img.decoding = 'async';
       img.fetchPriority = 'low';
       img.alt = meta.title || '';
+      // PERF: decode explícito para evitar picos de trabajo durante interacción.
+      if (typeof img.decode === 'function') img.decode().catch(() => {});
       if (onImageLoad) {
         img.addEventListener('load', onImageLoad);
         img.addEventListener('error', onImageLoad);
@@ -6102,7 +6130,8 @@
     const { top, bottom } = getViewportBounds();
     const minVisible = top - BENTO_CULL_MARGIN;
     const maxVisible = bottom + BENTO_CULL_MARGIN;
-    const dynamicMaxItemsInDom = Math.round(300 + (340 * getZoomProgress()));
+    // PERF: usa nuevo techo de DOM como referencia para modo agresivo.
+    const dynamicMaxItemsInDom = Math.round(220 + ((BENTO_MAX_ITEMS_IN_DOM - 220) * getZoomProgress()));
     let removed = 0;
     const aggressive = total > dynamicMaxItemsInDom;
     const removeLimit = aggressive ? 220 : 70;
@@ -6122,6 +6151,15 @@
     }
   }
 
+  // PERF: separa culling a un RAF independiente para evitar thrashing tras mutaciones.
+  function scheduleCull() {
+    if (cullRaf !== null) return;
+    cullRaf = requestAnimationFrame(() => {
+      cullRaf = null;
+      cullFarItems();
+    });
+  }
+
   /* Relleno alrededor de la vista */
   function fillAround(lite = false){
     if(activeList.length===0) return;
@@ -6135,33 +6173,46 @@
     const startIdx = Math.floor((leftBound)  / (COL_W+GAP)) - 2;
     const endIdx   = Math.floor((rightBound) / (COL_W+GAP)) + 2;
     let created = 0;
+    // PERF: agrupa inserciones de tarjetas para hacer un solo append al DOM por pasada.
+    const fragment = document.createDocumentFragment();
 
     for(let i=startIdx; i<=endIdx; i++){
       const col = ensureColumn(i);
       while(col.yDown < bottom){
-        makeCard(i,'down', nextMeta());
+        // PERF: monta tarjetas nuevas en fragmento temporal.
+        makeCard(i,'down', nextMeta(), fragment);
         created++;
         if(col.yDown > yBotLimit-(COL_W*2)) yBotLimit += 1500;
         if (created >= maxNewPerPass) {
-          if (!lite) cullFarItems();
+          // PERF: un único append evita relayout por tarjeta.
+          if (fragment.childNodes.length) plane.appendChild(fragment);
+          // PERF: nunca ejecutar culling sincrónico durante fill.
+          if (!lite) scheduleCull();
           if (lite) requestFillAroundLite();
           else requestFillAround();
           return;
         }
       }
       while(col.yUp > topV){
-        makeCard(i,'up',   nextMeta());
+        // PERF: monta tarjetas nuevas en fragmento temporal.
+        makeCard(i,'up',   nextMeta(), fragment);
         created++;
         if(col.yUp   < yTopLimit+(COL_W*2)) yTopLimit -= 1500;
         if (created >= maxNewPerPass) {
-          if (!lite) cullFarItems();
+          // PERF: un único append evita relayout por tarjeta.
+          if (fragment.childNodes.length) plane.appendChild(fragment);
+          // PERF: nunca ejecutar culling sincrónico durante fill.
+          if (!lite) scheduleCull();
           if (lite) requestFillAroundLite();
           else requestFillAround();
           return;
         }
       }
     }
-    if (!lite) cullFarItems();
+    // PERF: completa el batch en un solo append al terminar el pass.
+    if (fragment.childNodes.length) plane.appendChild(fragment);
+    // PERF: culling diferido a otro RAF para aislar lecturas.
+    if (!lite) scheduleCull();
   }
 
   function requestFillAround(lite = false) {
@@ -6233,6 +6284,11 @@
       cancelAnimationFrame(fillAroundRaf);
       fillAroundRaf = null;
     }
+    // PERF: cancela culling pendiente al reiniciar el mundo.
+    if (cullRaf !== null) {
+      cancelAnimationFrame(cullRaf);
+      cullRaf = null;
+    }
     if (fillAroundLiteTimer !== null) {
       clearTimeout(fillAroundLiteTimer);
       fillAroundLiteTimer = null;
@@ -6252,7 +6308,8 @@
     columns.clear();
     globalId = 0;
     genPtr = 0;
-    applyTransform();
+    // PERF: mantiene todas las actualizaciones de transform bajo RAF guardado.
+    requestTransform();
     lastLiteFillCamX = camX;
     lastLiteFillCamY = camY;
     if (activeList.length === 0) {
@@ -6264,11 +6321,19 @@
     const vh = viewportHeight / scale;
     const startIdx = Math.floor((-vw*0.5) / (COL_W+GAP)) - 2;
     const endIdx   = Math.floor((vw*1.5) / (COL_W+GAP)) + 2;
+    // PERF: batch inicial de tarjetas para evitar append por item en reset.
+    const fragment = document.createDocumentFragment();
     for(let i=startIdx; i<=endIdx; i++){
       const col = ensureColumn(i);
-      while(col.yDown < vh*1.15) makeCard(i,'down', nextMeta());
-      while(col.yUp   > -vh*1.15) makeCard(i,'up',   nextMeta());
+      // PERF: usa fragment en creación inicial.
+      while(col.yDown < vh*1.15) makeCard(i,'down', nextMeta(), fragment);
+      // PERF: usa fragment en creación inicial.
+      while(col.yUp   > -vh*1.15) makeCard(i,'up',   nextMeta(), fragment);
     }
+    // PERF: append único para el lote inicial.
+    if (fragment.childNodes.length) plane.appendChild(fragment);
+    // PERF: culling diferido para evitar lecturas tras mutación masiva.
+    scheduleCull();
     updateCount();
     requestFillAround();
   }
@@ -7082,7 +7147,8 @@
         if (activeView === 'bento') {
           camX = 0;
           camY = 0;
-          applyTransform();
+          // PERF: mantiene transform updates mediante requestTransform RAF-guard.
+          requestTransform();
         }
         closeSpotlight();
         renderActiveView();
@@ -7107,7 +7173,8 @@
       // Evita bloqueos cuando se filtra después de desplazarse mucho en infinito.
       camX = 0;
       camY = 0;
-      applyTransform();
+      // PERF: mantiene transform updates mediante requestTransform RAF-guard.
+      requestTransform();
     }
     closeSpotlight();
     renderActiveView();
