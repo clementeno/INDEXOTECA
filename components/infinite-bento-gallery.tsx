@@ -1,9 +1,9 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useMemo } from 'react';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import type { ImagesPage } from '@/lib/images';
 
 type Props = {
@@ -28,7 +28,11 @@ async function fetchImagesPage(pageParam: number): Promise<ImagesPage> {
 }
 
 export function InfiniteBentoGallery({ initialPage }: Props) {
-  const { ref, inView } = useInView({ rootMargin: '600px 0px' });
+  const shouldReduceMotion = useReducedMotion();
+  const { ref, inView } = useInView({
+    rootMargin: '800px 0px 800px 0px',
+    threshold: 0
+  });
 
   const {
     data,
@@ -56,10 +60,16 @@ export function InfiniteBentoGallery({ initialPage }: Props) {
     }
   }, [inView, hasNextPage, isFetching, fetchNextPage]);
 
-  const images =
-    data?.pages
-      .flatMap((page) => page.images)
-      .filter((image, index, arr) => arr.findIndex((item) => item.id === image.id) === index) ?? [];
+  const images = useMemo(() => {
+    const uniqueById = new Map<string, ImagesPage['images'][number]>();
+    const pages = data?.pages ?? [];
+    for (const page of pages) {
+      for (const image of page.images) {
+        if (!uniqueById.has(image.id)) uniqueById.set(image.id, image);
+      }
+    }
+    return Array.from(uniqueById.values());
+  }, [data?.pages]);
 
   if (error) {
     return (
@@ -98,25 +108,40 @@ export function InfiniteBentoGallery({ initialPage }: Props) {
         {images.map((image, index) => (
           <motion.article
             key={image.id}
-            initial={{ opacity: 0, y: 20, scale: 0.98 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.6, ease: 'easeOut', delay: Math.min(index * 0.03, 0.45) }}
+            initial={!shouldReduceMotion && index < 80 ? { opacity: 0, y: 20, scale: 0.98 } : false}
+            animate={!shouldReduceMotion && index < 80 ? { opacity: 1, y: 0, scale: 1 } : undefined}
+            transition={
+              !shouldReduceMotion && index < 80
+                ? { duration: 0.55, ease: 'easeOut', delay: Math.min(index * 0.025, 0.35) }
+                : undefined
+            }
             className={`group overflow-hidden rounded-2xl bg-zinc-900 md:rounded-3xl ${getBentoSpanClasses(index)}`}
+            style={{ contentVisibility: 'auto', containIntrinsicSize: '300px 260px' }}
           >
             <img
               src={image.url}
               alt={image.alt || ''}
               loading="lazy"
               decoding="async"
+              fetchPriority={index < 6 ? 'high' : 'low'}
+              draggable={false}
               className="h-full w-full object-cover transition-all duration-700 ease-out group-hover:scale-105"
             />
           </motion.article>
         ))}
 
+        {isFetchingNextPage &&
+          Array.from({ length: 6 }).map((_, index) => (
+            <div
+              key={`page-skeleton-${index}`}
+              className="h-[240px] animate-pulse rounded-2xl bg-zinc-800/70 md:rounded-3xl"
+            />
+          ))}
+
         <div ref={ref} className="col-span-full h-20" />
       </div>
 
-      <div className="px-4 pb-10 md:px-8">
+      <div aria-live="polite" className="px-4 pb-10 md:px-8">
         {isFetching && !isFetchingNextPage && (
           <p className="text-sm text-zinc-400">Actualizando resultados...</p>
         )}
