@@ -2,29 +2,52 @@
 
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Lenis from 'lenis';
-import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+  type ReactNode
+} from 'react';
 
-export function Providers({ children }: { children: React.ReactNode }) {
+const LenisContext = createContext<Lenis | null>(null);
+
+export function useLenis() {
+  return useContext(LenisContext);
+}
+
+export function Providers({ children }: { children: ReactNode }) {
+  const pathname = usePathname();
+  const lenisRef = useRef<Lenis | null>(null);
+  const [lenisInstance, setLenisInstance] = useState<Lenis | null>(null);
   const [queryClient] = useState(
     () =>
       new QueryClient({
         defaultOptions: {
           queries: {
             staleTime: 60_000,
-            refetchOnWindowFocus: false
+            refetchOnWindowFocus: false,
+            refetchOnReconnect: false,
+            retry: 1
           }
         }
       })
   );
 
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     const lenis = new Lenis({
-      lerp: 0.1,
-      smoothWheel: true,
-      // En la versión actual de Lenis, `syncTouch: false` equivale a desactivar smooth touch.
+      lerp: prefersReducedMotion ? 0.18 : 0.1,
+      smoothWheel: !prefersReducedMotion,
       syncTouch: false,
       infinite: false
     });
+
+    lenisRef.current = lenis;
+    setLenisInstance(lenis);
 
     let rafId = 0;
     const raf = (time: number) => {
@@ -32,13 +55,43 @@ export function Providers({ children }: { children: React.ReactNode }) {
       rafId = requestAnimationFrame(raf);
     };
 
-    rafId = requestAnimationFrame(raf);
+    const start = () => {
+      if (rafId !== 0) return;
+      rafId = requestAnimationFrame(raf);
+    };
+
+    const stop = () => {
+      if (rafId === 0) return;
+      cancelAnimationFrame(rafId);
+      rafId = 0;
+    };
+
+    const onVisibilityChange = () => {
+      if (document.hidden) stop();
+      else start();
+    };
+
+    start();
+    document.addEventListener('visibilitychange', onVisibilityChange);
 
     return () => {
-      cancelAnimationFrame(rafId);
+      document.removeEventListener('visibilitychange', onVisibilityChange);
+      stop();
       lenis.destroy();
+      lenisRef.current = null;
+      setLenisInstance(null);
     };
   }, []);
 
-  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+  useEffect(() => {
+    const lenis = lenisRef.current;
+    if (!lenis) return;
+    lenis.scrollTo(0, { immediate: true });
+  }, [pathname]);
+
+  return (
+    <QueryClientProvider client={queryClient}>
+      <LenisContext.Provider value={lenisInstance}>{children}</LenisContext.Provider>
+    </QueryClientProvider>
+  );
 }
