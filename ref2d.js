@@ -5527,7 +5527,7 @@
   const BENTO_LITE_FILL_INTERVAL_MS = 180;
   const BENTO_SETTLE_FULL_DELAY_MS = 160;
   const BENTO_INTERACTION_SETTLE_MS = 120;
-  const BENTO_LITE_MIN_MOVE_SCREEN = 30;
+  const BENTO_LITE_MIN_MOVE_SCREEN = 64;
   const BENTO_LITE_MIN_MOVE_SCREEN_SQ = BENTO_LITE_MIN_MOVE_SCREEN * BENTO_LITE_MIN_MOVE_SCREEN;
   const SIMPLE_CARD_COUNT = 3;
   const nextMeta = ()=> activeList.length ? activeList[(genPtr++) % activeList.length] : null;
@@ -6211,6 +6211,12 @@
 
   /* Reset/reordenar mundo */
   function resetWorld(){
+    if (pointerPanRaf !== null) {
+      cancelAnimationFrame(pointerPanRaf);
+      pointerPanRaf = null;
+    }
+    pointerPanAccumX = 0;
+    pointerPanAccumY = 0;
     if (wheelRaf !== null) {
       cancelAnimationFrame(wheelRaf);
       wheelRaf = null;
@@ -6273,6 +6279,9 @@
   let activePid = null;
   let suppressClickUntil = 0; // Para evitar clicks fantasma después de drag
   const CARD_CONTEXT_BLOCK_SELECTOR = '.ref2d__item, .ref2d__view-card, .ref2d__simple-card';
+  let pointerPanAccumX = 0;
+  let pointerPanAccumY = 0;
+  let pointerPanRaf = null;
   let wheelPanAccumX = 0;
   let wheelPanAccumY = 0;
   let wheelZoomFactor = 1;
@@ -6316,6 +6325,28 @@
   function scheduleWheelFrame() {
     if (wheelRaf !== null) return;
     wheelRaf = requestAnimationFrame(flushWheelFrame);
+  }
+
+  function flushPointerPanFrame() {
+    pointerPanRaf = null;
+    if (activeView !== 'bento') {
+      pointerPanAccumX = 0;
+      pointerPanAccumY = 0;
+      return;
+    }
+    if (pointerPanAccumX === 0 && pointerPanAccumY === 0) return;
+    camX += pointerPanAccumX;
+    camY += pointerPanAccumY;
+    pointerPanAccumX = 0;
+    pointerPanAccumY = 0;
+    requestTransform();
+    requestFillAroundLiteIfNeeded(false, false);
+    scheduleInteractionSettle();
+  }
+
+  function schedulePointerPanFrame() {
+    if (pointerPanRaf !== null) return;
+    pointerPanRaf = requestAnimationFrame(flushPointerPanFrame);
   }
   
   function resetPointerState(){
@@ -6377,12 +6408,9 @@
     if(isDragging){
       const dx = currentX - lastX;
       const dy = currentY - lastY;
-      
-      camX += dx;
-      camY += dy;
-      requestTransform();
-      requestFillAroundLiteIfNeeded(false, false);
-      scheduleInteractionSettle();
+      pointerPanAccumX += dx;
+      pointerPanAccumY += dy;
+      schedulePointerPanFrame();
       
       lastX = currentX;
       lastY = currentY;
@@ -6396,6 +6424,11 @@
     if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
     const hadDrag = isDragging;
+
+    if (pointerPanRaf !== null) {
+      cancelAnimationFrame(pointerPanRaf);
+      flushPointerPanFrame();
+    }
     
     // Si hubo drag, suprimir clicks por un tiempo
     if(isDragging){
@@ -6414,6 +6447,12 @@
   function onPointerCancel(e){
     if (activeView !== 'bento') return;
     if(activePid === null || e.pointerId !== activePid) return;
+    if (pointerPanRaf !== null) {
+      cancelAnimationFrame(pointerPanRaf);
+      pointerPanRaf = null;
+    }
+    pointerPanAccumX = 0;
+    pointerPanAccumY = 0;
     resetPointerState();
     scheduleInteractionSettle();
   }
